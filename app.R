@@ -3,31 +3,40 @@ library(shiny)
 
 # Setup the user interface ---------
 ui <- fluidPage(
-    tags$head(
-        tags$link(rel = "stylesheet", type = "text/css", href = "main.css")
-    ),
-    titlePanel(
+    title = "Corporate Plan",
+    lang = "en-GB", # set the language of the page - important for accessibility
+    tags$head(includeCSS("www/css/main.css")), # put the CSS in the head section rather than in the body - for HTML5 conformity
 
-    ),
-    tagList(
-        navbarPage(
-            title = "",
-            collapsible = TRUE,
-            id = "tabs",
-            tabPanel("Home"
-                # This is for the home/landing page
-            ),
-            # Pull in all the ui fragments for each of the priorities
-            source("priorities/accessible/ui_fragment.R", local = TRUE)$value,
-            source("priorities/climate/ui_fragment.R", local = TRUE)$value,
-            source("priorities/health/ui_fragment.R", local = TRUE)$value,
-            source("priorities/poverty/ui_fragment.R", local = TRUE)$value,
-            source("priorities/services/ui_fragment.R", local = TRUE)$value
-        )
-    ),
-    tags$footer(
+    HTML('<header class="themeDarkBlueBIU">
+                <a href="https://www.trafford.gov.uk" aria-label="Go to Trafford Council website"><img src="images/biu_logo_white_on_transparent_large.png" alt="Trafford Council | Business Intelligence Unit" id="logoBIU"/></a>
+                <span id="appTitle">Corporate Plan</span>
+          </header>
+          <main>'),
 
-    )
+    # titlePanel(
+    #
+    # ),
+    # tagList(
+    #     navbarPage(
+    #         title = "",
+    #         collapsible = TRUE,
+    #         id = "tabs",
+    #         tabPanel("Home"
+    #             # This is for the home/landing page
+    #         ),
+    #         # Pull in all the ui fragments for each of the priorities
+    #         source("priorities/accessible/ui_fragment.R", local = TRUE)$value,
+    #         source("priorities/climate/ui_fragment.R", local = TRUE)$value,
+    #         source("priorities/health/ui_fragment.R", local = TRUE)$value,
+    #         source("priorities/poverty/ui_fragment.R", local = TRUE)$value,
+    #         source("priorities/services/ui_fragment.R", local = TRUE)$value
+    #     )
+    # ),
+
+    HTML('</main>
+          <footer>
+
+          </footer>')
 )
 
 # Declare the server code to supply objects to the user interface ---------
