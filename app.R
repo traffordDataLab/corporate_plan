@@ -6,13 +6,15 @@ library(bslib)
 bs_global_theme(version = "4", bootswatch = NULL)
 tab_theme <- bs_theme(
   bg = "#e7e6e1",
-  fg = "#00445e"
+  fg = "#00142e"
 )
 
 # Setup the user interface ---------
 ui <- fluidPage(
     lang = "en-GB", # set the language of the page - important for accessibility
-    tags$head(includeCSS("www/css/main.css")), # put the CSS in the head section rather than in the body - for HTML5 conformity
+    tags$head(
+        includeCSS("www/css/main.css"),
+        includeCSS("www/css/tabs.css")), # put the CSS in the head section rather than in the body - for HTML5 conformity
 
     HTML('<header class="themeDarkBlueBIU">
                 <a href="https://www.trafford.gov.uk" aria-label="Go to Trafford Council website"><img src="images/biu_logo_white_on_transparent_large.png" alt="Trafford Council | Business Intelligence Unit" id="logoBIU"/></a>
@@ -20,13 +22,13 @@ ui <- fluidPage(
           </header>
           <main>'),
 
-    # tagList(
     navbarPage(
         id = "tabs",
         title = "",
         windowTitle = "Trafford Council Corporate Plan Dashboard", # This is the page title. Needs to be here otherwise an empty <title> is created.
         collapsible = TRUE,
-        #theme = tab_theme,
+        theme = tab_theme,
+        
         tabPanel(
             # Home/landing page
             title = "Introduction",
