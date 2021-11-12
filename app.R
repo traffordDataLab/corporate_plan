@@ -1,5 +1,13 @@
 # Load required packages
 library(shiny)
+library(bslib)
+
+# Set SASS variables for theme ---------
+bs_global_theme(version = "4", bootswatch = NULL)
+tab_theme <- bs_theme(
+  bg = "#e7e6e1",
+  fg = "#00445e"
+)
 
 # Setup the user interface ---------
 ui <- fluidPage(
@@ -14,21 +22,23 @@ ui <- fluidPage(
 
     # tagList(
     navbarPage(
+        id = "tabs",
         title = "",
         windowTitle = "Trafford Council Corporate Plan Dashboard", # This is the page title. Needs to be here otherwise an empty <title> is created.
         collapsible = TRUE,
-        id = "tabs",
+        #theme = tab_theme,
         tabPanel(
             # Home/landing page
-            title = icon("home"),
+            title = "Introduction",
+            icon = icon("home"),
             HTML("<h2>Visualising the Council's priorities</h2>")
         ),
         # Pull in all the ui fragments for each of the priorities in the order we want the tabs to appear
-        source("priorities/climate/ui_fragment.R", local = TRUE)$value,
-        source("priorities/accessible/ui_fragment.R", local = TRUE)$value,
-        source("priorities/services/ui_fragment.R", local = TRUE)$value,
         source("priorities/health/ui_fragment.R", local = TRUE)$value,
-        source("priorities/poverty/ui_fragment.R", local = TRUE)$value
+        source("priorities/poverty/ui_fragment.R", local = TRUE)$value,
+        source("priorities/climate/ui_fragment.R", local = TRUE)$value,
+        source("priorities/services/ui_fragment.R", local = TRUE)$value
+        
     ),
 
     HTML('</main>
@@ -41,31 +51,26 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
     # Pull in all the server fragments for each of the priorities
-    source("priorities/accessible/server_fragment.R", local = TRUE)$value
-    source("priorities/climate/server_fragment.R", local = TRUE)$value
     source("priorities/health/server_fragment.R", local = TRUE)$value
     source("priorities/poverty/server_fragment.R", local = TRUE)$value
+    source("priorities/climate/server_fragment.R", local = TRUE)$value
     source("priorities/services/server_fragment.R", local = TRUE)$value
 
     # Event listeners for the tabs
-    observeEvent(input$accessible_tab, {
-      updateTabsetPanel(session, "tabs", selected = "Open &amp; Accessible")
+    observeEvent(input$health_tab, {
+      updateTabsetPanel(session, "tabs", selected = "Health Inequalities")
+    })
+    
+    observeEvent(input$poverty_tab, {
+      updateTabsetPanel(session, "tabs", selected = "Poverty Reduction")
     })
 
     observeEvent(input$climate_tab, {
       updateTabsetPanel(session, "tabs", selected = "Climate Crisis")
     })
 
-    observeEvent(input$health_tab, {
-      updateTabsetPanel(session, "tabs", selected = "Health Inequalities")
-    })
-
-    observeEvent(input$poverty_tab, {
-      updateTabsetPanel(session, "tabs", selected = "Poverty Support")
-    })
-
     observeEvent(input$services_tab, {
-      updateTabsetPanel(session, "tabs", selected = "Quality Services")
+      updateTabsetPanel(session, "tabs", selected = "Council Services")
     })
 }
 
