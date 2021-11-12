@@ -24,9 +24,23 @@ main, section, header, footer, nav, figure, figcaption
 }
 /* ---------------------------------------- */
 
+img
+{
+    border: 0;
+}
+
 header
 {
-    padding: 0.5em;
+    padding: 0.65em;
+}
+
+h1
+{
+    display: inline-block;
+    font-size: 2em;
+    color: #fff;
+    margin: 0.025em 0 0 0;
+    padding: 0;
 }
 
 .themeDarkBlueBIU
@@ -43,14 +57,6 @@ header
 
 #logoBIU
 {
-    height: 45px;
-    padding-bottom: 5px;
+    height: 3.25em;
     margin-right: 1em;
-}
-
-#appTitle
-{
-    display: inline-block;
-    font-size: 2em;
-    color: #fff;
 }

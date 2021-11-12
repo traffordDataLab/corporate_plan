@@ -9,7 +9,7 @@ ui <- fluidPage(
 
     HTML('<header class="themeDarkBlueBIU">
                 <a href="https://www.trafford.gov.uk" aria-label="Go to Trafford Council website"><img src="images/biu_logo_white_on_transparent_large.png" alt="Trafford Council | Business Intelligence Unit" id="logoBIU"/></a>
-                <span id="appTitle">Corporate Plan</span>
+                <h1>Corporate Plan Dashboard</h1>
           </header>
           <main>'),
 
