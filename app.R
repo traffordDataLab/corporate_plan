@@ -45,7 +45,7 @@ ui <- fluidPage(
 
     HTML('</main>
           <footer>
-
+              <div>Developed in <a href="https://cran.r-project.org/" target="_blank">R</a> by the <a href="https://www.trafforddatalab.io" target="_blank">Trafford Data Lab</a> under the <a href="https://www.trafforddatalab.io/LICENSE.txt" target="_blank">MIT</a> licence</div>
           </footer>')
 )
 

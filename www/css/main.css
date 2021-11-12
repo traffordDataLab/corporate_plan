@@ -48,6 +48,28 @@ h2
     font-size: 1.75em;
 }
 
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e7e6e1;
+    font-size: 0.8em;
+}
+
+footer div
+{
+    xmargin-left: 1em;
+    margin: 0.25em 1em;
+}
+
+footer a
+{
+    color: #00445e;
+    font-weight: bold;
+}
+
 .themeDarkBlueBIU
 {
     background-color: #00445e;
