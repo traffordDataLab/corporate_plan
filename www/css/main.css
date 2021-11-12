@@ -43,6 +43,11 @@ h1
     padding: 0;
 }
 
+h2
+{
+    font-size: 1.75em;
+}
+
 .themeDarkBlueBIU
 {
     background-color: #00445e;
@@ -53,6 +58,11 @@ h1
 {
     background-color: #0bc2d2;
     color: #fff;
+}
+
+.navbar-brand
+{
+    display: none;
 }
 
 #logoBIU

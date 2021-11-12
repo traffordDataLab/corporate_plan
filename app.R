@@ -3,7 +3,6 @@ library(shiny)
 
 # Setup the user interface ---------
 ui <- fluidPage(
-    title = "Corporate Plan",
     lang = "en-GB", # set the language of the page - important for accessibility
     tags$head(includeCSS("www/css/main.css")), # put the CSS in the head section rather than in the body - for HTML5 conformity
 
@@ -13,25 +12,24 @@ ui <- fluidPage(
           </header>
           <main>'),
 
-    # titlePanel(
-    #
-    # ),
     # tagList(
-    #     navbarPage(
-    #         title = "",
-    #         collapsible = TRUE,
-    #         id = "tabs",
-    #         tabPanel("Home"
-    #             # This is for the home/landing page
-    #         ),
-    #         # Pull in all the ui fragments for each of the priorities
-    #         source("priorities/accessible/ui_fragment.R", local = TRUE)$value,
-    #         source("priorities/climate/ui_fragment.R", local = TRUE)$value,
-    #         source("priorities/health/ui_fragment.R", local = TRUE)$value,
-    #         source("priorities/poverty/ui_fragment.R", local = TRUE)$value,
-    #         source("priorities/services/ui_fragment.R", local = TRUE)$value
-    #     )
-    # ),
+    navbarPage(
+        title = "",
+        windowTitle = "Trafford Council Corporate Plan Dashboard", # This is the page title. Needs to be here otherwise an empty <title> is created.
+        collapsible = TRUE,
+        id = "tabs",
+        tabPanel(
+            # Home/landing page
+            title = icon("home"),
+            HTML("<h2>Visualising the Council's priorities</h2>")
+        ),
+        # Pull in all the ui fragments for each of the priorities in the order we want the tabs to appear
+        source("priorities/climate/ui_fragment.R", local = TRUE)$value,
+        source("priorities/accessible/ui_fragment.R", local = TRUE)$value,
+        source("priorities/services/ui_fragment.R", local = TRUE)$value,
+        source("priorities/health/ui_fragment.R", local = TRUE)$value,
+        source("priorities/poverty/ui_fragment.R", local = TRUE)$value
+    ),
 
     HTML('</main>
           <footer>
