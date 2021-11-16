@@ -59,20 +59,20 @@ server <- function(input, output, session) {
     source("priorities/climate/server_fragment.R", local = TRUE)$value
     source("priorities/services/server_fragment.R", local = TRUE)$value
 
-    # Event listeners for the tabs
-    observeEvent(input$health_tab, {
+    # Event listeners for the buttons on the "introduction" tab to select the relevant tabs
+    observeEvent(input$health_btn, {
       updateTabsetPanel(session, "tabs", selected = "Health Inequalities")
     })
 
-    observeEvent(input$poverty_tab, {
+    observeEvent(input$poverty_btn, {
       updateTabsetPanel(session, "tabs", selected = "Poverty Reduction")
     })
 
-    observeEvent(input$climate_tab, {
+    observeEvent(input$climate_btn, {
       updateTabsetPanel(session, "tabs", selected = "Climate Crisis")
     })
 
-    observeEvent(input$services_tab, {
+    observeEvent(input$services_btn, {
       updateTabsetPanel(session, "tabs", selected = "Council Services")
     })
 }
