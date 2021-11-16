@@ -7,6 +7,11 @@
     #ffcb00; yellow
 */
 
+.navbar-brand
+{
+    display: none;
+}
+
 /* Container for all tab items */
 .nav
 {

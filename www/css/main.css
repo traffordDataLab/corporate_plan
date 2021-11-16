@@ -60,7 +60,6 @@ footer
 
 footer div
 {
-    xmargin-left: 1em;
     margin: 0.25em 1em;
 }
 
@@ -80,11 +79,6 @@ footer a
 {
     background-color: #0bc2d2;
     color: #fff;
-}
-
-.navbar-brand
-{
-    display: none;
 }
 
 #logoBIU
