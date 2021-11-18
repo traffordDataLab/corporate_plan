@@ -95,7 +95,7 @@ ui <- fluidPage(
             ),
 
             HTML("<h3>About the dashboard</h3>
-                  <p>This dashboard allows you to browse a range of indicators that relate to each of the strategic priorities. The indicators are provided at local authority level or in some cases lower, with many benchmarked against Trafford's <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA nearest neighbours</a>. Some of the visualisations can be filtered by variable, area and chart type. Information is provided about each indicator with a link to the original data source.</p>
+                  <p>This dashboard allows you to browse a range of indicators that relate to each of the strategic priorities. The indicators are provided at local authority level or in some cases lower, with many benchmarked against Trafford's <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA nearest neighbours</a> (other councils with the most similar statistical characteristics in terms of social and economic features). Some of the visualisations can be filtered by variable, area and chart type. Information is provided about each indicator with a link to the original data source.</p>
                   </div>"
             )
         ),
