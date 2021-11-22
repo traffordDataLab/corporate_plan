@@ -1,7 +1,4 @@
-/* Styles used across the dashboard app */
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+/* Styles used across the dashboard app --------- */
 *
 {
     box-sizing: border-box;
@@ -22,16 +19,36 @@ main, section, header, footer, nav, figure, figcaption
 {
     display: block;
 }
-/* ---------------------------------------- */
-
-img
-{
-    border: 0;
-}
 
 header
 {
     padding: 0.3em 0.6em;
+}
+
+main
+{
+    padding-bottom: 2.25em;
+}
+
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e7e6e1;
+    font-size: 0.8em;
+}
+
+footer div
+{
+    margin: 0.25em 1em;
+}
+
+footer a
+{
+    color: #00445e;
+    font-weight: bold;
 }
 
 h1
@@ -48,26 +65,19 @@ h2
     font-size: 1.75em;
 }
 
-footer
+h3
 {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #e7e6e1;
-    font-size: 0.8em;
+    font-size: 1.5em;
 }
 
-footer div
+a
 {
-    xmargin-left: 1em;
-    margin: 0.25em 1em;
+    color: #046dc3;
 }
 
-footer a
+img
 {
-    color: #00445e;
-    font-weight: bold;
+    border: 0;
 }
 
 .themeDarkBlueBIU
@@ -82,13 +92,86 @@ footer a
     color: #fff;
 }
 
-.navbar-brand
-{
-    display: none;
-}
-
 #logoBIU
 {
     height: 3.25em;
     margin: 0.3em 1em 0.3em 0;
+}
+
+
+/* Styles just for the introduction tab --------- */
+button.homeMenuButton
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    padding: 0.75em;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 2.5em;
+    border-top-left-radius: 2.5em;
+}
+
+button.homeMenuButton img
+{
+    width: 3em;
+    margin-right: 1em;
+    float: left;
+}
+
+button.homeMenuButton p
+{
+    overflow: hidden;
+    line-height: 1.25em;
+    margin-top: 0.25em;
+}
+
+#health_btn
+{
+    background-color: #e51f4a;
+    color: #fff;
+}
+
+#health_btn:hover
+{
+    box-shadow: 0 0 9px #e51f4a;
+}
+
+#poverty_btn
+{
+    background-color: #70c3d3;
+}
+
+#poverty_btn:hover
+{
+    box-shadow: 0 0 9px #70c3d3;
+}
+
+#climate_btn
+{
+    background-color: #91caa2;
+}
+
+#climate_btn:hover
+{
+    box-shadow: 0 0 9px #91caa2;
+}
+
+#services_btn
+{
+    background-color: #fecb00;
+}
+
+#services_btn:hover
+{
+    box-shadow: 0 0 9px #fecb00;
+}
+
+/* The individual divs inside fluidRows - but only on the home tab */
+#homePageContainer div.row > div
+{
+    padding: 0.5em;
 }
