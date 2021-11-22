@@ -26,6 +26,11 @@
     border-bottom: 2px solid #00445e;
 }
 
+#tabs li 
+{
+    flex-grow: 1;
+}
+
 @media (max-width:804px) {
     /* when tabs are displayed on two lines, remove the visible border line between them */
     .nav li:nth-last-of-type(n+2)
