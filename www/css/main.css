@@ -70,6 +70,11 @@ h3
     font-size: 1.5em;
 }
 
+h2, h3
+{
+    font-family: 'Roboto', sans-serif;
+}
+
 a
 {
     color: #046dc3;
@@ -117,72 +122,78 @@ img
 /* Styles just for the introduction tab --------- */
 button.homeMenuButton
 {
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-align: left;
     cursor: pointer;
-    padding: 0.75em;
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 2.5em;
-    border-top-left-radius: 2.5em;
+}
+
+button.homeMenuButton span
+{
+    margin-right: 1em;
+    float: left;
+    padding: 1em;
+    border-radius: 2.5em;
 }
 
 button.homeMenuButton img
 {
     width: 3em;
-    margin-right: 1em;
-    float: left;
+}
+
+button.homeMenuButton div
+{
+    overflow: hidden;   /* This stops the text wrapping under the icon */
+}
+
+button.homeMenuButton h3
+{
+    font-size: 1.25em;
+    margin-top: 0;
 }
 
 button.homeMenuButton p
 {
-    overflow: hidden;
-    line-height: 1.25em;
-    margin-top: 0.25em;
+    font-size: 0.75em;
 }
 
-#health_btn
+#health_btn span
 {
     background-color: #e51f4a;
-    color: #fff;
 }
 
-#health_btn:hover
+#health_btn span:hover
 {
     box-shadow: 0 0 9px #e51f4a;
 }
 
-#poverty_btn
+#poverty_btn span
 {
     background-color: #70c3d3;
 }
 
-#poverty_btn:hover
+#poverty_btn span:hover
 {
     box-shadow: 0 0 9px #70c3d3;
 }
 
-#climate_btn
+#climate_btn span
 {
     background-color: #91caa2;
 }
 
-#climate_btn:hover
+#climate_btn span:hover
 {
     box-shadow: 0 0 9px #91caa2;
 }
 
-#services_btn
+#services_btn span
 {
-    background-color: #fecb00;
+    background-color: #959591;
 }
 
-#services_btn:hover
+#services_btn span:hover
 {
-    box-shadow: 0 0 9px #fecb00;
+    box-shadow: 0 0 9px #959591;
 }
 
 /* The individual divs inside fluidRows - but only on the home tab */
