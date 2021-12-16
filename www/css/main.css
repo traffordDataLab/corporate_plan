@@ -1,4 +1,5 @@
 /* Styles used across the dashboard app --------- */
+
 *
 {
     box-sizing: border-box;
@@ -175,3 +176,7 @@ button.homeMenuButton p
 {
     padding: 0.5em;
 }
+
+#obese_reception_selection .btn {
+  background-color: #a0bccb; 
+  color: #000;}
