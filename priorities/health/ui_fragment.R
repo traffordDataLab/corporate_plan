@@ -3,8 +3,7 @@
 
 tabPanel("Health Inequalities",
          HTML('<h2>Reducing health inequalities</h2>'),
-         #includeHTML("help.html"),
-         fluidPage(
+         includeHTML("help.html"),
            br(),
            fluidRow(
              div(
@@ -20,7 +19,5 @@ tabPanel("Health Inequalities",
                       individual = FALSE
                     ),
              )
-           ),
-           br(),br()
-         )
+           )
 )

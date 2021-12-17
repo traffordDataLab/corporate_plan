@@ -6,8 +6,6 @@
 
 library(tidyverse) 
 
-CIPFA <- read_csv("../../cipfa.csv")
-
 obese_reception_quintiles <- read_csv("https://fingertips.phe.org.uk/api/all_data/csv/by_indicator_id?indicator_ids=92026&area_type_id=101") %>%
   filter(`Area Name` == "Trafford", Sex == "Persons", `Time period` == "2015/16 - 19/20", `Category Type` == "LSOA11 deprivation quintiles in England (IMD2019)") %>%
   select(area_code = `Area Code`, area_name = `Area Name`, period = `Time period`, value = Value, indicator = `Indicator Name`, unit = Sex, compared_to_England = `Compared to England value or percentiles`, inequality = Category) %>%
@@ -30,6 +28,8 @@ obese_reception_districsts <- obese_reception_trend %>%
   mutate(measure = "Percentage")
 
 df <- bind_rows(obese_reception_quintiles, obese_reception_england, obese_reception_districsts) %>%
+  mutate(value = round(value, 1)) %>%
+  filter(!period %in% c("2006/07", "2007/08", "2008/09", "2009/10")) %>%
   unique()
 
 write_csv(df, "../obese_reception.csv")

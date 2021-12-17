@@ -7,25 +7,25 @@ obese_reception <- read_csv("data/health/obese_reception.csv") %>%
   mutate(period = as_factor(period)) %>% 
   filter(!is.na(value))
 
-CIPFA <- read_csv("data/cipfa.csv") %>%
-  select(Code)
+cssn <- read_csv("data/cssn.csv") %>%
+  select(area_code)
 
-obese_reception_cipfa_mean <- read_csv("data/health/obese_reception.csv") %>% 
-  filter(area_code %in% c(CIPFA$Code)) %>%
+obese_reception_cssn_mean <- read_csv("data/health/obese_reception.csv") %>% 
+  filter(area_code %in% c(cssn$area_code)) %>%
   group_by(period) %>%
-  summarise(value = mean(value, na.rm=TRUE)) %>%
-  mutate(area_name = "CIPFA mean",
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "CSSN mean",
          period = as_factor(period)) %>% 
   filter(!is.na(value))
 
-obese_reception_trend <- bind_rows(obese_reception %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_reception_cipfa_mean) 
+obese_reception_trend <- bind_rows(obese_reception %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_reception_cssn_mean) 
 
 output$obese_reception_plot <- renderggiraph({
   
   if (input$obese_reception_selection == "Trend") {
     
     gg <- ggplot(
-      filter(obese_reception_trend, area_name %in% c("Trafford", "CIPFA mean", "England")),
+      filter(obese_reception_trend, area_name %in% c("Trafford", "CSSN mean", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
       geom_point_interactive(aes(tooltip = 
@@ -33,8 +33,8 @@ output$obese_reception_plot <- renderggiraph({
                                           "<em>", area_name, "</em><br/>",
                                           period)), 
                              shape = 21, size = 2.5, colour = "white") +
-      scale_colour_manual(values = c("Trafford" = "#00445E", "CIPFA mean" = "#009590", "England" = "#FFCB00")) +
-      scale_fill_manual(values = c("Trafford" = "#00445E", "CIPFA mean" = "#009590", "England" = "#FFCB00")) +
+      scale_colour_manual(values = c("Trafford" = "#00445E", "CSSN mean" = "#009590", "England" = "#FFCB00")) +
+      scale_fill_manual(values = c("Trafford" = "#00445E", "CSSN mean" = "#009590", "England" = "#FFCB00")) +
       scale_y_continuous(limits = c(0, NA)) +
       labs(
         title = "Children aged 4-5 years who have excess weight",
@@ -45,9 +45,7 @@ output$obese_reception_plot <- renderggiraph({
         colour = NULL
       ) +
       theme_x()
-    
-    
-    
+
     gg <- girafe(ggobj = gg)
     girafe_options(gg, opts_tooltip(use_fill = TRUE), opts_toolbar(saveaspng = FALSE))
   }

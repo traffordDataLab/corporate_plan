@@ -7,11 +7,9 @@ library(shinythemes)
 library(shinydashboard)
 library(shinycssloaders)
 library(ggiraph)
-library(scales)
 library(sf)
 library(leaflet)
-library(lubridate)
-library(jsonlite)
+
 
 
 # ggplot2 theme
