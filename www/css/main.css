@@ -103,7 +103,7 @@ img
     color: #00445e;
 }
 
-.plotColourCIPFA
+.plotColourSimilarAuthorities
 {
     color: #009590;
 }
@@ -204,5 +204,5 @@ button.homeMenuButton p
 }
 
 #obese_reception_selection .btn {
-  background-color: #a0bccb; 
+  background-color: #a0bccb;
   color: #000;}
