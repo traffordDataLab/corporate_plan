@@ -7,7 +7,7 @@ obese_reception <- read_csv("data/health/obese_reception.csv") %>%
   mutate(period = as_factor(period)) %>% 
   filter(!is.na(value))
 
-CIPFA <- fromJSON("https://fingertips.phe.org.uk/api/areas/by_parent_area_code?area_type_id=101&parent_area_code=nn-7-E08000009", flatten = TRUE) %>%
+CIPFA <- read_csv("data/cipfa.csv") %>%
   select(Code)
 
 obese_reception_cipfa_mean <- read_csv("data/health/obese_reception.csv") %>% 
