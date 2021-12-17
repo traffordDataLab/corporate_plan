@@ -3,5 +3,13 @@
 
 tabPanel(
     title = "Climate Crisis",
-    HTML('<h2>Addressing our climate crisis</h2>')
+    HTML('<div id="climatePageContainer">
+          <h2>Addressing our climate crisis</h2>'
+    ),
+    includeHTML("help.html"),
+    fluidRow(
+        # indicator visualisations go here
+    ),
+
+    HTML('</div>')
 )

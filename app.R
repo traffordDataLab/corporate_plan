@@ -64,7 +64,7 @@ ui <- fluidPage(
             icon = icon("home"),
             HTML("<div id='homePageContainer'>
                   <h2>Visualising the Council's priorities</h2>
-                  <p>The Corporate Plan describes Trafford Council's vision and priorities for the borough and the priorities we have identified as an organisation as being key to the delivery of that vision:</p>"
+                  <p>The corporate plan describes Trafford Council's strategic vision, outcomes and priorities for the borough, with the priorities being key to it's delivery. We will focus on three priorities to help us achieve these outcomes: <strong>reducing health inequalities</strong>, <strong>supporting people out of poverty</strong> and <strong>addressing our climate crisis</strong>.</p>"
             ),
 
             fluidRow(
@@ -72,24 +72,34 @@ ui <- fluidPage(
                     tags$button(
                         id = "health_btn",
                         class = "btn action-button homeMenuButton",
-                        img(
-                            src = "images/icon_heart.png",
-                            alt = "",
-                            role = "presentation"
+                        span(
+                            img(
+                                src = "images/icon_health.png",
+                                alt = "",
+                                role = "presentation"
+                            )
                         ),
-                        p("Reducing health inequalities")
+                        div(
+                            h3("Reducing health inequalities"),
+                            p("Working with people, communities and partners, particularly in deprived areas, to improve the physical and mental health of all our residents.")
+                        )
                     )
                 ),
                 column(width = 6,
                     tags$button(
                         id = "poverty_btn",
                         class = "btn action-button homeMenuButton",
-                        img(
-                            src = "images/icon_money.png",
-                            alt = "",
-                            role = "presentation"
+                        span(
+                            img(
+                                src = "images/icon_poverty.png",
+                                alt = "",
+                                role = "presentation"
+                            )
                         ),
-                        p("Supporting people out of poverty")
+                        div(
+                            h3("Supporting people out of poverty"),
+                            p("Tackling the root causes to prevent people from falling into poverty, and raising people out of it.")
+                        )
                     )
                 )
             ),
@@ -98,30 +108,40 @@ ui <- fluidPage(
                     tags$button(
                         id = "climate_btn",
                         class = "btn action-button homeMenuButton",
-                        img(
-                            src = "images/icon_plant.png",
-                            alt = "",
-                            role = "presentation"
+                        span(
+                            img(
+                                src = "images/icon_climate.png",
+                                alt = "",
+                                role = "presentation"
+                            )
                         ),
-                        p("Addressing our climate crisis")
+                        div(
+                            h3("Addressing our climate crisis"),
+                            p("Reducing our carbon footprint and tackling the impact of climate change.")
+                        )
                     )
                 ),
                 column(width = 6,
                     tags$button(
                         id = "services_btn",
                         class = "btn action-button homeMenuButton",
-                        img(
-                            src = "images/icon_rosette.png",
-                            alt = "",
-                            role = "presentation"
+                        span (
+                            img(
+                                src = "images/icon_services.png",
+                                alt = "",
+                                role = "presentation"
+                            )
                         ),
-                        p("Council services")
+                        div(
+                            h3("Council services"),
+                            p("Although not part of the corporate plan, this section provides information on a number of services and functions provided by the council.")
+                        )
                     )
                 )
             ),
 
             HTML("<h3>About the dashboard</h3>
-                  <p>This dashboard allows you to browse a range of indicators that relate to each of the strategic priorities. The indicators are provided at local authority level or in some cases lower, with many benchmarked against Trafford's <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA nearest neighbours</a> (other councils with the most similar statistical characteristics in terms of social and economic features). Some of the visualisations can be filtered by variable, area and chart type. Information is provided about each indicator with a link to the original data source.</p>
+                  <p>The dashboard visualises a range of indicators relating to each of the three strategic priorities, as well as an additional section covering council services. The indicators are provided at local authority level or in some cases lower, with many benchmarked against Trafford's <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA nearest neighbours</a> (other councils with the most similar statistical characteristics in terms of social and economic features). Some of the visualisations have additional options, such as alternative chart types. Information is provided about each indicator, including links to download the data and to the original data source.</p>
                   </div>"
             )
         ),
