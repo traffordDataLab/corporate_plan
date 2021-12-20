@@ -9,6 +9,7 @@ library(shinycssloaders)
 library(ggiraph)
 library(sf)
 library(leaflet)
+library(scales)
 
 
 # Set common plot colours, themes and options etc. used in the visualisations ---------

@@ -3,13 +3,32 @@
 
 tabPanel(
     title = "Climate Crisis",
-    HTML('<div id="climatePageContainer">
-          <h2>Addressing our climate crisis</h2>'
-    ),
+    h2("Addressing our climate crisis"),
     includeHTML("help.html"),
     fluidRow(
-        # indicator visualisations go here
-    ),
-
-    HTML('</div>')
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Licensed vehicles"),
+            uiOutput("licensed_vehicles_box")
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Indicator #2 title"),
+            p("Indicator #2")
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Indicator #3 title"),
+            p("Indicator #3")
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Indicator #4 title"),
+            p("Indicator #4")
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Indicator #5 title"),
+            p("Indicator #5")
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Indicator #6 title"),
+            p("Indicator #6")
+        )
+    )
 )
