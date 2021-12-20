@@ -39,6 +39,7 @@ footer
     width: 100%;
     background-color: #e7e6e1;
     font-size: 0.8em;
+    z-index: 10000;
 }
 
 footer div
