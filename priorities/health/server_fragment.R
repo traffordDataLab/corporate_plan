@@ -2,36 +2,36 @@
 
 # Child classified as obese in 4-5 year olds --------------------------------------------------
 
-obese_reception <- read_csv("data/health/obese_reception.csv") %>% 
+obese_reception <- read_csv("data/health/obese_reception.csv") %>%
   filter(indicator == "Reception: Prevalence of obesity (including severe obesity)") %>%
-  mutate(period = as_factor(period)) %>% 
+  mutate(period = as_factor(period)) %>%
   filter(!is.na(value))
 
 cssn <- read_csv("data/cssn.csv") %>%
   select(area_code)
 
-obese_reception_cssn_mean <- read_csv("data/health/obese_reception.csv") %>% 
+obese_reception_cssn_mean <- read_csv("data/health/obese_reception.csv") %>%
   filter(area_code %in% c(cssn$area_code)) %>%
   group_by(period) %>%
   summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
   mutate(area_name = "CSSN mean",
-         period = as_factor(period)) %>% 
+         period = as_factor(period)) %>%
   filter(!is.na(value))
 
-obese_reception_trend <- bind_rows(obese_reception %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_reception_cssn_mean) 
+obese_reception_trend <- bind_rows(obese_reception %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_reception_cssn_mean)
 
 output$obese_reception_plot <- renderggiraph({
-  
+
   if (input$obese_reception_selection == "Trend") {
-    
+
     gg <- ggplot(
       filter(obese_reception_trend, area_name %in% c("Trafford", "CSSN mean", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
-      geom_point_interactive(aes(tooltip = 
+      geom_point_interactive(aes(tooltip =
                                    paste0("<strong>", value, "</strong>", "%", "<br/>",
                                           "<em>", area_name, "</em><br/>",
-                                          period)), 
+                                          period)),
                              shape = 21, size = 2.5, colour = "white") +
       scale_colour_manual(values = c("Trafford" = "#00445E", "CSSN mean" = "#009590", "England" = "#FFCB00")) +
       scale_fill_manual(values = c("Trafford" = "#00445E", "CSSN mean" = "#009590", "England" = "#FFCB00")) +
@@ -50,7 +50,7 @@ output$obese_reception_plot <- renderggiraph({
     girafe_options(gg, opts_tooltip(use_fill = TRUE), opts_toolbar(saveaspng = FALSE))
   }
   else {
-    
+
     gg <- ggplot(data = filter(obese_reception, area_name != "England"),
                  aes(x = period, y = value)) +
       stat_boxplot(geom = "errorbar", colour = "#C9C9C9", width = 0.2) +
@@ -87,24 +87,19 @@ output$obese_reception_plot <- renderggiraph({
         legend.title = element_text(size = 9),
         legend.text = element_text(size = 8)
       )
-    
+
     gg<- girafe(ggobj = gg)
     girafe_options(gg, opts_tooltip(use_fill = TRUE), opts_toolbar(saveaspng = FALSE))
-    
-  } 
+
+  }
 })
 
 output$obese_reception_box <- renderUI({
-  box(width = 12, 
-      hr(style = "border-top: 1px solid #757575;"),
-      title = "4-5 year olds with excess weight",
-      withSpinner(
+    withSpinner(
         ggiraphOutput("obese_reception_plot", height = "inherit"),
         type = 4,
         color = "#bdbdbd",
         size = 1,
         proxy.height = "250px"
-      ),
-  ) 
-  
+    )
 })
