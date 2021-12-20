@@ -11,6 +11,8 @@ library(sf)
 library(leaflet)
 
 
+# Set common plot colours, themes and options etc. used in the visualisations ---------
+# NOTE: These are here to be in global scope - would've previously been placed in global.R
 
 # ggplot2 theme
 theme_x <- function () { 
@@ -26,7 +28,19 @@ theme_x <- function () {
     )
 }
 
-# Set SASS variables for theme ---------
+# customisation of ggiraph interactive output, building on top of theme_x() to give a common appearance to the plots
+lab_ggiraph_options <- list(opts_tooltip(use_fill = FALSE, opacity = 1, css = "background-color: #e7e6e1; color: #212121; padding: 0.5em; border-radius: 0.5em;"),
+                            opts_hover(css = "fill-opacity: 1; stroke:white; stroke-opacity: 1; r: 2.5pt;"),
+                            opts_selection(type = "single"),
+                            opts_toolbar(saveaspng = FALSE))
+
+plot_colour_trafford = "#00445e"
+plot_colour_similar_authorities = "#009590"
+plot_colour_england = "#ffcb00"
+plot_colour_spinner = "#bdbdbd"
+
+
+# Set SASS variables for main app theme ---------
 bs_global_theme(version = "4", bootswatch = NULL)
 tab_theme <- bs_theme(
   bg = "#e7e6e1",

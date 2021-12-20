@@ -33,8 +33,8 @@ output$obese_reception_plot <- renderggiraph({
                                           "<em>", area_name, "</em><br/>",
                                           period)),
                              shape = 21, size = 2.5, colour = "white") +
-      scale_colour_manual(values = c("Trafford" = "#00445E", "CSSN mean" = "#009590", "England" = "#FFCB00")) +
-      scale_fill_manual(values = c("Trafford" = "#00445E", "CSSN mean" = "#009590", "England" = "#FFCB00")) +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "CSSN mean" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "CSSN mean" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       scale_y_continuous(limits = c(0, NA)) +
       labs(
         title = "Children aged 4-5 years who have excess weight",
@@ -45,9 +45,6 @@ output$obese_reception_plot <- renderggiraph({
         colour = NULL
       ) +
       theme_x()
-
-    gg <- girafe(ggobj = gg)
-    girafe_options(gg, opts_tooltip(use_fill = TRUE), opts_toolbar(saveaspng = FALSE))
   }
   else {
 
@@ -87,18 +84,16 @@ output$obese_reception_plot <- renderggiraph({
         legend.title = element_text(size = 9),
         legend.text = element_text(size = 8)
       )
-
-    gg<- girafe(ggobj = gg)
-    girafe_options(gg, opts_tooltip(use_fill = TRUE), opts_toolbar(saveaspng = FALSE))
-
   }
+
+  girafe(ggobj = gg, options = lab_ggiraph_options)
 })
 
 output$obese_reception_box <- renderUI({
     withSpinner(
         ggiraphOutput("obese_reception_plot", height = "inherit"),
         type = 4,
-        color = "#bdbdbd",
+        color = plot_colour_spinner,
         size = 1,
         proxy.height = "250px"
     )
