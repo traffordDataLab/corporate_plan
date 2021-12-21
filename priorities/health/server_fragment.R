@@ -29,9 +29,9 @@ output$obese_reception_plot <- renderggiraph({
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
       geom_point_interactive(aes(tooltip =
-                                   paste0("<strong>", value, "</strong>", "%", "<br/>",
-                                          "<em>", area_name, "</em><br/>",
-                                          period)),
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
                              shape = 21, size = 2.5, colour = "white") +
       scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "CSSN mean" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "CSSN mean" = plot_colour_similar_authorities, "England" = plot_colour_england)) +

@@ -14,9 +14,9 @@ output$licensed_vehicles_plot <- renderggiraph({
                aes(x = period, y = value, colour = area_name, fill = area_name,)) +
                geom_line(size = 1) +
                geom_point_interactive(
-                 aes(tooltip = paste0("<strong>", scales::label_comma()(value), "</strong><br />",
-                                      "<em>", area_name, "</em><br />",
-                                      period)),
+                 aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
+                                      '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                      '<span class="plotTooltipPeriod">', period, '</span>')),
                  shape = 21, size = 2.5, colour = "white"
                ) +
                scale_colour_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +

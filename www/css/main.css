@@ -92,12 +92,6 @@ img
     border: 0;
 }
 
-details
-{
-    font-size: 0.85em;
-    margin-top: 0.3em;
-}
-
 .themeDarkBlueBIU
 {
     background-color: #00445e;
@@ -108,6 +102,19 @@ details
 {
     background-color: #0bc2d2;
     color: #fff;
+}
+
+#logoBIU
+{
+    height: 3.25em;
+    margin: 0.3em 1em 0.3em 0;
+}
+
+
+/* styles for the plots */
+.indicatorContainer /* this is applied to the containing div for each plot */
+{
+    border: 1px solid #bdbdbd;
 }
 
 .plotColourTrafford
@@ -125,9 +132,19 @@ details
     color: #ffcb00
 }
 
-.indicatorContainer
+.plotTooltipValue
 {
-    border: 1px solid #bdbdbd;
+    font-weight: bold;
+}
+
+.plotTooltipMain
+{
+    font-style: italic;
+}
+
+.plotTooltipPeriod
+{
+    font-size: 0.8em;
 }
 
 /* styles for the tabs under the plots */
@@ -157,11 +174,11 @@ details
 }
 /* end of styles for the tabs under plots */
 
-#logoBIU
+.furtherInfo /* content displayed within <details></details> */
 {
-    height: 3.25em;
-    margin: 0.3em 1em 0.3em 0;
+    font-size: 0.85em;
 }
+/* end of styles for the plots */
 
 
 /* Styles just for the introduction tab --------- */

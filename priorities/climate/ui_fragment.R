@@ -18,7 +18,7 @@ tabPanel(
                 individual = FALSE,
                 status = "plotButtons" # Our custom CSS class, .btn-plotButtons
             ),
-            HTML('<details>
+            HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
                     includeMarkdown("data/climate/metadata/licensed_vehicles.md"),
             HTML('</details>')
