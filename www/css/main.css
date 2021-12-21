@@ -177,6 +177,7 @@ img
 .furtherInfo /* content displayed within <details></details> */
 {
     font-size: 0.85em;
+    margin-top: -0.8em;
 }
 /* end of styles for the plots */
 
