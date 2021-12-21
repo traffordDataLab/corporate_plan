@@ -2,15 +2,9 @@
 
 # Licensed vehicles (all vehicle types) ---------
 
-# Setup objects ---------------------------
-# Trafford and its CIPFA nearest neighbours (2019):
-authorities <- read_csv("data/cipfa2019.csv") %>%
-  add_row(area_code = "E08000009", area_name = "Trafford")
-
 # Load in data and create mean of similar neighbours
 df_licensed_vehicles <- read_csv("data/climate/licensed_vehicles.csv") %>%
-  filter(area_code %in% authorities$area_code) %>%
-  mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Average of CIPFA neighbours")) %>%
+  mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average")) %>%
   group_by(period, area_name) %>%
   summarise(value = round(mean(value)))
 

@@ -12,8 +12,13 @@ library(tidyverse); library(readODS); library(lubridate)
 # Download the data ---------------------------
 download.file("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/985605/veh0105.ods", "veh0105.ods")
 
+# Setup objects ---------------------------
+# Trafford and its CIPFA nearest neighbours (2019):
+authorities <- read_csv("../../cipfa2019.csv") %>%
+  add_row(area_code = "E08000009", area_name = "Trafford")
+
 # All vehicles ---------------------------
-# These data are reported at the end of each year, so we'll align to the Q4 data in the other datasets
+# These data are reported at the end of each year.
 
 # The data is arranged within the workbook with a separate tab for each year, so we first need to load it into a single data frame
 df_raw <- "veh0105.ods" %>%
@@ -33,7 +38,8 @@ df_all_vehicles <- df_raw %>%
          unit = "Vehicles",
          value = as.integer(as.numeric(`Total`)*1000)
   ) %>%
-  filter(year >= 2010) %>%
+  filter(year >= 2010,
+         area_code %in% authorities$area_code) %>%
   select(area_code,area_name,period,value,indicator,unit,measure)
 
 # Export the tidied data ---------------------------
