@@ -8,7 +8,7 @@ tabPanel(
     fluidRow(
         div(class = "col-sm-12 col-md-6 col-lg-4",
             h3("4-5 year olds with excess weight"),
-            uiOutput("obese_reception_box"),
+            uiOutput("obese_reception_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "obese_reception_selection",
                 choiceNames = c("Trend", "Boxplot"),
@@ -16,7 +16,8 @@ tabPanel(
                 selected = "Trend",
                 direction = "horizontal",
                 justified = TRUE,
-                individual = FALSE
+                individual = FALSE,
+                status = "plotButtons"
             ),
         )
     )

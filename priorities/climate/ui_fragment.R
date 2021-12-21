@@ -8,7 +8,11 @@ tabPanel(
     fluidRow(
         div(class = "col-sm-12 col-md-6 col-lg-4",
             h3("Licensed vehicles"),
-            uiOutput("licensed_vehicles_box")
+            uiOutput("licensed_vehicles_box", class = "indicatorContainer"),
+            HTML('<details>
+                    <summary>Further information</summary>'),
+                    includeMarkdown("data/climate/metadata/licensed_vehicles.md"),
+            HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
             h3("Indicator #2 title"),

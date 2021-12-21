@@ -72,7 +72,12 @@ h3
     font-size: 1.5em;
 }
 
-h2, h3
+h4
+{
+    font-size: 1.25em;
+}
+
+h2, h3, h4
 {
     font-family: 'Roboto', sans-serif;
 }
@@ -85,6 +90,12 @@ a
 img
 {
     border: 0;
+}
+
+details
+{
+    font-size: 0.85em;
+    margin-top: 0.3em;
 }
 
 .themeDarkBlueBIU
@@ -113,6 +124,38 @@ img
 {
     color: #ffcb00
 }
+
+.indicatorContainer
+{
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+/* styles for the tabs under the plots */
+.btn-group
+{
+    margin-left: 0.5em;
+}
+.btn-plotButtons
+{
+    font-size: 0.85em;
+    border-left: 1px solid #bdbdbd;
+    border-right: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    margin-top: -1px;
+    border-top: 1px solid #bdbdbd;
+    background-color: #e7e6e1;
+}
+.btn-plotButtons.active
+{
+    border-top: 1px solid #fff;
+    background-color: #fff;
+}
+/* end of styles for the tabs under plots */
 
 #logoBIU
 {
@@ -203,7 +246,3 @@ button.homeMenuButton p
 {
     padding: 0.5em;
 }
-
-#obese_reception_selection .btn {
-  background-color: #a0bccb;
-  color: #000;}
