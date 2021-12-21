@@ -15,10 +15,9 @@ tabPanel(
                 choiceValues = c("Trend", "Boxplot"),
                 selected = "Trend",
                 direction = "horizontal",
-                justified = TRUE,
                 individual = FALSE,
-                status = "plotButtons"
-            ),
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            )
         )
     )
 )

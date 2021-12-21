@@ -9,6 +9,15 @@ tabPanel(
         div(class = "col-sm-12 col-md-6 col-lg-4",
             h3("Licensed vehicles"),
             uiOutput("licensed_vehicles_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "licensed_vehicles_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
             HTML('<details>
                     <summary>Further information</summary>'),
                     includeMarkdown("data/climate/metadata/licensed_vehicles.md"),

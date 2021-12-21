@@ -127,8 +127,7 @@ details
 
 .indicatorContainer
 {
-    border-top: 1px solid #bdbdbd;
-    border-bottom: 1px solid #bdbdbd;
+    border: 1px solid #bdbdbd;
 }
 
 /* styles for the tabs under the plots */
@@ -148,12 +147,13 @@ details
     border-bottom-right-radius: 0.5em;
     margin-top: -1px;
     border-top: 1px solid #bdbdbd;
-    background-color: #e7e6e1;
+    color: #757575;
 }
 .btn-plotButtons.active
 {
     border-top: 1px solid #fff;
-    background-color: #fff;
+    border-bottom: 2px solid #00445e;
+    color: #212121;
 }
 /* end of styles for the tabs under plots */
 
