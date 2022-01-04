@@ -42,7 +42,8 @@ df_household_recycling <- df_raw %>%
   bind_rows(england) %>%
   mutate(indicator = "Reuse, recycling or composting of household waste",
          measure = "Percentage",
-         unit = "Waste") %>%
+         unit = "Waste",
+         period = str_replace(period, "-", "/")) %>%
   select(area_code, area_name, period, value, indicator, unit, measure) %>%
   arrange(period)
 
