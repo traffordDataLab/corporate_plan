@@ -33,7 +33,6 @@ output$licensed_vehicles_plot <- renderggiraph({
   girafe(ggobj = gg, options = lab_ggiraph_options)
 })
 
-
 # Render the output in the ui object
 output$licensed_vehicles_box <- renderUI({
   withSpinner(
@@ -44,3 +43,51 @@ output$licensed_vehicles_box <- renderUI({
     proxy.height = "250px"
   )
 })
+
+
+# Household waste recycling ---------
+
+# Load in data and create mean of similar neighbours
+df_household_waste_recycling <- read_csv("data/climate/household_waste_recycling.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), digits = 2))
+
+# Plot
+output$household_waste_recycling_plot <- renderggiraph({
+  gg <- ggplot(df_household_waste_recycling,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', (value * 100), '%</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA), labels = percent_format(accuracy = 1)) +
+    labs(title = "Household waste recycling",
+         subtitle = "Percentage collected",
+         caption = "Source: DEFRA",
+         x = NULL,
+         y = "Percentage",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$household_waste_recycling_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("household_waste_recycling_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
