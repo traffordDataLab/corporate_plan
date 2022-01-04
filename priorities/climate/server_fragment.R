@@ -53,7 +53,7 @@ df_household_waste_recycling <- read_csv("data/climate/household_waste_recycling
                                area_name == "England" ~ "England",
                                TRUE ~ "Similar authorities average")) %>%
   group_by(period, area_name) %>%
-  summarise(value = round(mean(value), digits = 2))
+  summarise(value = round(mean(value), digits = 3))
 
 # Plot
 output$household_waste_recycling_plot <- renderggiraph({
