@@ -24,7 +24,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Household waste"),
+            HTML("<h3>Household waste <small>(1)</small></h3>"),
             uiOutput("household_waste_recycling_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "household_waste_recycling_selection",
@@ -38,6 +38,23 @@ tabPanel(
             HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
             includeMarkdown("data/climate/metadata/household_waste_recycling.md"),
+            HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            HTML("<h3>Household waste <small>(2)</small></h3>"),
+            uiOutput("household_waste_not_recycled_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "household_waste_not_recycled_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/climate/metadata/household_waste_not_recycled.md"),
             HTML('</details>')
         )
     )
