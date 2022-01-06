@@ -1,9 +1,63 @@
 area_code,area_name,area_type,period,indicator,measure,unit,value,compared_to_England,inequality
-E08000009,Trafford,District,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.6,Not compared,Most deprived quintile
-E08000009,Trafford,District,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.8,Not compared,Second most deprived quintile
-E08000009,Trafford,District,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.8,Not compared,Average deprived quintile
-E08000009,Trafford,District,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.9,Not compared,Second least deprived quintile
-E08000009,Trafford,District,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.3,Not compared,Least deprived quintile
+E92000001,England,Country,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12.4,Not compared,Most deprived quintile
+E92000001,England,Country,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,10.7,Not compared,Second most deprived quintile
+E92000001,England,Country,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.1,Not compared,Average deprived quintile
+E92000001,England,Country,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7.7,Not compared,Second least deprived quintile
+E92000001,England,Country,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.3,Not compared,Least deprived quintile
+E06000014,York,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,13.8,Not compared,Most deprived quintile
+E06000014,York,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12.6,Not compared,Second most deprived quintile
+E06000014,York,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.5,Not compared,Average deprived quintile
+E06000014,York,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.3,Not compared,Second least deprived quintile
+E06000014,York,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.9,Not compared,Least deprived quintile
+E06000036,Bracknell Forest,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,10,Not compared,Second most deprived quintile
+E06000036,Bracknell Forest,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.2,Not compared,Average deprived quintile
+E06000036,Bracknell Forest,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.3,Not compared,Second least deprived quintile
+E06000036,Bracknell Forest,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.2,Not compared,Least deprived quintile
+E06000049,Cheshire East,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.8,Not compared,Most deprived quintile
+E06000049,Cheshire East,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,10.2,Not compared,Second most deprived quintile
+E06000049,Cheshire East,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7.4,Not compared,Average deprived quintile
+E06000049,Cheshire East,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7.3,Not compared,Second least deprived quintile
+E06000049,Cheshire East,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.1,Not compared,Least deprived quintile
+E06000056,Central Bedfordshire,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12.9,Not compared,Most deprived quintile
+E06000056,Central Bedfordshire,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.5,Not compared,Second most deprived quintile
+E06000056,Central Bedfordshire,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.1,Not compared,Average deprived quintile
+E06000056,Central Bedfordshire,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7.4,Not compared,Second least deprived quintile
+E06000056,Central Bedfordshire,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.9,Not compared,Least deprived quintile
+E06000060,Buckinghamshire UA,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.1,Not compared,Most deprived quintile
+E06000060,Buckinghamshire UA,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.2,Not compared,Second most deprived quintile
+E06000060,Buckinghamshire UA,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.5,Not compared,Average deprived quintile
+E06000060,Buckinghamshire UA,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7,Not compared,Second least deprived quintile
+E06000060,Buckinghamshire UA,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.5,Not compared,Least deprived quintile
+E08000007,Stockport,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12.4,Not compared,Most deprived quintile
+E08000007,Stockport,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,10.4,Not compared,Second most deprived quintile
+E08000007,Stockport,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.7,Not compared,Average deprived quintile
+E08000007,Stockport,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7.7,Not compared,Second least deprived quintile
+E08000007,Stockport,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.9,Not compared,Least deprived quintile
+E08000009,Trafford,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.6,Not compared,Most deprived quintile
+E08000009,Trafford,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.8,Not compared,Second most deprived quintile
+E08000009,Trafford,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.8,Not compared,Average deprived quintile
+E08000009,Trafford,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.9,Not compared,Second least deprived quintile
+E08000009,Trafford,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.3,Not compared,Least deprived quintile
+E08000029,Solihull,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.4,Not compared,Most deprived quintile
+E08000029,Solihull,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.5,Not compared,Second most deprived quintile
+E08000029,Solihull,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8,Not compared,Average deprived quintile
+E08000029,Solihull,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.6,Not compared,Second least deprived quintile
+E08000029,Solihull,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.1,Not compared,Least deprived quintile
+E09000006,Bromley,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12.3,Not compared,Most deprived quintile
+E09000006,Bromley,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.7,Not compared,Second most deprived quintile
+E09000006,Bromley,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.4,Not compared,Average deprived quintile
+E09000006,Bromley,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.9,Not compared,Second least deprived quintile
+E09000006,Bromley,UA,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.8,Not compared,Least deprived quintile
+E10000014,Hampshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12.4,Not compared,Most deprived quintile
+E10000014,Hampshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,12,Not compared,Second most deprived quintile
+E10000014,Hampshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,9.1,Not compared,Average deprived quintile
+E10000014,Hampshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.2,Not compared,Second least deprived quintile
+E10000014,Hampshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,6.6,Not compared,Least deprived quintile
+E10000015,Hertfordshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,11.8,Not compared,Most deprived quintile
+E10000015,Hertfordshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,10.2,Not compared,Second most deprived quintile
+E10000015,Hertfordshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,8.8,Not compared,Average deprived quintile
+E10000015,Hertfordshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,7.4,Not compared,Second least deprived quintile
+E10000015,Hertfordshire,County,2015/16 - 19/20,"Reception: Prevalence of obesity (including severe obesity), 5-years data combined",Percentage,Persons,5.5,Not compared,Least deprived quintile
 E92000001,England,Country,2010/11,Reception: Prevalence of obesity (including severe obesity),Percentage,Persons,9.4,Not compared,NA
 E92000001,England,Country,2011/12,Reception: Prevalence of obesity (including severe obesity),Percentage,Persons,9.5,Not compared,NA
 E92000001,England,Country,2012/13,Reception: Prevalence of obesity (including severe obesity),Percentage,Persons,9.3,Not compared,NA

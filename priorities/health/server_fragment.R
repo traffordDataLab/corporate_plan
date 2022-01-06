@@ -23,7 +23,21 @@ obese_reception_cssn_mean <- obese_reception %>%
 obese_reception_trend <- bind_rows(obese_reception %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_reception_cssn_mean)
 
 obese_reception_quintiles <- obese_r %>%
-  filter(indicator == "Reception: Prevalence of obesity (including severe obesity), 5-years data combined") %>% mutate(inequality = as_factor(inequality))
+  filter(indicator == "Reception: Prevalence of obesity (including severe obesity), 5-years data combined") %>% 
+  mutate(inequality = as_factor(inequality))
+
+obese_r_quintiles_cssn_mean <- obese_reception_quintiles %>%
+  filter(area_code %in% cssn$area_code) %>%
+  group_by(period, inequality) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average") %>%
+  filter(!is.na(value)) 
+
+obese_r_quintiles_plot <- obese_reception_quintiles %>%
+  filter(area_name %in% c("England", "Trafford")) %>%
+  select(area_name,period,inequality,value) %>%
+  bind_rows(obese_r_quintiles_cssn_mean) %>%
+  mutate(area_name = factor(area_name, levels = c("Trafford","Similar Authorities average","England")))
 
 output$obese_reception_plot <- renderggiraph({
 
@@ -92,11 +106,15 @@ output$obese_reception_plot <- renderggiraph({
       )
   } else {
     gg <-
-      ggplot(obese_reception_quintiles, aes(x = inequality, y = value)) +
+      ggplot(obese_r_quintiles_plot, aes(x = inequality, y = value, fill = area_name, group = area_name)) +
       geom_bar_interactive(aes(tooltip =
                                  paste0('<span class="plotTooltipValue">', value, '%</span><br />',
-                                        '<span class="plotTooltipMain">', "Trafford", '</span><br />',
-                                        '<span class="plotTooltipPeriod">', inequality, '</span><br />')), stat = "identity", fill = plot_colour_trafford) +
+                                        '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                        '<span class="plotTooltipPeriod">', inequality, '</span><br />')), 
+                           stat = "identity", width = 0.5, position = position_dodge(width=0.6)) +
+       scale_fill_manual(
+        values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      
       scale_x_discrete(labels = wrap_format(13)) +
       scale_y_continuous(limits = c(0, NA),
                          labels = label_percent(scale = 1, accuracy = 1)) +
@@ -148,6 +166,19 @@ obese_year6_trend <- bind_rows(obese_year6 %>% select(area_name, period,value) %
 
 obese_year6_quintiles <- obese_y6 %>%
   filter(indicator == "Year 6: Prevalence of obesity (including severe obesity), 5-years data combined") %>% mutate(inequality = as_factor(inequality))
+
+obese_y6_quintiles_cssn_mean <- obese_year6_quintiles %>%
+  filter(area_code %in% cssn$area_code) %>%
+  group_by(period, inequality) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average") %>%
+  filter(!is.na(value)) 
+
+obese_y6_quintiles_plot <- obese_year6_quintiles %>%
+  filter(area_name %in% c("England", "Trafford")) %>%
+  select(area_name,period,inequality,value) %>%
+  bind_rows(obese_y6_quintiles_cssn_mean) %>%
+  mutate(area_name = factor(area_name, levels = c("Trafford","Similar Authorities average","England")))
 
 output$obese_year6_plot <- renderggiraph({
   
@@ -216,11 +247,14 @@ output$obese_year6_plot <- renderggiraph({
       )
   } else {
     gg <-
-      ggplot(obese_year6_quintiles, aes(x = inequality, y = value)) +
+      ggplot(obese_y6_quintiles_plot, aes(x = inequality, y = value, fill = area_name, group = area_name)) +
       geom_bar_interactive(aes(tooltip =
                                  paste0('<span class="plotTooltipValue">', value, '%</span><br />',
-                                        '<span class="plotTooltipMain">', "Trafford", '</span><br />',
-                                        '<span class="plotTooltipPeriod">', inequality, '</span><br />')), stat = "identity", fill = plot_colour_trafford) +
+                                        '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                        '<span class="plotTooltipPeriod">', inequality, '</span><br />')),
+                           stat = "identity", width = 0.5, position = position_dodge(width=0.6)) +
+      scale_fill_manual(
+        values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       scale_x_discrete(labels = wrap_format(13)) +
       scale_y_continuous(limits = c(0, NA),
                          labels = label_percent(scale = 1, accuracy = 1)) +
