@@ -45,6 +45,54 @@ output$licensed_vehicles_box <- renderUI({
 })
 
 
+# Vehicle miles travelled ---------
+
+# Load in data and create mean of similar neighbours
+df_vehicle_miles <- read_csv("data/climate/vehicle_miles_travelled.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England average" ~ "England average",
+                               TRUE ~ "Similar authorities average"),
+         period = as.character(period)) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value)))
+
+# Plot
+output$vehicle_miles_plot <- renderggiraph({
+  gg <- ggplot(df_vehicle_miles,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), ' million</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England average" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England average" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
+    labs(title = "Annual motor vehicle traffic",
+         subtitle = "Miles travelled (millions)",
+         caption = "Source: DfT",
+         x = NULL,
+         y = "Miles (millions)",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$vehicle_miles_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("vehicle_miles_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
 # Household waste recycling ---------
 
 # Load in data and create mean of similar neighbours
