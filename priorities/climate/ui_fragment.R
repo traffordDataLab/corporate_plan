@@ -37,7 +37,7 @@ tabPanel(
             ),
             HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
-            #includeMarkdown("data/climate/metadata/vehicle_miles_travelled.md"),
+            includeMarkdown("data/climate/metadata/vehicle_miles_travelled.md"),
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",

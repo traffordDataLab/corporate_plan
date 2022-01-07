@@ -62,7 +62,7 @@ output$vehicle_miles_plot <- renderggiraph({
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
     geom_point_interactive(
-      aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), ' million</span><br />',
+      aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma(accuracy = 1)(value), ' million</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
                            '<span class="plotTooltipPeriod">', period, '</span>')),
       shape = 21, size = 2.5, colour = "white"
