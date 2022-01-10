@@ -93,6 +93,53 @@ output$vehicle_miles_box <- renderUI({
 })
 
 
+# Electric vehicle charging points ---------
+
+# Load in data and create mean of similar neighbours
+df_ev_charging_points_rate <- read_csv("data/climate/electric_vehicle_charging_points.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), 1))
+
+# Plot
+output$ev_charging_points_plot <- renderggiraph({
+  gg <- ggplot(df_ev_charging_points_rate,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = "Publicly available electric vehicle charging devices",
+         subtitle = "Per 100,000 population",
+         caption = "Source: DfT and OZEV",
+         x = NULL,
+         y = "Devices (per 100K)",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$ev_charging_points_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("ev_charging_points_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
 # Household waste recycling ---------
 
 # Load in data and create mean of similar neighbours
