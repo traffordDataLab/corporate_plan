@@ -2,16 +2,18 @@
 
 # Licensed vehicles (all vehicle types) ---------
 
-# Load in data and create mean of similar neighbours
+# Load in data and create mean of similar neighbours - we are excluding the England data as it is not comparable due to being a count
 df_licensed_vehicles <- read_csv("data/climate/licensed_vehicles.csv") %>%
-  mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average")) %>%
+  filter(area_name != "England") %>%
+  mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average"),
+         period = as.character(period)) %>%
   group_by(period, area_name) %>%
-  summarise(value = round(mean(value)))
+  summarise(value = round(mean(value_all_vehicles)))
 
 # Plot
 output$licensed_vehicles_plot <- renderggiraph({
   gg <- ggplot(df_licensed_vehicles,
-               aes(x = period, y = value, colour = area_name, fill = area_name,)) +
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
                geom_line(size = 1) +
                geom_point_interactive(
                  aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
