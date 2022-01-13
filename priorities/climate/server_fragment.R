@@ -2,7 +2,7 @@
 
 # Licensed vehicles (all vehicle types) ---------
 
-# Load in data and create mean of similar neighbours - we are excluding the England data as it is not comparable due to being a count
+# Load in data and create mean of similar neighbours - data for England is excluded as the counts can't be compared to individual LAs
 df_licensed_vehicles <- read_csv("data/climate/licensed_vehicles.csv") %>%
   filter(area_name != "England") %>%
   mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average"),
@@ -39,6 +39,56 @@ output$licensed_vehicles_plot <- renderggiraph({
 output$licensed_vehicles_box <- renderUI({
   withSpinner(
     ggiraphOutput("licensed_vehicles_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
+# Licensed vehicles (ulev) ---------
+
+# Load in data and create percentages as well as average of similar authorities
+df_licensed_ulev <- read_csv("data/climate/licensed_vehicles.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford",
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average"),
+         period = as.character(period)) %>%
+  group_by(period, area_name) %>%
+  summarise(value_ulev = sum(value_ulev),
+            value_all_vehicles = sum(value_all_vehicles)) %>%
+  mutate(value = round((value_ulev/value_all_vehicles)*100, 2))
+
+# Plot
+output$licensed_ulev_plot <- renderggiraph({
+  gg <- ggplot(df_licensed_ulev,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = "Percentage of Ultra Low Emission Vehicles",
+         subtitle = "Compared to all licensed vehicles",
+         caption = "Source: DfT and DVLA",
+         x = NULL,
+         y = "Percentage",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$licensed_ulev_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("licensed_ulev_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,

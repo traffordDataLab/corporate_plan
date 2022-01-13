@@ -7,7 +7,7 @@ tabPanel(
     includeHTML("help.html"),
     fluidRow(
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Licensed vehicles"),
+            HTML("<h3>Licensed vehicles <small>(1)</small></h3>"),
             uiOutput("licensed_vehicles_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "licensed_vehicles_selection",
@@ -21,6 +21,23 @@ tabPanel(
             HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
                     includeMarkdown("data/climate/metadata/licensed_vehicles.md"),
+            HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            HTML("<h3>Licensed vehicles <small>(2)</small></h3>"),
+            uiOutput("licensed_ulev_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "licensed_ulev_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/climate/metadata/licensed_ulev.md"),
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
