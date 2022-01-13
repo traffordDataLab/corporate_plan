@@ -6,4 +6,4 @@ Source: Dataset VEH0105: <a href="https://assets.publishing.service.gov.uk/gover
 
 Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2019.
 
-The drop in registrations for Trafford from 2015 to 2016 is due to a significant reduction in the number of diesel powered cars and vans. This correlates with the timeline of the ["Dieselgate" scandal](https://www.bbc.co.uk/news/business-34324772).
+The drop in registrations for Trafford from 2015 to 2016 is due to a significant reduction in the number of diesel powered cars and vans. This coincides with the timing of worldwide reporting into the ["Dieselgate" scandal](https://www.bbc.co.uk/news/business-34324772).
