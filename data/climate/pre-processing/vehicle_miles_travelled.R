@@ -51,7 +51,7 @@ df_vehicle_miles <- df_raw %>%
 # Calculate England averages for each year ---------------------------
 df_england_averages <- df_vehicle_miles %>%
   mutate(area_code = "E92000001",
-         area_name = "England average") %>%
+         area_name = "England LA average") %>%
   group_by(period, area_code, area_name) %>%
   summarise(value = round(mean(value), digits = 0)) %>%
   select(area_code, area_name, period, value)

@@ -102,7 +102,7 @@ output$licensed_ulev_box <- renderUI({
 # Load in data and create mean of similar neighbours
 df_vehicle_miles <- read_csv("data/climate/vehicle_miles_travelled.csv") %>%
   mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
-                               area_name == "England average" ~ "England average",
+                               area_name == "England LA average" ~ "England LA average",
                                TRUE ~ "Similar authorities average"),
          period = as.character(period)) %>%
   group_by(period, area_name) %>%
@@ -119,8 +119,8 @@ output$vehicle_miles_plot <- renderggiraph({
                            '<span class="plotTooltipPeriod">', period, '</span>')),
       shape = 21, size = 2.5, colour = "white"
     ) +
-    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England average" = plot_colour_england)) +
-    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England average" = plot_colour_england)) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England LA average" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England LA average" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
     labs(title = "Annual motor vehicle traffic",
          subtitle = "Miles travelled (millions)",
