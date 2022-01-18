@@ -54,11 +54,10 @@ df_licensed_ulev <- read_csv("data/climate/licensed_vehicles.csv") %>%
   mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford",
                                area_name == "England" ~ "England",
                                TRUE ~ "Similar authorities average"),
-         period = as.character(period)) %>%
+         period = as.character(period),
+         value = round((value_ulev/value_all_vehicles)*100, 2)) %>%
   group_by(period, area_name) %>%
-  summarise(value_ulev = sum(value_ulev),
-            value_all_vehicles = sum(value_all_vehicles)) %>%
-  mutate(value = round((value_ulev/value_all_vehicles)*100, 2))
+  summarise(value = round(mean(value), 2))
 
 # Plot
 output$licensed_ulev_plot <- renderggiraph({
