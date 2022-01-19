@@ -172,6 +172,19 @@ img
     border-bottom: 2px solid #00445e;
     color: #212121;
 }
+@media (min-width:992px) and (max-width:1052px) {
+    .btn-group
+    {
+        margin-left: 0.25em;
+    }
+    .btn-plotButtons
+    {
+        max-width: 6em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 /* end of styles for the tabs under plots */
 
 .furtherInfo /* content displayed within <details></details> */
