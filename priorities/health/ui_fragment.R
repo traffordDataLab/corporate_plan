@@ -11,8 +11,8 @@ tabPanel(
             uiOutput("obese_reception_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "obese_reception_selection",
-                choiceNames = c("Trend", "Boxplot", "Deprivation"),
-                choiceValues = c("Trend", "Boxplot", "Deprivation"),
+                choiceNames = c("Trend", "Boxplot", "Deprivation", "Map"),
+                choiceValues = c("Trend", "Boxplot", "Deprivation", "Map"),
                 selected = "Trend",
                 direction = "horizontal",
                 individual = FALSE,
@@ -28,8 +28,8 @@ tabPanel(
             uiOutput("obese_year6_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "obese_year6_selection",
-              choiceNames = c("Trend", "Boxplot", "Deprivation"),
-              choiceValues = c("Trend", "Boxplot", "Deprivation"),
+              choiceNames = c("Trend", "Boxplot", "Deprivation", "Map"),
+              choiceValues = c("Trend", "Boxplot", "Deprivation", "Map"),
               selected = "Trend",
               direction = "horizontal",
               individual = FALSE,

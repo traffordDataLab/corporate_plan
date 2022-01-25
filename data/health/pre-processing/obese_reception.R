@@ -40,8 +40,16 @@ obese_reception_cssn <- obese_reception_trend %>%
   select(-c(`Category Type`)) %>%
   mutate(measure = "Percentage")
 
+lookup <- read_csv("https://www.trafforddatalab.io/spatial_data/lookups/administrative_lookup.csv") %>%
+  filter(lad17nm == "Trafford")
 
-df <- bind_rows(obese_reception_quintiles, obese_reception_england, obese_reception_districsts, obese_reception_cssn) %>%
+obese_reception_wards <- read_csv("https://fingertips.phe.org.uk/api/all_data/csv/by_indicator_id?indicator_ids=93105&area_type_id=101") %>%
+  filter(`Area Code` %in% lookup$wd17cd) %>%
+  select(area_code = `Area Code`, area_name = `Area Name`, area_type = `Area Type`, period = `Time period`, value = Value, indicator = `Indicator Name`, unit = Sex, compared_to_England = `Compared to England value or percentiles`, inequality = Category) %>%
+  mutate(measure = "Percentage")
+
+
+df <- bind_rows(obese_reception_quintiles, obese_reception_england, obese_reception_districsts, obese_reception_cssn, obese_reception_wards) %>%
   mutate(value = round(value, 1)) %>%
   filter(!period %in% c("2006/07", "2007/08", "2008/09", "2009/10")) %>%
   unique() %>%

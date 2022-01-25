@@ -39,10 +39,13 @@ obese_r_quintiles_plot <- obese_reception_quintiles %>%
   bind_rows(obese_r_quintiles_cssn_mean) %>%
   mutate(area_name = factor(area_name, levels = c("Trafford","Similar Authorities average","England")))
 
+obese_reception_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
+  left_join(obese_r %>% filter(area_type == "Ward") %>% select(area_code, indicator, value), by = "area_code")
+
 output$obese_reception_plot <- renderggiraph({
-
+  
   if (input$obese_reception_selection == "Trend") {
-
+    
     gg <- ggplot(
       filter(obese_reception_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
@@ -66,7 +69,7 @@ output$obese_reception_plot <- renderggiraph({
       theme_x()
   }
   else if (input$obese_reception_selection == "Boxplot"){
-
+    
     gg <- ggplot(data = filter(obese_reception, area_type %in% c("District", "UA")),
                  aes(x = period, y = value)) +
       stat_boxplot(geom = "errorbar", colour = "#C9C9C9", width = 0.2) +
@@ -87,7 +90,7 @@ output$obese_reception_plot <- renderggiraph({
                                      paste0('<span class="plotTooltipValue">', filter(obese_reception, area_name == "England")$value, '%</span><br />',
                                             '<span class="plotTooltipMain">', "England", '</span><br />',
                                             '<span class="plotTooltipPeriod">', filter(obese_reception, area_name == "England")$period, '</span>')
-                                   ),
+                               ),
                                fill = "#C9C9C9", size = 0.5) +
       scale_fill_manual(values = c("Better" = "#92D050",
                                    "Similar" = "#FFC000",
@@ -104,7 +107,7 @@ output$obese_reception_plot <- renderggiraph({
         legend.title = element_text(size = 9),
         legend.text = element_text(size = 8)
       )
-  } else {
+  } else if (input$obese_reception_selection == "Deprivation"){
     gg <-
       ggplot(obese_r_quintiles_plot, aes(x = inequality, y = value, fill = area_name, group = area_name)) +
       geom_bar_interactive(aes(tooltip =
@@ -112,7 +115,7 @@ output$obese_reception_plot <- renderggiraph({
                                         '<span class="plotTooltipMain">', area_name, '</span><br />',
                                         '<span class="plotTooltipPeriod">', inequality, '</span><br />')), 
                            stat = "identity", width = 0.5, position = position_dodge(width=0.6)) +
-       scale_fill_manual(
+      scale_fill_manual(
         values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       
       scale_x_discrete(labels = wrap_format(13)) +
@@ -120,29 +123,61 @@ output$obese_reception_plot <- renderggiraph({
                          labels = label_percent(scale = 1, accuracy = 1)) +
       labs(
         title = "Obese children aged 4-5 years by deprivation",
-        subtitle = NULL,
-        caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, ONS",
+        subtitle = "2015/16 - 2019/20",
+        caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
         y = NULL
       ) +
       theme_x() +
-      theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 1, margin = margin(t = 0)))
+      theme(plot.subtitle = element_text(size = 11),
+            axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 1, margin = margin(t = 0)))
+  } else {
+    gg <-
+      ggplot(obese_reception_wards) + 
+      geom_sf_interactive(aes(tooltip =
+                                paste0('<span class="plotTooltipValue">', ifelse(is.na(value),value,paste0(value,"%")),'</span><br />',
+                                       '<span class="plotTooltipMain">', area_name, '</span><br />'),
+                              fill = value), color = "#FFFFFF", size = 0.5, alpha = 0.8) +
+      scale_fill_gradient(  low = "#b9e0e6",
+                            high = "#00445e",
+                            space = "Lab",
+                            na.value = "grey50",
+                            breaks = c(min(obese_reception_wards$value, na.rm=T),max(obese_reception_wards$value, na.rm=T)),
+                            label = function(x) paste0(x, "%"),
+                            guide = guide_legend(
+                              title = NULL,
+                              reverse = TRUE,
+                              keyheight = unit(3, units = "mm"), 
+                              keywidth = unit(6, units = "mm"), 
+                              ncol = 2)
+      ) +
+      labs(
+        title = "Obese children aged 4-5 years by ward",
+        subtitle = "2017/18 - 2019/20",
+        caption = "Source: National Child Measurement Programme, NHS Digital",
+        x = NULL,
+        y = NULL
+      ) +
+      coord_sf(datum = NA) +
+      theme_x() +
+      theme(plot.subtitle = element_text(size = 11),
+            legend.position = c(0.5, 1.055))
   }
-
+  
   girafe(ggobj = gg, options = lab_ggiraph_options)
 })
 
 output$obese_reception_box <- renderUI({
-    withSpinner(
-        ggiraphOutput("obese_reception_plot", height = "inherit"),
-        type = 4,
-        color = plot_colour_spinner,
-        size = 1,
-        proxy.height = "250px"
-    )
+  withSpinner(
+    ggiraphOutput("obese_reception_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
 })
 
-#10-11 year old children classified as obese --------------------------------------------------
+#  10-11 year old children classified as obese --------------------------------------------------
 
 obese_y6 <- read_csv("data/health/obese_year6.csv") 
 
@@ -179,6 +214,10 @@ obese_y6_quintiles_plot <- obese_year6_quintiles %>%
   select(area_name,period,inequality,value) %>%
   bind_rows(obese_y6_quintiles_cssn_mean) %>%
   mutate(area_name = factor(area_name, levels = c("Trafford","Similar Authorities average","England")))
+
+obese_year6_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
+  left_join(obese_y6 %>% filter(area_type == "Ward") %>% select(area_code, indicator, value), by = "area_code")
+
 
 output$obese_year6_plot <- renderggiraph({
   
@@ -245,7 +284,7 @@ output$obese_year6_plot <- renderggiraph({
         legend.title = element_text(size = 9),
         legend.text = element_text(size = 8)
       )
-  } else {
+  } else if (input$obese_year6_selection == "Deprivation"){
     gg <-
       ggplot(obese_y6_quintiles_plot, aes(x = inequality, y = value, fill = area_name, group = area_name)) +
       geom_bar_interactive(aes(tooltip =
@@ -260,13 +299,44 @@ output$obese_year6_plot <- renderggiraph({
                          labels = label_percent(scale = 1, accuracy = 1)) +
       labs(
         title = "Obese children aged 10-11 years by deprivation",
-        subtitle = NULL,
-        caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, ONS",
+        subtitle = "2015/16 - 2019/20",
+        caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
         y = NULL
       ) +
       theme_x() +
-      theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 1, margin = margin(t = 0)))
+      theme(plot.subtitle = element_text(size = 11),
+            axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 1, margin = margin(t = 0)))
+  } else {
+    gg <-
+      ggplot(obese_year6_wards) + 
+      geom_sf_interactive(aes(tooltip =
+                                paste0('<span class="plotTooltipValue">', ifelse(is.na(value),value,paste0(value,"%")),'</span><br />',
+                                       '<span class="plotTooltipMain">', area_name, '</span><br />'),
+                              fill = value), color = "#FFFFFF", size = 0.5, alpha = 0.8) +
+      scale_fill_gradient(  low = "#b9e0e6",
+                            high = "#00445e",
+                            space = "Lab",
+                            na.value = "grey50",
+                            breaks = c(min(obese_year6_wards$value, na.rm=T),max(obese_year6_wards$value, na.rm=T)),
+                            label = function(x) paste0(x, "%"),
+                            guide = guide_legend(
+                              title = NULL,
+                              reverse = TRUE,
+                              keyheight = unit(3, units = "mm"), 
+                              keywidth = unit(6, units = "mm"), 
+                              ncol = 2)) +
+      labs(
+        title = "Obese children aged 10-11 years by ward",
+        subtitle = "2017/18 - 2019/20",
+        caption = "Source: National Child Measurement Programme, NHS Digital",
+        x = NULL,
+        y = NULL
+      ) +
+      coord_sf(datum = NA) +
+      theme_x() +
+      theme(plot.subtitle = element_text(size = 11),
+            legend.position = c(0.5, 1.055))
   }
   
   girafe(ggobj = gg, options = lab_ggiraph_options)
