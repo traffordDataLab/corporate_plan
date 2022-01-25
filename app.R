@@ -154,8 +154,46 @@ ui <- fluidPage(
             ),
 
             HTML("<h3>About the dashboard</h3>
-                  <p>The dashboard visualises a range of indicators relating to each of the three strategic priorities. These show data for Trafford compared to the average of other similar Local Authorities (in terms of statistical characteristics) and also, where possible, to England. The statistically similar Local Authorities to Trafford for indicators relating to children are defined within the <a href='https://www.gov.uk/government/publications/local-authority-interactive-tool-lait' target='_blank' aria-label='Children's Services Statistical Neighbour Benchmarking Tool, (opens in a new window)'>Children's Services Statistical Neighbour Benchmarking Tool</a>. For all other indicators the statistically similar Local Authorities to Trafford are defined by the <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA nearest neighbours</a> model.</p>
-                  <p>Some of the indicators have multiple visualisations showing different aspects of the data. These can be viewed by selecting the relevant tabs below them. Further information is also provided below each indicator, including links to download the data used in the visualisation and to the original source of the data.</p>
+                  <p>The dashboard visualises a range of indicators relating to each of the three strategic priorities. These show data for Trafford compared to the average of other similar Local Authorities (in terms of statistical characteristics) and also, where possible, to England. Similar Local Authorities for indicators relating to children are defined within the <a href='https://www.gov.uk/government/publications/local-authority-interactive-tool-lait' target='_blank' aria-label='Children's Services Statistical Neighbour Benchmarking Tool, (opens in a new window)'>Children's Services Statistical Neighbour Benchmarking Tool</a>. For all other indicators the <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA Nearest Neighbours</a> definition is used.</p>
+                  <p>
+                      <details style='font-size: 0.85em'>
+                          <summary><strong>Trafford's Children's Services Statistical Neighbours</strong></summary>
+                          <ul>
+                              <li>Bracknell Forest</li>
+                              <li>Bromley</li>
+                              <li>Buckinghamshire</li>
+                              <li>Central Bedfordshire</li>
+                              <li>Cheshire East</li>
+                              <li>Hampshire</li>
+                              <li>Hertfordshire</li>
+                              <li>Solihull</li>
+                              <li>Stockport</li>
+                              <li>York</li>
+                          </ul>
+                      </details>
+                      
+                      <details style='font-size: 0.85em'>
+                          <summary><strong>Trafford's CIPFA Nearest Neighbours</strong></summary>
+                          <ul>
+                              <li>Bedford</li>
+                              <li>Bury</li>
+                              <li>Cheshire West and Chester</li>
+                              <li>Darlington</li>
+                              <li>Derby</li>
+                              <li>Milton Keynes</li>
+                              <li>Peterborough</li>
+                              <li>Solihull</li>
+                              <li>South Gloucestershire</li>
+                              <li>Stockport</li>
+                              <li>Swindon</li>
+                              <li>Telford and Wrekin</li>
+                              <li>Thurrock</li>
+                              <li>Warrington</li>
+                              <li>York</li>
+                          </ul>
+                      </details>
+                  </p>
+                  <p>The visualisations are interactive, displaying the values of the data presented. Some of the indicators have multiple visualisations showing different aspects of the data, which can be selected using the relevant tabs below them. Further information is also provided below each indicator, including links to download the data used in the visualisation(s) and to the original source of the data.</p>
                   </div>"
             )
         ),
