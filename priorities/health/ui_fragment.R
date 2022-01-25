@@ -90,6 +90,23 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/health/metadata/inactive_adults.md"),
             HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Fairly active adults"),
+            uiOutput("fairly_active_adults_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "fairly_active_adults_selection",
+              choiceNames = c("Trend"),
+              choiceValues = c("Trend"),
+              selected = "Trend",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/health/metadata/fairly_active_adults.md"),
+            HTML('</details>')
         )
     )
 )

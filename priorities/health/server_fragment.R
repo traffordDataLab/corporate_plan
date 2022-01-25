@@ -652,3 +652,60 @@ output$inactive_adults_box <- renderUI({
 })
 
 
+#  Fairly Active Adults --------------------------------------------------
+
+fairly_active_adults <- read_csv("data/health/fairly_active_adults.csv") %>%
+  mutate(period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+fairly_active_adults_cipfa_mean <- fairly_active_adults %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average",
+         period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+fairly_active_adults_trend <- bind_rows(fairly_active_adults %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), fairly_active_adults_cipfa_mean)
+
+
+output$fairly_active_adults_plot <- renderggiraph({
+  
+  if (input$fairly_active_adults_selection == "Trend") {
+    
+    gg <- ggplot(
+      filter(fairly_active_adults_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Physically fairly active adults",
+        subtitle = NULL,
+        caption = "Source: Active Lives survey, Sport England",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+output$fairly_active_adults_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("fairly_active_adults_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
