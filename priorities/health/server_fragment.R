@@ -282,3 +282,105 @@ output$obese_year6_box <- renderUI({
   )
 })
 
+
+#  Adults classified as overweight or obese--------------------------------------------------
+
+cipfa <- read_csv("data/cipfa2019.csv") %>%
+  select(area_code)
+
+overweight_adult <- read_csv("data/health/overweight_adult.csv") %>%
+  filter(indicator == "Percentage of adults (aged 18+) classified as overweight or obese") %>%
+  mutate(period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+overweight_adult_cipfa_mean <- overweight_adult %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average",
+         period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+overweight_adult_trend <- bind_rows(overweight_adult %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), overweight_adult_cipfa_mean)
+
+
+output$overweight_adult_plot <- renderggiraph({
+  
+  if (input$overweight_adult_selection == "Trend") {
+    
+    gg <- ggplot(
+      filter(overweight_adult_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Adults classified as overweight or obese",
+        subtitle = NULL,
+        caption = "Source: Active Lives survey, Sport England",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  else {
+    
+    gg <- ggplot(data = filter(overweight_adult, area_type %in% c("District", "UA")),
+                 aes(x = period, y = value)) +
+      stat_boxplot(geom = "errorbar", colour = "#C9C9C9", width = 0.2) +
+      geom_boxplot_interactive(aes(tooltip = value),
+                               colour = "#C9C9C9",
+                               outlier.shape = 21, outlier.colour = "#C9C9C9", outlier.size = 1,
+                               fatten = NULL) +
+      geom_point_interactive(data = filter(overweight_adult, area_name == "Trafford"),
+                             aes(x = period, y = value, fill = compared_to_England,
+                                 tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, colour = "#000000", size = 3) +
+      geom_boxplot_interactive(data = filter(overweight_adult, area_name == "England"),
+                               aes(x = factor(period), y = value,
+                                   tooltip =
+                                     paste0('<span class="plotTooltipValue">', filter(overweight_adult, area_name == "England")$value, '%</span><br />',
+                                            '<span class="plotTooltipMain">', "England", '</span><br />',
+                                            '<span class="plotTooltipPeriod">', filter(overweight_adult, area_name == "England")$period, '</span>')
+                               ),
+                               fill = "#C9C9C9", size = 0.5) +
+      scale_fill_manual(values = c("Better" = "#92D050",
+                                   "Similar" = "#FFC000",
+                                   "Worse" = "#C00000")) +
+      scale_y_continuous(limits = c(0, NA), labels = scales::comma) +
+      labs(title = "Adults classified as overweight or obese",
+           subtitle = NULL,
+           caption = "Source: Active Lives survey, Sport England",
+           x = NULL, y = "Percentage",
+           fill = "Compared with England:") +
+      theme_x() +
+      theme(
+        legend.position = "top",
+        legend.title = element_text(size = 9),
+        legend.text = element_text(size = 8)
+      )
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+output$overweight_adult_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("overweight_adult_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
