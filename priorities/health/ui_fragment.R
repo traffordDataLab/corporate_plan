@@ -141,6 +141,23 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/health/metadata/mortality_rate.md"),
             HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Healthy life expectancy at birth"),
+            uiOutput("healthy_life_expectancy_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "healthy_life_expectancy_selection",
+              choiceNames = c("Sex", "Boxplot"),
+              choiceValues = c("Sex", "Boxplot"),
+              selected = "Sex",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/health/metadata/healthy_life_expectancy.md"),
+            HTML('</details>')
         )
     )
 )
