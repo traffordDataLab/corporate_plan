@@ -807,3 +807,133 @@ output$active_children_box <- renderUI({
     proxy.height = "250px"
   )
 })
+
+
+#  Under 75 mortality rate --------------------------------------------------
+
+mortality_rate <- read_csv("data/health/mortality_rate.csv") %>%
+  #filter(unit == "Persons") %>%
+  mutate(period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+mortality_rate_cipfa_mean <- mortality_rate %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period, unit) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average",
+         period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+mortality_rate_trend <- bind_rows(mortality_rate %>% select(area_name, period,value,unit) %>% filter(area_name %in% c("Trafford", "England")), mortality_rate_cipfa_mean) 
+
+mortality_rate_persons <- mortality_rate %>%
+  filter(unit == "Persons")
+
+
+output$mortality_rate_plot <- renderggiraph({
+  
+  if (input$mortality_rate_selection == "Trend") {
+    
+    gg <- ggplot(
+      filter(mortality_rate_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
+             unit == "Persons"),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Under 75 mortality rate from preventable causes",
+        subtitle = NULL,
+        caption = "Source: Annual Mortality Extracts, ONS",
+        x = NULL,
+        y = "per 100,000 polulation",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  else if (input$mortality_rate_selection == "Boxplot"){
+    
+    gg <- ggplot(data = filter(mortality_rate_persons, area_type %in% c("District", "UA")),
+                 aes(x = period, y = value)) +
+      stat_boxplot(geom = "errorbar", colour = "#C9C9C9", width = 0.2) +
+      geom_boxplot_interactive(aes(tooltip = value),
+                               colour = "#C9C9C9",
+                               outlier.shape = 21, outlier.colour = "#C9C9C9", outlier.size = 1,
+                               fatten = NULL) +
+      geom_point_interactive(data = filter(mortality_rate_persons, area_name == "Trafford"),
+                             aes(x = period, y = value, fill = compared_to_England,
+                                 tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, colour = "#000000", size = 3) +
+      geom_boxplot_interactive(data = filter(mortality_rate_persons, area_name == "England"),
+                               aes(x = factor(period), y = value,
+                                   tooltip =
+                                     paste0('<span class="plotTooltipValue">', filter(mortality_rate_persons, area_name == "England")$value, '%</span><br />',
+                                            '<span class="plotTooltipMain">', "England", '</span><br />',
+                                            '<span class="plotTooltipPeriod">', filter(mortality_rate_persons, area_name == "England")$period, '</span>')
+                               ),
+                               fill = "#C9C9C9", size = 0.5) +
+      scale_fill_manual(values = c("Better" = "#92D050",
+                                   "Similar" = "#FFC000",
+                                   "Worse" = "#C00000")) +
+      scale_y_continuous(limits = c(0, NA), labels = scales::comma) +
+      labs(title = "Under 75 mortality rate from preventable causes",
+           subtitle = NULL,
+           caption = "Source: Annual Mortality Extracts, ONS",
+           x = NULL, y = "per 100,000 polulation",
+           fill = "Compared with England:") +
+      theme_x() +
+      theme(
+        legend.position = "top",
+        legend.title = element_text(size = 9),
+        legend.text = element_text(size = 8)
+      )
+  } else {
+    
+    gg <- ggplot(
+      filter(mortality_rate_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
+             unit != "Persons", period %in% c("2015":"2020")),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      facet_wrap(~unit, strip.position = "top") +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Under 75 mortality rate from preventable causes",
+        subtitle = NULL,
+        caption = "Source: Annual Mortality Extracts, ONS",
+        x = NULL,
+        y = "per 100,000 polulation",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+output$mortality_rate_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("mortality_rate_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
