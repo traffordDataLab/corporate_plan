@@ -840,7 +840,7 @@ output$mortality_rate_plot <- renderggiraph({
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
       geom_point_interactive(aes(tooltip =
-                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
                                           '<span class="plotTooltipPeriod">', period, '</span>')),
                              shape = 21, size = 2.5, colour = "white") +
@@ -869,7 +869,7 @@ output$mortality_rate_plot <- renderggiraph({
       geom_point_interactive(data = filter(mortality_rate_persons, area_name == "Trafford"),
                              aes(x = period, y = value, fill = compared_to_England,
                                  tooltip =
-                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
                                           '<span class="plotTooltipPeriod">', period, '</span>')),
                              shape = 21, colour = "#000000", size = 3) +
@@ -904,7 +904,7 @@ output$mortality_rate_plot <- renderggiraph({
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
       geom_point_interactive(aes(tooltip =
-                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
                                           '<span class="plotTooltipPeriod">', period, '</span>')),
                              shape = 21, size = 2.5, colour = "white") +
@@ -940,7 +940,6 @@ output$mortality_rate_box <- renderUI({
 #  Healthy life expectancy at birth --------------------------------------------------
 
 healthy_life_expectancy <- read_csv("data/health/healthy_life_expectancy.csv") %>%
-  #filter(unit == "Persons") %>%
   mutate(period = as_factor(period)) %>%
   filter(!is.na(value))
 
@@ -963,7 +962,7 @@ output$healthy_life_expectancy_plot <- renderggiraph({
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
       geom_point_interactive(aes(tooltip =
-                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
                                           '<span class="plotTooltipPeriod">', period, '</span>')),
                              shape = 21, size = 2.5, colour = "white") +
@@ -993,7 +992,7 @@ output$healthy_life_expectancy_plot <- renderggiraph({
       geom_point_interactive(data = filter(healthy_life_expectancy, area_name == "Trafford"),
                              aes(x = period, y = value, fill = compared_to_England,
                                  tooltip =
-                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
                                           '<span class="plotTooltipPeriod">', period, '</span>')),
                              shape = 21, colour = "#000000", size = 3) +
@@ -1030,6 +1029,106 @@ output$healthy_life_expectancy_plot <- renderggiraph({
 output$healthy_life_expectancy_box <- renderUI({
   withSpinner(
     ggiraphOutput("healthy_life_expectancy_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
+#  Inequality life expectancy at birth --------------------------------------------------
+
+inequality_life_expectancy <- read_csv("data/health/inequality_life_expectancy.csv") %>%
+  mutate(period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+inequality_life_expectancy_cipfa_mean <- inequality_life_expectancy %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period, inequality) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average",
+         period = as_factor(period)) %>%
+  filter(!is.na(value))
+
+inequality_life_expectancy_trend <- bind_rows(inequality_life_expectancy %>% select(area_name, period,value,inequality) %>% filter(area_name %in% c("Trafford", "England")), inequality_life_expectancy_cipfa_mean)
+
+
+output$inequality_life_expectancy_plot <- renderggiraph({
+  
+  if (input$inequality_life_expectancy_selection == "Sex") {
+    
+    gg <- ggplot(inequality_life_expectancy_trend,
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      facet_wrap(~inequality, strip.position = "top") +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Inequality life expectancy at birth by sex",
+        subtitle = NULL,
+        caption = "Source: Annual Mortality Extracts, ONS, Annual Population Survey",
+        x = NULL,
+        y = "years",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  else {
+    
+    gg <- ggplot(data = filter(inequality_life_expectancy, area_type %in% c("District", "UA")),
+                 aes(x = period, y = value)) +
+      stat_boxplot(geom = "errorbar", colour = "#C9C9C9", width = 0.2) +
+      geom_boxplot_interactive(aes(tooltip = value),
+                               colour = "#C9C9C9",
+                               outlier.shape = 21, outlier.colour = "#C9C9C9", outlier.size = 1,
+                               fatten = NULL) +
+      geom_point_interactive(data = filter(inequality_life_expectancy, area_name == "Trafford"),
+                             aes(x = period, y = value, fill = compared_to_England,
+                                 tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, colour = "#000000", size = 3) +
+      geom_boxplot_interactive(data = filter(inequality_life_expectancy, area_name == "England"),
+                               aes(x = factor(period), y = value,
+                                   tooltip =
+                                     paste0('<span class="plotTooltipValue">', filter(inequality_life_expectancy, area_name == "England")$value, '%</span><br />',
+                                            '<span class="plotTooltipMain">', "England", '</span><br />',
+                                            '<span class="plotTooltipPeriod">', filter(inequality_life_expectancy, area_name == "England")$period, '</span>')
+                               ),
+                               fill = "#C9C9C9", size = 0.5) +
+      facet_wrap(~inequality, strip.position = "top") +
+      scale_fill_manual(values = c("Better" = "#92D050",
+                                   "Similar" = "#FFC000",
+                                   "Worse" = "#C00000")) +
+      scale_y_continuous(limits = c(0, NA), labels = scales::comma) +
+      labs(title = "Inequality life expectancy at birth by sex",
+           subtitle = NULL,
+           caption = "Source: Annual Mortality Extracts, ONS, Annual Population Survey",
+           x = NULL,
+           y = "years",
+           fill = "Compared with England:") +
+      theme_x() +
+      theme(
+        legend.position = "top",
+        legend.title = element_text(size = 9),
+        legend.text = element_text(size = 8)
+      )
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+output$inequality_life_expectancy_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("inequality_life_expectancy_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,

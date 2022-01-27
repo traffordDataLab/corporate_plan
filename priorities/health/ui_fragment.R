@@ -41,7 +41,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Overweigth or obese adults"),
+            h3("Overweight or obese adults"),
             uiOutput("overweight_adult_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "overweight_adult_selection",
@@ -143,7 +143,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Healthy life expectancy at birth"),
+            h3("Healthy life expectancy"),
             uiOutput("healthy_life_expectancy_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "healthy_life_expectancy_selection",
@@ -157,6 +157,23 @@ tabPanel(
             HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
             includeMarkdown("data/health/metadata/healthy_life_expectancy.md"),
+            HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Inequality in life expectancy"),
+            uiOutput("inequality_life_expectancy_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "inequality_life_expectancy_selection",
+              choiceNames = c("Sex", "Boxplot"),
+              choiceValues = c("Sex", "Boxplot"),
+              selected = "Sex",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/health/metadata/inequality_life_expectancy.md"),
             HTML('</details>')
         )
     )

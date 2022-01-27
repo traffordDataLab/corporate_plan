@@ -1,6 +1,6 @@
 #### Proportion of children aged 10-11 years classified as obese.
 
-Source: <a href="https://digital.nhs.uk/services/national-child-measurement-programme/" target="_blank">NHS Digital, National Child Measurement Programme</a>, <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">English indices of deprivation 2019</a>
+Source: <a href="https://digital.nhs.uk/services/national-child-measurement-programme/" target="_blank"> National Child Measurement Programme, NHS Digital</a>, <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">English indices of deprivation 2019, </a>
 
 Data for Trafford compared to the average of 10 Children's Services Statistical Neighbours as defined in the <a href='https://www.gov.uk/government/publications/local-authority-interactive-tool-lait' target='_blank'>Children's Services Statistical Neighbour Benchmarking Tool</a>.
 
