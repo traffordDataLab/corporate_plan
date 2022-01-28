@@ -107,6 +107,40 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/climate/metadata/household_waste_not_recycled.md"),
             HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            HTML("<h3>Domestic EPC</h3>"),
+            uiOutput("domestic_epc_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "domestic_epc_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/climate/metadata/domestic_epc.md"),
+            HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            HTML("<h3>Borough CO<sub>2</sub> emissions</h3>"),
+            uiOutput("borough_co2_emissions_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "borough_co2_emissions_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/climate/metadata/borough_co2_emissions.md"),
+            HTML('</details>')
         )
     )
 )

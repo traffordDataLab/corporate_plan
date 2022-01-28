@@ -281,3 +281,123 @@ output$household_waste_not_recycled_box <- renderUI({
     proxy.height = "250px"
   )
 })
+
+
+# Domestic Energy Performance Certificates ---------
+
+# Load in data
+df_epc <- read_csv("data/climate/energy_performance_certificates.csv")
+
+# function to calculate 10-year periods of data as this is the validity period for the certificates
+calc10YearProportionEPC <- function(year_from) {
+  # NOTE: +9 not +10 as year_from+9 = 10 years of data e.g. 2012 - 2021
+  filter(df_epc, period >= year_from, period <= year_from+9) %>%
+  group_by(area_code, area_name) %>%
+  summarise(value_certificates_lodged = sum(value_certificates_lodged),
+            value_rating_A = sum(value_rating_A),
+            value_rating_B = sum(value_rating_B),
+            value_rating_C = sum(value_rating_C)) %>%
+  mutate(period = paste0(year_from, " - ", year_from+9),
+         value_AC = sum(value_rating_A, value_rating_B, value_rating_C),
+         value = (value_AC/value_certificates_lodged)*100) %>%
+  select(area_code, area_name, period, value)
+}
+
+# Get the data for the 10 year periods
+df_epc_2009 <- calc10YearProportionEPC(2009)
+df_epc_2010 <- calc10YearProportionEPC(2010)
+df_epc_2011 <- calc10YearProportionEPC(2011)
+df_epc_2012 <- calc10YearProportionEPC(2012)
+
+# Combine the datasets, then create the average of similar LAs
+df_epc <- bind_rows(df_epc_2009,
+                    df_epc_2010,
+                    df_epc_2011,
+                    df_epc_2012) %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), digits = 1))
+
+# Plot
+output$domestic_epc_plot <- renderggiraph({
+  gg <- ggplot(df_epc,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = "Domestic Energy Performance Certificates (EPC)",
+         subtitle = "Proportion rated A, B or C over 10 year periods",
+         caption = "Source: DLUHC",
+         x = NULL,
+         y = "Percentage",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$domestic_epc_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("domestic_epc_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
+# Borough wide CO2 emissions ---------
+
+# Load in data and create mean of similar neighbours
+df_borough_co2_emissions <- read_csv("data/climate/borough_wide_co2_emissions.csv") %>%
+  mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average"),
+         period = as.character(period)) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value)))
+
+# Plot
+output$borough_co2_emissions_plot <- renderggiraph({
+  gg <- ggplot(df_borough_co2_emissions,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = if_else(df_borough_co2_emissions$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
+    scale_fill_manual(values = if_else(df_borough_co2_emissions$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
+    scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
+    labs(title = "Local Authority territorial CO2 emissions estimates",
+         subtitle = "Carbon dioxide emissions within region borders",
+         caption = "Source: BEIS",
+         x = NULL,
+         y = "Kilotonnes (kt)",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$borough_co2_emissions_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("borough_co2_emissions_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
