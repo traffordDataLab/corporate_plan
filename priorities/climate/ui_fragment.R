@@ -7,7 +7,7 @@ tabPanel(
     includeHTML("help.html"),
     fluidRow(
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            HTML("<h3>Licensed vehicles <small>(1)</small></h3>"),
+            HTML("<h3>Licensed vehicles</h3>"),
             uiOutput("licensed_vehicles_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "licensed_vehicles_selection",
@@ -24,7 +24,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            HTML("<h3>Licensed vehicles <small>(2)</small></h3>"),
+            HTML("<h3>Licensed vehicles: ULEV</h3>"),
             uiOutput("licensed_ulev_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "licensed_ulev_selection",
@@ -58,7 +58,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Electric Vehicle Charging"),
+            h3("Electric vehicle charging"),
             uiOutput("ev_charging_points_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "ev_charging_selection",
