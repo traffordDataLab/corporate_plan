@@ -194,7 +194,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Smoking in manual jobs"),
+            h3("Smokers in manual jobs"),
             uiOutput("adults_smoking_manual_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "adults_smoking_manual_selection",
