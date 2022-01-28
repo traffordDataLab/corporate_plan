@@ -209,6 +209,23 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/health/metadata/adults_smoking_manual.md"),
             HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Adults with depression"),
+            uiOutput("adults_depression_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "adults_depression_selection",
+              choiceNames = c("Trend", "Boxplot"),
+              choiceValues = c("Trend", "Boxplot"),
+              selected = "Trend",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/health/metadata/adults_depression.md"),
+            HTML('</details>')
         )
     )
 )
