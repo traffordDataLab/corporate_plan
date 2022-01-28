@@ -7,7 +7,7 @@ tabPanel(
     includeHTML("help.html"),
     fluidRow(
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("4-5 year olds with obesity"),
+            h3("Obesity in 4-5 year olds"),
             uiOutput("obese_reception_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "obese_reception_selection",
@@ -24,7 +24,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("10-11 year olds with obesity"),
+            h3("Obesity in 10-11 year olds"),
             uiOutput("obese_year6_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "obese_year6_selection",
@@ -160,7 +160,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Inequality in life expectancy"),
+            h3("Unequal life expectancy"),
             uiOutput("inequality_life_expectancy_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "inequality_life_expectancy_selection",
@@ -194,7 +194,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Smoking in manual ocupations"),
+            h3("Smoking in manual jobs"),
             uiOutput("adults_smoking_manual_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "adults_smoking_manual_selection",
