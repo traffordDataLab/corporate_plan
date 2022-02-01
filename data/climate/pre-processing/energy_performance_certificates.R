@@ -15,7 +15,7 @@ authorities <- read_csv("../../cipfa2019.csv") %>%
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1029576/D1_-_Domestic_EPCs.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1050433/D1_-_Domestic_EPCs.ods",
     write_disk(tmp))
 
 # Extract the raw data ---------------------------
