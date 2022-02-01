@@ -133,28 +133,67 @@ ui <- fluidPage(
                             p("Reducing our carbon footprint and tackling the impact of climate change.")
                         )
                     )
-                ),
-                column(width = 6,
-                    tags$button(
-                        id = "services_btn",
-                        class = "btn action-button homeMenuButton",
-                        span (
-                            img(
-                                src = "images/icon_services.png",
-                                alt = "",
-                                role = "presentation"
-                            )
-                        ),
-                        div(
-                            h3("Council services"),
-                            p("Although not part of the corporate plan, this section provides information on a number of services and functions provided by the council.")
-                        )
-                    )
-                )
+                )#,
+                # column(width = 6,
+                #     tags$button(
+                #         id = "services_btn",
+                #         class = "btn action-button homeMenuButton",
+                #         span (
+                #             img(
+                #                 src = "images/icon_services.png",
+                #                 alt = "",
+                #                 role = "presentation"
+                #             )
+                #         ),
+                #         div(
+                #             h3("Council services"),
+                #             p("Although not part of the corporate plan, this section provides information on a number of services and functions provided by the council.")
+                #         )
+                #     )
+                # )
             ),
 
             HTML("<h3>About the dashboard</h3>
-                  <p>The dashboard visualises a range of indicators relating to each of the three strategic priorities, as well as an additional section covering council services. The indicators are provided at local authority level or in some cases lower, with many benchmarked against Trafford's <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA nearest neighbours</a> (other councils with the most similar statistical characteristics in terms of social and economic features). Some of the visualisations have additional options, such as alternative chart types. Information is provided about each indicator, including links to download the data and to the original data source.</p>
+                  <p>The dashboard visualises a range of indicators relating to each of the three strategic priorities. These show data for Trafford compared to the average of other similar Local Authorities (in terms of statistical characteristics) and also, where possible, to England. Similar Local Authorities for indicators relating to children are defined within the <a href='https://www.gov.uk/government/publications/local-authority-interactive-tool-lait' target='_blank' aria-label='Children's Services Statistical Neighbour Benchmarking Tool, (opens in a new window)'>Children's Services Statistical Neighbour Benchmarking Tool</a>. For all other indicators the <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank' aria-label='CIPFA nearest neighbours, (opens in new window)'>CIPFA Nearest Neighbours</a> definition is used.</p>
+                  <p>
+                      <details style='font-size: 0.85em'>
+                          <summary><strong>Trafford's Children's Services Statistical Neighbours</strong></summary>
+                          <ul>
+                              <li>Bracknell Forest</li>
+                              <li>Bromley</li>
+                              <li>Buckinghamshire</li>
+                              <li>Central Bedfordshire</li>
+                              <li>Cheshire East</li>
+                              <li>Hampshire</li>
+                              <li>Hertfordshire</li>
+                              <li>Solihull</li>
+                              <li>Stockport</li>
+                              <li>York</li>
+                          </ul>
+                      </details>
+                      
+                      <details style='font-size: 0.85em'>
+                          <summary><strong>Trafford's CIPFA Nearest Neighbours</strong></summary>
+                          <ul>
+                              <li>Bedford</li>
+                              <li>Bury</li>
+                              <li>Cheshire West and Chester</li>
+                              <li>Darlington</li>
+                              <li>Derby</li>
+                              <li>Milton Keynes</li>
+                              <li>Peterborough</li>
+                              <li>Solihull</li>
+                              <li>South Gloucestershire</li>
+                              <li>Stockport</li>
+                              <li>Swindon</li>
+                              <li>Telford and Wrekin</li>
+                              <li>Thurrock</li>
+                              <li>Warrington</li>
+                              <li>York</li>
+                          </ul>
+                      </details>
+                  </p>
+                  <p>The visualisations are interactive, displaying the values of the data presented. Some of the indicators have multiple visualisations showing different aspects of the data, which can be selected using the relevant tabs below them. Further information is also provided below each indicator, including links to download the data used in the visualisation(s) and to the original source of the data.</p>
                   </div>"
             )
         ),
@@ -162,7 +201,7 @@ ui <- fluidPage(
         source("priorities/health/ui_fragment.R", local = TRUE)$value,
         source("priorities/poverty/ui_fragment.R", local = TRUE)$value,
         source("priorities/climate/ui_fragment.R", local = TRUE)$value,
-        source("priorities/services/ui_fragment.R", local = TRUE)$value
+        #source("priorities/services/ui_fragment.R", local = TRUE)$value
 
     ),
 
@@ -179,7 +218,7 @@ server <- function(input, output, session) {
     source("priorities/health/server_fragment.R", local = TRUE)$value
     source("priorities/poverty/server_fragment.R", local = TRUE)$value
     source("priorities/climate/server_fragment.R", local = TRUE)$value
-    source("priorities/services/server_fragment.R", local = TRUE)$value
+    #source("priorities/services/server_fragment.R", local = TRUE)$value
 
     # Event listeners for the buttons on the "introduction" tab to select the relevant tabs
     observeEvent(input$health_btn, {
@@ -194,9 +233,9 @@ server <- function(input, output, session) {
       updateTabsetPanel(session, "tabs", selected = "Climate Crisis")
     })
 
-    observeEvent(input$services_btn, {
-      updateTabsetPanel(session, "tabs", selected = "Council Services")
-    })
+    # observeEvent(input$services_btn, {
+    #   updateTabsetPanel(session, "tabs", selected = "Council Services")
+    # })
 }
 
 # Run the app

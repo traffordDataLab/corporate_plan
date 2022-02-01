@@ -1,0 +1,188 @@
+area_code,area_name,period,value,indicator,unit,measure
+E06000005,Darlington,2010,482,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2011,492,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2012,497,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2013,499,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2014,516,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2015,527,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2016,523,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2017,527,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2018,546,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2019,566,Vehicle miles travelled,Miles (million),Frequency
+E06000005,Darlington,2020,457,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2010,2381,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2011,2413,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2012,2366,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2013,2400,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2014,2500,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2015,2537,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2016,2576,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2017,2566,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2018,2645,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2019,2714,Vehicle miles travelled,Miles (million),Frequency
+E06000050,Cheshire West and Chester,2020,2091,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2010,1581,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2011,1595,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2012,1584,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2013,1589,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2014,1638,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2015,1687,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2016,1787,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2017,1801,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2018,1825,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2019,1873,Vehicle miles travelled,Miles (million),Frequency
+E06000007,Warrington,2020,1461,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2010,1014,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2011,1028,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2012,1022,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2013,1043,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2014,1068,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2015,1076,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2016,1104,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2017,1093,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2018,1118,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2019,1178,Vehicle miles travelled,Miles (million),Frequency
+E08000002,Bury,2020,978,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2010,1129,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2011,1150,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2012,1164,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2013,1177,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2014,1214,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2015,1239,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2016,1258,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2017,1284,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2018,1312,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2019,1413,Vehicle miles travelled,Miles (million),Frequency
+E08000007,Stockport,2020,1179,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2010,902,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2011,921,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2012,949,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2013,955,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2014,992,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2015,995,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2016,994,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2017,1013,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2018,1034,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2019,1085,Vehicle miles travelled,Miles (million),Frequency
+E08000009,Trafford,2020,887,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2010,770,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2011,775,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2012,789,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2013,799,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2014,831,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2015,852,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2016,887,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2017,931,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2018,957,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2019,983,Vehicle miles travelled,Miles (million),Frequency
+E06000014,York,2020,768,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2010,1042,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2011,1053,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2012,1057,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2013,1041,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2014,1074,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2015,1086,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2016,1085,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2017,1112,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2018,1107,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2019,1137,Vehicle miles travelled,Miles (million),Frequency
+E06000015,Derby,2020,979,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2010,799,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2011,832,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2012,833,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2013,842,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2014,867,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2015,887,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2016,912,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2017,967,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2018,1011,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2019,1020,Vehicle miles travelled,Miles (million),Frequency
+E06000020,Telford and Wrekin,2020,802,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2010,1376,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2011,1428,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2012,1437,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2013,1431,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2014,1495,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2015,1550,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2016,1590,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2017,1601,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2018,1632,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2019,1634,Vehicle miles travelled,Miles (million),Frequency
+E08000029,Solihull,2020,1223,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2010,723,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2011,718,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2012,745,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2013,760,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2014,801,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2015,828,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2016,855,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2017,909,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2018,899,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2019,917,Vehicle miles travelled,Miles (million),Frequency
+E06000055,Bedford,2020,722,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2010,1089,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2011,1085,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2012,1070,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2013,1099,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2014,1143,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2015,1180,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2016,1222,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2017,1293,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2018,1297,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2019,1321,Vehicle miles travelled,Miles (million),Frequency
+E06000031,Peterborough,2020,1037,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2010,1002,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2011,1010,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2012,1008,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2013,1013,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2014,1044,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2015,1065,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2016,1098,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2017,1167,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2018,1167,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2019,1168,Vehicle miles travelled,Miles (million),Frequency
+E06000034,Thurrock,2020,996,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2010,1457,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2011,1453,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2012,1510,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2013,1548,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2014,1588,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2015,1618,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2016,1671,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2017,1698,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2018,1695,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2019,1732,Vehicle miles travelled,Miles (million),Frequency
+E06000042,Milton Keynes,2020,1306,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2010,2331,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2011,2344,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2012,2303,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2013,2348,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2014,2450,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2015,2530,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2016,2575,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2017,2605,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2018,2629,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2019,2704,Vehicle miles travelled,Miles (million),Frequency
+E06000025,South Gloucestershire,2020,2074,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2010,1173,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2011,1185,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2012,1182,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2013,1190,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2014,1277,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2015,1301,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2016,1302,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2017,1328,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2018,1335,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2019,1358,Vehicle miles travelled,Miles (million),Frequency
+E06000030,Swindon,2020,1022,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2010,1724,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2011,1740,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2012,1744,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2013,1760,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2014,1819,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2015,1862,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2016,1910,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2017,1950,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2018,1975,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2019,2030,Vehicle miles travelled,Miles (million),Frequency
+E92000001,England LA average,2020,1603,Vehicle miles travelled,Miles (million),Frequency
