@@ -50,8 +50,7 @@ df_household_waste_recycled <- df_raw_recycling %>%
          unit = "Waste",
          period = str_replace(period, "-", "/"),
          value = round((value * 100), digits = 1)) %>%
-  select(area_code, area_name, period, value, indicator, unit, measure) %>%
-  arrange(period)
+  select(area_code, area_name, period, indicator, measure, unit, value)
 
 # Export the tidied data
 write_csv(df_household_waste_recycled, "../household_waste_recycling.csv")
@@ -69,11 +68,10 @@ df_household_waste_not_recycled <- df_raw_not_recycled %>%
          period = `Financial Year`,
          value = `Household - waste not sent for recycling (tonnes)`) %>%
   mutate(indicator = "Household waste not sent for recycling",
-         measure = "Tonnes",
-         unit = "Waste",
+         measure = "Frequency",
+         unit = "Tonnes",
          period = str_replace(period, "-", "/")) %>%
-  select(area_code, area_name, period, value, indicator, unit, measure) %>%
-  arrange(period)
+  select(area_code, area_name, period, indicator, measure, unit, value)
 
 # Export the tidied data
 write_csv(df_household_waste_not_recycled, "../household_waste_not_recycled.csv")

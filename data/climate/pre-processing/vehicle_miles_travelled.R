@@ -63,7 +63,8 @@ df_vehicle_miles <- df_vehicle_miles %>%
   mutate(indicator = "Vehicle miles travelled",
          measure = "Frequency",
          unit = "Miles (million)") %>%
-  select(area_code,area_name,period,value,indicator,unit,measure)
+  arrange(period, area_name) %>%
+  select(area_code, area_name, period, indicator, measure, unit, value)
 
 # Export the tidied data ---------------------------
 write_csv(df_vehicle_miles, "../vehicle_miles_travelled.csv")

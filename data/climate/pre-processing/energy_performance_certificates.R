@@ -48,7 +48,7 @@ df_epc <- bind_rows(df_epc_england, df_epc_la) %>%
   mutate(indicator = "Domestic Energy Performance Certificates (EPC) lodged on the Buildings Register",
          measure = "Frequency",
          unit = "Certificates") %>%
-  select(area_code,area_name,period,value_certificates_lodged,value_rating_A,value_rating_B,value_rating_C,indicator,unit,measure)
+  select(area_code, area_name, period, indicator, measure, unit, value_certificates_lodged, value_rating_A, value_rating_B, value_rating_C)
   
 # Export the tidied data ---------------------------
 write_csv(df_epc, "../energy_performance_certificates.csv")  

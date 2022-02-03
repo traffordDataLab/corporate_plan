@@ -1,154 +1,154 @@
-area_code,area_name,period,value,indicator,unit,measure
-E92000001,England,2021-10,38.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2021-07,36.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2021-04,34.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2021-01,31,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2020-10,29.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2020-07,27.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2020-04,26.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2020-01,24.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E92000001,England,2019-10,22.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2021-10,28.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2021-07,28.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2021-04,27.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2021-01,27.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2020-10,27.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2020-07,26.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2020-04,26.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2020-01,25.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000005,Darlington,2019-10,25.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2021-10,28.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2021-07,24.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2021-04,20.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2021-01,16.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2020-10,16,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2020-07,14.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2020-04,14.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2020-01,11.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000050,Cheshire West and Chester,2019-10,11.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2021-10,42.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2021-07,42,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2021-04,41.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2021-01,40.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2020-10,39,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2020-07,39.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2020-04,39.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2020-01,31.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000007,Warrington,2019-10,31.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2021-10,11.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2021-07,8.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2021-04,8.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2021-01,8.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2020-10,8.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2020-07,12.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2020-04,12.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2020-01,10.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000002,Bury,2019-10,10.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2021-10,12.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2021-07,11.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2021-04,12.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2021-01,11.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2020-10,10.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2020-07,11.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2020-04,11.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2020-01,11,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000007,Stockport,2019-10,9.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2021-10,21.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2021-07,18.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2021-04,19,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2021-01,19,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2020-10,19,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2020-07,21.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2020-04,21.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2020-01,20.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000009,Trafford,2019-10,20.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2021-10,40.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2021-07,37.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2021-04,35.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2021-01,35.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2020-10,34.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2020-07,33.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2020-04,32.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2020-01,27.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000014,York,2019-10,27.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2021-10,25.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2021-07,24.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2021-04,24.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2021-01,22.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2020-10,22.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2020-07,22.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2020-04,22.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2020-01,22.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000015,Derby,2019-10,20.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2021-10,16.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2021-07,16.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2021-04,14.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2021-01,13.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2020-10,13.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2020-07,13.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2020-04,12.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2020-01,9.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000020,Telford and Wrekin,2019-10,7.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2021-10,54.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2021-07,53.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2021-04,36.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2021-01,37.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2020-10,32.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2020-07,30.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2020-04,30.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2020-01,26.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E08000029,Solihull,2019-10,24.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2021-10,58.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2021-07,49.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2021-04,36.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2021-01,28.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2020-10,27.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2020-07,21.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2020-04,21,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2020-01,19.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000055,Bedford,2019-10,19.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2021-10,32.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2021-07,32.6,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2021-04,30.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2021-01,29.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2020-10,26.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2020-07,28.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2020-04,25.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2020-01,21.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000031,Peterborough,2019-10,20.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2021-10,10.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2021-07,10.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2021-04,10.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2021-01,10.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2020-10,10.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2020-07,10.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2020-04,10.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2020-01,8.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000034,Thurrock,2019-10,8.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2021-10,137.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2021-07,134.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2021-04,132.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2021-01,121.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2020-10,108.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2020-07,105.8,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2020-04,105,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2020-01,102.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000042,Milton Keynes,2019-10,96.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2021-10,41.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2021-07,34,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2021-04,30.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2021-01,26.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2020-10,22.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2020-07,20.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2020-04,20.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2020-01,22.3,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000025,South Gloucestershire,2019-10,20.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2021-10,21.1,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2021-07,20.2,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2021-04,20.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2021-01,18.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2020-10,19.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2020-07,18.9,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2020-04,18.5,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2020-01,11.7,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
-E06000030,Swindon,2019-10,10.4,Publicly available electric vehicle charging devices at all speeds,Devices,"Per 100,000 population"
+area_code,area_name,period,indicator,measure,unit,value
+E06000055,Bedford,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,19.2
+E06000055,Bedford,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,19.8
+E06000055,Bedford,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21
+E06000055,Bedford,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21.9
+E06000055,Bedford,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.7
+E06000055,Bedford,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,28.9
+E06000055,Bedford,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,36.4
+E06000055,Bedford,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,49.8
+E06000055,Bedford,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,58.4
+E08000002,Bury,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.5
+E08000002,Bury,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.5
+E08000002,Bury,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,12.6
+E08000002,Bury,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,12.6
+E08000002,Bury,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,8.9
+E08000002,Bury,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,8.9
+E08000002,Bury,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,8.9
+E08000002,Bury,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,8.9
+E08000002,Bury,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.5
+E06000050,Cheshire West and Chester,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.7
+E06000050,Cheshire West and Chester,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.7
+E06000050,Cheshire West and Chester,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,14.1
+E06000050,Cheshire West and Chester,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,14.3
+E06000050,Cheshire West and Chester,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,16
+E06000050,Cheshire West and Chester,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,16.6
+E06000050,Cheshire West and Chester,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.1
+E06000050,Cheshire West and Chester,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,24.1
+E06000050,Cheshire West and Chester,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,28.8
+E06000005,Darlington,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,25.3
+E06000005,Darlington,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,25.3
+E06000005,Darlington,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,26.3
+E06000005,Darlington,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,26.2
+E06000005,Darlington,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.2
+E06000005,Darlington,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.2
+E06000005,Darlington,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.2
+E06000005,Darlington,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,28.9
+E06000005,Darlington,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,28.9
+E06000015,Derby,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.6
+E06000015,Derby,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.2
+E06000015,Derby,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.6
+E06000015,Derby,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.5
+E06000015,Derby,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.9
+E06000015,Derby,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.9
+E06000015,Derby,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,24.1
+E06000015,Derby,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,24.9
+E06000015,Derby,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,25.3
+E92000001,England,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.4
+E92000001,England,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,24.5
+E92000001,England,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,26.8
+E92000001,England,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.3
+E92000001,England,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,29.2
+E92000001,England,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,31
+E92000001,England,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,34.2
+E92000001,England,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,36.4
+E92000001,England,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,38.8
+E06000042,Milton Keynes,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,96.1
+E06000042,Milton Keynes,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,102.4
+E06000042,Milton Keynes,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,105
+E06000042,Milton Keynes,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,105.8
+E06000042,Milton Keynes,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,108.4
+E06000042,Milton Keynes,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,121.4
+E06000042,Milton Keynes,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,132.9
+E06000042,Milton Keynes,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,134.7
+E06000042,Milton Keynes,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,137.7
+E06000031,Peterborough,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.9
+E06000031,Peterborough,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21.4
+E06000031,Peterborough,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,25.4
+E06000031,Peterborough,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,28.2
+E06000031,Peterborough,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,26.7
+E06000031,Peterborough,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,29.2
+E06000031,Peterborough,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,30.7
+E06000031,Peterborough,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,32.6
+E06000031,Peterborough,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,32.6
+E08000029,Solihull,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,24.7
+E08000029,Solihull,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,26.1
+E08000029,Solihull,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,30.7
+E08000029,Solihull,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,30.5
+E08000029,Solihull,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,32.8
+E08000029,Solihull,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,37.9
+E08000029,Solihull,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,36.5
+E08000029,Solihull,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,53.3
+E08000029,Solihull,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,54.7
+E06000025,South Gloucestershire,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.2
+E06000025,South Gloucestershire,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.3
+E06000025,South Gloucestershire,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.9
+E06000025,South Gloucestershire,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.3
+E06000025,South Gloucestershire,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,22.4
+E06000025,South Gloucestershire,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,26.3
+E06000025,South Gloucestershire,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,30.2
+E06000025,South Gloucestershire,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,34
+E06000025,South Gloucestershire,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,41.3
+E08000007,Stockport,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,9.6
+E08000007,Stockport,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11
+E08000007,Stockport,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.7
+E08000007,Stockport,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.6
+E08000007,Stockport,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.9
+E08000007,Stockport,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.2
+E08000007,Stockport,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,12.3
+E08000007,Stockport,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.9
+E08000007,Stockport,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,12.2
+E06000030,Swindon,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.4
+E06000030,Swindon,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,11.7
+E06000030,Swindon,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,18.5
+E06000030,Swindon,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,18.9
+E06000030,Swindon,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,19.4
+E06000030,Swindon,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,18.9
+E06000030,Swindon,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.7
+E06000030,Swindon,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.2
+E06000030,Swindon,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21.1
+E06000020,Telford and Wrekin,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,7.3
+E06000020,Telford and Wrekin,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,9.6
+E06000020,Telford and Wrekin,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,12.9
+E06000020,Telford and Wrekin,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,13.3
+E06000020,Telford and Wrekin,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,13.3
+E06000020,Telford and Wrekin,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,13.9
+E06000020,Telford and Wrekin,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,14.5
+E06000020,Telford and Wrekin,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,16.5
+E06000020,Telford and Wrekin,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,16.5
+E06000034,Thurrock,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,8.7
+E06000034,Thurrock,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,8.7
+E06000034,Thurrock,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.4
+E06000034,Thurrock,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.3
+E06000034,Thurrock,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.3
+E06000034,Thurrock,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.3
+E06000034,Thurrock,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.9
+E06000034,Thurrock,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.3
+E06000034,Thurrock,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,10.8
+E08000009,Trafford,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.7
+E08000009,Trafford,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,20.7
+E08000009,Trafford,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21.6
+E08000009,Trafford,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21.5
+E08000009,Trafford,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,19
+E08000009,Trafford,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,19
+E08000009,Trafford,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,19
+E08000009,Trafford,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,18.5
+E08000009,Trafford,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,21.9
+E06000007,Warrington,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,31.5
+E06000007,Warrington,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,31.5
+E06000007,Warrington,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,39.1
+E06000007,Warrington,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,39.5
+E06000007,Warrington,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,39
+E06000007,Warrington,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,40.5
+E06000007,Warrington,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,41.4
+E06000007,Warrington,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,42
+E06000007,Warrington,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,42.5
+E06000014,York,2019-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.6
+E06000014,York,2020-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,27.6
+E06000014,York,2020-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,32.4
+E06000014,York,2020-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,33.2
+E06000014,York,2020-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,34.7
+E06000014,York,2021-01,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,35.1
+E06000014,York,2021-04,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,35.6
+E06000014,York,2021-07,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,37.4
+E06000014,York,2021-10,Publicly available electric vehicle charging devices at all speeds,"Per 100,000 population",Devices,40.8

@@ -57,7 +57,8 @@ df_charging_points_rate <- df_raw %>%
          indicator = "Publicly available electric vehicle charging devices at all speeds",
          measure = "Per 100,000 population",
          unit = "Devices") %>%
-  select(area_code,area_name,period,value,indicator,unit,measure)
+  arrange(area_name, period) %>%
+  select(area_code, area_name, period, indicator, measure, unit, value)
 
 # Export the tidied data ---------------------------
 write_csv(df_charging_points_rate, "../electric_vehicle_charging_points.csv")

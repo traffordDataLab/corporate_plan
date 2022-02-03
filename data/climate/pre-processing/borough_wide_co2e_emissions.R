@@ -28,9 +28,9 @@ df_co2e <- df_co2e_raw %>%
          value = "Grand Total") %>%
   mutate(indicator = "Local Authority territorial CO2 emissions estimates",
          measure = "Frequency",
-         unit = "kt CO2") %>%
+         unit = "kilotonnes") %>%
   filter(area_code %in% authorities$area_code, period >= 2010) %>%
-  select(area_code,area_name,period,value,indicator,unit,measure)
+  select(area_code, area_name, period, indicator, measure, unit, value)
 
 # Export the tidied data ---------------------------
 write_csv(df_co2e, "../borough_wide_co2_emissions.csv")    

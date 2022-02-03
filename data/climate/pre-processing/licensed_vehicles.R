@@ -78,13 +78,14 @@ df_licensed_vehicles <- df_ulev %>%
   mutate(indicator = "Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev",
          measure = "Frequency",
          unit = "Vehicles") %>%
+  arrange(period, area_name.x) %>%
   select(area_code,
          area_name = area_name.x,
          period,
-         value_ulev,
-         value_all_vehicles,
          indicator,
+         measure,
          unit,
-         measure)
+         value_ulev,
+         value_all_vehicles)
 
 write_csv(df_licensed_vehicles, "../licensed_vehicles.csv")
