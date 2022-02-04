@@ -106,7 +106,7 @@ df_wa <- airqualityengland(Wellacre, paste0(max_year-9, "-01-01"), paste0(max_ye
 
 df_no2 <- bind_rows(df_no2, df_a56, df_mp, df_wa)
 
-# Tidy the data ---------------------------
+# Tidy the NO2 data ---------------------------
 df_no2_final <- df_no2 %>%
   drop_na() %>%
   mutate(period = year(date)) %>%
@@ -121,5 +121,76 @@ df_no2_final <- df_no2 %>%
          unit = "µg/m3") %>%
   select(station_code = station, station_name, period, indicator, measure, unit, value)
   
-# Export the tidied data ---------------------------
+# Export the tidied NO2 data ---------------------------
 write_csv(df_no2_final, "../no2_concentration.csv")
+
+
+# Get PM10 data for last complete 10 years ---------------------------
+# After getting each year, merge it into a single dataset
+
+df_a56 <- airqualityengland(A56, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-1, "-01-01"), paste0(max_year-1, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-1, "-01-01"), paste0(max_year-1, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-2, "-01-01"), paste0(max_year-2, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-2, "-01-01"), paste0(max_year-2, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-4, "-01-01"), paste0(max_year-4, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-4, "-01-01"), paste0(max_year-4, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-5, "-01-01"), paste0(max_year-5, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-5, "-01-01"), paste0(max_year-5, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-6, "-01-01"), paste0(max_year-6, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-6, "-01-01"), paste0(max_year-6, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-7, "-01-01"), paste0(max_year-7, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-7, "-01-01"), paste0(max_year-7, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-8, "-01-01"), paste0(max_year-8, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-8, "-01-01"), paste0(max_year-8, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+df_a56 <- airqualityengland(A56, paste0(max_year-9, "-01-01"), paste0(max_year-9, "-12-31"), "PM10")
+df_mp <- airqualityengland(MossPark, paste0(max_year-9, "-01-01"), paste0(max_year-9, "-12-31"), "PM10")
+
+df_pm10 <- bind_rows(df_pm10, df_a56, df_mp)
+
+
+# Tidy the PM10 data ---------------------------
+df_pm10_final <- df_pm10 %>%
+  drop_na() %>%
+  mutate(period = year(date)) %>%
+  filter(period <= max_year) %>% # This removes a slight anomaly in the results of having results from max_year+1-01-01T00:00:00
+  group_by(period, station) %>%
+  summarise(value = round(mean(value), digits = 1)) %>%
+  mutate(station_name = if_else(station == "TRF2", "Trafford A56", "Trafford Moss Park"),
+         indicator = "Particulate Matter (PM10)",
+         measure = "Annual mean concentration",
+         unit = "µg/m3") %>%
+  select(station_code = station, station_name, period, indicator, measure, unit, value)
+
+# Export the tidied data ---------------------------
+write_csv(df_pm10_final, "../pm10_concentration.csv")
