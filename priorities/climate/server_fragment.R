@@ -380,8 +380,8 @@ output$borough_co2_emissions_plot <- renderggiraph({
     scale_colour_manual(values = if_else(df_borough_co2_emissions$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
     scale_fill_manual(values = if_else(df_borough_co2_emissions$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
     scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
-    labs(title = "Local Authority territorial CO2 emissions estimates",
-         subtitle = "Carbon dioxide emissions within region borders",
+    labs(title = expression(paste("Territorial Carbon Dioxide (", CO[2], ") emission estimates")),
+         subtitle = "Estimates of emissions within Local Authority borders",
          caption = "Source: BEIS",
          x = NULL,
          y = "Kilotonnes (kt)",
@@ -395,6 +395,106 @@ output$borough_co2_emissions_plot <- renderggiraph({
 output$borough_co2_emissions_box <- renderUI({
   withSpinner(
     ggiraphOutput("borough_co2_emissions_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
+# Nitrogen Dioxide (NO2) Concentration ---------
+
+# Load in data
+df_no2_concentration <- read_csv("data/climate/no2_concentration.csv") %>%
+  mutate(period = as.character(period))
+
+# Plot
+output$no2_concentration_plot <- renderggiraph({
+  gg <- ggplot(df_no2_concentration,
+               aes(x = period, y = value, colour = station_name, fill = station_name, group = station_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '</span><br />',
+                           '<span class="plotTooltipMain">', station_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white",
+      show.legend = FALSE
+    ) +
+    scale_colour_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0", "Trafford Wellacre Academy" = "#94b6c3")) +
+    scale_fill_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0", "Trafford Wellacre Academy" = "#94b6c3")) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = expression(paste("Nitrogen Dioxide (", NO[2], ") concentration")),
+         subtitle = "Annual mean of hourly measurements",
+         caption = "Source: Trafford Council and Ricardo EE",
+         x = NULL,
+         y = expression(paste("µg/m"^3)),
+         fill = NULL,
+         colour = "Location: ") +
+    theme_x() +
+    theme(
+      legend.position = "top",
+      legend.title = element_text(size = 9),
+      legend.text = element_text(size = 8)
+    )
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$no2_concentration_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("no2_concentration_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
+# Particulate Matter (PM10) Concentration ---------
+
+# Load in data
+df_pm10_concentration <- read_csv("data/climate/pm10_concentration.csv") %>%
+  mutate(period = as.character(period))
+
+# Plot
+output$pm10_concentration_plot <- renderggiraph({
+  gg <- ggplot(df_pm10_concentration,
+               aes(x = period, y = value, colour = station_name, fill = station_name, group = station_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '</span><br />',
+                           '<span class="plotTooltipMain">', station_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white",
+      show.legend = FALSE
+    ) +
+    scale_colour_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0")) +
+    scale_fill_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0")) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = expression(paste("Particulate Matter (", PM[10], ") concentration")),
+         subtitle = "Annual mean of hourly measurements",
+         caption = "Source: Trafford Council and Ricardo EE",
+         x = NULL,
+         y = expression(paste("µg/m"^3)),
+         fill = NULL,
+         colour = "Location: ") +
+    theme_x() +
+    theme(
+      legend.position = "top",
+      legend.title = element_text(size = 9),
+      legend.text = element_text(size = 8)
+    )
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$pm10_concentration_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("pm10_concentration_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,

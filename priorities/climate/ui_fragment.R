@@ -141,6 +141,41 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/climate/metadata/borough_co2_emissions.md"),
             HTML('</details>')
+        ),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            HTML("<h3>NO<sub>2</sub> concentrations</h3>"),
+            uiOutput("no2_concentration_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "no2_concentration_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            #includeMarkdown("data/climate/metadata/no2_concentration.md"),
+            HTML('</details>')
+        )
+        ,
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            HTML("<h3>PM<sub>10</sub> concentrations</h3>"),
+            uiOutput("pm10_concentration_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "pm10_concentration_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            #includeMarkdown("data/climate/metadata/pm10_concentration.md"),
+            HTML('</details>')
         )
     )
 )
