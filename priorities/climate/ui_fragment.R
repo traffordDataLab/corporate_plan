@@ -156,7 +156,7 @@ tabPanel(
             ),
             HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
-            #includeMarkdown("data/climate/metadata/no2_concentration.md"),
+            includeMarkdown("data/climate/metadata/no2_concentration.md"),
             HTML('</details>')
         )
         ,
@@ -174,7 +174,7 @@ tabPanel(
             ),
             HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
-            #includeMarkdown("data/climate/metadata/pm10_concentration.md"),
+            includeMarkdown("data/climate/metadata/pm10_concentration.md"),
             HTML('</details>')
         )
     )
