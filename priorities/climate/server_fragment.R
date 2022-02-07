@@ -501,3 +501,50 @@ output$pm10_concentration_box <- renderUI({
     proxy.height = "250px"
   )
 })
+
+
+# Adults who walk or cycle 5 times per week ---------
+
+# Load in data and create percentages as well as average of similar authorities
+df_adults_walk_cycle <- read_csv("data/climate/adults_walking_or_cycling.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford",
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), 1))
+
+# Plot
+output$adults_walk_cycle_plot <- renderggiraph({
+  gg <- ggplot(df_adults_walk_cycle,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = "Adults who do any walking or cycling, for any purpose",
+         subtitle = "Percentage participating five times per week",
+         caption = "Source: DfT",
+         x = NULL,
+         y = "Percentage",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$adults_walk_cycle_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("adults_walk_cycle_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
