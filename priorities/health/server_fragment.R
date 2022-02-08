@@ -1072,7 +1072,7 @@ output$inequality_life_expectancy_plot <- renderggiraph({
       labs(
         title = "Inequality in life expectancy at birth by sex",
         subtitle = NULL,
-        caption = "Source: Annual Mortality Extracts, ONS, Annual Population Survey",
+        caption = "Source: Annual Mortality Extracts, ONS, IMD 2019, MHCLG",
         x = NULL,
         y = "years",
         colour = NULL
@@ -1107,7 +1107,7 @@ output$inequality_life_expectancy_plot <- renderggiraph({
       scale_y_continuous(limits = c(0, NA), labels = scales::comma) +
       labs(title = "Inequality in life expectancy at birth by sex",
            subtitle = NULL,
-           caption = "Source: Annual Mortality Extracts, ONS, Annual Population Survey",
+           caption = "Source: Annual Mortality Extracts, ONS, IMD 2019, MHCLG",
            x = NULL,
            y = "years") +
       theme_x() 

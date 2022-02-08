@@ -21,7 +21,7 @@ inequality_life_expectancy_districsts <- inequality_life_expectancy_trend %>%
   select(-c(`Category Type`))
 
 df <- bind_rows(inequality_life_expectancy_england, inequality_life_expectancy_districsts) %>%
-  filter(period %in% c("2010 - 12", "2011 - 13", "2012 - 14", "2013 - 15", "2014 - 16", "2015 - 17", "2016 - 18", "2017 - 19")) %>%
+  filter(period %in% c("2010 - 12", "2011 - 13", "2012 - 14", "2013 - 15", "2014 - 16", "2015 - 17", "2016 - 18", "2017 - 19", "2018 - 20")) %>%
   mutate(value = round(value, 1),
          indicator = "Inequality in life expectancy at birth",
          measure = "Slope Index of Inequality",
