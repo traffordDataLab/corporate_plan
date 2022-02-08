@@ -3,5 +3,38 @@
 
 tabPanel(
     title = "Poverty Reduction",
-    HTML('<h2>Supporting people out of poverty</h2>')
+    h2("Supporting people out of poverty"),
+    includeHTML("help.html"),
+    fluidRow(
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+            
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #),
+        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        
+        #)
+    )
 )
