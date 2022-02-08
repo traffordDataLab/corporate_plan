@@ -24,8 +24,8 @@ output$licensed_vehicles_plot <- renderggiraph({
                scale_colour_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
                scale_fill_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
                scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
-               labs(title = "Number of licensed vehicles",
-                    subtitle = "All vehicle types",
+               labs(title = "All Licensed vehicles",
+                    subtitle = NULL,
                     caption = "Source: DfT and DVLA",
                     x = NULL,
                     y = "Count",
@@ -73,8 +73,8 @@ output$licensed_ulev_plot <- renderggiraph({
     scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(title = "Percentage of Ultra Low Emission Vehicles",
-         subtitle = "Compared to all licensed vehicles",
+    labs(title = "Proportion of Ultra Low Emission Vehicles",
+         subtitle = NULL,
          caption = "Source: DfT and DVLA",
          x = NULL,
          y = "Percentage",
@@ -121,8 +121,8 @@ output$vehicle_miles_plot <- renderggiraph({
     scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England LA average" = plot_colour_england)) +
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England LA average" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
-    labs(title = "Annual motor vehicle traffic",
-         subtitle = "Miles travelled (millions)",
+    labs(title = "Annual motor vehicle miles travelled",
+         subtitle = NULL,
          caption = "Source: DfT",
          x = NULL,
          y = "Miles (millions)",
@@ -169,7 +169,7 @@ output$ev_charging_points_plot <- renderggiraph({
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA)) +
     labs(title = "Publicly available electric vehicle charging devices",
-         subtitle = "Per 100,000 population",
+         subtitle = NULL,
          caption = "Source: DfT and OZEV",
          x = NULL,
          y = "Devices (per 100K)",
@@ -215,8 +215,8 @@ output$household_waste_recycling_plot <- renderggiraph({
     scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(title = "Household waste sent for recycling",
-         subtitle = "Percentage collected",
+    labs(title = "Household waste collected and sent for recycling",
+         subtitle = NULL,
          caption = "Source: DEFRA",
          x = NULL,
          y = "Percentage",
@@ -260,8 +260,8 @@ output$household_waste_not_recycled_plot <- renderggiraph({
     scale_colour_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
     scale_fill_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
     scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
-    labs(title = "Household waste not sent for recycling",
-         subtitle = "Tonnage collected",
+    labs(title = "Household waste collected not sent for recycling",
+         subtitle = NULL,
          caption = "Source: DEFRA",
          x = NULL,
          y = "Tonnes",
@@ -334,8 +334,8 @@ output$domestic_epc_plot <- renderggiraph({
     scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(title = "Domestic Energy Performance Certificates (EPC)",
-         subtitle = "Proportion rated A, B or C over 10 year periods",
+    labs(title = "Domestic EPC rated A, B or C over 10 years",
+         subtitle = NULL,
          caption = "Source: DLUHC",
          x = NULL,
          y = "Percentage",
@@ -381,7 +381,7 @@ output$borough_co2_emissions_plot <- renderggiraph({
     scale_fill_manual(values = if_else(df_borough_co2_emissions$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
     scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
     labs(title = expression(paste("Territorial Carbon Dioxide (", CO[2], ") emission estimates")),
-         subtitle = "Estimates of emissions within Local Authority borders",
+         subtitle = NULL,
          caption = "Source: BEIS",
          x = NULL,
          y = "Kilotonnes (kt)",
@@ -421,11 +421,11 @@ output$no2_concentration_plot <- renderggiraph({
       shape = 21, size = 2.5, colour = "white",
       show.legend = FALSE
     ) +
-    scale_colour_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0", "Trafford Wellacre Academy" = "#94b6c3")) +
-    scale_fill_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0", "Trafford Wellacre Academy" = "#94b6c3")) +
+    scale_colour_manual(values = c("Trafford A56" = "#62156C", "Trafford Moss Park" = "#B63458", "Trafford Wellacre Academy" = "#FA9209")) +
+    scale_fill_manual(values = c("Trafford A56" = "#62156C", "Trafford Moss Park" = "#B63458", "Trafford Wellacre Academy" = "#FA9209")) +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(title = expression(paste("Nitrogen Dioxide (", NO[2], ") concentration")),
-         subtitle = "Annual mean of hourly measurements",
+    labs(title = expression(paste("Annual mean Nitrogen Dioxide (", NO[2], ") concentration")),
+         subtitle = NULL,
          caption = "Source: Trafford Council and Ricardo EE",
          x = NULL,
          y = expression(paste("µg/m"^3)),
@@ -471,11 +471,11 @@ output$pm10_concentration_plot <- renderggiraph({
       shape = 21, size = 2.5, colour = "white",
       show.legend = FALSE
     ) +
-    scale_colour_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0")) +
-    scale_fill_manual(values = c("Trafford A56" = plot_colour_trafford, "Trafford Moss Park" = "#00a1e0")) +
+    scale_colour_manual(values = c("Trafford A56" = "#62156C", "Trafford Moss Park" = "#B63458")) +
+    scale_fill_manual(values = c("Trafford A56" = "#62156C", "Trafford Moss Park" = "#B63458")) +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(title = expression(paste("Particulate Matter (", PM[10], ") concentration")),
-         subtitle = "Annual mean of hourly measurements",
+    labs(title = expression(paste("Annual mean Particulate Matter (", PM[10], ") concentration")),
+         subtitle = NULL,
          caption = "Source: Trafford Council and Ricardo EE",
          x = NULL,
          y = expression(paste("µg/m"^3)),
@@ -527,8 +527,8 @@ output$adults_walk_cycle_plot <- renderggiraph({
     scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA)) +
-    labs(title = "Adults who do any walking or cycling, for any purpose",
-         subtitle = "Percentage participating five times per week",
+    labs(title = "Adults walking or cycling five times per week",
+         subtitle = NULL,
          caption = "Source: DfT",
          x = NULL,
          y = "Percentage",
