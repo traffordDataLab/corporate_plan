@@ -7,3 +7,5 @@ Source: Dataset CW0301: <a href="https://assets.publishing.service.gov.uk/govern
 Further information regarding this dataset can be found in <a href="https://www.gov.uk/government/publications/walking-and-cycling-statistics-notes-and-definitions/walking-and-cycling-statistics-notes-and-definitions" target="_blank">Walking and cycling statistics: notes and definitions</a>
 
 Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2019.
+
+<a href="https://www.trafforddatalab.io/corporate_plan/data/climate/adults_walking_or_cycling.csv" aria-label="Download the data" class="downloadButton" target="_blank" download>Data <span class="fas fa-download"></span></a>
