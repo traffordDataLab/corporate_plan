@@ -7,7 +7,7 @@ tabPanel(
     includeHTML("help.html"),
     fluidRow(
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            HTML("<h3>Licensed vehicles</h3>"),
+            h3("Licensed vehicles"),
             uiOutput("licensed_vehicles_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "licensed_vehicles_selection",
@@ -24,7 +24,7 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            HTML("<h3>Licensed vehicles: ULEV</h3>"),
+            h3("Licensed vehicles: ULEV"),
             uiOutput("licensed_ulev_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "licensed_ulev_selection",
@@ -75,13 +75,13 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            HTML("<h3>Household waste <small>(1)</small></h3>"),
+            h3("Waste recycled"),
             uiOutput("household_waste_recycling_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "household_waste_recycling_selection",
-                choiceNames = c("Trend"),
-                choiceValues = c("Trend"),
-                selected = "Trend",
+                choiceNames = c("% Trend", "Wt. Trend"),
+                choiceValues = c("% Trend", "Wt. Trend"),
+                selected = "% Trend",
                 direction = "horizontal",
                 individual = FALSE,
                 status = "plotButtons" # Our custom CSS class, .btn-plotButtons
@@ -92,13 +92,13 @@ tabPanel(
             HTML('</details>')
         ),
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            HTML("<h3>Household waste <small>(2)</small></h3>"),
+            h3("Waste not recycled"),
             uiOutput("household_waste_not_recycled_box", class = "indicatorContainer"),
             radioGroupButtons(
                 inputId = "household_waste_not_recycled_selection",
-                choiceNames = c("Trend"),
-                choiceValues = c("Trend"),
-                selected = "Trend",
+                choiceNames = c("% Trend", "Wt. Trend"),
+                choiceValues = c("% Trend", "Wt. Trend"),
+                selected = "% Trend",
                 direction = "horizontal",
                 individual = FALSE,
                 status = "plotButtons" # Our custom CSS class, .btn-plotButtons

@@ -1,4 +1,4 @@
-#### Tonnage of household waste collected and not sent for recycling.
+#### Household waste not sent for recycling.
 
 Note: the following links open in a new window.
 

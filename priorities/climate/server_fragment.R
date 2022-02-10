@@ -193,35 +193,69 @@ output$ev_charging_points_box <- renderUI({
 
 # Household waste recycling ---------
 
-# Load in data and create mean of similar neighbours
-df_household_waste_recycling <- read_csv("data/climate/household_waste_recycling.csv") %>%
+# Load in data for percentages and tonnes separately and create mean of similar neighbours
+df_household_waste_recycling_percentage <- read_csv("data/climate/household_waste_recycling.csv") %>%
+  filter(measure == "Percentage") %>%
   mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
                                area_name == "England" ~ "England",
                                TRUE ~ "Similar authorities average")) %>%
   group_by(period, area_name) %>%
   summarise(value = round(mean(value), digits = 1))
 
+df_household_waste_recycling_tonnes <- read_csv("data/climate/household_waste_recycling.csv") %>%
+  filter(measure == "Frequency") %>%
+  mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), digits = 1))
+
 # Plot
 output$household_waste_recycling_plot <- renderggiraph({
-  gg <- ggplot(df_household_waste_recycling,
-               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
-    geom_point_interactive(
-      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
-                           '<span class="plotTooltipMain">', area_name, '</span><br />',
-                           '<span class="plotTooltipPeriod">', period, '</span>')),
-      shape = 21, size = 2.5, colour = "white"
-    ) +
-    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
-    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
-    scale_y_continuous(limits = c(0, NA)) +
-    labs(title = "Household waste collected and sent for recycling",
-         subtitle = NULL,
-         caption = "Source: DEFRA",
-         x = NULL,
-         y = "Percentage",
-         fill = NULL) +
-    theme_x()
+  
+  if (input$household_waste_recycling_selection == "% Trend") {
+  
+    gg <- ggplot(df_household_waste_recycling_percentage,
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(
+        aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                             '<span class="plotTooltipMain">', area_name, '</span><br />',
+                             '<span class="plotTooltipPeriod">', period, '</span>')),
+        shape = 21, size = 2.5, colour = "white"
+      ) +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(title = "Household waste collected and sent for recycling",
+           subtitle = NULL,
+           caption = "Source: DEFRA",
+           x = NULL,
+           y = "Percentage",
+           fill = NULL) +
+      theme_x()
+    
+  } else {
+    
+    gg <- ggplot(df_household_waste_recycling_tonnes,
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(
+        aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
+                             '<span class="plotTooltipMain">', area_name, '</span><br />',
+                             '<span class="plotTooltipPeriod">', period, '</span>')),
+        shape = 21, size = 2.5, colour = "white"
+      ) +
+      scale_colour_manual(values = if_else(df_household_waste_recycling_tonnes$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
+      scale_fill_manual(values = if_else(df_household_waste_recycling_tonnes$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
+      scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
+      labs(title = "Household waste collected and sent for recycling",
+           subtitle = NULL,
+           caption = "Source: DEFRA",
+           x = NULL,
+           y = "Tonnes",
+           fill = NULL) +
+      theme_x()
+    
+  }
   
   girafe(ggobj = gg, options = lab_ggiraph_options)
 })
@@ -240,33 +274,70 @@ output$household_waste_recycling_box <- renderUI({
 
 # Household waste not recycled ---------
 
-# Load in data and create mean of similar neighbours
-df_household_waste_not_recycled <- read_csv("data/climate/household_waste_not_recycled.csv") %>%
+# Load in data for percentages and tonnes separately and create mean of similar neighbours
+df_household_waste_not_recycled_percentage <- read_csv("data/climate/household_waste_not_recycled.csv") %>%
+  filter(measure == "Percentage") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), digits = 1))
+
+df_household_waste_not_recycled_tonnes <- read_csv("data/climate/household_waste_not_recycled.csv") %>%
+  filter(measure == "Frequency") %>%
   mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average")) %>%
   group_by(period, area_name) %>%
   summarise(value = round(mean(value), digits = 1))
 
+
 # Plot
 output$household_waste_not_recycled_plot <- renderggiraph({
-  gg <- ggplot(df_household_waste_not_recycled,
-               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
-    geom_point_interactive(
-      aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
-                           '<span class="plotTooltipMain">', area_name, '</span><br />',
-                           '<span class="plotTooltipPeriod">', period, '</span>')),
-      shape = 21, size = 2.5, colour = "white"
-    ) +
-    scale_colour_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
-    scale_fill_manual(values = if_else(df_licensed_vehicles$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
-    scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
-    labs(title = "Household waste collected not sent for recycling",
-         subtitle = NULL,
-         caption = "Source: DEFRA",
-         x = NULL,
-         y = "Tonnes",
-         fill = NULL) +
-    theme_x()
+  
+  if (input$household_waste_not_recycled_selection == "% Trend") {
+  
+    gg <- ggplot(df_household_waste_not_recycled_percentage,
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(
+        aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                             '<span class="plotTooltipMain">', area_name, '</span><br />',
+                             '<span class="plotTooltipPeriod">', period, '</span>')),
+        shape = 21, size = 2.5, colour = "white"
+      ) +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(title = "Household waste collected not sent for recycling",
+           subtitle = NULL,
+           caption = "Source: DEFRA",
+           x = NULL,
+           y = "Percentage",
+           fill = NULL) +
+      theme_x()
+    
+  } else {
+  
+    gg <- ggplot(df_household_waste_not_recycled_tonnes,
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(
+        aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
+                             '<span class="plotTooltipMain">', area_name, '</span><br />',
+                             '<span class="plotTooltipPeriod">', period, '</span>')),
+        shape = 21, size = 2.5, colour = "white"
+      ) +
+      scale_colour_manual(values = if_else(df_household_waste_not_recycled_tonnes$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
+      scale_fill_manual(values = if_else(df_household_waste_not_recycled_tonnes$area_name == "Trafford", plot_colour_trafford, plot_colour_similar_authorities)) +
+      scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
+      labs(title = "Household waste collected not sent for recycling",
+           subtitle = NULL,
+           caption = "Source: DEFRA",
+           x = NULL,
+           y = "Tonnes",
+           fill = NULL) +
+      theme_x()
+  
+  }
   
   girafe(ggobj = gg, options = lab_ggiraph_options)
 })

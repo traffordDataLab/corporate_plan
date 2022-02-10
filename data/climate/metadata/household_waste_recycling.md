@@ -1,4 +1,4 @@
-#### Percentage of household waste collected and sent for reuse, recycling or composting.
+#### Household waste sent for reuse, recycling or composting.
 
 Note: the following links open in a new window.
 
