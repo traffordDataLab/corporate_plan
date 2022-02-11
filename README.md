@@ -3,16 +3,16 @@ Dashboard application to visualise, and make available, data relating to the [Tr
 
 The Corporate Plan describes Trafford Council's vision and priorities for the borough and the priorities we have identified as an organisation as being key to the delivery of that vision. The first Corporate Plan was launched in 2018, this repo relates to the updated version for 2022 onwards.
 
-The app is created in [R](https://cran.r-project.org/) using [Shiny](https://cran.r-project.org/web/packages/shiny/index.html) and a number of other packages including [ggiraph](https://cran.r-project.org/web/packages/ggiraph/index.html).  When launched it will be available from our shinyapps subdomain: https://trafforddatalab.shinyapps.io/[TBD]
+The app is created in [R](https://cran.r-project.org/) using [Shiny](https://cran.r-project.org/web/packages/shiny/index.html) and a number of other packages including [ggiraph](https://cran.r-project.org/web/packages/ggiraph/index.html).
+
+You can access the app at: https://trafforddatalab.shinyapps.io/corporate-plan
 
 ## Priorities
 The priorities underpinning the Corporate Plan are:
 
-- Addressing our climate crisis
-- Being a more open and accessible council
-- Making best use of our resources to deliver quality services
 - Reducing health inequalities
 - Supporting people out of poverty
+- Addressing our climate crisis
 
 Multiple [indicators](indicators.md) have been chosen to provide the data to measure progress within each of the priorities. These are visualised in the dashboard within the relevant priority section.
 
