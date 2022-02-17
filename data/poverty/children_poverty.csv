@@ -1,0 +1,145 @@
+area_code,area_name,area_type,period,indicator,measure,unit,value
+E92000001,England,Country,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,15.3
+E92000001,England,Country,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,15.2
+E92000001,England,Country,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,14.8
+E92000001,England,Country,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,15
+E92000001,England,Country,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,15.2
+E92000001,England,Country,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,15.6
+E06000014,York,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,11.5
+E06000036,Bracknell Forest,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,7.4
+E06000049,Cheshire East,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,10.6
+E06000056,Central Bedfordshire,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,10.1
+E06000060,Buckinghamshire UA,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,9.6
+E08000007,Stockport,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,12.2
+E08000009,Trafford,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,10.9
+E08000029,Solihull,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,10.5
+E09000006,Bromley,UA,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,10
+E10000014,Hampshire,County,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,9.2
+E10000015,Hertfordshire,County,2014/15,Children in absolute low income families (under 16s),Percentage,Persons,9.3
+E06000014,York,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,10.6
+E06000036,Bracknell Forest,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,7.5
+E06000049,Cheshire East,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,10.3
+E06000056,Central Bedfordshire,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,9.6
+E06000060,Buckinghamshire UA,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,9.8
+E08000007,Stockport,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,11.5
+E08000009,Trafford,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,10.6
+E08000029,Solihull,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,11
+E09000006,Bromley,UA,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,9.2
+E10000014,Hampshire,County,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,9.3
+E10000015,Hertfordshire,County,2015/16,Children in absolute low income families (under 16s),Percentage,Persons,9
+E06000014,York,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,10
+E06000036,Bracknell Forest,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,7.9
+E06000049,Cheshire East,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,10.3
+E06000056,Central Bedfordshire,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,8.8
+E06000060,Buckinghamshire UA,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,10.1
+E08000007,Stockport,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,11.9
+E08000009,Trafford,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,10.8
+E08000029,Solihull,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,10.6
+E09000006,Bromley,UA,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,8.8
+E10000014,Hampshire,County,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,9.5
+E10000015,Hertfordshire,County,2016/17,Children in absolute low income families (under 16s),Percentage,Persons,8.5
+E06000014,York,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,9.7
+E06000036,Bracknell Forest,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,8
+E06000049,Cheshire East,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,10.7
+E06000056,Central Bedfordshire,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,8.4
+E06000060,Buckinghamshire UA,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,10.5
+E08000007,Stockport,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,12.5
+E08000009,Trafford,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,10.7
+E08000029,Solihull,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,10.4
+E09000006,Bromley,UA,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,9.4
+E10000014,Hampshire,County,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,9.8
+E10000015,Hertfordshire,County,2017/18,Children in absolute low income families (under 16s),Percentage,Persons,8
+E06000014,York,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,10.3
+E06000036,Bracknell Forest,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,8
+E06000049,Cheshire East,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,10.9
+E06000056,Central Bedfordshire,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,8.5
+E06000060,Buckinghamshire UA,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,10.3
+E08000007,Stockport,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,12.9
+E08000009,Trafford,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,11
+E08000029,Solihull,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,10.2
+E09000006,Bromley,UA,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,9.1
+E10000014,Hampshire,County,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,9.8
+E10000015,Hertfordshire,County,2018/19,Children in absolute low income families (under 16s),Percentage,Persons,8.2
+E06000014,York,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,10.5
+E06000036,Bracknell Forest,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,8.2
+E06000049,Cheshire East,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,10.3
+E06000056,Central Bedfordshire,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,8.6
+E06000060,Buckinghamshire UA,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,9.6
+E08000007,Stockport,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,12
+E08000009,Trafford,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,10
+E08000029,Solihull,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,11.2
+E09000006,Bromley,UA,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,9.6
+E10000014,Hampshire,County,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,9.4
+E10000015,Hertfordshire,County,2019/20,Children in absolute low income families (under 16s),Percentage,Persons,8.2
+E92000001,England,Country,2014/15,Children in relative low income families (under 16s),Percentage,Persons,15.2
+E92000001,England,Country,2015/16,Children in relative low income families (under 16s),Percentage,Persons,16.2
+E92000001,England,Country,2016/17,Children in relative low income families (under 16s),Percentage,Persons,17
+E92000001,England,Country,2017/18,Children in relative low income families (under 16s),Percentage,Persons,18
+E92000001,England,Country,2018/19,Children in relative low income families (under 16s),Percentage,Persons,18.2
+E92000001,England,Country,2019/20,Children in relative low income families (under 16s),Percentage,Persons,19.1
+E06000014,York,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,11.1
+E06000036,Bracknell Forest,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,7.3
+E06000049,Cheshire East,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,10.8
+E06000056,Central Bedfordshire,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,10
+E06000060,Buckinghamshire UA,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,9.4
+E08000007,Stockport,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,12.3
+E08000009,Trafford,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,11
+E08000029,Solihull,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,10.8
+E09000006,Bromley,UA,2014/15,Children in relative low income families (under 16s),Percentage,Persons,10
+E10000014,Hampshire,County,2014/15,Children in relative low income families (under 16s),Percentage,Persons,9
+E10000015,Hertfordshire,County,2014/15,Children in relative low income families (under 16s),Percentage,Persons,9.2
+E06000014,York,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,11.1
+E06000036,Bracknell Forest,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,7.8
+E06000049,Cheshire East,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,11.2
+E06000056,Central Bedfordshire,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,10.5
+E06000060,Buckinghamshire UA,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,10
+E08000007,Stockport,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,12.5
+E08000009,Trafford,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,11.7
+E08000029,Solihull,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,12.1
+E09000006,Bromley,UA,2015/16,Children in relative low income families (under 16s),Percentage,Persons,9.6
+E10000014,Hampshire,County,2015/16,Children in relative low income families (under 16s),Percentage,Persons,9.6
+E10000015,Hertfordshire,County,2015/16,Children in relative low income families (under 16s),Percentage,Persons,9.8
+E06000014,York,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,11
+E06000036,Bracknell Forest,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,8.9
+E06000049,Cheshire East,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,11.9
+E06000056,Central Bedfordshire,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,10.5
+E06000060,Buckinghamshire UA,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,11.3
+E08000007,Stockport,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,13.7
+E08000009,Trafford,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,12.4
+E08000029,Solihull,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,12.4
+E09000006,Bromley,UA,2016/17,Children in relative low income families (under 16s),Percentage,Persons,9.9
+E10000014,Hampshire,County,2016/17,Children in relative low income families (under 16s),Percentage,Persons,10.7
+E10000015,Hertfordshire,County,2016/17,Children in relative low income families (under 16s),Percentage,Persons,10
+E06000014,York,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,11.1
+E06000036,Bracknell Forest,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,8.9
+E06000049,Cheshire East,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,12.6
+E06000056,Central Bedfordshire,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,11.1
+E06000060,Buckinghamshire UA,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,11.6
+E08000007,Stockport,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,14.7
+E08000009,Trafford,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,12.7
+E08000029,Solihull,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,12.7
+E09000006,Bromley,UA,2017/18,Children in relative low income families (under 16s),Percentage,Persons,11.3
+E10000014,Hampshire,County,2017/18,Children in relative low income families (under 16s),Percentage,Persons,11
+E10000015,Hertfordshire,County,2017/18,Children in relative low income families (under 16s),Percentage,Persons,10.5
+E06000014,York,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,11.9
+E06000036,Bracknell Forest,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,9
+E06000049,Cheshire East,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,12.8
+E06000056,Central Bedfordshire,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,10.7
+E06000060,Buckinghamshire UA,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,11.7
+E08000007,Stockport,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,15
+E08000009,Trafford,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,12.7
+E08000029,Solihull,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,12.5
+E09000006,Bromley,UA,2018/19,Children in relative low income families (under 16s),Percentage,Persons,11.3
+E10000014,Hampshire,County,2018/19,Children in relative low income families (under 16s),Percentage,Persons,11.1
+E10000015,Hertfordshire,County,2018/19,Children in relative low income families (under 16s),Percentage,Persons,10.5
+E06000014,York,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,13
+E06000036,Bracknell Forest,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,9.9
+E06000049,Cheshire East,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,12.9
+E06000056,Central Bedfordshire,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,11.2
+E06000060,Buckinghamshire UA,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,11.5
+E08000007,Stockport,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,14.7
+E08000009,Trafford,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,12.3
+E08000029,Solihull,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,13.8
+E09000006,Bromley,UA,2019/20,Children in relative low income families (under 16s),Percentage,Persons,11.9
+E10000014,Hampshire,County,2019/20,Children in relative low income families (under 16s),Percentage,Persons,11.4
+E10000015,Hertfordshire,County,2019/20,Children in relative low income families (under 16s),Percentage,Persons,10.4

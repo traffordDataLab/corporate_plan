@@ -70,22 +70,92 @@
 
 # Load in data
 
+children_poverty <- read_csv("data/poverty/children_poverty.csv") #%>%
+#mutate(period = as_factor(period)) %>%
+
+cssn <- read_csv("data/cssn.csv") %>%
+  select(area_code)
+
+children_poverty_cssn_mean <- children_poverty %>%
+  filter(area_code %in% c(cssn$area_code)) %>%
+  group_by(period, indicator) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average"#,
+         #period = as_factor(period)
+  ) %>%
+  filter(!is.na(value))
+
+children_poverty_trend <- bind_rows(children_poverty %>% select(area_name, period,value,indicator) %>% filter(area_name %in% c("Trafford", "England")), children_poverty_cssn_mean) 
+
 
 # Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
-
-#})
+output$children_poverty_plot <- renderggiraph({
+  
+  if (input$children_poverty_selection == "Trend Abs.") {
+    
+    gg <- ggplot(
+      filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
+             indicator == "Children in absolute low income families (under 16s)"),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Children in absolute low income families",
+        subtitle = NULL,
+        caption = "Source: DWP",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+  } else {
+    gg <- ggplot(
+      filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
+             indicator == "Children in relative low income families (under 16s)"),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Children in relative low income families",
+        subtitle = NULL,
+        caption = "Source: DWP",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+    
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+  
+  
+})
 
 # Render the output in the ui object
-# output$[INDICATOR NAME]_box <- renderUI({
-#   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
-#     type = 4,
-#     color = plot_colour_spinner,
-#     size = 1,
-#     proxy.height = "250px"
-#   )
-# })
+output$children_poverty_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("children_poverty_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
 
 
 # Maintain the low level of 16-17 year olds who are NEET and NEET plus unknown ---------

@@ -19,9 +19,24 @@ tabPanel(
         
         #),
         # Reduction in % of children in poverty ---------
-        #div(class = "col-sm-12 col-md-6 col-lg-4",
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+        h3("Children poverty"),
+        uiOutput("children_poverty_box", class = "indicatorContainer"),
+        radioGroupButtons(
+          inputId = "children_poverty_selection",
+          choiceNames = c("Trend Abs.", "Trend Rel."),
+          choiceValues = c("Trend Abs.", "Trend Rel."),
+          selected = "Trend Abs.",
+          direction = "horizontal",
+          individual = FALSE,
+          status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+        ),
+        HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+        includeMarkdown("data/poverty/metadata/children_poverty.md"),
+        HTML('</details>')
         
-        #),
+        ),
         # Maintain the low level of 16-17 year olds who are NEET and NEET plus unknown ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         
