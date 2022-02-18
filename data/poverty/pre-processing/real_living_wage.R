@@ -36,18 +36,23 @@ get_data <- function (url, workbook, data_year) {
   # Download the file to temporary location  
   download.file(url, dest = file_name)
   
-  # Extract the contents and then delete the zip
-  unzip(file_name, exdir = ".")
-  file.remove(file_name)
+  # Extract the required Excel workbook from the zip
+  unzip(file_name, files = workbook, exdir = ".")
   
-  # Open the required workbook, extract the data and return it to the caller
+  # Open the workbook, extract the data and store it, ready to return it to the caller
   # NOTE: value in all instances is the % BELOW the real Living wage. need to mutate value = 100 - value to get % at or above the real living wage.
-  read_xls(workbook, sheet = 2, skip = 4) %>%
-  select(area_code = "Code", area_name = "Description", value = 4) %>%
-  filter(area_code %in% authorities$area_code) %>%
-  mutate(period = data_year,
-         value = 100 - as.numeric(value)) %>%
-  select(area_code, area_name, period, value)
+  df_temp <- read_xls(workbook, sheet = 2, skip = 4) %>%
+    select(area_code = "Code", area_name = "Description", value = 4) %>%
+    filter(area_code %in% authorities$area_code) %>%
+    mutate(period = data_year,
+           value = 100 - as.numeric(value))
+    
+  # Tidy up the filesystem by deleting the zip and workbook
+  file.remove(c(file_name, workbook))
+  
+  # Return the data to the caller
+  df_temp %>%
+    select(area_code, area_name, period, value)
 }
 
 
