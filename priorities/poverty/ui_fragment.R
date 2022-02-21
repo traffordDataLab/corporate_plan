@@ -39,7 +39,7 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/poverty/metadata/neet.md"),
             HTML('</details>')
-        )
+        ),
         # Improve the number of people being re-housed (from Trafford’s housing waiting list) ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         
@@ -53,9 +53,23 @@ tabPanel(
         
         #),
         # Improve employees paid at/above the real living wage ---------
-        #div(class = "col-sm-12 col-md-6 col-lg-4",
-        
-        #),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Real living wage"),
+            uiOutput("real_living_wage_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "real_living_wage_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/poverty/metadata/real_living_wage.md"),
+            HTML('</details>')
+        ),
         # Improve school readiness all children and those with a free school meal status ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         
