@@ -80,7 +80,7 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/poverty/metadata/employment_rate.md"),
             HTML('</details>')
-        )
+        ),
 
         # Improve employees paid at/above the real living wage ---------
         div(class = "col-sm-12 col-md-6 col-lg-4",
@@ -99,7 +99,7 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/poverty/metadata/real_living_wage.md"),
             HTML('</details>')
-        ),
+        )
         # Improve school readiness all children and those with a free school meal status ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         
