@@ -38,9 +38,23 @@ tabPanel(
         
         ),
         # Maintain the low level of 16-17 year olds who are NEET and NEET plus unknown ---------
-        #div(class = "col-sm-12 col-md-6 col-lg-4",
-        
-        #),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("16-17 year olds NEET"),
+            uiOutput("neet_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "neet_selection",
+                choiceNames = c("Trend", "+NK Trend"),
+                choiceValues = c("Trend", "+NK Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/poverty/metadata/neet.md"),
+            HTML('</details>')
+        ),
         # Improve the number of people being re-housed (from Trafford’s housing waiting list) ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         
@@ -69,9 +83,23 @@ tabPanel(
         )
 
         # Improve employees paid at/above the real living wage ---------
-        #div(class = "col-sm-12 col-md-6 col-lg-4",
-        
-        #),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Real living wage"),
+            uiOutput("real_living_wage_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "real_living_wage_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/poverty/metadata/real_living_wage.md"),
+            HTML('</details>')
+        ),
         # Improve school readiness all children and those with a free school meal status ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         
