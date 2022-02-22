@@ -24,9 +24,9 @@ tabPanel(
         uiOutput("children_poverty_box", class = "indicatorContainer"),
         radioGroupButtons(
           inputId = "children_poverty_selection",
-          choiceNames = c("Trend Abs.", "Trend Rel."),
-          choiceValues = c("Trend Abs.", "Trend Rel."),
-          selected = "Trend Abs.",
+          choiceNames = c("Rel. Trend", "Abs.Trend"),
+          choiceValues = c("Rel. Trend", "Abs.Trend"),
+          selected = "Rel. Trend",
           direction = "horizontal",
           individual = FALSE,
           status = "plotButtons" # Our custom CSS class, .btn-plotButtons

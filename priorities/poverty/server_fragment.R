@@ -91,31 +91,8 @@ children_poverty_trend <- bind_rows(children_poverty %>% select(area_name, perio
 # Plot
 output$children_poverty_plot <- renderggiraph({
   
-  if (input$children_poverty_selection == "Trend Abs.") {
+  if (input$children_poverty_selection == "Rel. Trend") {
     
-    gg <- ggplot(
-      filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
-             indicator == "Children in absolute low income families (under 16s)"),
-      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
-      geom_point_interactive(aes(tooltip =
-                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
-                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
-                                          '<span class="plotTooltipPeriod">', period, '</span>')),
-                             shape = 21, size = 2.5, colour = "white") +
-      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
-      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
-      scale_y_continuous(limits = c(0, NA)) +
-      labs(
-        title = "Children in absolute low income families",
-        subtitle = NULL,
-        caption = "Source: DWP",
-        x = NULL,
-        y = "Percentage",
-        colour = NULL
-      ) +
-      theme_x()
-  } else {
     gg <- ggplot(
       filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
              indicator == "Children in relative low income families (under 16s)"),
@@ -131,6 +108,32 @@ output$children_poverty_plot <- renderggiraph({
       scale_y_continuous(limits = c(0, NA)) +
       labs(
         title = "Children in relative low income families",
+        subtitle = NULL,
+        caption = "Source: DWP",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+    
+    
+  } else {
+
+    gg <- ggplot(
+      filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
+             indicator == "Children in absolute low income families (under 16s)"),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Children in absolute low income families",
         subtitle = NULL,
         caption = "Source: DWP",
         x = NULL,
