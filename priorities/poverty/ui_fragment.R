@@ -99,10 +99,24 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/poverty/metadata/real_living_wage.md"),
             HTML('</details>')
-        )
+        ),
         # Improve school readiness all children and those with a free school meal status ---------
-        #div(class = "col-sm-12 col-md-6 col-lg-4",
-        
-        #)
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("School readiness"),
+            uiOutput("school_readiness_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "school_readiness_selection",
+                choiceNames = c("Trend", "FSM Trend"),
+                choiceValues = c("Trend", "FSM Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/poverty/metadata/school_readiness.md"),
+            HTML('</details>')
+        )
     )
 )
