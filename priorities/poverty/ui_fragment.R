@@ -7,9 +7,23 @@ tabPanel(
     includeHTML("help.html"),
     fluidRow(
         # Percentage receiving Universal Credit (UC) and the Claimant Count (CC) ---------
-        #div(class = "col-sm-12 col-md-6 col-lg-4",
-            
-        #),
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+        h3("Universal Credit"),
+        uiOutput("universal_credit_box", class = "indicatorContainer"),
+        radioGroupButtons(
+          inputId = "universal_credit_selection",
+          choiceNames = c("Trend"),
+          choiceValues = c("Trend"),
+          selected = "Trend",
+          direction = "horizontal",
+          individual = FALSE,
+          status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+        ),
+        HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+        includeMarkdown("data/poverty/metadata/universal_credit.md"),
+        HTML('</details>')
+        ),
         # Number of people prevented from becoming homeless ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
         

@@ -5,43 +5,63 @@
 # Load in data
 
 
+universal_credit <- read_csv("data/poverty/universal_credit.csv") %>%
+  mutate(period = as.Date(paste0("01 ",period), format = "%d %B %Y")) %>%
+  filter(measure == "rate")
+
+universal_credit_cipfa_mean <- universal_credit %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average") %>%
+  filter(!is.na(value))
+
+universal_credit_trend <- bind_rows(universal_credit %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), universal_credit_cipfa_mean) 
+
 # Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
+output$universal_credit_plot <- renderggiraph({
   
-#})
+  if (input$universal_credit_selection == "Trend") {
+    
+    gg <- ggplot(
+      filter(universal_credit_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      scale_x_date(date_labels = "%b %y", date_breaks = "3 month") +
+      labs(
+        title = "Universal Credit rate - aged 16 to 64",
+        subtitle = NULL,
+        caption = "Source: DWP",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+  
+  
+})
 
 # Render the output in the ui object
-# output$[INDICATOR NAME]_box <- renderUI({
-#   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
-#     type = 4,
-#     color = plot_colour_spinner,
-#     size = 1,
-#     proxy.height = "250px"
-#   )
-# })
-
-
-# Number of people prevented from becoming homeless ---------
-
-# Load in data
-
-
-# Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
-
-#})
-
-# Render the output in the ui object
-# output$[INDICATOR NAME]_box <- renderUI({
-#   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
-#     type = 4,
-#     color = plot_colour_spinner,
-#     size = 1,
-#     proxy.height = "250px"
-#   )
-# })
+output$universal_credit_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("universal_credit_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
 
 
 # Improve the number of affordable housing completions ---------
