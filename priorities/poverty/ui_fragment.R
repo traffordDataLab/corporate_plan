@@ -117,6 +117,24 @@ tabPanel(
                     <summary>Further information</summary>'),
             includeMarkdown("data/poverty/metadata/school_readiness.md"),
             HTML('</details>')
+        ),
+        # Improve the percentage of pupils reaching the expected standard at the end of key stage 2 in reading, writing and mathematics ---------
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Expected standard KS2"),
+            uiOutput("expected_standard_ks2_box", class = "indicatorContainer"),
+            radioGroupButtons(
+                inputId = "expected_standard_ks2_selection",
+                choiceNames = c("Trend"),
+                choiceValues = c("Trend"),
+                selected = "Trend",
+                direction = "horizontal",
+                individual = FALSE,
+                status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/poverty/metadata/expected_standard_ks2.md"),
+            HTML('</details>')
         )
     )
 )
