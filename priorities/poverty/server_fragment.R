@@ -518,20 +518,120 @@ output$real_living_wage_box <- renderUI({
 # Improve school readiness all children and those with a free school meal status ---------
 
 # Load in data
-
+df_school_readiness <- read_csv("data/poverty/school_readiness.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(indicator, period, area_name) %>%
+  summarise(value = round(mean(value), digits = 1))
 
 # Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
-
-#})
+output$school_readiness_plot <- renderggiraph({
+  
+  if (input$school_readiness_selection == "Trend") {
+    
+    gg <- ggplot(df_school_readiness %>% filter(indicator == "School readiness: percentage of children achieving a good level of development at the end of Reception"),
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(
+        aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                             '<span class="plotTooltipMain">', area_name, '</span><br />',
+                             '<span class="plotTooltipPeriod">', period, '</span>')),
+        shape = 21, size = 2.5, colour = "white"
+      ) +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(title = "Reception pupils: good level of development",
+           subtitle = NULL,
+           caption = "Source: DfE",
+           x = NULL,
+           y = "Percentage",
+           fill = NULL) +
+      theme_x()
+    
+  } else {
+    
+    gg <- ggplot(df_school_readiness %>% filter(indicator == "School Readiness: percentage of children with free school meal status achieving a good level of development at the end of Reception"),
+                 aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(
+        aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                             '<span class="plotTooltipMain">', area_name, '</span><br />',
+                             '<span class="plotTooltipPeriod">', period, '</span>')),
+        shape = 21, size = 2.5, colour = "white"
+      ) +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(title = "Reception pupils: good level of development (FSM)",
+           subtitle = NULL,
+           caption = "Source: DfE",
+           x = NULL,
+           y = "Percentage",
+           fill = NULL) +
+      theme_x()
+    
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
 
 # Render the output in the ui object
-# output$[INDICATOR NAME]_box <- renderUI({
-#   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
-#     type = 4,
-#     color = plot_colour_spinner,
-#     size = 1,
-#     proxy.height = "250px"
-#   )
-# })
+output$school_readiness_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("school_readiness_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
+
+# Percentage of pupils reaching the expected standard at the end of key stage 2 in reading, writing and mathematics ---------
+
+# Load in data
+df_expected_standard_ks2 <- read_csv("data/poverty/expected_standard_ks2.csv") %>%
+  mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
+                               area_name == "England" ~ "England",
+                               TRUE ~ "Similar authorities average")) %>%
+  group_by(period, area_name) %>%
+  summarise(value = round(mean(value), 1))
+
+# Plot
+output$expected_standard_ks2_plot <- renderggiraph({
+  gg <- ggplot(df_expected_standard_ks2,
+               aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+    geom_line(size = 1) +
+    geom_point_interactive(
+      aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                           '<span class="plotTooltipMain">', area_name, '</span><br />',
+                           '<span class="plotTooltipPeriod">', period, '</span>')),
+      shape = 21, size = 2.5, colour = "white"
+    ) +
+    scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+    scale_y_continuous(limits = c(0, NA)) +
+    labs(title = "Pupils reaching expected standard at KS2 (RWM)",
+         subtitle = NULL,
+         caption = "Source: DfE",
+         x = NULL,
+         y = "Percentage",
+         fill = NULL) +
+    theme_x()
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+})
+
+# Render the output in the ui object
+output$expected_standard_ks2_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("expected_standard_ks2_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
