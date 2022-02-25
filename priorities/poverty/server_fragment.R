@@ -345,22 +345,62 @@ output$neet_box <- renderUI({
 
 # Load in data
 
+fuel_poverty <- read_csv("data/poverty/fuel_poverty.csv") %>%
+  mutate(period = as_factor(period))
+
+fuel_poverty_cipfa_mean <- fuel_poverty %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average"
+  ) %>%
+  filter(!is.na(value))
+
+fuel_poverty_trend <- bind_rows(fuel_poverty %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), fuel_poverty_cipfa_mean) 
 
 # Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
-
-#})
+output$fuel_poverty_plot <- renderggiraph({
+  
+  if (input$fuel_poverty_selection == "Trend") {
+    
+    gg <- ggplot(
+      filter(fuel_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2.5, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      labs(
+        title = "Households in fuel poverty",
+        subtitle = NULL,
+        caption = "Source: BEIS\n2019 data based on low income, low energy efficiency,\nother years data based on low income, high cost.",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+  
+  
+})
 
 # Render the output in the ui object
-# output$[INDICATOR NAME]_box <- renderUI({
-#   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
-#     type = 4,
-#     color = plot_colour_spinner,
-#     size = 1,
-#     proxy.height = "250px"
-#   )
-# })
+output$fuel_poverty_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("fuel_poverty_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
 
 
 # Improve overall employment rate (aged 16-64) (%) ---------
