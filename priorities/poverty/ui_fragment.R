@@ -52,7 +52,7 @@ tabPanel(
         #),
         # Reduction in % of children in poverty ---------
         div(class = "col-sm-12 col-md-6 col-lg-4",
-            h3("Children poverty"),
+            h3("Children in poverty"),
             uiOutput("children_poverty_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "children_poverty_selection",
