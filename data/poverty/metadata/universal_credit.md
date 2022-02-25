@@ -1,4 +1,4 @@
-#### Proportion of people on Universal Credit amongst those aged 16-64 years.
+#### Universal Credit claims as a proportion of people aged 16-64 years.
 
 Source: <a href='https://stat-xplore.dwp.gov.uk/webapi/metadata/UC_Monthly/UC_Monthly.html' target='_blank'> People on Universal Credit, DWP</a>. <a href='https://www.nomisweb.co.uk/datasets/pestsyoala' target='_blank'>Population estimates ONS</a>.
 

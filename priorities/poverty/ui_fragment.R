@@ -6,23 +6,41 @@ tabPanel(
     h2("Supporting people out of poverty"),
     includeHTML("help.html"),
     fluidRow(
-        # Percentage receiving Universal Credit (UC) and the Claimant Count (CC) ---------
+        # Percentage receiving Universal Credit (UC) ---------
         div(class = "col-sm-12 col-md-6 col-lg-4",
-        h3("Universal Credit"),
-        uiOutput("universal_credit_box", class = "indicatorContainer"),
-        radioGroupButtons(
-          inputId = "universal_credit_selection",
-          choiceNames = c("Trend"),
-          choiceValues = c("Trend"),
-          selected = "Trend",
-          direction = "horizontal",
-          individual = FALSE,
-          status = "plotButtons" # Our custom CSS class, .btn-plotButtons
-        ),
+            h3("Universal Credit"),
+            uiOutput("universal_credit_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "universal_credit_selection",
+              choiceNames = c("Trend"),
+              choiceValues = c("Trend"),
+              selected = "Trend",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
         HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
         includeMarkdown("data/poverty/metadata/universal_credit.md"),
         HTML('</details>')
+        ),
+        # Claimant Count rate ---------
+        div(class = "col-sm-12 col-md-6 col-lg-4",
+            h3("Claimant Count"),
+            uiOutput("claimant_count_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "claimant_count_selection",
+              choiceNames = c("Trend"),
+              choiceValues = c("Trend"),
+              selected = "Trend",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
+                    <summary>Further information</summary>'),
+            includeMarkdown("data/poverty/metadata/claimant_count.md"),
+            HTML('</details>')
         ),
         # Number of people prevented from becoming homeless ---------
         #div(class = "col-sm-12 col-md-6 col-lg-4",
@@ -34,22 +52,22 @@ tabPanel(
         #),
         # Reduction in % of children in poverty ---------
         div(class = "col-sm-12 col-md-6 col-lg-4",
-        h3("Children poverty"),
-        uiOutput("children_poverty_box", class = "indicatorContainer"),
-        radioGroupButtons(
-          inputId = "children_poverty_selection",
-          choiceNames = c("Rel. Trend", "Abs.Trend"),
-          choiceValues = c("Rel. Trend", "Abs.Trend"),
-          selected = "Rel. Trend",
-          direction = "horizontal",
-          individual = FALSE,
-          status = "plotButtons" # Our custom CSS class, .btn-plotButtons
-        ),
-        HTML('<details class="furtherInfo">
+            h3("Children poverty"),
+            uiOutput("children_poverty_box", class = "indicatorContainer"),
+            radioGroupButtons(
+              inputId = "children_poverty_selection",
+              choiceNames = c("Rel. Trend", "Abs.Trend"),
+              choiceValues = c("Rel. Trend", "Abs.Trend"),
+              selected = "Rel. Trend",
+              direction = "horizontal",
+              individual = FALSE,
+              status = "plotButtons" # Our custom CSS class, .btn-plotButtons
+            ),
+            HTML('<details class="furtherInfo">
                     <summary>Further information</summary>'),
-        includeMarkdown("data/poverty/metadata/children_poverty.md"),
-        HTML('</details>')
-        
+            includeMarkdown("data/poverty/metadata/children_poverty.md"),
+            HTML('</details>')
+            
         ),
         # Maintain the low level of 16-17 year olds who are NEET and NEET plus unknown ---------
         div(class = "col-sm-12 col-md-6 col-lg-4",

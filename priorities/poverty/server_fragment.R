@@ -1,9 +1,8 @@
 # Server code for Priority: Supporting people out of poverty
 
-# Percentage receiving Universal Credit (UC) and the Claimant Count (CC) ---------
+# Percentage receiving Universal Credit (UC) ---------
 
 # Load in data
-
 
 universal_credit <- read_csv("data/poverty/universal_credit.csv") %>%
   mutate(period = as.Date(paste0("01 ",period), format = "%d %B %Y")) %>%
@@ -35,7 +34,7 @@ output$universal_credit_plot <- renderggiraph({
       scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       scale_y_continuous(limits = c(0, NA)) +
-      scale_x_date(date_labels = "%b %y", date_breaks = "3 month") +
+      scale_x_date(date_labels = "%b %y", date_breaks = "3 month", expand = c(0.06,0.06)) +
       labs(
         title = "Universal Credit rate - aged 16 to 64",
         subtitle = NULL,
@@ -62,6 +61,71 @@ output$universal_credit_box <- renderUI({
     proxy.height = "250px"
   )
 })
+
+# Claimant Count (CC) rate ---------
+
+
+# Load in data
+
+
+claimant_count <- read_csv("data/poverty/claimant_count.csv") %>%
+  mutate(period = as.Date(paste0("01 ",period), format = "%d %B %Y")) %>%
+  filter(measure == "Percentage")
+
+claimant_count_cipfa_mean <- claimant_count %>%
+  filter(area_code %in% c(cipfa$area_code)) %>%
+  group_by(period) %>%
+  summarise(value = round(mean(value, na.rm=TRUE), 1)) %>%
+  mutate(area_name = "Similar Authorities average") %>%
+  filter(!is.na(value))
+
+claimant_count_trend <- bind_rows(claimant_count %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), claimant_count_cipfa_mean) 
+
+# Plot
+output$claimant_count_plot <- renderggiraph({
+  
+  if (input$claimant_count_selection == "Trend") {
+    
+    gg <- ggplot(
+      filter(claimant_count_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
+      aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
+      geom_line(size = 1) +
+      geom_point_interactive(aes(tooltip =
+                                   paste0('<span class="plotTooltipValue">', value, '%</span><br />',
+                                          '<span class="plotTooltipMain">', area_name, '</span><br />',
+                                          '<span class="plotTooltipPeriod">', period, '</span>')),
+                             shape = 21, size = 2, colour = "white") +
+      scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
+      scale_y_continuous(limits = c(0, NA)) +
+      scale_x_date(date_labels = "%b %y", date_breaks = "3 month", expand = c(0.06,0.06)) +
+      labs(
+        title = "Claimant Count rate - aged 16 to 64",
+        subtitle = NULL,
+        caption = "Source: ONS",
+        x = NULL,
+        y = "Percentage",
+        colour = NULL
+      ) +
+      theme_x()
+  }
+  
+  girafe(ggobj = gg, options = lab_ggiraph_options)
+  
+  
+})
+
+# Render the output in the ui object
+output$claimant_count_box <- renderUI({
+  withSpinner(
+    ggiraphOutput("claimant_count_plot", height = "inherit"),
+    type = 4,
+    color = plot_colour_spinner,
+    size = 1,
+    proxy.height = "250px"
+  )
+})
+
 
 
 # Improve the number of affordable housing completions ---------
