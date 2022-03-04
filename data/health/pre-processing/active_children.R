@@ -35,7 +35,7 @@ active_children_cssn <- active_children_trend %>%
 
 df <- bind_rows(active_children_england, active_children_districsts, active_children_cssn) %>%
   mutate(value = round(value, 1)) %>%
-  unique() %>%
+  distinct(area_name,period,.keep_all = TRUE) %>%
   select(area_code, area_name, area_type, period, indicator, measure, unit, value, compared_to_England, inequality)
 
 write_csv(df, "../active_children.csv")
