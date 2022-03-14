@@ -208,7 +208,50 @@ ui <- fluidPage(
     HTML('</main>
           <footer>
               <div>Developed in <a href="https://cran.r-project.org/" target="_blank" aria-label="R, (opens in new window)">R</a> by the <a href="https://www.trafforddatalab.io">Trafford Data Lab</a> under the <a href="https://www.trafforddatalab.io/LICENSE.txt">MIT</a> licence</div>
-          </footer>')
+          </footer>
+         
+          <script>
+              /*
+                  Receive call from Shiny server to make a given ggraph plot accessible.
+                  Despite the fact that the SVGs produced by ggraph are navigatable by screen readers, it is not a good user experience.
+                  This call handler and function add features to the SVG to improve this using the accessibility pattern:
+                  <svg> + role="img" + <title> + <desc> + aria-labelledby="[ID]" (https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/#pattern-11-svg-role-img-title-desc-aria-labelledby-id)
+              */
+              Shiny.addCustomMessageHandler("a11yPlotSVG", function(message) {
+                  var a11yCallback = setInterval(function() {  // Setup a call to the update function every 500 milliseconds in case the plot does not exist yet
+                      try {
+                          // Split out the components of the message parameter passed to the function.
+                          // These contain the id of the plot SVG we are manipulating, the title of the plot and the alt text
+                          arrMsg = message.split("|")
+                          svgId = arrMsg[0];
+                          titleText = arrMsg[1]
+                          altText = arrMsg[2];
+                          
+                          // Create a <title> element for the SVG containing the plot title
+                          svgTitle = document.createElement("title");
+                          svgTitle.setAttribute("id", svgId + "_title");
+                          svgTitle.appendChild(document.createTextNode(titleText + ".")); // Add a full stop at the end (usually the titles do not have any) to add a pause between the title and the alt text when it is read aloud.
+                          
+                          // Create a <desc> element for the SVG containing the plot alt text
+                          svgDesc = document.createElement("desc");
+                          svgDesc.setAttribute("id", svgId + "_desc");
+                          svgDesc.appendChild(document.createTextNode(altText));
+                          
+                          // Get the plot SVG DOM element, add the <title> and <desc> elements and set the required attributes
+                          svg = document.getElementById(arrMsg[0]);
+                          svg.appendChild(svgTitle);
+                          svg.appendChild(svgDesc);
+                          svg.setAttribute("role", "img");
+                          svg.setAttribute("aria-labelledby", svgTitle.id + " " + svgDesc.id);
+                          
+                          clearInterval(a11yCallback);
+                      }
+                      catch(e) {
+                          // An error occurred, try again in 500ms
+                      }
+                  }, 500);
+              });
+          </script>')
 )
 
 # Declare the server code to supply objects to the user interface ---------

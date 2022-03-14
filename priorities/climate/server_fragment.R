@@ -29,10 +29,17 @@ output$licensed_vehicles_plot <- renderggiraph({
                     caption = "Source: DfT and DVLA",
                     x = NULL,
                     y = "Count",
-                    fill = NULL) +
+                    fill = NULL,
+                    alt = "Line chart showing the number of vehicles registered to Trafford addresses compared to the average of similar authorities.") +
                theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_licensed_vehicles_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_licensed_vehicles_plot")
 })
 
 # Render the output in the ui object
@@ -78,10 +85,17 @@ output$licensed_ulev_plot <- renderggiraph({
          caption = "Source: DfT and DVLA",
          x = NULL,
          y = "Percentage",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing the proportion of all licensed vehicles which are ultra low emission vehicles, registered to Trafford addresses compared to the average of similar authorities and England.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_licensed_ulev_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_licensed_ulev_plot")
 })
 
 # Render the output in the ui object
@@ -230,7 +244,8 @@ output$household_waste_recycling_plot <- renderggiraph({
            caption = "Source: DEFRA",
            x = NULL,
            y = "Percentage",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford compared to the average of similar authorities and England.") +
       theme_x()
     
   } else {
@@ -252,12 +267,19 @@ output$household_waste_recycling_plot <- renderggiraph({
            caption = "Source: DEFRA",
            x = NULL,
            y = "Tonnes",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing the tonnage of household waste collected and sent for recycling in Trafford compared to the average of similar authorities.") +
       theme_x()
     
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_household_waste_recycling_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_household_waste_recycling_plot")
 })
 
 # Render the output in the ui object
@@ -267,9 +289,13 @@ output$household_waste_recycling_box <- renderUI({
     type = 4,
     color = plot_colour_spinner,
     size = 1,
-    proxy.height = "250px"
+    proxy.height = "250px",
   )
 })
+
+#observeEvent(output$household_waste_recycling_box, {
+#  session$sendCustomMessage("altTextHandler", "svg_household_waste_recycling_plot|This is alt text")
+#})
 
 
 # Household waste not recycled ---------
