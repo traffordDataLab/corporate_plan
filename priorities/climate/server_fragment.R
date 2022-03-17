@@ -30,7 +30,7 @@ output$licensed_vehicles_plot <- renderggiraph({
                     x = NULL,
                     y = "Count",
                     fill = NULL,
-                    alt = "Line chart showing the number of vehicles registered to Trafford addresses compared to the average of similar authorities.") +
+                    alt = "Line chart showing the number of vehicles registered to Trafford addresses has been consistently lower compared to the average of similar authorities since 2016. Trafford registrations between 2015 and 2016 dropped by approximately 20,000 and have since been around 130,000, whereas the average for similar authorities has continued to rise, reaching 202,502 in 2020.") +
                theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -86,7 +86,7 @@ output$licensed_ulev_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing the proportion of all licensed vehicles which are ultra low emission vehicles, registered to Trafford addresses compared to the average of similar authorities and England.") +
+         alt = "Line chart showing the proportion of licensed vehicles registered to Trafford addresses which are ultra low emission vehicles has been consistently lower, and increasing at a slower rate, compared to the average for similar authorities and England from 2011 to 2020. In 2020 the average proportion for similar authorities was 2.38% compared with an average of 1.18% in England and 0.81% in Trafford.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -140,10 +140,17 @@ output$vehicle_miles_plot <- renderggiraph({
          caption = "Source: DfT",
          x = NULL,
          y = "Miles (millions)",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing the number of miles travelled annually within Trafford between 2010 and 2020 is consistently lower compared with the average for similar authorities and the average of all local authorities in England. Mileage has been increasing year on year for all up to 2019, before showing a considerable decrease in 2020: 1,085 million down to 887 million miles in Trafford, 1,448 million down to 1,140 million miles for the average of similar authorities and 2,030 million down to 1,603 million miles for the average of all local authorities in England.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_vehicle_miles_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_vehicle_miles_plot")
 })
 
 # Render the output in the ui object
@@ -187,10 +194,17 @@ output$ev_charging_points_plot <- renderggiraph({
          caption = "Source: DfT and OZEV",
          x = NULL,
          y = "Devices (per 100K)",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing that there have been consistently fewer publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between October 2019 and October 2021. Whilst its comparitors have shown an increasing trend, Trafford's rate has been around 20 devices per 100,000 people. Data for October 2021 shows an increase in the rate to 21.9, still much lower than the average of similar authorities (37.5) and England (38.8).") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_charging_points_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_charging_points_plot")
 })
 
 # Render the output in the ui object
@@ -245,7 +259,7 @@ output$household_waste_recycling_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford compared to the average of similar authorities and England.") +
+           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford has been higher than the average of similar authorities and England since 2011/12. Whilst the trend for its comparitors has remained broadly consistent, Trafford showed a big increase between 2021/13 (47.9%) and 2014/15 (61.9%) before going on a downward trend. Although all lines show a decrease from 2019/20 to 2020/21, Trafford still collected and sent for recycling a higher percentage of waste (53.3%) compared to the average of similar authorities (44.5%) and the average for England (42.3%).") +
       theme_x()
     
   } else {
@@ -268,7 +282,7 @@ output$household_waste_recycling_plot <- renderggiraph({
            x = NULL,
            y = "Tonnes",
            fill = NULL,
-           alt = "Line chart showing the tonnage of household waste collected and sent for recycling in Trafford compared to the average of similar authorities.") +
+           alt = "Line chart showing between 2014/15 and 2016/17 Trafford collected and sent for recycling around 50,000 tonnes of household waste, approximately 7,000 more than the average for similar authorities. Since then the amounts collected in Trafford have decreased to a similar level to its comparator. 2020/21 showed a slightly higher amount of 46,040 tonnes in Trafford compared to an average of 44,259 tonnes for similar authorities.") +
       theme_x()
     
   }
@@ -292,10 +306,6 @@ output$household_waste_recycling_box <- renderUI({
     proxy.height = "250px",
   )
 })
-
-#observeEvent(output$household_waste_recycling_box, {
-#  session$sendCustomMessage("altTextHandler", "svg_household_waste_recycling_plot|This is alt text")
-#})
 
 
 # Household waste not recycled ---------
@@ -338,7 +348,8 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            caption = "Source: DEFRA",
            x = NULL,
            y = "Percentage",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing that Trafford has had a lower percentage of household waste collected but not sent for recycling than the average of similar authorities and England between 2011/12 and 2020/21, although the gap has been narrowing since 2016/17. In 2020/21 the percentage for Trafford was 46.7% compared to 55.5% for the average of similar authorities and 57.7% for the England average.") +
       theme_x()
     
   } else {
@@ -360,12 +371,19 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            caption = "Source: DEFRA",
            x = NULL,
            y = "Tonnes",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2020/21. Despite the gap narrowing since 2016/17, Trafford recorded 40,394 tonnes in 2020/21 compared to 52,042 tonnes for the average of similar authorities.") +
       theme_x()
   
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_household_waste_not_recycled_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_household_waste_not_recycled_plot")
 })
 
 # Render the output in the ui object
@@ -436,10 +454,17 @@ output$domestic_epc_plot <- renderggiraph({
          caption = "Source: DLUHC",
          x = NULL,
          y = "Percentage",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (10% fewer) or England (7% fewer). The latest time period available, 2012-2021 shows 33.4% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 43.3% for the average of similar authorities and 40.5% for England.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_domestic_epc_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_domestic_epc_plot")
 })
 
 # Render the output in the ui object
@@ -482,10 +507,17 @@ output$borough_co2_emissions_plot <- renderggiraph({
          caption = "Source: BEIS",
          x = NULL,
          y = "Kilotonnes (kt)",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing that territorial CO2 emissions in Trafford were higher than the average for similar authorities between 2010 and 2019. Although the amount has been decreasing since 2013, the average for similar authorities has been decreasing at the same rate. The latest data for 2019 shows 1,468 kilotonnes of CO2 emitted within the borough of Trafford compared to the similar authorities average of 1,238 kilotonnes.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_borough_co2_emissions_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_borough_co2_emissions_plot")
 })
 
 # Render the output in the ui object
@@ -527,7 +559,8 @@ output$no2_concentration_plot <- renderggiraph({
          x = NULL,
          y = expression(paste("µg/m"^3)),
          fill = NULL,
-         colour = "Location: ") +
+         colour = "Location: ",
+         alt = "Line chart showing the annual mean of N.O.2 readings taken between 2013 and 2021 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy, with all 3 showing an overall gradual decreasing trend in the readings since 2016. All 3 stations showed decreases between 2019 to 2020 recording their lowest annual readings in the time period plotted. Readings from all showed slight increases in 2021 from the previous year, with Trafford A56 recording 23.1 microgrammes of N.O.2 per cubic metre compared with 15 microgrammes at Trafford Moss Park and 13.3 microgrammes at Trafford Wellacre Academy.") +
     theme_x() +
     theme(
       legend.position = "top",
@@ -535,7 +568,13 @@ output$no2_concentration_plot <- renderggiraph({
       legend.text = element_text(size = 8)
     )
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_no2_concentration_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_no2_concentration_plot")
 })
 
 # Render the output in the ui object
@@ -577,7 +616,8 @@ output$pm10_concentration_plot <- renderggiraph({
          x = NULL,
          y = expression(paste("µg/m"^3)),
          fill = NULL,
-         colour = "Location: ") +
+         colour = "Location: ",
+         alt = "Line chart showing the annual mean of PM10 readings taken between 2013 and 2021 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. The trend for both has been a generally stready decline, with the exception of 2018 and 2019. However levels in 2021 are around the lowest recorded within the timeframe plotted, with Trafford A56 recording 14.4 microgrammes of PM10 per cubic metre compared to 13.2 microgrammes at Trafford Moss Park.") +
     theme_x() +
     theme(
       legend.position = "top",
@@ -585,7 +625,13 @@ output$pm10_concentration_plot <- renderggiraph({
       legend.text = element_text(size = 8)
     )
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_pm10_concentration_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_pm10_concentration_plot")
 })
 
 # Render the output in the ui object
@@ -629,10 +675,17 @@ output$adults_walk_cycle_plot <- renderggiraph({
          caption = "Source: DfT",
          x = NULL,
          y = "Percentage",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing the percentage of adults in Trafford regularly participating in walking or cycling activities compared with the average of similar authorities and England from 2015-16 to 2019-20. Up to 2018-19 Trafford was consistently showing around 1% lower participation than the average of similar authorities and 2% lower than the England average. However in 2019-20 a sharper participation increase in Trafford coupled with a decrease in its comparitors closed the gap, with both Trafford and the England average recording 34.5% participation compared with 34.2% for the average of similar authorities.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_adults_walk_cycle_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_adults_walk_cycle_plot")
 })
 
 # Render the output in the ui object
