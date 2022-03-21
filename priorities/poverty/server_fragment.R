@@ -41,13 +41,19 @@ output$universal_credit_plot <- renderggiraph({
         caption = "Source: DWP",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from January 2019 to January 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In January 2022 Trafford's claimant rate was 10.8% compared with 13.9% for England and 14% for the average of similar authorities."
       ) +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_universal_credit_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
   
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_universal_credit_plot")
   
 })
 
@@ -105,13 +111,19 @@ output$claimant_count_plot <- renderggiraph({
         caption = "Source: ONS",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from January 2019 to January 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Lastest data for January 2022 shows a claimant count rate of 3.4% in Trafford, 4.1% for the average of similar authorities and 4.4% for England."
       ) +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_claimant_count_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
   
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_claimant_count_plot")
   
 })
 
@@ -196,7 +208,8 @@ output$children_poverty_plot <- renderggiraph({
         caption = "Source: DWP",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of children under the age of 16 in relative low income families in Trafford compared to the average of similar authorities and England between 2014/15 and 2019/20. Over the majority of the time period plotted, Trafford has consistently tracked approximately 1 percentage point above the trend of the similar authorities average, with the England average approximately 4 to 5 percentage points above Trafford. However, the latest data for 2019/20 shows a decrease in the proportion for Trafford from the previous year to 12.3%, bringing it almost in line with the average of similar authorities at 12.1%. The England average for comparison is 19.1%, continuing an upward trend."
       ) +
       theme_x()
     
@@ -222,14 +235,20 @@ output$children_poverty_plot <- renderggiraph({
         caption = "Source: DWP",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of children under the age of 16 in absolute low income families in Trafford compared to the average of similar authorities and England between 2014/15 and 2019/20. Over the majority of the time period plotted, Trafford has approximately tracked 1 percentage point above the trend of the similar authorities average, with the England average approximately 4 to 5 percentage points above Trafford. However, the latest data for 2019/20 shows a decrease in the proportion for Trafford from the previous year to 10%, bringing it almost in line with the average of similar authorities at 9.8%. The England average for comparison is 15.6%, continuing an upward trend from 2106/17."
       ) +
       theme_x()
     
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_children_poverty_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
   
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_children_poverty_plot")
   
 })
 
@@ -277,7 +296,8 @@ output$neet_plot <- renderggiraph({
            caption = "Source: DfE",
            x = NULL,
            y = "Percentage",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing the percentage of academic age 16 to 17 year olds who were not in employment, education or training (NEET) in Trafford, compared with the average for similar authorities and England between 2016 and 2020. For the time period shown, Trafford has the lowest NEET percentage of its comparitors and is fairly consistent at approximately 2.3% each year, with a low of 1.8% recorded in 2019. The England average decreased from 2.8% in 2016 to 2.6% in 2018 before increasing again back to 2.8% in 2020. The average for similar authorities has been on a downward trend from 3.3% in 2016 to 3% in 2019, however it rose again to 3.2% in 2020.") +
       theme_x()
     
   } else {
@@ -299,12 +319,19 @@ output$neet_plot <- renderggiraph({
            caption = "Source: DfE",
            x = NULL,
            y = "Percentage",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing the percentage of academic age 16 to 17 year olds who were not in employment, education or training (NEET) or whose status was unknown in Trafford, compared with the average for similar authorities and England between 2016 and 2020. In 2016 Trafford recorded 6.1% NEET or unknown compared to 6% for England and 4.9% for the average of similar authorities. However, since then Trafford's rate has decreased year on year and in 2020 recorded the lowest rate amongst the comparitors with 4.8% compared to 4.9% for the average of similar authorities and 5.5% for England.") +
       theme_x()
     
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_neet_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_neet_plot")
 })
 
 # Render the output in the ui object
@@ -381,13 +408,19 @@ output$fuel_poverty_plot <- renderggiraph({
         caption = "Source: BEIS\n2019 data based on low income, low energy efficiency,\nother years data based on low income, high cost.",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the percentage of households in fuel poverty in Trafford compared with the average of similar authorities and England between 2011 and 2019. Whilst the lines for the average of similar authorities to Trafford and the England average show a broadly consistent trend, with the latter approximately 1 percentage point higher throughout the time period, the trend for Trafford has been irratic. Following a decrease between 2011 and 2013, Trafford's percentages have been higher, lower and in between its comparitors. Following a change in methodology in 2019, all lines show a sharp increase from the previous year with Trafford having 12.8% of households in fuel poverty compared with 12.5% for the average of similar authorities and 13.4% in England."
       ) +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_fuel_poverty_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
   
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_fuel_poverty_plot")
   
 })
 
@@ -443,16 +476,22 @@ output$employment_rate_plot <- renderggiraph({
       labs(
         title = "Employment rate - aged 16 to 64",
         subtitle = NULL,
-        caption = "Source: Annual Polulation Survey",
+        caption = "Source: Annual Population Survey",
         x = "12 months ending",
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the employment rate amongst those aged 16 to 64 in Trafford compared to the average of similar authorities and England between the 12 months ending September 2010 and the 12 months ending September 2021. The average for similar authorities to Trafford and England follow a broadly similar trend with the England rate approximately between 1 and 2 percentage points below. Trafford's rate has been slightly more variable, however during the time period shown it has always been above the England rate and between the 12 months ending September 2014 and the 12 months ending September 2020 it was at or above the average of similar authorities. In the 12 months to September 2021, Trafford's rate has fallen slightly to 76%, just below the 77% average of similar authorities, but above the England rate of 74.9%."
       ) +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_employment_rate_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
   
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_employment_rate_plot")
 
 })
 
@@ -497,10 +536,17 @@ output$real_living_wage_plot <- renderggiraph({
          caption = "Source: ONS",
          x = NULL,
          y = "Percentage",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing that a lower percentage of employees are paid at or above the real living wage in Trafford compared to the average of similar authorities and England. Between 2016 and 2021, Trafford's percentage has been on an upward trend, with the only exception being a 0.3 percentage point drop in 2020. Data for 2021 shows 80.7% of employees are paid at or above the real living wage in Trafford, compared to 82.8% across England and 83.9% for the average of similar authorities.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_real_living_wage_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_real_living_wage_plot")
 })
 
 # Render the output in the ui object
@@ -547,7 +593,8 @@ output$school_readiness_plot <- renderggiraph({
            caption = "Source: DfE",
            x = NULL,
            y = "Percentage",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing the percentage of pupils having a good level of development at the end of Reception in Trafford compared with the average of similar authorities and England between the academic years 2012/13 and 2018/19. For all years except 2016/17 Trafford has had the highest percentage of pupils achieving a good level of development, although in recent years the gap between Trafford and its comparitors has closed. In 2018/19 74.7% of Trafford pupils achieved the measure compared with 74.3% for the average of similar authorities and 71.8% for England.") +
       theme_x()
     
   } else {
@@ -569,12 +616,19 @@ output$school_readiness_plot <- renderggiraph({
            caption = "Source: DfE",
            x = NULL,
            y = "Percentage",
-           fill = NULL) +
+           fill = NULL,
+           alt = "Line chart showing the percentage of pupils with Free School Meals eligibility (FSM) having a good level of development at the end of Reception in Trafford compared with the average of similar authorities and England between the academic years 2012/13 and 2018/19. For the first 3 academic years of the time period shown Trafford's percentage was higher than that of its comparitors. However between 2014/15 and 2015/16 it fell from 54.7% to 47.3%, below both the average of similar authorities (51.1%) and England 54.4%. Trafford's percentage stayed below both comparitors for the 2 following academic years, before rising to 56% in 2018/19, just below the England average of 56.5% but above the average of similar authorities at 53.1%.") +
       theme_x()
     
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_school_readiness_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_school_readiness_plot")
 })
 
 # Render the output in the ui object
@@ -618,10 +672,17 @@ output$expected_standard_ks2_plot <- renderggiraph({
          caption = "Source: DfE",
          x = NULL,
          y = "Percentage",
-         fill = NULL) +
+         fill = NULL,
+         alt = "Line chart showing that in the academic years from 2015/16 to 2018/19 Trafford had a higher percentage of pupils achieving the expected standard at Key Stage 2 in Reading, Writing and Maths compared with the average of similar authorities and England. All 3 lines show a similar trend, however the gap between Trafford and the other comparitors is slightly increasing. In 2018/19 77% of Trafford's pupils achieved the expected standard, compared with 67.2% for the average of similar authorities and 65% for England.") +
     theme_x()
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_expected_standard_ks2_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_expected_standard_ks2_plot")
 })
 
 # Render the output in the ui object
