@@ -1357,7 +1357,7 @@ output$adults_smoking_manual_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing the percentage of smoking adults in routine and manual occupations in Trafford between 2012 and 2020 compared to the average of similar authorities and England. Trafford's percentage has been higher than its comparitors for much of the time period shown. One notable exception is 2019 where Trafford's percentage decreased by 9 points from the previous year to 17.4% (the lowest percentage recorded in the time period shown) compared to 23.2% in England and 25.4% for the average of similar authorities. However Trafford's percentage rose in 2020 to 20.3% whereas its comparitors continued their decreasing trend leaving Trafford just above the average of similar authorities (19.9%) but still below England (21.4%)."
+        alt = "Line chart showing the percentage of smoking adults in routine and manual occupations in Trafford between 2012 and 2020 compared to the average of similar authorities and England. Trafford's percentage has been higher than its comparitors for much of the time period shown. One notable exception is 2019 where Trafford's percentage decreased by 9 percentage points from the previous year to 17.4% (the lowest percentage recorded in the time period shown) compared to 23.2% in England and 25.4% for the average of similar authorities. However Trafford's percentage rose in 2020 to 20.3% whereas its comparitors continued their decreasing trend leaving Trafford just above the average of similar authorities (19.9%) but still below England (21.4%)."
       ) +
       theme_x()
   }
