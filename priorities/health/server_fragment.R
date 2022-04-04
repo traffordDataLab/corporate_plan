@@ -64,7 +64,8 @@ output$obese_reception_plot <- renderggiraph({
         caption = "Source: NHS Digital, National Child Measurement Programme",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of children aged 4 to 5 years old classified as obese in Trafford from 2010/11 to 2019/20 compared to the average of similar authorities and England. The Trend for Trafford has been inconsistent during the time period shown, however from 2015/16 onwards the proportion has been lower than its comparitors. The proportions for England and the average for similar authorities have followed a similar trend throughout the time period shown, with England just over 1 percentage point higher, and both have been on a gradually increasing trend since 2014/15. The latest data for 2019/20 shows 7.2% of 4 to 5 years olds in Trafford are classified as obese, (the joint lowest recorded within the time period shown along with 2012/13 and 2015/16) compared with 8.4% for the average of similar authorities and 9.9% for England."
       ) +
       theme_x()
   }
@@ -100,7 +101,8 @@ output$obese_reception_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: NHS Digital, National Child Measurement Programme",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot comparing the proportion of children aged 4 to 5 years old classified as obese in Trafford with England from 2010/11 to 2019/20. Trafford's proportion compared to England has been statistically similar in 2 of the 10 years shown (2011/12 and 2014/15) and better in the other 8.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -126,7 +128,8 @@ output$obese_reception_plot <- renderggiraph({
         subtitle = "2015/16 - 2019/20",
         caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
-        y = NULL
+        y = NULL,
+        alt = "Bar chart showing the proportion of children aged 4 to 5 years old classified as obese in Trafford between 2015/16 to 2019/20 compared to the average of similar authorities and England by deprivation quintiles, from most to least deprived. In each quintile England has the highest proportion. Trafford's proportions are below the average of similar authorities in all quintiles except the average deprived, in which Trafford is 0.1 percentage points higher."
       ) +
       theme_x() +
       theme(plot.subtitle = element_text(size = 11),
@@ -156,7 +159,8 @@ output$obese_reception_plot <- renderggiraph({
         subtitle = "2017/18 - 2019/20",
         caption = "Source: National Child Measurement Programme, NHS Digital",
         x = NULL,
-        y = NULL
+        y = NULL,
+        alt = "Map showing the proportion of children aged 4 to 5 years old classified as obese in each of Trafford's wards between 2017/18 and 2019/20. The proportions are highest in Gorse Hill in the North and Bucklow-St Martins in the West at 11.2% and lowest in the Southern ward of Hale Central at 2.9%. The Central ward of St Mary's next to Bucklow-St Martins has the 2nd highest proportion of 10.8%. Flixton in the West and Longford in the North have proportions below 6% which are noticably lower than their neighbouring wards."
       ) +
       coord_sf(datum = NA) +
       theme_x() +
@@ -164,7 +168,13 @@ output$obese_reception_plot <- renderggiraph({
             legend.position = c(0.5, 1.055))
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_obese_reception_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_obese_reception_plot")
 })
 
 output$obese_reception_box <- renderUI({
@@ -241,7 +251,8 @@ output$obese_year6_plot <- renderggiraph({
         caption = "Source: NHS Digital, National Child Measurement Programme",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of children aged 10 to 11 years old classified as obese in Trafford from 2010/11 to 2019/20 compared to the average of similar authorities and England. The Trend for Trafford has been inconsistent during the time period shown, rising and falling, with the proportion at its highest in 2012/13 with 18.8% and at its lowest in 2014/15 with 16%. The proportions for England and the average for similar authorities have followed a broadly similar trend throughout the time period shown, with England roughly 3.5 percentage points higher, and both have been on a gradually increasing trend since 2014/15. The latest data for 2019/20 shows 17.8% of 10 to 11 years olds in Trafford are classified as obese, the same as the average of similar authorities, compared with 21% for England."
       ) +
       theme_x()
   }
@@ -277,7 +288,8 @@ output$obese_year6_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: NHS Digital, National Child Measurement Programme",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot comparing the proportion of children aged 10 to 11 years old classified as obese in Trafford with England from 2010/11 to 2019/20. Trafford's proportion was statistically similar compared to England's in 2012/13 and better in the other 9 years shown.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -302,7 +314,8 @@ output$obese_year6_plot <- renderggiraph({
         subtitle = "2015/16 - 2019/20",
         caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
-        y = NULL
+        y = NULL,
+        alt = "Bar chart showing the proportion of children aged 10 to 11 years old classified as obese in Trafford between 2015/16 to 2019/20 compared to the average of similar authorities and England by deprivation quintiles, from most to least deprived. In each quintile England has the highest proportion. Trafford's proportions are below the average of similar authorities in the second most deprived quintile (21.9% compared to 22%) and the second least deprived quintile (15.2% compared to 16%). In the 3 other quintiles Trafford is above the similar authorities average by either 0.2 and 0.5 percentage points."
       ) +
       theme_x() +
       theme(plot.subtitle = element_text(size = 11),
@@ -331,7 +344,8 @@ output$obese_year6_plot <- renderggiraph({
         subtitle = "2017/18 - 2019/20",
         caption = "Source: National Child Measurement Programme, NHS Digital",
         x = NULL,
-        y = NULL
+        y = NULL,
+        alt = "Map showing the proportion of children aged 10 to 11 years old classified as obese in each of Trafford's wards between 2017/18 and 2019/20. The highest proportion is in Bucklow-St Martins in the West at 25.8% followed by Gorse Hill (23%) and Stretford (22.2%) in the North. The lowest proportions are in the Southern wards of Timperley (10.1%) and Hale Barns (10.7%) and the Central ward of Priory (10.8%). The Central ward of Sale Moor and the Southern ward of Timperley have noticably higher proportions than their neighbouring wards and Flixton in the West has a noticably lower proportion than the surrounding wards."
       ) +
       coord_sf(datum = NA) +
       theme_x() +
@@ -339,7 +353,13 @@ output$obese_year6_plot <- renderggiraph({
             legend.position = c(0.5, 1.055))
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_obese_year6_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_obese_year6_plot")
 })
 
 output$obese_year6_box <- renderUI({
@@ -396,7 +416,8 @@ output$overweight_adult_plot <- renderggiraph({
         caption = "Source: Active Lives survey, Sport England",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of adults classified as overweight or obese in Trafford between 2015/16 and 2019/20 compared with the average of similar authorities and England. Trafford has a lower proportion than the average of similar authorities for all years in the period shown, and a lower proportion than England except for 2018/19. The trend for both the average of similar authorities and England is broadly consistent whilst Trafford's proportion varies more from year to year. The latest data for 2019/20 shows 59.3% of adults in Trafford were classified as overweight or obese (down from 64% the previous year), compared to 62.8% in England and 64.8% for the average of similar authorities."
       ) +
       theme_x()
   }
@@ -432,7 +453,8 @@ output$overweight_adult_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: Active Lives survey, Sport England",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot comparing the proportion of adults classified as overweight or obese in Trafford with England from 2015/16 to 2019/20. Trafford's proportion compared to England has been statistically similar in 2 of the 5 years shown (2015/16 and 2018/19) and better in the other 3.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -441,7 +463,13 @@ output$overweight_adult_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_overweight_adult_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_overweight_adult_plot")
 })
 
 output$overweight_adult_box <- renderUI({
@@ -495,7 +523,8 @@ output$active_adults_plot <- renderggiraph({
         caption = "Source: Active Lives survey, Sport England",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of adults who are physically active in Trafford between 2015/16 and 2019/20 compared with the average of similar authorities and England. Throughout the period shown, the average of similar authorities to Trafford has had a slightly lower proportion than England, (less than 1 percentage point). In 2015/16 Trafford had the lowest proportion of physically active adults compared to its comparitors (64% compared to 65.3% for the average of similar authorities and 66.1% for England), however for the other 4 years in the period shown Trafford's proportion has been higher. The latest data for 2019/20 showed 68.1% of Trafford's adults were physically active compared with 66.4% in England and 65.9% for the average of similar authorities."
       ) +
       theme_x()
   }
@@ -531,7 +560,8 @@ output$active_adults_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: Active Lives survey, Sport England",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot showing that the proportion of physically active adults in Trafford compared with England was statistically similar for the period shown from 2015/16 to 2019/20.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -540,7 +570,13 @@ output$active_adults_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_active_adults_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_active_adults_plot")
 })
 
 output$active_adults_box <- renderUI({
@@ -593,7 +629,8 @@ output$inactive_adults_plot <- renderggiraph({
         caption = "Source: Active Lives survey, Sport England",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of adults who are physically inactive in Trafford between 2015/16 and 2019/20 compared with the average of similar authorities and England. Between 2015/16 and 2018/19 the proportion in Trafford decreased from 24% to 19.9%. In 2015/16 Trafford had the highest proportion of physically inactive adults compared with the average of similar authorities and England, however in the following and subsequent years it has been below its comparitors. Over the same period (2015/16 to 2018/19) the trend for the average of similar authorities and England has been broadly consistent and similar to each other. Between 2018/19 and 2019/20 all 3 lines show an increase in the proportion of inactive adults, with the average of similar authorities increasing the most (from 21.2% to 23.9%), followed by England (from 21.4% to 22.9%) and then Trafford (from 19.9% to 20.6%)."
       ) +
       theme_x()
   }
@@ -629,7 +666,8 @@ output$inactive_adults_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: Active Lives survey, Sport England",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot showing that the proportion of physically inactive adults in Trafford compared with England was statistically similar for the period shown from 2015/16 to 2019/20.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -638,7 +676,13 @@ output$inactive_adults_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_inactive_adults_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_inactive_adults_plot")
 })
 
 output$inactive_adults_box <- renderUI({
@@ -691,12 +735,19 @@ output$fairly_active_adults_plot <- renderggiraph({
         caption = "Source: Active Lives survey, Sport England",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of adults who are physically fairly active in Trafford between 2016 and 2020 compared with the average of similar authorities and England. Whilst the proportions for the average of similar authorities and England have been on a generally similar and decreasing trend over the period shown, the proportions in Trafford have gone up and down year to year changing by approximately 1.5 to just over 2 percentage points each time. Between 2019 and 2020 the proportion in Trafford increased whilst the other comparitors decreased. The latest data for 2020 shows 12.3% of adults in Trafford are physically fairly inactive compared with 11.5% in England and 10.8% for the average of similar authorities."
       ) +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_fairly_active_adults_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_fairly_active_adults_plot")
 })
 
 output$fairly_active_adults_box <- renderUI({
@@ -750,7 +801,8 @@ output$active_children_plot <- renderggiraph({
         caption = "Source: Active Lives survey, Sport England",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of children who are physically active in Trafford between 2017/18 and 2020/21 compared with the average of similar authorities and England. The proportions for the average of similar authorities and England have been broadly similar and consistent across the period shown, whilst Trafford's has varied a lot, increasing then decreasing year to year. In 2018/19 it had the highest proportion of its comparitors, but all were within 0.8 percentage points of each other. However the following year Trafford's proportion decreased by almost 10 percentage points compared to a decrease in its comparitors proportions between 0.3 and 1.9 percentage points. The latest data for 2020/21 shows that the proportion of physically active children in Trafford has increased and is now similar, although still lower, than its comparitors at 43.1% compared with 44% for the average of similar authorities and 44.6% for England."
       ) +
       theme_x()
   }
@@ -786,7 +838,8 @@ output$active_children_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: Active Lives survey, Sport England",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot showing that the proportion of physically active children in Trafford compared with England was statistically similar for the period shown from 2017/18 to 2020/21.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -795,7 +848,13 @@ output$active_children_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_active_children_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_active_children_plot")
 })
 
 output$active_children_box <- renderUI({
@@ -851,8 +910,9 @@ output$mortality_rate_plot <- renderggiraph({
         subtitle = NULL,
         caption = "Source: Annual Mortality Extracts, ONS",
         x = NULL,
-        y = "per 100,000 polulation",
-        colour = NULL
+        y = "per 100,000 population",
+        colour = NULL,
+        alt = "Line chart showing the mortality rate of under 75 year olds from preventable causes per 100,000 population in Trafford between 2010 and 2020 compared with the average of similar authorities and England. All 3 lines show broadly similar rates and a general decreasing trend over the period shown, however Trafford's rate has fluctuated more than its comparitors. Trafford's highest rate was in 2013 at 161.6 where it was also the highest amongst its comparitors, however the year later it fell to 144.6 which was lower than both the average for similar authorities (150.5) and England (147.6). Trafford has had the lowest rate amongst its comparitors for 5 of the 11 years shown, including 2020 which has the lowest rate during the time period shown of 131 compared with 140.5 for England and 142.1 for the average of similar authorities."
       ) +
       theme_x()
   }
@@ -887,8 +947,9 @@ output$mortality_rate_plot <- renderggiraph({
       labs(title = "Under 75 mortality rate from preventable causes",
            subtitle = NULL,
            caption = "Source: Annual Mortality Extracts, ONS",
-           x = NULL, y = "per 100,000 polulation",
-           fill = "Compared with England:") +
+           x = NULL, y = "per 100,000 population",
+           fill = "Compared with England:",
+           alt = "Box plot showing that the mortality rate of under 75 year olds from preventable causes in Trafford compared with England was statistically similar for the period shown from 2010 to 2020.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -916,13 +977,20 @@ output$mortality_rate_plot <- renderggiraph({
         subtitle = NULL,
         caption = "Source: Annual Mortality Extracts, ONS",
         x = NULL,
-        y = "per 100,000 polulation",
-        colour = NULL
+        y = "per 100,000 population",
+        colour = NULL,
+        alt = "Line chart showing the mortality rate of under 75 year olds from preventable causes per 100,000 population in Trafford between 2015 and 2020 compared with the average of similar authorities and England by sex. There is a clear disparity between the sexes with the rate for females much lower than for males across all comparitors and years shown. The rates for both females and males in Trafford are generally lower than their comparitors, with both recording lower rates in 4 of the 6 years shown and the latest data for 2020 shows Trafford recording the lowest rates for both sexes during this period. The latest data for 2020 shows the under 75 year old mortality rate from preventable causes for females in Trafford as 92.6 per 100,000 compared with 95.7 for the average of similar authorities and 96.1 for England. The same data for males shows Trafford's rate at 171.4 per 100,000 compared with 186.9 for England and 190.8 for the average of similar authorities."
       ) +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_mortality_rate_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_mortality_rate_plot")
 })
 
 output$mortality_rate_box <- renderUI({
@@ -975,7 +1043,8 @@ output$healthy_life_expectancy_plot <- renderggiraph({
         caption = "Source: Annual Mortality Extracts, ONS, Annual Population Survey",
         x = NULL,
         y = "years",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the health life expectancy at birth in Trafford between the time periods 2010 to 2012 and 2017 to 2019 compared with the average of similar authorities and England by sex. The trend and values for the average of similar authorities and England for both sexes is very similar to each other, whereas there is more variation in the values for Trafford's females and males. Generally speaking the data show that females and males in Trafford have a slightly higher healthy life expectancy from birth than their comparitors, with the age being higher for 6 out of the 8 time periods shown for both sexes. The latest data for 2017 to 2019 shows the health life expectancy from birth in Trafford for females to be 65 years compared with 63.8 for the average of similar authorities and 63.5 for England. The same data for males shows 65.6 years in Trafford compared with 63.2 years for both the average of similar authorities and England."
       ) +
       theme_x()
   }
@@ -1013,7 +1082,8 @@ output$healthy_life_expectancy_plot <- renderggiraph({
            caption = "Source: Annual Mortality Extracts, ONS, Annual Population Survey",
            x = NULL,
            y = "years",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot showing the health life expectancy at birth of females and males in Trafford compared with England between the time periods 2010 to 2012 and 2017 to 2019. In 2 of the 8 periods for females and 4 of 8 periods for males, health life expectancy at birth in Trafford was statistically better than England.  In the other periods Trafford was statistically similar to England.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -1022,7 +1092,13 @@ output$healthy_life_expectancy_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_healthy_life_expectancy_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_healthy_life_expectancy_plot")
 })
 
 output$healthy_life_expectancy_box <- renderUI({
@@ -1075,7 +1151,8 @@ output$inequality_life_expectancy_plot <- renderggiraph({
         caption = "Source: Annual Mortality Extracts, ONS, IMD 2019, MHCLG",
         x = NULL,
         y = "years",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the difference in life expectancy at birth between the most and least deprived areas in Trafford between the periods 2010 to 2012 and 2018 to 2020 compared to the same for the average of similar authorities and England by sex. The trend and values for the average of similar authorities and England for both sexes is broadly similar and consistent, whilst the data for Trafford shows greater variation between the time periods. The difference in life expectancy for females between the worst and least deprived areas has increased over the time periods shown by approximately 1 year, the latest data for 2018 to 2020 shows Trafford with the lowest inequality at 7.4 years compared to 7.8 years for the average of similar authorities and 7.9 years for England. For males the increasing trend is more gradual than the females, but only for the average of similar authorities and England. Trafford's data has been on a downward trend for the last 4 time periods shown, reducing from 10.6 years in 2014 to 2016 (when it was highest amongst its comparitors) to 8.5 years in 2018 to 2020. This compares favourably with the latest data of its comparitors with the average of similar authorities being 9.4 years and 9.7 years for England."
       ) +
       theme_x()
   }
@@ -1109,11 +1186,18 @@ output$inequality_life_expectancy_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: Annual Mortality Extracts, ONS, IMD 2019, MHCLG",
            x = NULL,
-           y = "years") +
+           y = "years",
+           alt = "Box plot showing the difference in years of life expectancy at birth between the most and least deprived areas within Trafford and compares it with the difference in England and other authorities between the time periods 2010 to 2012 and 2018 to 2020. The data for Trafford is statistically similar to that of England for both sexes, although there is more variance in the data for males.") +
       theme_x() 
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_inequality_life_expectancy_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_inequality_life_expectancy_plot")
 })
 
 output$inequality_life_expectancy_box <- renderUI({
@@ -1166,7 +1250,8 @@ output$children_dental_decay_plot <- renderggiraph({
         caption = "Source: Dental Public Health Epidemiology Programme for England",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the proportion of 5 year olds with visually obvious dental decay in Trafford between 2014/15 and 2018/19 compared with the average of similar authorities and England. The data for England (higher percentage) and the average for similar authorities to Trafford (lower percentage) show a general declining trend with the average for similar authorities decreasing faster, going from 19.3% in 2014/15 to 15.4 in 2018/19 compared with 24.7% and 23.4% for England in the same period. Trafford's data is more erratic by comparison, with its percentage being higher than its comparitors in 2014/15 and 2018/19, 26.4% and 26% respectively. Although Trafford's percentage dropped to 19% in 2016/17, just 1 percentage point above the average of similar authorities, it rose again sharply the following year by 7 percentage points."
       ) +
       theme_x()
   }
@@ -1202,7 +1287,8 @@ output$children_dental_decay_plot <- renderggiraph({
            subtitle = NULL,
            caption = "Source: Dental Public Health Epidemiology Programme for England",
            x = NULL, y = "Percentage",
-           fill = "Compared with England:") +
+           fill = "Compared with England:",
+           alt = "Box plot showing that the proportion of 5 year olds with visually obvious dental decay in Trafford compared with England was statistically similar for the period shown from 2014/15 to 2018/19.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -1211,7 +1297,13 @@ output$children_dental_decay_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_children_dental_decay_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_children_dental_decay_plot")
 })
 
 output$children_dental_decay_box <- renderUI({
@@ -1264,7 +1356,8 @@ output$adults_smoking_manual_plot <- renderggiraph({
         caption = "Source: Annual Population Survey, ONS",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the percentage of smoking adults in routine and manual occupations in Trafford between 2012 and 2020 compared to the average of similar authorities and England. Trafford's percentage has been higher than its comparitors for much of the time period shown. One notable exception is 2019 where Trafford's percentage decreased by 9 points from the previous year to 17.4% (the lowest percentage recorded in the time period shown) compared to 23.2% in England and 25.4% for the average of similar authorities. However Trafford's percentage rose in 2020 to 20.3% whereas its comparitors continued their decreasing trend leaving Trafford just above the average of similar authorities (19.9%) but still below England (21.4%)."
       ) +
       theme_x()
   }
@@ -1301,7 +1394,8 @@ output$adults_smoking_manual_plot <- renderggiraph({
         subtitle = NULL,
         caption = "Source: Annual Population Survey, ONS",
         x = NULL, y = "Percentage",
-        fill = "Compared with England:") +
+        fill = "Compared with England:",
+        alt = "Box plot showing that the percentage of smoking adults in routine and manual occupations in Trafford compared with England was statistically similar for the period shown from 2012 to 2020.") +
       theme_x() +
       theme(
         legend.position = "top",
@@ -1310,7 +1404,13 @@ output$adults_smoking_manual_plot <- renderggiraph({
       )
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_adults_smoking_manual_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_adults_smoking_manual_plot")
 })
 
 output$adults_smoking_manual_box <- renderUI({
@@ -1363,7 +1463,8 @@ output$adults_depression_plot <- renderggiraph({
         caption = "Quality and Outcomes Framework, NHS Digital",
         x = NULL,
         y = "Percentage",
-        colour = NULL
+        colour = NULL,
+        alt = "Line chart showing the prevelance of adults with depression in Trafford between 2013/14 and 2020/21 compared with the average of similar authorities and England. The percentages for the average of similar authorities and England are very close to each other with the former approximately 0.3 percentage points higher for most of the period shown. In contrast Trafford's percentage is higher than its comparitors and increasing at a faster rate. In 2013/14 the gap between Trafford and the average of similar authorities was 0.7 percentage points, however in 2020/21 the gap was 3.1 percentage points. The latest data shows the prevelence of adults with depression in Trafford to be 15.4% compared with 12.3% for both the average of similar authorities and England."
       ) +
       theme_x()
   }
@@ -1397,11 +1498,18 @@ output$adults_depression_plot <- renderggiraph({
         subtitle = NULL,
         caption = "Quality and Outcomes Framework, NHS Digital",
         x = NULL, y = "Percentage",
-        fill = "Compared with England:") +
+        fill = "Compared with England:",
+        alt = "Box plot showing the prevelance of adults with depression in Trafford between 2013/14 and 2020/21 compared with the average of similar authorities and England. Trafford's values for the periods shown are all in the upper quartile range.") +
       theme_x()
   }
   
-  girafe(ggobj = gg, options = lab_ggiraph_options)
+  # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
+  observe({
+    session$sendCustomMessage("a11yPlotSVG", paste0("svg_adults_depression_plot|", gg$labels$title, "|", get_alt_text(gg), " ", gg$labels$caption))
+  })
+  
+  # Turn the ggplot (static image) into an interactive plot (SVG) using ggiraph
+  girafe(ggobj = gg, options = lab_ggiraph_options, canvas_id = "svg_adults_depression_plot")
 })
 
 output$adults_depression_box <- renderUI({
