@@ -112,7 +112,7 @@ output$claimant_count_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from January 2019 to January 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Lastest data for January 2022 shows a claimant count rate of 3.4% in Trafford, 4.1% for the average of similar authorities and 4.4% for England."
+        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from March 2019 to March 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Latest data for March 2022 shows a claimant count rate of 3.5% in Trafford, 4% for the average of similar authorities and 4.3% for England. This shows a slight rise in the claimant count percentage in Trafford from 3.3% in January 2022 whereas the percentage has remained static for its comparitors during the same period."
       ) +
       theme_x()
   }

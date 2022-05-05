@@ -3,6 +3,8 @@
 # URL: https://www.nomisweb.co.uk/sources/cc
 # Licence: Open Government Licence
 
+library(tidyverse)
+
 cipfa <- read_csv("../../cipfa2019.csv") %>%
   select(area_code) 
 
