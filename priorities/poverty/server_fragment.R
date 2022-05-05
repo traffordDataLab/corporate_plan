@@ -42,7 +42,7 @@ output$universal_credit_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from January 2019 to January 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In January 2022 Trafford's claimant rate was 10.8% compared with 13.9% for England and 14% for the average of similar authorities."
+        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from March 2019 to March 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In March 2022 Trafford's claimant rate was 10.7% compared with 13.8% for England and 14% for the average of similar authorities."
       ) +
       theme_x()
   }

@@ -1,8 +1,4 @@
 area_code,area_name,indicator,period,measure,unit,value
-E06000055,Bedford,People on Universal Credit,January 2019,count,persons,6940
-E06000055,Bedford,People on Universal Credit,January 2019,rate,persons,6.6
-E06000055,Bedford,People on Universal Credit,February 2019,count,persons,6851
-E06000055,Bedford,People on Universal Credit,February 2019,rate,persons,6.5
 E06000055,Bedford,People on Universal Credit,March 2019,count,persons,7036
 E06000055,Bedford,People on Universal Credit,March 2019,rate,persons,6.6
 E06000055,Bedford,People on Universal Credit,April 2019,count,persons,7208
@@ -71,12 +67,12 @@ E06000055,Bedford,People on Universal Credit,November 2021,count,persons,16397
 E06000055,Bedford,People on Universal Credit,November 2021,rate,persons,15.4
 E06000055,Bedford,People on Universal Credit,December 2021,count,persons,16308
 E06000055,Bedford,People on Universal Credit,December 2021,rate,persons,15.3
-E06000055,Bedford,People on Universal Credit,January 2022,count,persons,16395
-E06000055,Bedford,People on Universal Credit,January 2022,rate,persons,15.4
-E08000002,Bury,People on Universal Credit,January 2019,count,persons,5090
-E08000002,Bury,People on Universal Credit,January 2019,rate,persons,4.3
-E08000002,Bury,People on Universal Credit,February 2019,count,persons,5513
-E08000002,Bury,People on Universal Credit,February 2019,rate,persons,4.7
+E06000055,Bedford,People on Universal Credit,January 2022,count,persons,16145
+E06000055,Bedford,People on Universal Credit,January 2022,rate,persons,15.2
+E06000055,Bedford,People on Universal Credit,February 2022,count,persons,16153
+E06000055,Bedford,People on Universal Credit,February 2022,rate,persons,15.2
+E06000055,Bedford,People on Universal Credit,March 2022,count,persons,16208
+E06000055,Bedford,People on Universal Credit,March 2022,rate,persons,15.2
 E08000002,Bury,People on Universal Credit,March 2019,count,persons,5924
 E08000002,Bury,People on Universal Credit,March 2019,rate,persons,5.1
 E08000002,Bury,People on Universal Credit,April 2019,count,persons,6240
@@ -145,12 +141,12 @@ E08000002,Bury,People on Universal Credit,November 2021,count,persons,17558
 E08000002,Bury,People on Universal Credit,November 2021,rate,persons,15
 E08000002,Bury,People on Universal Credit,December 2021,count,persons,17256
 E08000002,Bury,People on Universal Credit,December 2021,rate,persons,14.8
-E08000002,Bury,People on Universal Credit,January 2022,count,persons,17349
-E08000002,Bury,People on Universal Credit,January 2022,rate,persons,14.8
-E06000050,Cheshire West and Chester,People on Universal Credit,January 2019,count,persons,12372
-E06000050,Cheshire West and Chester,People on Universal Credit,January 2019,rate,persons,6
-E06000050,Cheshire West and Chester,People on Universal Credit,February 2019,count,persons,11962
-E06000050,Cheshire West and Chester,People on Universal Credit,February 2019,rate,persons,5.8
+E08000002,Bury,People on Universal Credit,January 2022,count,persons,17190
+E08000002,Bury,People on Universal Credit,January 2022,rate,persons,14.7
+E08000002,Bury,People on Universal Credit,February 2022,count,persons,17290
+E08000002,Bury,People on Universal Credit,February 2022,rate,persons,14.8
+E08000002,Bury,People on Universal Credit,March 2022,count,persons,17517
+E08000002,Bury,People on Universal Credit,March 2022,rate,persons,15
 E06000050,Cheshire West and Chester,People on Universal Credit,March 2019,count,persons,12071
 E06000050,Cheshire West and Chester,People on Universal Credit,March 2019,rate,persons,5.8
 E06000050,Cheshire West and Chester,People on Universal Credit,April 2019,count,persons,12386
@@ -219,12 +215,12 @@ E06000050,Cheshire West and Chester,People on Universal Credit,November 2021,cou
 E06000050,Cheshire West and Chester,People on Universal Credit,November 2021,rate,persons,12.7
 E06000050,Cheshire West and Chester,People on Universal Credit,December 2021,count,persons,25765
 E06000050,Cheshire West and Chester,People on Universal Credit,December 2021,rate,persons,12.4
-E06000050,Cheshire West and Chester,People on Universal Credit,January 2022,count,persons,26014
-E06000050,Cheshire West and Chester,People on Universal Credit,January 2022,rate,persons,12.6
-E06000005,Darlington,People on Universal Credit,January 2019,count,persons,3541
-E06000005,Darlington,People on Universal Credit,January 2019,rate,persons,5.5
-E06000005,Darlington,People on Universal Credit,February 2019,count,persons,3640
-E06000005,Darlington,People on Universal Credit,February 2019,rate,persons,5.6
+E06000050,Cheshire West and Chester,People on Universal Credit,January 2022,count,persons,25683
+E06000050,Cheshire West and Chester,People on Universal Credit,January 2022,rate,persons,12.4
+E06000050,Cheshire West and Chester,People on Universal Credit,February 2022,count,persons,25744
+E06000050,Cheshire West and Chester,People on Universal Credit,February 2022,rate,persons,12.4
+E06000050,Cheshire West and Chester,People on Universal Credit,March 2022,count,persons,26005
+E06000050,Cheshire West and Chester,People on Universal Credit,March 2022,rate,persons,12.6
 E06000005,Darlington,People on Universal Credit,March 2019,count,persons,3868
 E06000005,Darlington,People on Universal Credit,March 2019,rate,persons,6
 E06000005,Darlington,People on Universal Credit,April 2019,count,persons,4115
@@ -293,12 +289,12 @@ E06000005,Darlington,People on Universal Credit,November 2021,count,persons,1045
 E06000005,Darlington,People on Universal Credit,November 2021,rate,persons,16
 E06000005,Darlington,People on Universal Credit,December 2021,count,persons,10331
 E06000005,Darlington,People on Universal Credit,December 2021,rate,persons,15.9
-E06000005,Darlington,People on Universal Credit,January 2022,count,persons,10453
-E06000005,Darlington,People on Universal Credit,January 2022,rate,persons,16
-E06000015,Derby,People on Universal Credit,January 2019,count,persons,5809
-E06000015,Derby,People on Universal Credit,January 2019,rate,persons,3.6
-E06000015,Derby,People on Universal Credit,February 2019,count,persons,6450
-E06000015,Derby,People on Universal Credit,February 2019,rate,persons,4
+E06000005,Darlington,People on Universal Credit,January 2022,count,persons,10354
+E06000005,Darlington,People on Universal Credit,January 2022,rate,persons,15.9
+E06000005,Darlington,People on Universal Credit,February 2022,count,persons,10412
+E06000005,Darlington,People on Universal Credit,February 2022,rate,persons,16
+E06000005,Darlington,People on Universal Credit,March 2022,count,persons,10474
+E06000005,Darlington,People on Universal Credit,March 2022,rate,persons,16.1
 E06000015,Derby,People on Universal Credit,March 2019,count,persons,7194
 E06000015,Derby,People on Universal Credit,March 2019,rate,persons,4.5
 E06000015,Derby,People on Universal Credit,April 2019,count,persons,7841
@@ -367,12 +363,12 @@ E06000015,Derby,People on Universal Credit,November 2021,count,persons,27942
 E06000015,Derby,People on Universal Credit,November 2021,rate,persons,17.4
 E06000015,Derby,People on Universal Credit,December 2021,count,persons,27782
 E06000015,Derby,People on Universal Credit,December 2021,rate,persons,17.3
-E06000015,Derby,People on Universal Credit,January 2022,count,persons,28024
-E06000015,Derby,People on Universal Credit,January 2022,rate,persons,17.4
-E92000001,England,People on Universal Credit,January 2019,count,persons,1385918
-E92000001,England,People on Universal Credit,January 2019,rate,persons,3.9
-E92000001,England,People on Universal Credit,February 2019,count,persons,1459503
-E92000001,England,People on Universal Credit,February 2019,rate,persons,4.2
+E06000015,Derby,People on Universal Credit,January 2022,count,persons,27579
+E06000015,Derby,People on Universal Credit,January 2022,rate,persons,17.1
+E06000015,Derby,People on Universal Credit,February 2022,count,persons,27584
+E06000015,Derby,People on Universal Credit,February 2022,rate,persons,17.1
+E06000015,Derby,People on Universal Credit,March 2022,count,persons,27952
+E06000015,Derby,People on Universal Credit,March 2022,rate,persons,17.4
 E92000001,England,People on Universal Credit,March 2019,count,persons,1555051
 E92000001,England,People on Universal Credit,March 2019,rate,persons,4.4
 E92000001,England,People on Universal Credit,April 2019,count,persons,1663231
@@ -441,12 +437,12 @@ E92000001,England,People on Universal Credit,November 2021,count,persons,4924004
 E92000001,England,People on Universal Credit,November 2021,rate,persons,14
 E92000001,England,People on Universal Credit,December 2021,count,persons,4880178
 E92000001,England,People on Universal Credit,December 2021,rate,persons,13.9
-E92000001,England,People on Universal Credit,January 2022,count,persons,4900725
-E92000001,England,People on Universal Credit,January 2022,rate,persons,13.9
-E06000042,Milton Keynes,People on Universal Credit,January 2019,count,persons,1243
-E06000042,Milton Keynes,People on Universal Credit,January 2019,rate,persons,0.7
-E06000042,Milton Keynes,People on Universal Credit,February 2019,count,persons,2217
-E06000042,Milton Keynes,People on Universal Credit,February 2019,rate,persons,1.3
+E92000001,England,People on Universal Credit,January 2022,count,persons,4840024
+E92000001,England,People on Universal Credit,January 2022,rate,persons,13.7
+E92000001,England,People on Universal Credit,February 2022,count,persons,4836687
+E92000001,England,People on Universal Credit,February 2022,rate,persons,13.7
+E92000001,England,People on Universal Credit,March 2022,count,persons,4878816
+E92000001,England,People on Universal Credit,March 2022,rate,persons,13.8
 E06000042,Milton Keynes,People on Universal Credit,March 2019,count,persons,3105
 E06000042,Milton Keynes,People on Universal Credit,March 2019,rate,persons,1.8
 E06000042,Milton Keynes,People on Universal Credit,April 2019,count,persons,3862
@@ -515,12 +511,12 @@ E06000042,Milton Keynes,People on Universal Credit,November 2021,count,persons,2
 E06000042,Milton Keynes,People on Universal Credit,November 2021,rate,persons,14
 E06000042,Milton Keynes,People on Universal Credit,December 2021,count,persons,23183
 E06000042,Milton Keynes,People on Universal Credit,December 2021,rate,persons,13.8
-E06000042,Milton Keynes,People on Universal Credit,January 2022,count,persons,23451
-E06000042,Milton Keynes,People on Universal Credit,January 2022,rate,persons,13.9
-E06000031,Peterborough,People on Universal Credit,January 2019,count,persons,8682
-E06000031,Peterborough,People on Universal Credit,January 2019,rate,persons,7
-E06000031,Peterborough,People on Universal Credit,February 2019,count,persons,8808
-E06000031,Peterborough,People on Universal Credit,February 2019,rate,persons,7.1
+E06000042,Milton Keynes,People on Universal Credit,January 2022,count,persons,23144
+E06000042,Milton Keynes,People on Universal Credit,January 2022,rate,persons,13.7
+E06000042,Milton Keynes,People on Universal Credit,February 2022,count,persons,22957
+E06000042,Milton Keynes,People on Universal Credit,February 2022,rate,persons,13.6
+E06000042,Milton Keynes,People on Universal Credit,March 2022,count,persons,22973
+E06000042,Milton Keynes,People on Universal Credit,March 2022,rate,persons,13.6
 E06000031,Peterborough,People on Universal Credit,March 2019,count,persons,8924
 E06000031,Peterborough,People on Universal Credit,March 2019,rate,persons,7.1
 E06000031,Peterborough,People on Universal Credit,April 2019,count,persons,9315
@@ -589,12 +585,12 @@ E06000031,Peterborough,People on Universal Credit,November 2021,count,persons,26
 E06000031,Peterborough,People on Universal Credit,November 2021,rate,persons,21.3
 E06000031,Peterborough,People on Universal Credit,December 2021,count,persons,26208
 E06000031,Peterborough,People on Universal Credit,December 2021,rate,persons,21.1
-E06000031,Peterborough,People on Universal Credit,January 2022,count,persons,26309
-E06000031,Peterborough,People on Universal Credit,January 2022,rate,persons,21.2
-E08000029,Solihull,People on Universal Credit,January 2019,count,persons,6778
-E08000029,Solihull,People on Universal Credit,January 2019,rate,persons,5.3
-E08000029,Solihull,People on Universal Credit,February 2019,count,persons,6574
-E08000029,Solihull,People on Universal Credit,February 2019,rate,persons,5.1
+E06000031,Peterborough,People on Universal Credit,January 2022,count,persons,25863
+E06000031,Peterborough,People on Universal Credit,January 2022,rate,persons,20.8
+E06000031,Peterborough,People on Universal Credit,February 2022,count,persons,25746
+E06000031,Peterborough,People on Universal Credit,February 2022,rate,persons,20.7
+E06000031,Peterborough,People on Universal Credit,March 2022,count,persons,26028
+E06000031,Peterborough,People on Universal Credit,March 2022,rate,persons,21
 E08000029,Solihull,People on Universal Credit,March 2019,count,persons,6743
 E08000029,Solihull,People on Universal Credit,March 2019,rate,persons,5.3
 E08000029,Solihull,People on Universal Credit,April 2019,count,persons,7011
@@ -663,12 +659,12 @@ E08000029,Solihull,People on Universal Credit,November 2021,count,persons,15919
 E08000029,Solihull,People on Universal Credit,November 2021,rate,persons,12.3
 E08000029,Solihull,People on Universal Credit,December 2021,count,persons,15813
 E08000029,Solihull,People on Universal Credit,December 2021,rate,persons,12.2
-E08000029,Solihull,People on Universal Credit,January 2022,count,persons,15884
-E08000029,Solihull,People on Universal Credit,January 2022,rate,persons,12.3
-E06000025,South Gloucestershire,People on Universal Credit,January 2019,count,persons,2034
-E06000025,South Gloucestershire,People on Universal Credit,January 2019,rate,persons,1.1
-E06000025,South Gloucestershire,People on Universal Credit,February 2019,count,persons,2645
-E06000025,South Gloucestershire,People on Universal Credit,February 2019,rate,persons,1.5
+E08000029,Solihull,People on Universal Credit,January 2022,count,persons,15672
+E08000029,Solihull,People on Universal Credit,January 2022,rate,persons,12.1
+E08000029,Solihull,People on Universal Credit,February 2022,count,persons,15652
+E08000029,Solihull,People on Universal Credit,February 2022,rate,persons,12.1
+E08000029,Solihull,People on Universal Credit,March 2022,count,persons,15729
+E08000029,Solihull,People on Universal Credit,March 2022,rate,persons,12.2
 E06000025,South Gloucestershire,People on Universal Credit,March 2019,count,persons,3068
 E06000025,South Gloucestershire,People on Universal Credit,March 2019,rate,persons,1.7
 E06000025,South Gloucestershire,People on Universal Credit,April 2019,count,persons,3564
@@ -737,12 +733,12 @@ E06000025,South Gloucestershire,People on Universal Credit,November 2021,count,p
 E06000025,South Gloucestershire,People on Universal Credit,November 2021,rate,persons,8.8
 E06000025,South Gloucestershire,People on Universal Credit,December 2021,count,persons,15520
 E06000025,South Gloucestershire,People on Universal Credit,December 2021,rate,persons,8.6
-E06000025,South Gloucestershire,People on Universal Credit,January 2022,count,persons,15563
-E06000025,South Gloucestershire,People on Universal Credit,January 2022,rate,persons,8.7
-E08000007,Stockport,People on Universal Credit,January 2019,count,persons,3643
-E08000007,Stockport,People on Universal Credit,January 2019,rate,persons,2.1
-E08000007,Stockport,People on Universal Credit,February 2019,count,persons,4408
-E08000007,Stockport,People on Universal Credit,February 2019,rate,persons,2.5
+E06000025,South Gloucestershire,People on Universal Credit,January 2022,count,persons,15330
+E06000025,South Gloucestershire,People on Universal Credit,January 2022,rate,persons,8.5
+E06000025,South Gloucestershire,People on Universal Credit,February 2022,count,persons,15335
+E06000025,South Gloucestershire,People on Universal Credit,February 2022,rate,persons,8.5
+E06000025,South Gloucestershire,People on Universal Credit,March 2022,count,persons,15468
+E06000025,South Gloucestershire,People on Universal Credit,March 2022,rate,persons,8.6
 E08000007,Stockport,People on Universal Credit,March 2019,count,persons,5130
 E08000007,Stockport,People on Universal Credit,March 2019,rate,persons,2.9
 E08000007,Stockport,People on Universal Credit,April 2019,count,persons,5694
@@ -811,12 +807,12 @@ E08000007,Stockport,People on Universal Credit,November 2021,count,persons,20559
 E08000007,Stockport,People on Universal Credit,November 2021,rate,persons,11.6
 E08000007,Stockport,People on Universal Credit,December 2021,count,persons,20378
 E08000007,Stockport,People on Universal Credit,December 2021,rate,persons,11.5
-E08000007,Stockport,People on Universal Credit,January 2022,count,persons,20473
-E08000007,Stockport,People on Universal Credit,January 2022,rate,persons,11.5
-E06000030,Swindon,People on Universal Credit,January 2019,count,persons,9323
-E06000030,Swindon,People on Universal Credit,January 2019,rate,persons,6.6
-E06000030,Swindon,People on Universal Credit,February 2019,count,persons,9143
-E06000030,Swindon,People on Universal Credit,February 2019,rate,persons,6.5
+E08000007,Stockport,People on Universal Credit,January 2022,count,persons,20276
+E08000007,Stockport,People on Universal Credit,January 2022,rate,persons,11.4
+E08000007,Stockport,People on Universal Credit,February 2022,count,persons,20340
+E08000007,Stockport,People on Universal Credit,February 2022,rate,persons,11.4
+E08000007,Stockport,People on Universal Credit,March 2022,count,persons,20587
+E08000007,Stockport,People on Universal Credit,March 2022,rate,persons,11.6
 E06000030,Swindon,People on Universal Credit,March 2019,count,persons,9347
 E06000030,Swindon,People on Universal Credit,March 2019,rate,persons,6.7
 E06000030,Swindon,People on Universal Credit,April 2019,count,persons,9636
@@ -885,12 +881,12 @@ E06000030,Swindon,People on Universal Credit,November 2021,count,persons,21064
 E06000030,Swindon,People on Universal Credit,November 2021,rate,persons,15
 E06000030,Swindon,People on Universal Credit,December 2021,count,persons,20864
 E06000030,Swindon,People on Universal Credit,December 2021,rate,persons,14.9
-E06000030,Swindon,People on Universal Credit,January 2022,count,persons,21014
-E06000030,Swindon,People on Universal Credit,January 2022,rate,persons,15
-E06000020,Telford and Wrekin,People on Universal Credit,January 2019,count,persons,1852
-E06000020,Telford and Wrekin,People on Universal Credit,January 2019,rate,persons,1.7
-E06000020,Telford and Wrekin,People on Universal Credit,February 2019,count,persons,2685
-E06000020,Telford and Wrekin,People on Universal Credit,February 2019,rate,persons,2.4
+E06000030,Swindon,People on Universal Credit,January 2022,count,persons,20649
+E06000030,Swindon,People on Universal Credit,January 2022,rate,persons,14.7
+E06000030,Swindon,People on Universal Credit,February 2022,count,persons,20414
+E06000030,Swindon,People on Universal Credit,February 2022,rate,persons,14.6
+E06000030,Swindon,People on Universal Credit,March 2022,count,persons,20542
+E06000030,Swindon,People on Universal Credit,March 2022,rate,persons,14.7
 E06000020,Telford and Wrekin,People on Universal Credit,March 2019,count,persons,3336
 E06000020,Telford and Wrekin,People on Universal Credit,March 2019,rate,persons,3
 E06000020,Telford and Wrekin,People on Universal Credit,April 2019,count,persons,3930
@@ -959,12 +955,12 @@ E06000020,Telford and Wrekin,People on Universal Credit,November 2021,count,pers
 E06000020,Telford and Wrekin,People on Universal Credit,November 2021,rate,persons,15.5
 E06000020,Telford and Wrekin,People on Universal Credit,December 2021,count,persons,17288
 E06000020,Telford and Wrekin,People on Universal Credit,December 2021,rate,persons,15.4
-E06000020,Telford and Wrekin,People on Universal Credit,January 2022,count,persons,17465
-E06000020,Telford and Wrekin,People on Universal Credit,January 2022,rate,persons,15.6
-E06000034,Thurrock,People on Universal Credit,January 2019,count,persons,5950
-E06000034,Thurrock,People on Universal Credit,January 2019,rate,persons,5.4
-E06000034,Thurrock,People on Universal Credit,February 2019,count,persons,5948
-E06000034,Thurrock,People on Universal Credit,February 2019,rate,persons,5.4
+E06000020,Telford and Wrekin,People on Universal Credit,January 2022,count,persons,17325
+E06000020,Telford and Wrekin,People on Universal Credit,January 2022,rate,persons,15.5
+E06000020,Telford and Wrekin,People on Universal Credit,February 2022,count,persons,17394
+E06000020,Telford and Wrekin,People on Universal Credit,February 2022,rate,persons,15.5
+E06000020,Telford and Wrekin,People on Universal Credit,March 2022,count,persons,17663
+E06000020,Telford and Wrekin,People on Universal Credit,March 2022,rate,persons,15.8
 E06000034,Thurrock,People on Universal Credit,March 2019,count,persons,6140
 E06000034,Thurrock,People on Universal Credit,March 2019,rate,persons,5.6
 E06000034,Thurrock,People on Universal Credit,April 2019,count,persons,6487
@@ -1033,12 +1029,12 @@ E06000034,Thurrock,People on Universal Credit,November 2021,count,persons,16805
 E06000034,Thurrock,People on Universal Credit,November 2021,rate,persons,15.2
 E06000034,Thurrock,People on Universal Credit,December 2021,count,persons,16583
 E06000034,Thurrock,People on Universal Credit,December 2021,rate,persons,15
-E06000034,Thurrock,People on Universal Credit,January 2022,count,persons,16300
-E06000034,Thurrock,People on Universal Credit,January 2022,rate,persons,14.8
-E08000009,Trafford,People on Universal Credit,January 2019,count,persons,7800
-E08000009,Trafford,People on Universal Credit,January 2019,rate,persons,5.4
-E08000009,Trafford,People on Universal Credit,February 2019,count,persons,7374
-E08000009,Trafford,People on Universal Credit,February 2019,rate,persons,5.1
+E06000034,Thurrock,People on Universal Credit,January 2022,count,persons,16092
+E06000034,Thurrock,People on Universal Credit,January 2022,rate,persons,14.6
+E06000034,Thurrock,People on Universal Credit,February 2022,count,persons,16148
+E06000034,Thurrock,People on Universal Credit,February 2022,rate,persons,14.7
+E06000034,Thurrock,People on Universal Credit,March 2022,count,persons,16221
+E06000034,Thurrock,People on Universal Credit,March 2022,rate,persons,14.7
 E08000009,Trafford,People on Universal Credit,March 2019,count,persons,7477
 E08000009,Trafford,People on Universal Credit,March 2019,rate,persons,5.1
 E08000009,Trafford,People on Universal Credit,April 2019,count,persons,7594
@@ -1107,12 +1103,12 @@ E08000009,Trafford,People on Universal Credit,November 2021,count,persons,15752
 E08000009,Trafford,People on Universal Credit,November 2021,rate,persons,10.8
 E08000009,Trafford,People on Universal Credit,December 2021,count,persons,15542
 E08000009,Trafford,People on Universal Credit,December 2021,rate,persons,10.7
-E08000009,Trafford,People on Universal Credit,January 2022,count,persons,15689
-E08000009,Trafford,People on Universal Credit,January 2022,rate,persons,10.8
-E06000007,Warrington,People on Universal Credit,January 2019,count,persons,9348
-E06000007,Warrington,People on Universal Credit,January 2019,rate,persons,7.2
-E06000007,Warrington,People on Universal Credit,February 2019,count,persons,8853
-E06000007,Warrington,People on Universal Credit,February 2019,rate,persons,6.8
+E08000009,Trafford,People on Universal Credit,January 2022,count,persons,15441
+E08000009,Trafford,People on Universal Credit,January 2022,rate,persons,10.6
+E08000009,Trafford,People on Universal Credit,February 2022,count,persons,15444
+E08000009,Trafford,People on Universal Credit,February 2022,rate,persons,10.6
+E08000009,Trafford,People on Universal Credit,March 2022,count,persons,15596
+E08000009,Trafford,People on Universal Credit,March 2022,rate,persons,10.7
 E06000007,Warrington,People on Universal Credit,March 2019,count,persons,8958
 E06000007,Warrington,People on Universal Credit,March 2019,rate,persons,6.9
 E06000007,Warrington,People on Universal Credit,April 2019,count,persons,9100
@@ -1181,12 +1177,12 @@ E06000007,Warrington,People on Universal Credit,November 2021,count,persons,1672
 E06000007,Warrington,People on Universal Credit,November 2021,rate,persons,12.9
 E06000007,Warrington,People on Universal Credit,December 2021,count,persons,16651
 E06000007,Warrington,People on Universal Credit,December 2021,rate,persons,12.8
-E06000007,Warrington,People on Universal Credit,January 2022,count,persons,16764
-E06000007,Warrington,People on Universal Credit,January 2022,rate,persons,12.9
-E06000014,York,People on Universal Credit,January 2019,count,persons,4929
-E06000014,York,People on Universal Credit,January 2019,rate,persons,3.5
-E06000014,York,People on Universal Credit,February 2019,count,persons,4889
-E06000014,York,People on Universal Credit,February 2019,rate,persons,3.5
+E06000007,Warrington,People on Universal Credit,January 2022,count,persons,16564
+E06000007,Warrington,People on Universal Credit,January 2022,rate,persons,12.8
+E06000007,Warrington,People on Universal Credit,February 2022,count,persons,16529
+E06000007,Warrington,People on Universal Credit,February 2022,rate,persons,12.7
+E06000007,Warrington,People on Universal Credit,March 2022,count,persons,16678
+E06000007,Warrington,People on Universal Credit,March 2022,rate,persons,12.8
 E06000014,York,People on Universal Credit,March 2019,count,persons,4961
 E06000014,York,People on Universal Credit,March 2019,rate,persons,3.6
 E06000014,York,People on Universal Credit,April 2019,count,persons,5072
@@ -1255,5 +1251,9 @@ E06000014,York,People on Universal Credit,November 2021,count,persons,11623
 E06000014,York,People on Universal Credit,November 2021,rate,persons,8.3
 E06000014,York,People on Universal Credit,December 2021,count,persons,11432
 E06000014,York,People on Universal Credit,December 2021,rate,persons,8.2
-E06000014,York,People on Universal Credit,January 2022,count,persons,11349
-E06000014,York,People on Universal Credit,January 2022,rate,persons,8.1
+E06000014,York,People on Universal Credit,January 2022,count,persons,11201
+E06000014,York,People on Universal Credit,January 2022,rate,persons,8
+E06000014,York,People on Universal Credit,February 2022,count,persons,11182
+E06000014,York,People on Universal Credit,February 2022,rate,persons,8
+E06000014,York,People on Universal Credit,March 2022,count,persons,11271
+E06000014,York,People on Universal Credit,March 2022,rate,persons,8.1
