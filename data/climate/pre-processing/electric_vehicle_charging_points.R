@@ -2,8 +2,8 @@
 # Created: 2022-01-10
 
 # Source: Department for Transport (DfT) and Office for Zero Emission Vehicles (OZEV)
-#         https://www.gov.uk/government/statistics/electric-vehicle-charging-device-statistics-october-2021
-#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1027050/electric-vehicle-charging-device-statistics-october-2021.ods
+#         https://www.gov.uk/government/statistics/electric-vehicle-charging-device-statistics-april-2022
+#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1069013/electric-vehicle-charging-device-statistics-april-2022.ods
 
 
 # Load required packages ---------------------------
@@ -11,7 +11,7 @@ library(tidyverse); library(readODS);
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1027050/electric-vehicle-charging-device-statistics-october-2021.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1069013/electric-vehicle-charging-device-statistics-april-2022.ods",
     write_disk(tmp))
 
 # Setup objects ---------------------------
@@ -29,25 +29,17 @@ df_charging_points_rate <- df_raw %>%
   # NOTE: due to the misalignment of the headings the renamed columns look like a mistake but they are correct!
   select(area_code = `LA / Region Code`,
          area_name = `Local Authority / Region Name`,
-         `2021-10` = `Jul-21`,
-         `2021-07` = `Jan-21`,
-         `2021-04` = `Jul-20`,
-         `2021-01` = `Jan-20`,
-         `2020-10` = 12,
-         `2020-07` = 14,
-         `2020-04` = 16,
-         `2020-01` = 18,
-         `2019-10` = 20
-         # If we need the absolute counts in a separate dataset:
-         #`2021-10` = `Oct-21`,
-         #`2021-07` = `Apr-21`,
-         #`2021-04` = `Oct-20`,
-         #`2021-01` = `Apr-20`,
-         #`2020-10` = `Oct-19`,
-         #`2020-07` = 13,
-         #`2020-04` = 15,
-         #`2020-01` = 17,
-         #`2019-10` = 19,
+         `2022-04` = `Jan-22`,
+         `2022-01` = `Jul-21`,
+         `2021-10` = `Jan-21`,
+         `2021-07` = `Jul-20`,
+         `2021-04` = `Jan-20`,
+         `2021-01` = 14,
+         `2020-10` = 16,
+         `2020-07` = 18,
+         `2020-04` = 20,
+         `2020-01` = 22,
+         `2019-10` = 24
   ) %>%
   filter(area_code %in% authorities$area_code) %>%
   mutate(area_name = if_else(area_name == "ENGLAND", "England", area_name)) %>%
