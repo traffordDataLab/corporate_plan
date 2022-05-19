@@ -1,10 +1,10 @@
 # Licensed Vehicles.
-# Created: 2021-11-29, last update: 2022-01-12
+# Created: 2021-11-29, last update: 2022-01-13
 
 # Source: Department for Transport (DfT) & Driver and Vehicle Licensing Authority (DVLA)
 #         https://www.gov.uk/government/statistical-data-sets/all-vehicles-veh01
 # All Vehicles by body type:       https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/985605/veh0105.ods
-# All Ultra Low Emission Vehicles: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1021017/veh0132.ods
+# All Ultra Low Emission Vehicles: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1046001/veh0132.ods
 
 
 # Load required packages ---------------------------
@@ -47,7 +47,7 @@ df_all_vehicles <- df_raw %>%
 # Download the data for ULEV vehicles ---------------------------
 # These data are reported as correct at the end of each calendar quarter, therefore Q4 is the same period as the data in df_all_vehicles
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1021017/veh0132.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1046001/veh0132.ods",
     write_disk(tmp))
 
 # Load in the raw data
