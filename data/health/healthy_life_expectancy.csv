@@ -15,6 +15,8 @@ E92000001,England,Country,2016 - 18,Healthy life expectancy at birth,Life expect
 E92000001,England,Country,2016 - 18,Healthy life expectancy at birth,Life expectancy,Years,63.9,Not compared,Female
 E92000001,England,Country,2017 - 19,Healthy life expectancy at birth,Life expectancy,Years,63.2,Not compared,Male
 E92000001,England,Country,2017 - 19,Healthy life expectancy at birth,Life expectancy,Years,63.5,Not compared,Female
+E92000001,England,Country,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.1,Not compared,Male
+E92000001,England,Country,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.9,Not compared,Female
 E06000001,Hartlepool,UA,2010 - 12,Healthy life expectancy at birth,Life expectancy,Years,56.7,Worse,Male
 E06000002,Middlesbrough,UA,2010 - 12,Healthy life expectancy at birth,Life expectancy,Years,57.7,Worse,Male
 E06000003,Redcar and Cleveland,UA,2010 - 12,Healthy life expectancy at birth,Life expectancy,Years,58.4,Worse,Male
@@ -4049,3 +4051,259 @@ E09000030,Tower Hamlets,UA,2017 - 19,Healthy life expectancy at birth,Life expec
 E09000031,Waltham Forest,UA,2017 - 19,Healthy life expectancy at birth,Life expectancy,Years,69.7,Better,Female
 E09000032,Wandsworth,UA,2017 - 19,Healthy life expectancy at birth,Life expectancy,Years,68.1,Better,Female
 E09000033,Westminster,UA,2017 - 19,Healthy life expectancy at birth,Life expectancy,Years,64.4,Similar,Female
+E06000001,Hartlepool,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.6,Worse,Male
+E06000002,Middlesbrough,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.8,Worse,Male
+E06000003,Redcar and Cleveland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.9,Worse,Male
+E06000004,Stockton-on-Tees,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.1,Worse,Male
+E06000005,Darlington,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.5,Worse,Male
+E06000006,Halton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Similar,Male
+E06000007,Warrington,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.6,Similar,Male
+E06000008,Blackburn with Darwen,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.8,Worse,Male
+E06000009,Blackpool,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,53.5,Worse,Male
+E06000010,Kingston upon Hull,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,53.8,Worse,Male
+E06000011,East Riding of Yorkshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.3,Better,Male
+E06000012,North East Lincolnshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,55.2,Worse,Male
+E06000013,North Lincolnshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.6,Worse,Male
+E06000014,York,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.3,Better,Male
+E06000015,Derby,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.7,Worse,Male
+E06000016,Leicester,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.6,Worse,Male
+E06000017,Rutland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,74.7,Better,Male
+E06000018,Nottingham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.4,Worse,Male
+E06000019,Herefordshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.2,Similar,Male
+E06000020,Telford and Wrekin,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.6,Worse,Male
+E06000021,Stoke-on-Trent,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,55.9,Worse,Male
+E06000022,Bath and North East Somerset,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.7,Better,Male
+E06000023,Bristol,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.8,Worse,Male
+E06000024,North Somerset,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.9,Similar,Male
+E06000025,South Gloucestershire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Better,Male
+E06000026,Plymouth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.2,Similar,Male
+E06000027,Torbay,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.8,Similar,Male
+E06000030,Swindon,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Similar,Male
+E06000031,Peterborough,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.8,Similar,Male
+E06000032,Luton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.2,Worse,Male
+E06000033,Southend-on-Sea,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.7,Similar,Male
+E06000034,Thurrock,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.8,Similar,Male
+E06000035,Medway,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.9,Similar,Male
+E06000036,Bracknell Forest,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.4,Better,Male
+E06000037,West Berkshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,69.4,Better,Male
+E06000038,Reading,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.4,Better,Male
+E06000039,Slough,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.1,Worse,Male
+E06000040,Windsor and Maidenhead,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,69.7,Better,Male
+E06000041,Wokingham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,70.9,Better,Male
+E06000042,Milton Keynes,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.1,Similar,Male
+E06000043,Brighton and Hove,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.6,Similar,Male
+E06000044,Portsmouth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.5,Similar,Male
+E06000045,Southampton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Similar,Male
+E06000046,Isle of Wight,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.8,Similar,Male
+E06000047,County Durham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.8,Worse,Male
+E06000049,Cheshire East,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.4,Better,Male
+E06000050,Cheshire West and Chester,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.1,Similar,Male
+E06000051,Shropshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.8,Similar,Male
+E06000052,Cornwall,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.8,Similar,Male
+E06000053,Isles of Scilly,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,NA,Not compared,Male
+E06000054,Wiltshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.5,Better,Male
+E06000055,Bedford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.3,Similar,Male
+E06000056,Central Bedfordshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.8,Better,Male
+E06000057,Northumberland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.5,Similar,Male
+E06000058,"Bournemouth, Christchurch and Poole",UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.9,Better,Male
+E06000059,Dorset,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Male
+E06000060,Buckinghamshire UA,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.8,Better,Male
+E06000061,North Northamptonshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64,Similar,Male
+E06000062,West Northamptonshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.8,Similar,Male
+E08000001,Bolton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.3,Worse,Male
+E08000002,Bury,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.4,Similar,Male
+E08000003,Manchester,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.2,Worse,Male
+E08000004,Oldham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.6,Worse,Male
+E08000005,Rochdale,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.4,Worse,Male
+E08000006,Salford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.6,Worse,Male
+E08000007,Stockport,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.1,Similar,Male
+E08000008,Tameside,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.6,Similar,Male
+E08000009,Trafford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.3,Better,Male
+E08000010,Wigan,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.2,Worse,Male
+E08000011,Knowsley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.7,Worse,Male
+E08000012,Liverpool,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.3,Worse,Male
+E08000013,St. Helens,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.3,Worse,Male
+E08000014,Sefton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.6,Similar,Male
+E08000015,Wirral,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.8,Worse,Male
+E08000016,Barnsley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,55.9,Worse,Male
+E08000017,Doncaster,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.4,Worse,Male
+E08000018,Rotherham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.7,Worse,Male
+E08000019,Sheffield,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.5,Similar,Male
+E08000021,Newcastle upon Tyne,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.8,Worse,Male
+E08000022,North Tyneside,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.6,Similar,Male
+E08000023,South Tyneside,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.3,Worse,Male
+E08000024,Sunderland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.1,Worse,Male
+E08000025,Birmingham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.2,Worse,Male
+E08000026,Coventry,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.1,Worse,Male
+E08000027,Dudley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.9,Similar,Male
+E08000028,Sandwell,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.5,Similar,Male
+E08000029,Solihull,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.4,Better,Male
+E08000030,Walsall,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59,Worse,Male
+E08000031,Wolverhampton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60,Worse,Male
+E08000032,Bradford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.9,Worse,Male
+E08000033,Calderdale,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59,Worse,Male
+E08000034,Kirklees,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.8,Similar,Male
+E08000035,Leeds,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Worse,Male
+E08000036,Wakefield,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58,Worse,Male
+E08000037,Gateshead,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.9,Worse,Male
+E09000001,City of London,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,NA,Not compared,Male
+E09000002,Barking and Dagenham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.1,Worse,Male
+E09000003,Barnet,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.9,Similar,Male
+E09000004,Bexley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.4,Better,Male
+E09000005,Brent,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Male
+E09000006,Bromley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.4,Better,Male
+E09000007,Camden,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.6,Similar,Male
+E09000008,Croydon,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.2,Similar,Male
+E09000009,Ealing,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Similar,Male
+E09000010,Enfield,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.3,Similar,Male
+E09000011,Greenwich,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.1,Similar,Male
+E09000012,Hackney,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.2,Similar,Male
+E09000013,Hammersmith and Fulham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.1,Similar,Male
+E09000014,Haringey,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Male
+E09000015,Harrow,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.8,Similar,Male
+E09000016,Havering,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.6,Similar,Male
+E09000017,Hillingdon,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65,Similar,Male
+E09000018,Hounslow,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62,Similar,Male
+E09000019,Islington,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63,Similar,Male
+E09000020,Kensington and Chelsea,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.4,Better,Male
+E09000021,Kingston upon Thames,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,69.4,Better,Male
+E09000022,Lambeth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.9,Similar,Male
+E09000023,Lewisham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.6,Similar,Male
+E09000024,Merton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.6,Better,Male
+E09000025,Newham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.5,Worse,Male
+E09000026,Redbridge,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.6,Similar,Male
+E09000027,Richmond upon Thames,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,70.2,Better,Male
+E09000028,Southwark,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.4,Similar,Male
+E09000029,Sutton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.3,Better,Male
+E09000030,Tower Hamlets,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.3,Similar,Male
+E09000031,Waltham Forest,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.2,Similar,Male
+E09000032,Wandsworth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.4,Similar,Male
+E09000033,Westminster,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.3,Similar,Male
+E06000001,Hartlepool,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.8,Worse,Female
+E06000002,Middlesbrough,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.6,Worse,Female
+E06000003,Redcar and Cleveland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.5,Worse,Female
+E06000004,Stockton-on-Tees,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.5,Worse,Female
+E06000005,Darlington,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.6,Worse,Female
+E06000006,Halton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58,Worse,Female
+E06000007,Warrington,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.8,Similar,Female
+E06000008,Blackburn with Darwen,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.7,Worse,Female
+E06000009,Blackpool,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,54.3,Worse,Female
+E06000010,Kingston upon Hull,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.9,Worse,Female
+E06000011,East Riding of Yorkshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.9,Better,Female
+E06000012,North East Lincolnshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.5,Worse,Female
+E06000013,North Lincolnshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.4,Worse,Female
+E06000014,York,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.6,Similar,Female
+E06000015,Derby,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.6,Similar,Female
+E06000016,Leicester,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.5,Worse,Female
+E06000017,Rutland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.8,Similar,Female
+E06000018,Nottingham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57,Worse,Female
+E06000019,Herefordshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.3,Better,Female
+E06000020,Telford and Wrekin,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.3,Worse,Female
+E06000021,Stoke-on-Trent,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,55.1,Worse,Female
+E06000022,Bath and North East Somerset,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.7,Similar,Female
+E06000023,Bristol,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.5,Worse,Female
+E06000024,North Somerset,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,68.1,Better,Female
+E06000025,South Gloucestershire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.1,Better,Female
+E06000026,Plymouth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.3,Worse,Female
+E06000027,Torbay,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.9,Similar,Female
+E06000030,Swindon,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.2,Similar,Female
+E06000031,Peterborough,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.1,Worse,Female
+E06000032,Luton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60,Worse,Female
+E06000033,Southend-on-Sea,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.1,Similar,Female
+E06000034,Thurrock,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.7,Similar,Female
+E06000035,Medway,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.6,Similar,Female
+E06000036,Bracknell Forest,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.5,Better,Female
+E06000037,West Berkshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,70.1,Better,Female
+E06000038,Reading,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Female
+E06000039,Slough,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.3,Worse,Female
+E06000040,Windsor and Maidenhead,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,70.3,Better,Female
+E06000041,Wokingham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,71.2,Better,Female
+E06000042,Milton Keynes,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Similar,Female
+E06000043,Brighton and Hove,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.3,Similar,Female
+E06000044,Portsmouth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Similar,Female
+E06000045,Southampton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63,Similar,Female
+E06000046,Isle of Wight,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Female
+E06000047,County Durham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.9,Worse,Female
+E06000049,Cheshire East,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.4,Better,Female
+E06000050,Cheshire West and Chester,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.9,Better,Female
+E06000051,Shropshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.1,Better,Female
+E06000052,Cornwall,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66,Better,Female
+E06000053,Isles of Scilly,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,NA,Not compared,Female
+E06000054,Wiltshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Similar,Female
+E06000055,Bedford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.3,Similar,Female
+E06000056,Central Bedfordshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.3,Similar,Female
+E06000057,Northumberland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.2,Similar,Female
+E06000058,"Bournemouth, Christchurch and Poole",UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Similar,Female
+E06000059,Dorset,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Similar,Female
+E06000060,Buckinghamshire UA,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,68.6,Better,Female
+E06000061,North Northamptonshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.4,Similar,Female
+E06000062,West Northamptonshire,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Similar,Female
+E08000001,Bolton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.4,Similar,Female
+E08000002,Bury,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.2,Similar,Female
+E08000003,Manchester,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.7,Worse,Female
+E08000004,Oldham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.2,Worse,Female
+E08000005,Rochdale,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.5,Worse,Female
+E08000006,Salford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.4,Worse,Female
+E08000007,Stockport,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.2,Similar,Female
+E08000008,Tameside,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.2,Worse,Female
+E08000009,Trafford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.9,Better,Female
+E08000010,Wigan,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.4,Worse,Female
+E08000011,Knowsley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60,Worse,Female
+E08000012,Liverpool,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.9,Worse,Female
+E08000013,St. Helens,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.9,Similar,Female
+E08000014,Sefton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.8,Similar,Female
+E08000015,Wirral,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63,Similar,Female
+E08000016,Barnsley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.1,Worse,Female
+E08000017,Doncaster,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.1,Worse,Female
+E08000018,Rotherham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.5,Worse,Female
+E08000019,Sheffield,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.3,Similar,Female
+E08000021,Newcastle upon Tyne,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.7,Worse,Female
+E08000022,North Tyneside,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.2,Worse,Female
+E08000023,South Tyneside,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.9,Worse,Female
+E08000024,Sunderland,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.9,Worse,Female
+E08000025,Birmingham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.2,Worse,Female
+E08000026,Coventry,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64,Similar,Female
+E08000027,Dudley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.7,Similar,Female
+E08000028,Sandwell,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.5,Worse,Female
+E08000029,Solihull,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.7,Similar,Female
+E08000030,Walsall,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.4,Worse,Female
+E08000031,Wolverhampton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.3,Worse,Female
+E08000032,Bradford,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.4,Similar,Female
+E08000033,Calderdale,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.4,Similar,Female
+E08000034,Kirklees,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.2,Worse,Female
+E08000035,Leeds,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.9,Similar,Female
+E08000036,Wakefield,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,56.7,Worse,Female
+E08000037,Gateshead,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,58.5,Worse,Female
+E09000001,City of London,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,NA,Not compared,Female
+E09000002,Barking and Dagenham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.1,Worse,Female
+E09000003,Barnet,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.1,Better,Female
+E09000004,Bexley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.9,Similar,Female
+E09000005,Brent,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,68.6,Better,Female
+E09000006,Bromley,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.6,Better,Female
+E09000007,Camden,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,66.8,Similar,Female
+E09000008,Croydon,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.4,Similar,Female
+E09000009,Ealing,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.3,Similar,Female
+E09000010,Enfield,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62,Similar,Female
+E09000011,Greenwich,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.2,Better,Female
+E09000012,Hackney,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,61.5,Similar,Female
+E09000013,Hammersmith and Fulham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Female
+E09000014,Haringey,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65,Similar,Female
+E09000015,Harrow,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,60.9,Similar,Female
+E09000016,Havering,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.8,Similar,Female
+E09000017,Hillingdon,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.4,Similar,Female
+E09000018,Hounslow,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62.6,Similar,Female
+E09000019,Islington,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.8,Similar,Female
+E09000020,Kensington and Chelsea,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,70,Better,Female
+E09000021,Kingston upon Thames,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,69.6,Better,Female
+E09000022,Lambeth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,59.5,Similar,Female
+E09000023,Lewisham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,63.2,Similar,Female
+E09000024,Merton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,67.1,Similar,Female
+E09000025,Newham,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64.6,Similar,Female
+E09000026,Redbridge,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,64,Similar,Female
+E09000027,Richmond upon Thames,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,68.9,Better,Female
+E09000028,Southwark,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,62,Similar,Female
+E09000029,Sutton,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,68.4,Better,Female
+E09000030,Tower Hamlets,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,57.8,Worse,Female
+E09000031,Waltham Forest,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,68,Better,Female
+E09000032,Wandsworth,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,70.1,Better,Female
+E09000033,Westminster,UA,2018 - 20,Healthy life expectancy at birth,Life expectancy,Years,65.2,Similar,Female
