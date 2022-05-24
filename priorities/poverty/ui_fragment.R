@@ -56,8 +56,8 @@ tabPanel(
             uiOutput("children_poverty_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "children_poverty_selection",
-              choiceNames = c("Rel. Trend", "Abs.Trend"),
-              choiceValues = c("Rel. Trend", "Abs.Trend"),
+              choiceNames = c("Rel. Trend", "Abs.Trend", "Rel. Map"),
+              choiceValues = c("Rel. Trend", "Abs.Trend", "Rel. Map"),
               selected = "Rel. Trend",
               direction = "horizontal",
               individual = FALSE,

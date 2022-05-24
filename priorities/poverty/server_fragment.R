@@ -183,6 +183,9 @@ children_poverty_cssn_mean <- children_poverty %>%
 
 children_poverty_trend <- bind_rows(children_poverty %>% select(area_name, period,value,indicator) %>% filter(area_name %in% c("Trafford", "England")), children_poverty_cssn_mean) 
 
+children_poverty_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
+  left_join(children_poverty %>% filter(area_type == "Ward") %>% select(area_code, indicator, value), by = "area_code")
+
 
 # Plot
 output$children_poverty_plot <- renderggiraph({
@@ -214,7 +217,7 @@ output$children_poverty_plot <- renderggiraph({
       theme_x()
     
     
-  } else {
+  } else if (input$children_poverty_selection == "Abs. Trend"){
 
     gg <- ggplot(
       filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
@@ -236,10 +239,42 @@ output$children_poverty_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing the proportion of children under the age of 16 in absolute low income families in Trafford compared to the average of similar authorities and England between 2014/15 and 2019/20. Over the majority of the time period plotted, Trafford has approximately tracked 1 percentage point above the trend of the similar authorities average, with the England average approximately 4 to 5 percentage points above Trafford. However, the latest data for 2019/20 shows a decrease in the proportion for Trafford from the previous year to 10%, bringing it almost in line with the average of similar authorities at 9.8%. The England average for comparison is 15.6%, continuing an upward trend from 2106/17."
+        alt = "Line chart showing the proportion of children under the age of 16 in absolute low income families in Trafford compared to the average of similar authorities and England between 2014/15 and 2019/20. Over the majority of the time period plotted, Trafford has approximately tracked 1 percentage point above the trend of the similar authorities average, with the England average approximately 4 to 5 percentage points above Trafford. However, the latest data for 2019/20 shows a decrease in the proportion for Trafford from the previous year to 10%, bringing it almost in line with the average of similar authorities at 9.8%. The England average for comparison is 15.6%, continuing an upward trend from 2016/17."
       ) +
       theme_x()
     
+  } else {
+    gg <-
+      ggplot(children_poverty_wards) + 
+      geom_sf_interactive(aes(tooltip =
+                                paste0('<span class="plotTooltipValue">', ifelse(is.na(value),value,paste0(value,"%")),'</span><br />',
+                                       '<span class="plotTooltipMain">', area_name, '</span><br />'),
+                              fill = value), color = "#FFFFFF", size = 0.5, alpha = 0.8) +
+      scale_fill_gradient(  low = "#b9e0e6",
+                            high = "#00445e",
+                            space = "Lab",
+                            na.value = "grey50",
+                            breaks = c(min(children_poverty_wards$value, na.rm=T),max(children_poverty_wards$value, na.rm=T)),
+                            label = function(x) paste0(x, "%"),
+                            guide = guide_legend(
+                              title = NULL,
+                              reverse = TRUE,
+                              keyheight = unit(3, units = "mm"), 
+                              keywidth = unit(6, units = "mm"), 
+                              ncol = 2)
+      ) +
+      labs(
+        title = "Children in relative low income families by ward",
+        subtitle = "2020/21",
+        caption = "Source: DWP",
+        x = NULL,
+        y = NULL,
+        alt = "Map showing the proportion of children under 16 years living in relative low income families  in each of Trafford's wards in 2020/2021. The wards in the North have high proportions with Clifford having the highest at 38.6% and Longford, Stretford and Gorse Hill between 24% and 30%. Bucklow-St Martins in the West had a high propotion at 27.9%. Other wards with proportion over 10% are Davyhulme West at 12.1% in the West, St Mary's at 16.4% and Sale Moor at 11.4% in the central area and Village at 15.4% in the South"
+      ) +
+      coord_sf(datum = NA) +
+      theme_x() +
+      theme(plot.subtitle = element_text(size = 11),
+            legend.position = c(0.5, 1.055))
   }
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
