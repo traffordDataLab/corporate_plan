@@ -87,6 +87,9 @@ claimant_count_cipfa_mean <- claimant_count %>%
 
 claimant_count_trend <- bind_rows(claimant_count %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), claimant_count_cipfa_mean) 
 
+claimant_count_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
+  left_join(claimant_count %>% filter(grepl("E05", area_code)) %>% select(area_code, indicator, value), by = "area_code")
+
 # Plot
 output$claimant_count_plot <- renderggiraph({
   
@@ -115,6 +118,38 @@ output$claimant_count_plot <- renderggiraph({
         alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from March 2019 to March 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Latest data for March 2022 shows a claimant count rate of 3.5% in Trafford, 4% for the average of similar authorities and 4.3% for England. This shows a slight rise in the claimant count percentage in Trafford from 3.3% in January 2022 whereas the percentage has remained static for its comparitors during the same period."
       ) +
       theme_x()
+  } else {
+    gg <-
+      ggplot(claimant_count_wards) + 
+      geom_sf_interactive(aes(tooltip =
+                                paste0('<span class="plotTooltipValue">', ifelse(is.na(value),value,paste0(value,"%")),'</span><br />',
+                                       '<span class="plotTooltipMain">', area_name, '</span><br />'),
+                              fill = value), color = "#FFFFFF", size = 0.5, alpha = 0.8) +
+      scale_fill_gradient(  low = "#b9e0e6",
+                            high = "#00445e",
+                            space = "Lab",
+                            na.value = "grey50",
+                            breaks = c(min(claimant_count_wards$value, na.rm=T),max(claimant_count_wards$value, na.rm=T)),
+                            label = function(x) paste0(x, "%"),
+                            guide = guide_legend(
+                              title = NULL,
+                              reverse = TRUE,
+                              keyheight = unit(3, units = "mm"), 
+                              keywidth = unit(6, units = "mm"), 
+                              ncol = 2)
+      ) +
+      labs(
+        title = "Claimant Count rate - aged 16 to 64 by ward",
+        subtitle = "April 2022",
+        caption = "Source: ONS",
+        x = NULL,
+        y = NULL,
+        alt = "Map showing the proportion of Claimant Count as a proportion of people aged 16 to 64 in each of Trafford's wards in April 2022. The wards in the North have high proportions with Clifford having the highest at 6.7% and Longford, Stretford and Gorse Hill between 5.1% and 5.8%. Bucklow-St Martins in the West had a high propotion at 8.2%. Other wards with proportion over 3% are Sale Moor at 3.9% and St Mary's at 3.5% in the central area and Village at 3.4% in the South"
+      ) +
+      coord_sf(datum = NA) +
+      theme_x() +
+      theme(plot.subtitle = element_text(size = 11),
+            legend.position = c(0.5, 1.055))
   }
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible

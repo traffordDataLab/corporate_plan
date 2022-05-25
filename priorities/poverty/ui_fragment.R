@@ -30,8 +30,8 @@ tabPanel(
             uiOutput("claimant_count_box", class = "indicatorContainer"),
             radioGroupButtons(
               inputId = "claimant_count_selection",
-              choiceNames = c("Trend"),
-              choiceValues = c("Trend"),
+              choiceNames = c("Trend", "Map"),
+              choiceValues = c("Trend", "Map"),
               selected = "Trend",
               direction = "horizontal",
               individual = FALSE,
