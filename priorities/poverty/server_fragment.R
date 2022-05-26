@@ -17,6 +17,10 @@ universal_credit_cipfa_mean <- universal_credit %>%
 
 universal_credit_trend <- bind_rows(universal_credit %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), universal_credit_cipfa_mean) 
 
+universal_credit_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
+  left_join(universal_credit %>% filter(grepl("E05", area_code)) %>% select(area_code, indicator, value), by = "area_code")
+
+
 # Plot
 output$universal_credit_plot <- renderggiraph({
   
@@ -45,6 +49,38 @@ output$universal_credit_plot <- renderggiraph({
         alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from March 2019 to March 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In March 2022 Trafford's claimant rate was 10.7% compared with 13.8% for England and 14% for the average of similar authorities."
       ) +
       theme_x()
+  } else {
+    gg <-
+      ggplot(universal_credit_wards) + 
+      geom_sf_interactive(aes(tooltip =
+                                paste0('<span class="plotTooltipValue">', ifelse(is.na(value),value,paste0(value,"%")),'</span><br />',
+                                       '<span class="plotTooltipMain">', area_name, '</span><br />'),
+                              fill = value), color = "#FFFFFF", size = 0.5, alpha = 0.8) +
+      scale_fill_gradient(  low = "#b9e0e6",
+                            high = "#00445e",
+                            space = "Lab",
+                            na.value = "grey50",
+                            breaks = c(min(universal_credit_wards$value, na.rm=T),max(universal_credit_wards$value, na.rm=T)),
+                            label = function(x) paste0(x, "%"),
+                            guide = guide_legend(
+                              title = NULL,
+                              reverse = TRUE,
+                              keyheight = unit(3, units = "mm"), 
+                              keywidth = unit(6, units = "mm"), 
+                              ncol = 2)
+      ) +
+      labs(
+        title = "Universal Credit rate - aged 16 to 64 by ward",
+        subtitle = "April 2022",
+        caption = "Source: DWP,ONS",
+        x = NULL,
+        y = NULL,
+        alt = "Map showing the proportion of Universal Credit claims as a proportion of people aged 16 to 64 in each of Trafford's wards in April 2022. Bucklow-St Martins in the West had the highest propotion of all wards at 24.7%. The wards in the North have high proportions with Clifford having the highest at 21.5% and Longford, Stretford and Gorse Hill between 14% and 19%.  Other wards with proportion over 10% are St Mary's at 14.3% and Sale Moor at 12.2% in the central area and Village at 12.5% in the South"
+      ) +
+      coord_sf(datum = NA) +
+      theme_x() +
+      theme(plot.subtitle = element_text(size = 11),
+            legend.position = c(0.5, 1.055))
   }
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible

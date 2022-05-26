@@ -66,14 +66,10 @@ pop_15_ward <- read_csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_2010_1.da
          area_name = GEOGRAPHY_NAME,
          pop0_15 = OBS_VALUE)
 
-# Proportion of people claiming Universal Credit #
+# Children in relative low income families #
 # Source: DWP
 # URL: https://www.gov.uk/government/collections/children-in-low-income-families-local-area-statistics
 # Licence: Open Government Licence
-
-
-lookup <- read_csv("https://www.trafforddatalab.io/spatial_data/lookups/administrative_lookup.csv") %>%
-  filter(lad17nm == "Trafford")
 
 query <- list(database = unbox("str:database:CILIF_REL"),
               measures = "str:count:CILIF_REL:V_F_CILIF_REL",

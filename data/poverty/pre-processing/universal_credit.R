@@ -6,7 +6,7 @@
 library(httr) ; library (tidyverse) ; library (jsonlite) ; library (zoo)
 
 
-# Source:Mid-2019 population estimates for local authorities in England
+# Source:Mid-2020 population estimates for local authorities in England
 # URL: https://www.nomisweb.co.uk/datasets/pestsyoala
 # Licence: Open Government Licence v3.0
 
@@ -57,13 +57,50 @@ df <- as.data.frame.table(values, stringsAsFactors = FALSE) %>%
   left_join(population, by = c("area_name", "year")) %>%
   arrange(area_name) %>%
   mutate(area_code = na.locf(area_code),
-         pop16_64 = na.locf(pop16_64)) %>%
+         pop16_64 = na.locf(pop16_64))
+
+pop_ward <- read_csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_2010_1.data.csv?geography=1656750701...1656750715,1656750717,1656750716,1656750718...1656750721&date=latest&gender=0&c_age=203&measures=20100") %>%
+  select(area_code = GEOGRAPHY_CODE,
+         area_name = GEOGRAPHY_NAME,
+         pop16_64 = OBS_VALUE)
+
+
+query <- list(database = unbox("str:database:UC_Monthly"),
+              measures = "str:count:UC_Monthly:V_F_UC_CASELOAD_FULL",
+              dimensions = c("str:field:UC_Monthly:V_F_UC_CASELOAD_FULL:WARD_CODE",
+                             "str:field:UC_Monthly:F_UC_DATE:DATE_NAME") %>% matrix(),
+              recodes = list(
+                `str:field:UC_Monthly:V_F_UC_CASELOAD_FULL:WARD_CODE` = list(
+                  map = as.list(paste0("str:value:UC_Monthly:V_F_UC_CASELOAD_FULL:WARD_CODE:V_C_MASTERGEOG11_WARD_TO_LA:E0", seq(5000819, 5000839, 1)))),
+                `str:field:UC_Monthly:F_UC_DATE:DATE_NAME` = list(
+                  map = as.list(paste0("str:value:UC_Monthly:F_UC_DATE:DATE_NAME:C_UC_DATE:",c(202204))))
+              )) %>% toJSON()
+request <- POST(
+  url = path,
+  body = query,
+  config = add_headers(APIKey = api_key),
+  encode = "json")
+response <- fromJSON(content(request, as = "text"), flatten = TRUE)
+# extract list items and convert to a dataframe
+tabnames <- response$fields$items %>% map(~.$labels %>% unlist)
+values <- response$cubes[[1]]$values
+dimnames(values) <- tabnames
+
+universal_credit_ward <- as.data.frame.table(values, stringsAsFactors = FALSE) %>%
+  as_tibble() %>%
+  set_names(c(response$fields$label,"value"))  %>%
+  select(area_name = "National - Regional - LA - Ward", period = Month, value) %>%
+  left_join(pop_ward, by="area_name") 
+
+df_t <- df %>%
+  bind_rows(universal_credit_ward) %>%
   mutate(rate = round((value/pop16_64)*100,1)) %>%
   select(area_code, area_name, period, count = value, rate) %>%
   pivot_longer(c(count,rate), names_to = "measure", values_to = "value") %>%
-  mutate(indicator="People on Universal Credit", 
+  mutate(indicator = if_else(measure =="rate","People on Universal Credit as a proportion of residents aged 16-64","People on Universal Credit"), 
          unit ="persons") %>%
   select(area_code, area_name, indicator, period, measure, unit, value)
 
-write_csv(df, "../universal_credit.csv")
+
+write_csv(df_t, "../universal_credit.csv")
 
