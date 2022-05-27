@@ -31,7 +31,7 @@ fuel_poverty_2020 <- read_xlsx(tmp, sheet = 6, skip = 2) %>%
   filter(`area_code` %in% c("E92000001", cipfa$area_code, "E08000009")) %>%
   mutate(area_name = if_else(area_name == "ENGLAND", "England", area_name),
          value = as.numeric(value),
-         period = 2022,
+         period = 2020,
          indicator = "Fuel poverty (low income, low energy efficiency methodology)")
   
 
