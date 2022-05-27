@@ -511,7 +511,7 @@ output$fuel_poverty_plot <- renderggiraph({
       labs(
         title = "Households in fuel poverty",
         subtitle = NULL,
-        caption = "Source: BEIS\n2019 data based on low income, low energy efficiency,\nother years data based on low income, high cost.",
+        caption = "Source: BEIS\nData from 2019 based on low income, low energy efficiency,\nother years data based on low income, high cost.",
         x = NULL,
         y = "Percentage",
         colour = NULL,

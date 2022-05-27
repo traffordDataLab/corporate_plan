@@ -1,10 +1,10 @@
 # Reduce % of households fuel poverty levels #
 
-# Source: PHE Fingertips
-# URL: https://fingertips.phe.org.uk/profile/wider-determinants
+# Source: Department for Business, Energy & Industrial Strategy
+# URL: https://www.gov.uk/government/collections/fuel-poverty-sub-regional-statistics
 # Licence: Open Government Licence v3.0
 
-library(tidyverse) 
+library(tidyverse) ; library(readxl) ; library(httr) 
 
 cipfa <- read_csv("../../cipfa2019.csv") %>%
   select(area_code) 
@@ -21,7 +21,21 @@ fuel_poverty_2019 <- read_csv("https://fingertips.phe.org.uk/api/all_data/csv/by
   filter(is.na(`Category Type`)) %>%
   select(-c(`Category Type`))
 
-df <- bind_rows(fuel_poverty_trend, fuel_poverty_2019) %>%
+tmp <- tempfile(fileext = ".xlsx")
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1072034/fuel-poverty-sub-regional-2022-tables.xlsx",
+    write_disk(tmp))
+
+fuel_poverty_2020 <- read_xlsx(tmp, sheet = 6, skip = 2) %>%
+  mutate(area_name = coalesce(`Area names`, `...3`, `...4`))%>%
+  select(area_code = `Area Codes`, area_name, value = `Proportion of households fuel poor (%)`) %>%
+  filter(`area_code` %in% c("E92000001", cipfa$area_code, "E08000009")) %>%
+  mutate(area_name = if_else(area_name == "ENGLAND", "England", area_name),
+         value = as.numeric(value),
+         period = 2022,
+         indicator = "Fuel poverty (low income, low energy efficiency methodology)")
+  
+
+df <- bind_rows(fuel_poverty_trend, fuel_poverty_2019, fuel_poverty_2020) %>%
   mutate(value = round(value, 1)) %>%
   mutate(measure = "Percentage", unit = "Households") %>%
   select(area_code, area_name, period, indicator, measure, unit, value)
