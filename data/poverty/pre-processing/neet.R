@@ -10,7 +10,7 @@
 
 
 # Load required packages ---------------------------
-library(tidyverse) 
+library(tidyverse) ; library(httr) ; library(readxl)
 
 # Setup objects ---------------------------
 # Trafford and its CIPFA nearest neighbours (2019):
@@ -47,21 +47,35 @@ df_neet_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?value.va
 # Tidy the LG Inform+ data ---------------------------
 df_neet <- df_neet_raw %>%
   select(area_code = area,
+         area_name = `area label`,
          everything(),
-         -`area label`,
          -`area long label`) %>%
-  filter(area_code != "area") %>%
-  pivot_longer(c(-area_code), names_to = "period", values_to = "value") %>%
-  left_join(authorities, by = "area_code") %>%
+  filter(area_code %in% authorities$area_code) %>%
+  pivot_longer(-c(area_code,area_name), names_to = "period", values_to = "value") %>%
   mutate(measure = "Percentage",
          unit = "Persons",
          indicator = "16-17 year olds not in education, employment or training (NEET)",
          value = as.numeric(value)) %>%
   arrange(period, area_name) %>%
   select(area_code, area_name, period, indicator, measure, unit, value)
+
+# Data from 2021
+
+tmp <- tempfile(fileext = ".xlsx")
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1005105/2021_NEET_and_participation_tables.xlsx",
+    write_disk(tmp))
+
+NEET_2021 <- read_xlsx(tmp, sheet = 8, skip = 6) %>%
+  select(area_code = "ONS Geography code (9 digit)", area_name = "Region/LA name", `16-17 year olds not in education, employment or training (NEET)` = "of which known to be NEET", `16-17 year olds not in education, employment or training (NEET) or whose activity is not known` = "Proportion NEET \r\nor not known") %>%
+  filter(area_code %in% authorities$area_code) %>%
+  pivot_longer(cols = -c(area_code, area_name), "indicator", "value") %>%
+  mutate(period = "2021", value = round(value *100,1),
+         measure = "Percentage", unit = "Persons") 
+
     
 # Combine the datasets ---------------------------
-df_neet <- bind_rows(df_neet_and_unknown, df_neet)
+df_neet <- bind_rows(df_neet_and_unknown, df_neet, NEET_2021) %>%
+arrange(indicator,period,area_code)
   
 # Export the tidied data ---------------------------
 write_csv(df_neet, "../neet.csv")
