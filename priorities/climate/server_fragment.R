@@ -30,7 +30,7 @@ output$licensed_vehicles_plot <- renderggiraph({
                     x = NULL,
                     y = "Count",
                     fill = NULL,
-                    alt = "Line chart showing the number of vehicles registered to Trafford addresses has been consistently lower compared to the average of similar authorities since 2016. Trafford registrations between 2015 and 2016 dropped by approximately 20,000 and have since been around 130,000, whereas the average for similar authorities has continued to rise, reaching 202,502 in 2020.") +
+                    alt = "Line chart showing the number of vehicles registered to Trafford addresses has been consistently lower compared to the average of similar authorities over the 3 year period shown. The numbers in Trafford for each calendar quarter are consistently around 130,000. The average for similar authorities has been much higher compared to Trafford, with around 185,000 licensed vehicles each calendar quarter up to the middle of 2020. After that the number increased sharply and has remained around 205,000 vehicles. The latest data for the end of March 2022 shows 129,533 vehicles registered within Trafford compared with an average of 204,069 vehicles in similar authorities.") +
                theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -86,7 +86,7 @@ output$licensed_ulev_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing the proportion of licensed vehicles registered to Trafford addresses which are ultra low emission vehicles has been consistently lower, and increasing at a slower rate, compared to the average for similar authorities and England from 2011 to 2020. In 2020 the average proportion for similar authorities was 2.38% compared with an average of 1.18% in England and 0.81% in Trafford.") +
+         alt = "Line chart showing the proportion of licensed vehicles registered to Trafford addresses which are ultra low emission vehicles has been consistently lower, and increasing at a slower rate, compared to the average for similar authorities and England across the 3 year period show. At the end of March 2022 the average proportion for similar authorities was 4.75% compared with an average of 2.24% in England and 1.61% in Trafford.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
