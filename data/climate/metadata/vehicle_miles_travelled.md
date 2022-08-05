@@ -6,6 +6,6 @@ Source: Dataset TRA8901: <a href="https://assets.publishing.service.gov.uk/gover
 
 England LA Average comparator is the mean value of the estimated miles travelled attributed to each Local Authority in England, provided within the source dataset.
 
-Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2019.
+Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2021.
 
 <a href="https://www.trafforddatalab.io/corporate_plan/data/climate/vehicle_miles_travelled.csv" aria-label="Download the data" class="downloadButton" target="_blank" download>Data <span class="fas fa-download"></span></a>

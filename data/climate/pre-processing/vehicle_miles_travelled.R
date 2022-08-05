@@ -7,7 +7,7 @@
 
 
 # Load required packages ---------------------------
-library(tidyverse); library(readODS);
+library(tidyverse); library(readODS); library(httr)
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
@@ -15,8 +15,8 @@ GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/up
     write_disk(tmp))
 
 # Setup objects ---------------------------
-# Trafford and its CIPFA nearest neighbours (2019):
-authorities <- read_csv("../../cipfa2019.csv") %>%
+# Trafford and its CIPFA nearest neighbours (2021):
+authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford")
 
 # Get the raw data ---------------------------
@@ -68,3 +68,6 @@ df_vehicle_miles <- df_vehicle_miles %>%
 
 # Export the tidied data ---------------------------
 write_csv(df_vehicle_miles, "../vehicle_miles_travelled.csv")
+
+# Cleanup the downloaded ODS
+unlink(tmp)

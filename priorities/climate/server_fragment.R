@@ -141,7 +141,7 @@ output$vehicle_miles_plot <- renderggiraph({
          x = NULL,
          y = "Miles (millions)",
          fill = NULL,
-         alt = "Line chart showing the number of miles travelled annually within Trafford between 2010 and 2020 is consistently lower compared with the average for similar authorities and the average of all local authorities in England. Mileage has been increasing year on year for all up to 2019, before showing a considerable decrease in 2020: 1,085 million down to 887 million miles in Trafford, 1,448 million down to 1,140 million miles for the average of similar authorities and 2,030 million down to 1,603 million miles for the average of all local authorities in England.") +
+         alt = "Line chart showing the number of miles travelled annually within Trafford between 2010 and 2020 is consistently lower compared with the average for similar authorities and the average of all local authorities in England. Mileage has been increasing year on year for all up to 2019, before showing a considerable decrease in 2020: 1,085 million down to 887 million miles in Trafford, 1,429 million down to 1,127 million miles for the average of similar authorities and 2,030 million down to 1,603 million miles for the average of all local authorities in England.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
