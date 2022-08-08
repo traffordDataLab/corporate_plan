@@ -6,21 +6,21 @@
 
 
 # Load required packages ---------------------------
-library(tidyverse) ; library(httr) ; library(readODS)
+library(tidyverse) ; library(httr) ; library(readxl)
 
 # Setup objects ---------------------------
 # Trafford and its CIPFA nearest neighbours (2019):
-authorities <- read_csv("../../cipfa2019.csv") %>%
+authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford")
 
 # Download the data ---------------------------
-tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1040529/LA_and_Regional_Spreadsheet_2021.ods",
+tmp <- tempfile(fileext = ".xlsx")
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1047705/LA_and_Regional_Spreadsheet_2021_rev.xlsx",
     write_disk(tmp))
 
 # Extract the raw data ---------------------------
-df_raw_tonnes <- read_ods(tmp, sheet = 4, skip = 3)
-df_raw_percentages <- read_ods(tmp, sheet = 8, skip = 3)
+df_raw_tonnes <- read_xlsx(tmp, sheet = 4, skip = 3)
+df_raw_percentages <- read_xlsx(tmp, sheet = 8, skip = 3)
 
 
 # Household waste collected for recycling ---------------------------
@@ -106,3 +106,6 @@ df_household_waste_not_recycled <- bind_rows(df_household_waste_not_recycled, df
 
 # Export the tidied data
 write_csv(df_household_waste_not_recycled, "../household_waste_not_recycled.csv")
+
+# Cleanup the downloaded data
+unlink(tmp)

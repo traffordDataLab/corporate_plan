@@ -259,7 +259,7 @@ output$household_waste_recycling_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford has been higher than the average of similar authorities and England since 2011/12. Whilst the trend for its comparitors has remained broadly consistent, Trafford showed a big increase between 2021/13 (47.9%) and 2014/15 (61.9%) before going on a downward trend. Although all lines show a decrease from 2019/20 to 2020/21, Trafford still collected and sent for recycling a higher percentage of waste (53.3%) compared to the average of similar authorities (44.5%) and the average for England (42.3%).") +
+           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford has been higher than the average of similar authorities and England since 2011/12. Whilst the trend for its comparitors has remained broadly consistent, Trafford showed a big increase between 2012/13 (47.9%) and 2014/15 (61.9%) before going on a downward trend. Although all lines show a decrease from 2019/20 to 2020/21, Trafford still collected and sent for recycling a higher percentage of waste (53.3%) compared to the average of similar authorities (44.1%) and the average for England (42.3%).") +
       theme_x()
     
   } else {
@@ -282,7 +282,7 @@ output$household_waste_recycling_plot <- renderggiraph({
            x = NULL,
            y = "Tonnes",
            fill = NULL,
-           alt = "Line chart showing between 2014/15 and 2016/17 Trafford collected and sent for recycling around 50,000 tonnes of household waste, approximately 7,000 more than the average for similar authorities. Since then the amounts collected in Trafford have decreased to a similar level to its comparator. 2020/21 showed a slightly higher amount of 46,040 tonnes in Trafford compared to an average of 44,259 tonnes for similar authorities.") +
+           alt = "Line chart showing between 2014/15 and 2016/17 Trafford collected and sent for recycling around 50,000 tonnes of household waste, approximately 5,000 more than the average for similar authorities. Since then the amounts collected in Trafford have decreased to a similar level to its comparator. 2020/21 showed a slightly higher amount of 46,040 tonnes in Trafford compared to an average of 45,118 tonnes for similar authorities.") +
       theme_x()
     
   }
@@ -349,7 +349,7 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing that Trafford has had a lower percentage of household waste collected but not sent for recycling than the average of similar authorities and England between 2011/12 and 2020/21, although the gap has been narrowing since 2016/17. In 2020/21 the percentage for Trafford was 46.7% compared to 55.5% for the average of similar authorities and 57.7% for the England average.") +
+           alt = "Line chart showing that Trafford has had a lower percentage of household waste collected but not sent for recycling than the average of similar authorities and England between 2011/12 and 2020/21, although the gap has been narrowing since 2016/17. In 2020/21 the percentage for Trafford was 46.7% compared to 55.9% for the average of similar authorities and 57.7% for the England average.") +
       theme_x()
     
   } else {
@@ -372,7 +372,7 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            x = NULL,
            y = "Tonnes",
            fill = NULL,
-           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2020/21. Despite the gap narrowing since 2016/17, Trafford recorded 40,394 tonnes in 2020/21 compared to 52,042 tonnes for the average of similar authorities.") +
+           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2020/21. Despite the gap narrowing since 2016/17, Trafford recorded 40,394 tonnes in 2020/21 compared to 54,170 tonnes for the average of similar authorities.") +
       theme_x()
   
   }
