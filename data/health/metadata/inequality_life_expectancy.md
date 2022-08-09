@@ -1,6 +1,6 @@
 #### Inequality in life expectancy at birth - Slope Index of Inequality.
 
-Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/deathsregisteredinenglandandwalesseriesdrreferencetables" target="_blank">Deaths registered in England and Wales, ONS</a>, <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">English indices of deprivation 2019, MHCLG</a>
+Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/deathsregisteredinenglandandwalesseriesdrreferencetables" target="_blank">Deaths registered in England and Wales, ONS</a>, <a href="https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019" target="_blank">English indices of deprivation 2021, MHCLG</a>
 
 The Slope Index of Inequality (SII) shows how much life expectancy varies with deprivation. It represents the range in years of life expectancy across the most to least deprived areas within the local authority or country.
 

@@ -4,9 +4,11 @@
 # URL: http://id.esd.org.uk/metricType/10270
 # Licence: Open Government Licence v3.0
 
+library(tidyverse) 
+
 lginform_key = ""
 
-cipfa <- read_csv("../../cipfa2019.csv") %>%
+cipfa <- read_csv("../../cipfa2021.csv") %>%
   select(area_code)
 
 fairly_active_adults <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?metricType=10270&area=",paste(c("E92000001",cipfa$area_code, "E08000009"), collapse = ','),"&period=latest:6&columnGrouping=period&rowGrouping=area&ApplicationKey=",lginform_key)) %>%
