@@ -178,15 +178,15 @@ ui <- fluidPage(
                               <li>Bedford</li>
                               <li>Bury</li>
                               <li>Cheshire West and Chester</li>
-                              <li>Darlington</li>
                               <li>Derby</li>
+                              <li>Medway</li>
                               <li>Milton Keynes</li>
                               <li>Peterborough</li>
+                              <li>Reading</li>
                               <li>Solihull</li>
                               <li>South Gloucestershire</li>
                               <li>Stockport</li>
                               <li>Swindon</li>
-                              <li>Telford and Wrekin</li>
                               <li>Thurrock</li>
                               <li>Warrington</li>
                               <li>York</li>

@@ -166,7 +166,7 @@ img
     border-top: 1px solid #bdbdbd;
     color: #757575;
 }
-.btn-plotButtons.active
+.btn-plotButtons.active, input[type='radio']:checked + label.btn-plotButtons
 {
     border-top: 1px solid #fff;
     border-bottom: 2px solid #00445e;

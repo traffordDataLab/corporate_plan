@@ -30,7 +30,7 @@ output$licensed_vehicles_plot <- renderggiraph({
                     x = NULL,
                     y = "Count",
                     fill = NULL,
-                    alt = "Line chart showing the number of vehicles registered to Trafford addresses has been consistently lower compared to the average of similar authorities since 2016. Trafford registrations between 2015 and 2016 dropped by approximately 20,000 and have since been around 130,000, whereas the average for similar authorities has continued to rise, reaching 202,502 in 2020.") +
+                    alt = "Line chart showing the number of vehicles registered to Trafford addresses has been consistently lower compared to the average of similar authorities over the 3 year period shown. The numbers in Trafford for each calendar quarter are consistently around 130,000. The average for similar authorities has been much higher compared to Trafford, with around 185,000 licensed vehicles each calendar quarter up to the middle of 2020. After that the number increased sharply and has remained around 205,000 vehicles. The latest data for the end of March 2022 shows 129,533 vehicles registered within Trafford compared with an average of 204,069 vehicles in similar authorities.") +
                theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -86,7 +86,7 @@ output$licensed_ulev_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing the proportion of licensed vehicles registered to Trafford addresses which are ultra low emission vehicles has been consistently lower, and increasing at a slower rate, compared to the average for similar authorities and England from 2011 to 2020. In 2020 the average proportion for similar authorities was 2.38% compared with an average of 1.18% in England and 0.81% in Trafford.") +
+         alt = "Line chart showing the proportion of licensed vehicles registered to Trafford addresses which are ultra low emission vehicles has been consistently lower, and increasing at a slower rate, compared to the average for similar authorities and England across the 3 year period show. At the end of March 2022 the average proportion for similar authorities was 4.75% compared with an average of 2.24% in England and 1.61% in Trafford.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -141,7 +141,7 @@ output$vehicle_miles_plot <- renderggiraph({
          x = NULL,
          y = "Miles (millions)",
          fill = NULL,
-         alt = "Line chart showing the number of miles travelled annually within Trafford between 2010 and 2020 is consistently lower compared with the average for similar authorities and the average of all local authorities in England. Mileage has been increasing year on year for all up to 2019, before showing a considerable decrease in 2020: 1,085 million down to 887 million miles in Trafford, 1,448 million down to 1,140 million miles for the average of similar authorities and 2,030 million down to 1,603 million miles for the average of all local authorities in England.") +
+         alt = "Line chart showing the number of miles travelled annually within Trafford between 2010 and 2020 is consistently lower compared with the average for similar authorities and the average of all local authorities in England. Mileage has been increasing year on year for all up to 2019, before showing a considerable decrease in 2020: 1,085 million down to 887 million miles in Trafford, 1,429 million down to 1,127 million miles for the average of similar authorities and 2,030 million down to 1,603 million miles for the average of all local authorities in England.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -195,7 +195,7 @@ output$ev_charging_points_plot <- renderggiraph({
          x = NULL,
          y = "Devices (per 100K)",
          fill = NULL,
-         alt = "Line chart showing that there have been consistently fewer publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between October 2019 and April 2022. Whilst its comparitors have shown an increasing trend, Trafford's rate between October 2019 and July 2021 has been static, averaging approximately 20 devices per 100,000 people. Between July 2021 and January 2022 data for Trafford showed a promising improvement, increasing at a faster rate than it's comparitors despite still being lower. However the latest data for April 2022 shows a decrease from the previous period to 24.4 devices per 100,000 people compared to 42.3 for the average of similar authorities and 45.8 for England.") +
+         alt = "Line chart showing that there have been consistently fewer publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between October 2019 and July 2022. Whilst its comparitors have shown a consistent increasing trend, Trafford's rate has been more erratic and the gap between it and its comparitors widening. Since July 2021 the data for Trafford has been on a generally increasing trend, however the latest data for July 2022 of 32 devices per 100,000 population is still much lower compared to 44.9 for the average of similar authorities and 48.6 for England.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -259,7 +259,7 @@ output$household_waste_recycling_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford has been higher than the average of similar authorities and England since 2011/12. Whilst the trend for its comparitors has remained broadly consistent, Trafford showed a big increase between 2021/13 (47.9%) and 2014/15 (61.9%) before going on a downward trend. Although all lines show a decrease from 2019/20 to 2020/21, Trafford still collected and sent for recycling a higher percentage of waste (53.3%) compared to the average of similar authorities (44.5%) and the average for England (42.3%).") +
+           alt = "Line chart showing the percentage of household waste collected and sent for recycling in Trafford has been higher than the average of similar authorities and England since 2011/12. Whilst the trend for its comparitors has remained broadly consistent, Trafford showed a big increase between 2012/13 (47.9%) and 2014/15 (61.9%) before going on a downward trend. Although all lines show a decrease from 2019/20 to 2020/21, Trafford still collected and sent for recycling a higher percentage of waste (53.3%) compared to the average of similar authorities (44.1%) and the average for England (42.3%).") +
       theme_x()
     
   } else {
@@ -282,7 +282,7 @@ output$household_waste_recycling_plot <- renderggiraph({
            x = NULL,
            y = "Tonnes",
            fill = NULL,
-           alt = "Line chart showing between 2014/15 and 2016/17 Trafford collected and sent for recycling around 50,000 tonnes of household waste, approximately 7,000 more than the average for similar authorities. Since then the amounts collected in Trafford have decreased to a similar level to its comparator. 2020/21 showed a slightly higher amount of 46,040 tonnes in Trafford compared to an average of 44,259 tonnes for similar authorities.") +
+           alt = "Line chart showing between 2014/15 and 2016/17 Trafford collected and sent for recycling around 50,000 tonnes of household waste, approximately 5,000 more than the average for similar authorities. Since then the amounts collected in Trafford have decreased to a similar level to its comparator. 2020/21 showed a slightly higher amount of 46,040 tonnes in Trafford compared to an average of 45,118 tonnes for similar authorities.") +
       theme_x()
     
   }
@@ -349,7 +349,7 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing that Trafford has had a lower percentage of household waste collected but not sent for recycling than the average of similar authorities and England between 2011/12 and 2020/21, although the gap has been narrowing since 2016/17. In 2020/21 the percentage for Trafford was 46.7% compared to 55.5% for the average of similar authorities and 57.7% for the England average.") +
+           alt = "Line chart showing that Trafford has had a lower percentage of household waste collected but not sent for recycling than the average of similar authorities and England between 2011/12 and 2020/21, although the gap has been narrowing since 2016/17. In 2020/21 the percentage for Trafford was 46.7% compared to 55.9% for the average of similar authorities and 57.7% for the England average.") +
       theme_x()
     
   } else {
@@ -372,7 +372,7 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            x = NULL,
            y = "Tonnes",
            fill = NULL,
-           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2020/21. Despite the gap narrowing since 2016/17, Trafford recorded 40,394 tonnes in 2020/21 compared to 52,042 tonnes for the average of similar authorities.") +
+           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2020/21. Despite the gap narrowing since 2016/17, Trafford recorded 40,394 tonnes in 2020/21 compared to 54,170 tonnes for the average of similar authorities.") +
       theme_x()
   
   }
