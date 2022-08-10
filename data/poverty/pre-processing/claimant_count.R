@@ -5,7 +5,7 @@
 
 library(tidyverse)
 
-cipfa <- read_csv("../../cipfa2019.csv") %>%
+cipfa <- read_csv("../../cipfa2021.csv") %>%
   select(area_code) 
 
 df <- read_csv(paste0("https://www.nomisweb.co.uk/api/v01/dataset/NM_162_1.data.csv?geography=",paste(c("E92000001",cipfa$area_code, "E08000009"), collapse = ','),"&date=latestMINUS36-latest&gender=0&age=0&measure=1,2&measures=20100")) %>%

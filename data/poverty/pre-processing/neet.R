@@ -13,8 +13,8 @@
 library(tidyverse) ; library(httr) ; library(readxl)
 
 # Setup objects ---------------------------
-# Trafford and its CIPFA nearest neighbours (2019):
-authorities <- read_csv("../../cipfa2019.csv") %>%
+# Trafford and its CIPFA nearest neighbours (2021):
+authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
@@ -41,7 +41,7 @@ df_neet_and_unknown <- df_neet_raw %>%
 
 # Download the data from LG Inform+: NEET only ---------------------------
 # NOTE: this requires an API key
-api_key <- "[INSERT API TOKEN HERE]"
+api_key <- #"[INSERT API TOKEN HERE]"
 df_neet_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?value.valueType=raw&metricType=9613&area=E08000009%2CTrafford_CIPFA_Near_Neighbours%2CE92000001&period=latest%3A5&rowGrouping=area&ApplicationKey=", api_key), skip = 2)
 
 # Tidy the LG Inform+ data ---------------------------

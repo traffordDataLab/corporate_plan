@@ -46,7 +46,7 @@ output$universal_credit_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from March 2019 to March 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In March 2022 Trafford's claimant rate was 10.7% compared with 13.8% for England and 14% for the average of similar authorities."
+        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from June 2019 to June 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In June 2022 Trafford's claimant rate was 10.7% compared with 13.8% for England and 13.7% for the average of similar authorities."
       ) +
       theme_x()
   } else {
@@ -71,11 +71,11 @@ output$universal_credit_plot <- renderggiraph({
       ) +
       labs(
         title = "Universal Credit rate - aged 16 to 64 by ward",
-        subtitle = "April 2022",
+        subtitle = "June 2022",
         caption = "Source: DWP,ONS",
         x = NULL,
         y = NULL,
-        alt = "Map showing the proportion of Universal Credit claims as a proportion of people aged 16 to 64 in each of Trafford's wards in April 2022. Bucklow-St Martins in the West had the highest propotion of all wards at 24.7%. The wards in the North have high proportions with Clifford having the highest at 21.5% and Longford, Stretford and Gorse Hill between 14% and 19%.  Other wards with proportion over 10% are St Mary's at 14.3% and Sale Moor at 12.2% in the central area and Village at 12.5% in the South"
+        alt = "Map showing the proportion of Universal Credit claims as a proportion of people aged 16 to 64 in each of Trafford's wards in June 2022. Bucklow-St Martins in the West had the highest propotion of all wards at 24.7%. The wards in the North have high proportions with Clifford having the highest at 21.5% and Longford, Stretford and Gorse Hill between 14.8% and 18.9%.  Other wards with proportion over 10% are St Mary's at 14.2% and Sale Moor at 12.4% in the central area and Village at 12.6% in the South"
       ) +
       coord_sf(datum = NA) +
       theme_x() +
@@ -151,7 +151,7 @@ output$claimant_count_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from March 2019 to March 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Latest data for March 2022 shows a claimant count rate of 3.5% in Trafford, 4% for the average of similar authorities and 4.3% for England. This shows a slight rise in the claimant count percentage in Trafford from 3.3% in January 2022 whereas the percentage has remained static for its comparitors during the same period."
+        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from June 2019 to June 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Latest data for June 2022 shows a claimant count rate of 3.1% in Trafford, 3.6% for the average of similar authorities and 3.8% for England. This shows a slight decrease in the claimant count percentage in Trafford from 3.3% in January 2022 whereas the percentage has also decreased for its comparitors during the same period."
       ) +
       theme_x()
   } else {
@@ -176,11 +176,11 @@ output$claimant_count_plot <- renderggiraph({
       ) +
       labs(
         title = "Claimant Count rate - aged 16 to 64 by ward",
-        subtitle = "April 2022",
+        subtitle = "June 2022",
         caption = "Source: ONS",
         x = NULL,
         y = NULL,
-        alt = "Map showing the proportion of Claimant Count as a proportion of people aged 16 to 64 in each of Trafford's wards in April 2022. The wards in the North have high proportions with Clifford having the highest at 6.7% and Longford, Stretford and Gorse Hill between 5.1% and 5.8%. Bucklow-St Martins in the West had a high propotion at 8.2%. Other wards with proportion over 3% are Sale Moor at 3.9% and St Mary's at 3.5% in the central area and Village at 3.4% in the South"
+        alt = "Map showing the proportion of Claimant Count as a proportion of people aged 16 to 64 in each of Trafford's wards in June 2022. The wards in the North have high proportions with Clifford having the highest at 6.3% and Longford, Stretford and Gorse Hill between 5% and 5.8%. Bucklow-St Martins in the West had a high propotion at 6.2%. Other wards with proportion over 3% are Sale Moor at 3.5% and St Mary's at 3.3% in the central area and Village at 3.3% in the South"
       ) +
       coord_sf(datum = NA) +
       theme_x() +
@@ -403,7 +403,7 @@ output$neet_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing the percentage of academic age 16 to 17 year olds who were not in employment, education or training (NEET) in Trafford, compared with the average for similar authorities and England between 2016 and 2020. For the time period shown, Trafford has the lowest NEET percentage of its comparitors and is fairly consistent at approximately 2.3% each year, with a low of 1.8% recorded in 2019. The England average decreased from 2.8% in 2016 to 2.6% in 2018 before increasing again back to 2.8% in 2020. The average for similar authorities has been on a downward trend from 3.3% in 2016 to 3% in 2019, however it rose again to 3.2% in 2020.") +
+           alt = "Line chart showing the percentage of academic age 16 to 17 year olds who were not in employment, education or training (NEET) in Trafford, compared with the average for similar authorities and England between 2016 and 2021. For the time period shown, Trafford has the lowest NEET percentage of its comparitors and is fairly consistent at approximately 2.3% each year, with a low of 1.8% recorded in 2019. The England average decreased from 2.8% in 2016 to 2.6% in 2018 before increasing again back to 2.8% in 2021. The average for similar authorities has been on a downward trend from 3.2% in 2016 to 2.7% in 2019, however it rose again to 2.9% in 2021.") +
       theme_x()
     
   } else {
@@ -426,7 +426,7 @@ output$neet_plot <- renderggiraph({
            x = NULL,
            y = "Percentage",
            fill = NULL,
-           alt = "Line chart showing the percentage of academic age 16 to 17 year olds who were not in employment, education or training (NEET) or whose status was unknown in Trafford, compared with the average for similar authorities and England between 2016 and 2020. In 2016 Trafford recorded 6.1% NEET or unknown compared to 6% for England and 4.9% for the average of similar authorities. However, since then Trafford's rate has decreased year on year and in 2020 recorded the lowest rate amongst the comparitors with 4.8% compared to 4.9% for the average of similar authorities and 5.5% for England.") +
+           alt = "Line chart showing the percentage of academic age 16 to 17 year olds who were not in employment, education or training (NEET) or whose status was unknown in Trafford, compared with the average for similar authorities and England between 2016 and 2021. In 2016 Trafford recorded 6.1% NEET or unknown compared to 6% for England and 5% for the average of similar authorities. However, since then Trafford's rate has decreased year on year and in 2021 recorded the lowest rate amongst the comparitors with 4.8% compared to 4.8% for the average of similar authorities and 5.5% for England.") +
       theme_x()
     
   }
@@ -515,7 +515,7 @@ output$fuel_poverty_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing the percentage of households in fuel poverty in Trafford compared with the average of similar authorities and England between 2011 and 2019. Whilst the lines for the average of similar authorities to Trafford and the England average show a broadly consistent trend, with the latter approximately 1 percentage point higher throughout the time period, the trend for Trafford has been irratic. Following a decrease between 2011 and 2013, Trafford's percentages have been higher, lower and in between its comparitors. Following a change in methodology in 2019, all lines show a sharp increase from the previous year with Trafford having 12.8% of households in fuel poverty compared with 12.5% for the average of similar authorities and 13.4% in England."
+        alt = "Line chart showing the percentage of households in fuel poverty in Trafford compared with the average of similar authorities and England between 2014 and 2020. Whilst the lines for the average of similar authorities to Trafford and the England average show a broadly consistent trend, with the latter approximately 1 percentage point higher throughout the time period, the trend for Trafford has been irratic. Trafford's percentages have been higher, lower and in between its comparitors. Following a change in methodology in 2019, all lines show a sharp increase from the previous year with Trafford having 12.8% of households in fuel poverty compared with 11.8% for the average of similar authorities and 13.4% in England.Trafford has decreased to 12.3% in 2020 coming closer to the average of similar authorities at 12.1% whilst England decreased slighly to 13.2%"
       ) +
       theme_x()
   }
@@ -586,7 +586,7 @@ output$employment_rate_plot <- renderggiraph({
         x = "12 months ending",
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing the employment rate amongst those aged 16 to 64 in Trafford compared to the average of similar authorities and England between the 12 months ending December 2010 and the 12 months ending December 2021. The average for similar authorities to Trafford and England follow a broadly similar trend with the England rate approximately between 1 and 2 percentage points below. Trafford's rate has been slightly more variable, however during the time period shown it has always been above the England rate and between the 12 months ending December 2014 and the 12 months ending December 2020 it was at or above the average of similar authorities. In the 12 months to December 2021, Trafford's rate has fallen slightly to 76.3%, just below the 76.6% average of similar authorities, but above the England rate of 75.1%."
+        alt = "Line chart showing the employment rate amongst those aged 16 to 64 in Trafford compared to the average of similar authorities and England between the 12 months ending December 2010 and the 12 months ending December 2021. The average for similar authorities to Trafford and England follow a broadly similar trend with the England rate approximately between 1 and 2 percentage points below. Trafford's rate has been slightly more variable, however during the time period shown it has always been above the England rate and between the 12 months ending December 2014 and the 12 months ending December 2020 it was at or above the average of similar authorities. In the 12 months to December 2021, Trafford's rate has fallen slightly to 76.3%, just below the 77.2% average of similar authorities, but above the England rate of 75.1%."
       ) +
       theme_x()
   }
@@ -643,7 +643,7 @@ output$real_living_wage_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing that a lower percentage of employees are paid at or above the real living wage in Trafford compared to the average of similar authorities and England. Between 2016 and 2021, Trafford's percentage has been on an upward trend, with the only exception being a 0.3 percentage point drop in 2020. Data for 2021 shows 80.7% of employees are paid at or above the real living wage in Trafford, compared to 82.8% across England and 83.9% for the average of similar authorities.") +
+         alt = "Line chart showing that a lower percentage of employees are paid at or above the real living wage in Trafford compared to the average of similar authorities and England. Between 2016 and 2021, Trafford's percentage has been on an upward trend, with the only exception being a 0.3 percentage point drop in 2020. Data for 2021 shows 80.7% of employees are paid at or above the real living wage in Trafford, compared to 82.8% across England and 84.9% for the average of similar authorities.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible

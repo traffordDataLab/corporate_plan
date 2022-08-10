@@ -10,7 +10,7 @@ library(httr) ; library (tidyverse) ; library (jsonlite) ; library (zoo)
 # URL: https://www.nomisweb.co.uk/datasets/pestsyoala
 # Licence: Open Government Licence v3.0
 
-cipfa <- read_csv("../../cipfa2019.csv") %>%
+cipfa <- read_csv("../../cipfa2021.csv") %>%
   select(area_code) %>%
   mutate(for_query = paste0("LA_TO_REGION:",area_code)) %>%
   bind_rows(data.frame (area_code  = c("E08000009","E92000001"),

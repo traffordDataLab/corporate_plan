@@ -21,7 +21,7 @@ library(tidyverse); library(readxl)
 
 # Setup objects ---------------------------
 # Trafford and its CIPFA nearest neighbours (2019):
-authorities <- read_csv("../../cipfa2019.csv") %>%
+authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
@@ -107,7 +107,8 @@ df_rlw <- df_rlw %>%
          measure = "Percentage",
          unit = "Persons") %>%
   arrange(period, area_name) %>%
-  select(area_code, area_name, period, indicator, measure, unit, value)
+  select(area_code, area_name, period, indicator, measure, unit, value) %>%
+  mutate(area_name = gsub(" UA", "", area_name))
 
 
 # Export the tidied data ---------------------------
