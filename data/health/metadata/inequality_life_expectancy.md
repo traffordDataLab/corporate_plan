@@ -4,8 +4,8 @@ Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeath
 
 The Slope Index of Inequality (SII) shows how much life expectancy varies with deprivation. It represents the range in years of life expectancy across the most to least deprived areas within the local authority or country.
 
-Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2019.
- 
+Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2021.
+
 Indicator:
 
 * <a href="https://fingertips.phe.org.uk/search/92901#page/6/gid" target="_blank"> Inequality in life expectancy at birth </a>
