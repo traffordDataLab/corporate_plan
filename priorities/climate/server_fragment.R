@@ -404,31 +404,36 @@ output$household_waste_not_recycled_box <- renderUI({
 df_epc <- read_csv("data/climate/energy_performance_certificates.csv")
 
 # function to calculate 10-year periods of data as this is the validity period for the certificates
-calc10YearProportionEPC <- function(year_from) {
-  # NOTE: +9 not +10 as year_from+9 = 10 years of data e.g. 2012 - 2021
-  filter(df_epc, period >= year_from, period <= year_from+9) %>%
-  group_by(area_code, area_name) %>%
-  summarise(value_certificates_lodged = sum(value_certificates_lodged),
-            value_rating_A = sum(value_rating_A),
-            value_rating_B = sum(value_rating_B),
-            value_rating_C = sum(value_rating_C)) %>%
-  mutate(period = paste0(year_from, " - ", year_from+9),
-         value_AC = sum(value_rating_A, value_rating_B, value_rating_C),
-         value = (value_AC/value_certificates_lodged)*100) %>%
-  select(area_code, area_name, period, value)
+calc10YearProportionEPC <- function(period_from, period_to) {
+  filter(df_epc, between(period, as.Date(period_from), as.Date(period_to))) %>%
+    group_by(area_code, area_name) %>%
+    summarise(value_certificates_lodged = sum(value_certificates_lodged),
+              value_rating_A = sum(value_rating_A),
+              value_rating_B = sum(value_rating_B),
+              value_rating_C = sum(value_rating_C)) %>%
+    # Important to convert the time period into a factor to ensure the ordering is correct in the plot
+    mutate(period = as.factor(paste0(format.Date(as.Date(period_from), "%b %Y"), " - ", format.Date(as.Date(period_to), "%b %Y"))),
+           value_AC = sum(value_rating_A, value_rating_B, value_rating_C),
+           value = (value_AC/value_certificates_lodged)*100) %>%
+    select(area_code, area_name, period, value)
 }
 
 # Get the data for the 10 year periods
-df_epc_2009 <- calc10YearProportionEPC(2009)
-df_epc_2010 <- calc10YearProportionEPC(2010)
-df_epc_2011 <- calc10YearProportionEPC(2011)
-df_epc_2012 <- calc10YearProportionEPC(2012)
+df_epc <- bind_rows(calc10YearProportionEPC("2009-12-31", "2019-09-30"),
+                    calc10YearProportionEPC("2010-03-31", "2019-12-31"),
+                    calc10YearProportionEPC("2010-06-30", "2020-03-31"),
+                    calc10YearProportionEPC("2010-09-30", "2020-06-30"),
+                    calc10YearProportionEPC("2010-12-31", "2020-09-30"),
+                    calc10YearProportionEPC("2011-03-31", "2020-12-31"),
+                    calc10YearProportionEPC("2011-06-30", "2021-03-31"),
+                    calc10YearProportionEPC("2011-09-30", "2021-06-30"),
+                    calc10YearProportionEPC("2011-12-31", "2021-09-30"),
+                    calc10YearProportionEPC("2012-03-31", "2021-12-31"),
+                    calc10YearProportionEPC("2012-06-30", "2022-03-31"),
+                    calc10YearProportionEPC("2012-09-30", "2022-06-30"))
 
-# Combine the datasets, then create the average of similar LAs
-df_epc <- bind_rows(df_epc_2009,
-                    df_epc_2010,
-                    df_epc_2011,
-                    df_epc_2012) %>%
+# Create the average of similar LAs
+df_epc <- df_epc %>%
   mutate(area_name = case_when(area_name == "Trafford" ~ "Trafford", 
                                area_name == "England" ~ "England",
                                TRUE ~ "Similar authorities average")) %>%
@@ -455,7 +460,7 @@ output$domestic_epc_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (10% fewer) or England (7% fewer). The latest time period available, 2012-2021 shows 33.4% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 43.3% for the average of similar authorities and 40.5% for England.") +
+         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (10 percentage points fewer) or England (7 percentage points fewer). The latest time period available, September 2012 to June 2022 shows 34.2% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 41.4% for England and 44% for the average of similar authorities.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
