@@ -1,161 +1,177 @@
 area_code,area_name,period,indicator,measure,unit,value
-E06000005,Darlington,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,734.5579200326879
-E06000005,Darlington,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,658.2685288102255
-E06000005,Darlington,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,689.0997382505158
-E06000005,Darlington,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,678.2330962473096
-E06000005,Darlington,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,599.9506728454176
-E06000005,Darlington,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,595.7035907316879
-E06000005,Darlington,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,569.7157273046564
-E06000005,Darlington,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,545.6647709131171
-E06000005,Darlington,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,536.3697076335008
-E06000005,Darlington,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,528.5197699989383
-E08000002,Bury,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1164.6563493117376
-E08000002,Bury,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1069.1484833631446
-E08000002,Bury,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1117.1814795691491
-E08000002,Bury,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1087.5769671094454
-E08000002,Bury,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,976.8350920666821
-E08000002,Bury,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,950.6298933020004
-E08000002,Bury,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,918.086428021464
-E08000002,Bury,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,869.8697573038927
-E08000002,Bury,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,865.8461051971957
-E08000002,Bury,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,851.204174916864
-E06000050,Cheshire West and Chester,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,5316.943878703804
-E06000050,Cheshire West and Chester,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,4714.580043571295
-E06000050,Cheshire West and Chester,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,5204.309876112321
-E06000050,Cheshire West and Chester,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,4744.637204762944
-E06000050,Cheshire West and Chester,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,4242.426683266329
-E06000050,Cheshire West and Chester,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,3987.572708092473
-E06000050,Cheshire West and Chester,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,4055.2359135989714
-E06000050,Cheshire West and Chester,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,4157.336116511103
-E06000050,Cheshire West and Chester,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,3692.7268902382502
-E06000050,Cheshire West and Chester,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,3856.7965880751112
-E08000007,Stockport,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1660.5755649052674
-E08000007,Stockport,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1502.5652477242847
-E08000007,Stockport,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1620.5705048696543
-E08000007,Stockport,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1564.0001698508906
-E08000007,Stockport,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1370.3014442484257
-E08000007,Stockport,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1325.179309616152
-E08000007,Stockport,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1262.3496489673987
-E08000007,Stockport,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1228.3103298757358
-E08000007,Stockport,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1212.3701911030664
-E08000007,Stockport,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1194.2919616287977
-E08000009,Trafford,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,2073.3300523295693
-E08000009,Trafford,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1768.552428374551
-E08000009,Trafford,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,2015.6512034544987
-E08000009,Trafford,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1967.9993006779275
-E08000009,Trafford,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1700.547338066878
-E08000009,Trafford,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1647.6358120180057
-E08000009,Trafford,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1592.9790209973148
-E08000009,Trafford,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1534.9606159054158
-E08000009,Trafford,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1507.018344200078
-E08000009,Trafford,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1467.6068475222596
-E06000007,Warrington,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1811.9966261672548
-E06000007,Warrington,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1613.0104386727787
-E06000007,Warrington,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1693.3535653909262
-E06000007,Warrington,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1665.8958635727915
-E06000007,Warrington,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1522.3054762487752
-E06000007,Warrington,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1506.9128924254862
-E06000007,Warrington,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1481.7378000729489
-E06000007,Warrington,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1407.9741217960009
-E06000007,Warrington,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1392.8160089265753
-E06000007,Warrington,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1351.3711870363402
-E06000014,York,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1140.7436776781883
-E06000014,York,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1034.7118664647755
-E06000014,York,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1080.9464659956332
-E06000014,York,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1063.8444709931798
-E06000014,York,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,966.0492780385134
-E06000014,York,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,930.2425298917973
-E06000014,York,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,892.8170600834094
-E06000014,York,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,844.6731807551292
-E06000014,York,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,839.4182466578056
-E06000014,York,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,807.5576819537838
-E06000015,Derby,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1539.2764591607058
-E06000015,Derby,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1409.3746384105664
-E06000015,Derby,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1418.144567961907
-E06000015,Derby,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1452.8776960799698
-E06000015,Derby,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1238.8890195728616
-E06000015,Derby,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1234.312695346551
-E06000015,Derby,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1158.8348180646983
-E06000015,Derby,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1128.3628718682064
-E06000015,Derby,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1139.774225471752
-E06000015,Derby,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1067.0640818634415
-E08000029,Solihull,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1599.0220897142103
-E08000029,Solihull,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1525.0517951246447
-E08000029,Solihull,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1611.0526831322284
-E08000029,Solihull,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1565.3637331911566
-E08000029,Solihull,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1435.0046531253888
-E08000029,Solihull,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1459.6609705867183
-E08000029,Solihull,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1405.4818574865342
-E08000029,Solihull,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1343.9993827126748
-E08000029,Solihull,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1334.0725617663534
-E08000029,Solihull,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1266.0780396157495
-E06000020,Telford and Wrekin,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1224.6124929142632
-E06000020,Telford and Wrekin,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1151.6528965292632
-E06000020,Telford and Wrekin,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1171.4326861381458
-E06000020,Telford and Wrekin,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1148.3060361700975
-E06000020,Telford and Wrekin,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1050.9016686933453
-E06000020,Telford and Wrekin,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1025.8108776585973
-E06000020,Telford and Wrekin,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,980.367820445494
-E06000020,Telford and Wrekin,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,948.66571160472
-E06000020,Telford and Wrekin,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,956.3794666110828
-E06000020,Telford and Wrekin,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,919.2663139698385
-E06000055,Bedford,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,979.1615594804609
-E06000055,Bedford,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,884.1884539062653
-E06000055,Bedford,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,951.915455341444
-E06000055,Bedford,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,934.4245382773037
-E06000055,Bedford,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,849.3571606792672
-E06000055,Bedford,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,827.9138922574085
-E06000055,Bedford,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,801.3513774258907
-E06000055,Bedford,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,780.8666633073738
-E06000055,Bedford,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,767.4793139678666
-E06000055,Bedford,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,735.8247874602068
-E06000031,Peterborough,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1429.5405154650607
-E06000031,Peterborough,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1339.043184832727
-E06000031,Peterborough,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1383.751354143763
-E06000031,Peterborough,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1346.6089480558626
-E06000031,Peterborough,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1242.754918863688
-E06000031,Peterborough,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1216.6392486688926
-E06000031,Peterborough,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1170.544784475321
-E06000031,Peterborough,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1161.061402080824
-E06000031,Peterborough,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1142.892538299659
-E06000031,Peterborough,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1113.6291225851735
-E06000034,Thurrock,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1344.3048807593902
-E06000034,Thurrock,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1177.5657019722585
-E06000034,Thurrock,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1303.3960505532252
-E06000034,Thurrock,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1185.2834875935334
-E06000034,Thurrock,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1111.06814687952
-E06000034,Thurrock,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1019.2542629975792
-E06000034,Thurrock,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,984.6852247142475
-E06000034,Thurrock,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,961.6538151606243
-E06000034,Thurrock,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,982.6148311552365
-E06000034,Thurrock,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,916.3297222379995
-E06000042,Milton Keynes,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1762.0308817120806
-E06000042,Milton Keynes,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1597.5604108811187
-E06000042,Milton Keynes,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1745.045020766572
-E06000042,Milton Keynes,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1713.7973348029873
-E06000042,Milton Keynes,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1545.755096625858
-E06000042,Milton Keynes,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1495.832764692423
-E06000042,Milton Keynes,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1412.4802483682647
-E06000042,Milton Keynes,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1371.4226589288517
-E06000042,Milton Keynes,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1331.8015850235213
-E06000042,Milton Keynes,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1286.412105709662
-E06000025,South Gloucestershire,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,2128.5492017040124
-E06000025,South Gloucestershire,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1961.7445170915173
-E06000025,South Gloucestershire,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,2058.382557757218
-E06000025,South Gloucestershire,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,2020.4592459613275
-E06000025,South Gloucestershire,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1868.4018626896227
-E06000025,South Gloucestershire,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1860.1554840238005
-E06000025,South Gloucestershire,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1803.0359257309608
-E06000025,South Gloucestershire,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1731.08848404985
-E06000025,South Gloucestershire,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1711.3826768496658
-E06000025,South Gloucestershire,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1660.0543333118358
-E06000030,Swindon,2010,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1445.919603321934
-E06000030,Swindon,2011,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1306.1505627732138
-E06000030,Swindon,2012,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1397.9310153569645
-E06000030,Swindon,2013,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1342.803661802722
-E06000030,Swindon,2014,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1210.1897767998073
-E06000030,Swindon,2015,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1183.2409113711674
-E06000030,Swindon,2016,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1129.7199273561089
-E06000030,Swindon,2017,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1080.5634368159926
-E06000030,Swindon,2018,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1059.9041776172344
-E06000030,Swindon,2019,Local Authority territorial CO2 emissions estimates,Frequency,kilotonnes,1019.0387016286192
+E08000002,Bury,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1172.3103733032335
+E08000002,Bury,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1073.4901809984135
+E08000002,Bury,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1119.2256026424254
+E08000002,Bury,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1088.9424188762416
+E08000002,Bury,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),981.6494892371986
+E08000002,Bury,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),964.9729629389896
+E08000002,Bury,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),925.9864732885186
+E08000002,Bury,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),882.0061354305413
+E08000002,Bury,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),874.7303631299698
+E08000002,Bury,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),857.8170540133659
+E08000002,Bury,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),764.7105044649751
+E06000050,Cheshire West and Chester,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),5296.584280619352
+E06000050,Cheshire West and Chester,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),4691.286376882084
+E06000050,Cheshire West and Chester,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),5187.283624478415
+E06000050,Cheshire West and Chester,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),4742.380932860505
+E06000050,Cheshire West and Chester,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),4245.5115955243255
+E06000050,Cheshire West and Chester,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),3990.9688414729612
+E06000050,Cheshire West and Chester,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),4040.570020548521
+E06000050,Cheshire West and Chester,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),4147.974477850627
+E06000050,Cheshire West and Chester,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),3687.802340182254
+E06000050,Cheshire West and Chester,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),3774.9951813310304
+E06000050,Cheshire West and Chester,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),3502.8700407965503
+E08000007,Stockport,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1694.290199370061
+E08000007,Stockport,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1531.8010222315977
+E08000007,Stockport,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1646.4262101835109
+E08000007,Stockport,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1587.5050531612592
+E08000007,Stockport,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1395.7218476222838
+E08000007,Stockport,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1366.3770563730366
+E08000007,Stockport,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1294.126558784075
+E08000007,Stockport,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1264.041601057192
+E08000007,Stockport,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1240.8803571491806
+E08000007,Stockport,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1215.6578147364125
+E08000007,Stockport,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1089.2139843848763
+E08000009,Trafford,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),2096.272574936604
+E08000009,Trafford,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1788.3713788067405
+E08000009,Trafford,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),2031.5906904804754
+E08000009,Trafford,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1983.7009273234378
+E08000009,Trafford,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1718.8201994203528
+E08000009,Trafford,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1673.3525914144025
+E08000009,Trafford,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1610.0549495508642
+E08000009,Trafford,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1555.299802076326
+E08000009,Trafford,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1528.8451063194432
+E08000009,Trafford,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1469.448491813869
+E08000009,Trafford,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1369.4996444710434
+E06000007,Warrington,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1799.356056025067
+E06000007,Warrington,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1592.2204127825428
+E06000007,Warrington,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1669.4199655396446
+E06000007,Warrington,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1643.210564965857
+E06000007,Warrington,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1504.9609978962885
+E06000007,Warrington,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1492.0124457183488
+E06000007,Warrington,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1465.2997074890543
+E06000007,Warrington,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1393.1137943049657
+E06000007,Warrington,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1379.6846610647497
+E06000007,Warrington,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1337.4228898794681
+E06000007,Warrington,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1176.380805410925
+E06000014,York,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1174.5571851627735
+E06000014,York,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1067.115185372371
+E06000014,York,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1111.5809199823138
+E06000014,York,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1093.9543205579162
+E06000014,York,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),996.5656585496484
+E06000014,York,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),961.7721294083741
+E06000014,York,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),924.6832425801853
+E06000014,York,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),875.4532993318159
+E06000014,York,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),864.7760076330169
+E06000014,York,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),834.0976191791997
+E06000014,York,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),728.9565497635074
+E06000015,Derby,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1618.679681167053
+E06000015,Derby,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1483.8825033590533
+E06000015,Derby,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1483.0822641066156
+E06000015,Derby,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1512.5569324082985
+E06000015,Derby,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1298.638530874251
+E06000015,Derby,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1296.4346423364714
+E06000015,Derby,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1216.7847489479489
+E06000015,Derby,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1188.6377972637622
+E06000015,Derby,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1184.052150947966
+E06000015,Derby,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1109.4763823486342
+E06000015,Derby,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1020.8497332313322
+E08000029,Solihull,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1562.0401507262516
+E08000029,Solihull,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1486.6243206579038
+E08000029,Solihull,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1569.3042521776333
+E08000029,Solihull,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1525.5171051142397
+E08000029,Solihull,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1395.7091082387255
+E08000029,Solihull,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1418.502868563307
+E08000029,Solihull,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1357.9084466205522
+E08000029,Solihull,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1300.4490463185766
+E08000029,Solihull,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1282.345600638048
+E08000029,Solihull,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1215.716882041073
+E08000029,Solihull,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1052.6877265749897
+E06000055,Bedford,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),982.5115935490712
+E06000055,Bedford,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),888.0513312284276
+E06000055,Bedford,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),956.9231151663482
+E06000055,Bedford,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),939.5291070381306
+E06000055,Bedford,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),848.4011514367429
+E06000055,Bedford,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),825.0181781681979
+E06000055,Bedford,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),804.6227436472644
+E06000055,Bedford,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),774.9731445905576
+E06000055,Bedford,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),755.1597129002757
+E06000055,Bedford,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),724.3742225924722
+E06000055,Bedford,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),649.167775695317
+E06000031,Peterborough,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1461.143944505168
+E06000031,Peterborough,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1369.01886410801
+E06000031,Peterborough,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1412.9232763650475
+E06000031,Peterborough,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1374.9725682694584
+E06000031,Peterborough,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1267.5964375119215
+E06000031,Peterborough,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1238.324487541231
+E06000031,Peterborough,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1196.05835415674
+E06000031,Peterborough,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1186.1283225072696
+E06000031,Peterborough,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1157.5423619307912
+E06000031,Peterborough,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1117.6757760309983
+E06000031,Peterborough,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1008.8589166867143
+E06000034,Thurrock,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1366.6490003747235
+E06000034,Thurrock,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1198.045863220532
+E06000034,Thurrock,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1321.9755863725895
+E06000034,Thurrock,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1206.5301714406264
+E06000034,Thurrock,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1128.593008980235
+E06000034,Thurrock,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1033.4269227593475
+E06000034,Thurrock,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1000.028611872948
+E06000034,Thurrock,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),978.3300291939101
+E06000034,Thurrock,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),994.2017476744837
+E06000034,Thurrock,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),921.0253991263043
+E06000034,Thurrock,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),873.9411260054039
+E06000035,Medway,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1228.5603653043893
+E06000035,Medway,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1119.2737510630163
+E06000035,Medway,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1174.3570705338716
+E06000035,Medway,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1137.271897967719
+E06000035,Medway,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1013.1881541300909
+E06000035,Medway,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),981.052674221191
+E06000035,Medway,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),930.8964122741784
+E06000035,Medway,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),924.576239195367
+E06000035,Medway,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),882.8436110156366
+E06000035,Medway,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),827.3794604447173
+E06000035,Medway,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),755.3851880366237
+E06000042,Milton Keynes,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1794.7739425618115
+E06000042,Milton Keynes,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1629.7492249504462
+E06000042,Milton Keynes,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1772.1493870631582
+E06000042,Milton Keynes,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1738.3710755080465
+E06000042,Milton Keynes,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1573.4306756462154
+E06000042,Milton Keynes,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1520.270977659783
+E06000042,Milton Keynes,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1445.625434713604
+E06000042,Milton Keynes,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1401.1784067175533
+E06000042,Milton Keynes,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1348.341545570052
+E06000042,Milton Keynes,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1298.1648781286551
+E06000042,Milton Keynes,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1134.3135709585906
+E06000038,Reading,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),869.2142238229892
+E06000038,Reading,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),766.9211526638971
+E06000038,Reading,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),817.8971609448381
+E06000038,Reading,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),784.8796793978212
+E06000038,Reading,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),688.9411315846136
+E06000038,Reading,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),653.8790832397872
+E06000038,Reading,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),611.7425275337729
+E06000038,Reading,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),573.7827396094375
+E06000038,Reading,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),553.3067926746243
+E06000038,Reading,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),516.6459020642649
+E06000038,Reading,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),457.52923198056544
+E06000025,South Gloucestershire,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),2174.705439700195
+E06000025,South Gloucestershire,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1988.9571241646822
+E06000025,South Gloucestershire,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),2069.56258019335
+E06000025,South Gloucestershire,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),2026.115237533444
+E06000025,South Gloucestershire,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1889.0226498921616
+E06000025,South Gloucestershire,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1879.8965157928856
+E06000025,South Gloucestershire,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1832.847392386487
+E06000025,South Gloucestershire,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1758.979744673661
+E06000025,South Gloucestershire,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1721.2077659648319
+E06000025,South Gloucestershire,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1668.124722521159
+E06000025,South Gloucestershire,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1448.7650049642457
+E06000030,Swindon,2010,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1479.2797586969034
+E06000030,Swindon,2011,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1337.3961554325303
+E06000030,Swindon,2012,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1426.7208063560338
+E06000030,Swindon,2013,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1371.125158602018
+E06000030,Swindon,2014,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1241.5774722179538
+E06000030,Swindon,2015,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1212.7248670671506
+E06000030,Swindon,2016,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1163.2864053059268
+E06000030,Swindon,2017,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1109.2256455163945
+E06000030,Swindon,2018,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1080.827869386219
+E06000030,Swindon,2019,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),1032.2050229217834
+E06000030,Swindon,2020,Local Authority territorial carbon dioxide (CO2) emissions estimates,Frequency,kilotonnes (kt CO2e),884.8242316897765

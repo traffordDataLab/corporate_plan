@@ -491,7 +491,7 @@ df_borough_co2_emissions <- read_csv("data/climate/borough_wide_co2_emissions.cs
   mutate(area_name = if_else(area_name == "Trafford", "Trafford", "Similar authorities average"),
          period = as.character(period)) %>%
   group_by(period, area_name) %>%
-  summarise(value = round(mean(value)))
+  summarise(value = round(mean(value), digits = 1))
 
 # Plot
 output$borough_co2_emissions_plot <- renderggiraph({
@@ -511,9 +511,9 @@ output$borough_co2_emissions_plot <- renderggiraph({
          subtitle = NULL,
          caption = "Source: BEIS",
          x = NULL,
-         y = "Kilotonnes (kt)",
+         y = expression(paste("Kilotonnes (kt ", CO[2], "e)")),
          fill = NULL,
-         alt = "Line chart showing that territorial CO2 emissions in Trafford were higher than the average for similar authorities between 2010 and 2019. Although the amount has been decreasing since 2013, the average for similar authorities has been decreasing at the same rate. The latest data for 2019 shows 1,468 kilotonnes of CO2 emitted within the borough of Trafford compared to the similar authorities average of 1,238 kilotonnes.") +
+         alt = "Line chart showing that territorial carbon dioxide (CO2) emissions in Trafford were higher than the average for similar authorities between 2010 and 2020. Although the amount has been decreasing since 2012, the trend has been very similar to the average for similar authorities, and since 2014 they have been decreasing at the same rate. The latest data for 2020 shows 1,369.5 kilotonnes of CO2 emitted within the borough of Trafford compared to the similar authorities average of 1,103.2 kilotonnes.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
