@@ -681,7 +681,7 @@ output$adults_walk_cycle_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing the percentage of adults in Trafford regularly participating in walking or cycling activities compared with the average of similar authorities and England from 2015-16 to 2019-20. Up to 2018-19 Trafford was consistently showing around 1 percentage point lower participation than the average of similar authorities and 2 percentage points lower than the England average. However in 2019-20 a sharper participation increase in Trafford coupled with a decrease in its comparitors closed the gap, with both Trafford and the England average recording 34.5% participation compared with 34.2% for the average of similar authorities.") +
+         alt = "Line chart showing the percentage of adults in Trafford regularly participating in walking or cycling activities compared with the average of similar authorities and England from 2015-16 to 2019-20. Up to 2018-19 participation in Trafford was between 0.5 and 1 percentage points lower than the average of similar authorities and around 2 percentage points lower than the England average. However, in 2019-20 a sharper participation increase in Trafford coupled with a decrease in its comparitors closed the gap, with both Trafford and the England average recording 34.5% participation compared with 34.3% for the average of similar authorities.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible

@@ -11,7 +11,7 @@ library(tidyverse); library(readODS); library(httr);
 
 # Setup objects ---------------------------
 # Trafford and its CIPFA nearest neighbours (2019):
-authorities <- read_csv("../../cipfa2019.csv") %>%
+authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
@@ -50,3 +50,6 @@ df_wlk_cyc <- df_raw %>%
 
 # Export the tidied data ---------------------------
 write_csv(df_wlk_cyc, "../adults_walking_or_cycling.csv")
+
+# delete the downloaded raw data
+unlink(tmp)
