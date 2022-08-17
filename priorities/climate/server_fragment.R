@@ -561,11 +561,11 @@ output$no2_concentration_plot <- renderggiraph({
     labs(title = expression(paste("Annual mean Nitrogen Dioxide (", NO[2], ") concentration")),
          subtitle = NULL,
          caption = "Source: Trafford Council and Ricardo EE",
-         x = NULL,
+         x = "12 months ending",
          y = expression(paste("µg/m"^3)),
          fill = NULL,
          colour = "Location: ",
-         alt = "Line chart showing the annual mean of N.O.2 readings taken between 2013 and 2021 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy, with all 3 showing an overall gradual decreasing trend in the readings since 2016. All 3 stations showed decreases between 2019 to 2020 recording their lowest annual readings in the time period plotted. Readings from all showed slight increases in 2021 from the previous year, with Trafford A56 recording 23.1 microgrammes of N.O.2 per cubic metre compared with 15 microgrammes at Trafford Moss Park and 13.3 microgrammes at Trafford Wellacre Academy.") +
+         alt = "Line chart showing the annual mean of N.O.2 readings taken between the 12 months ending September 2021 and the 12 months ending June 2022 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy, with the latest data for all 3 showing a small decrease compared with the 12 months up to the previous quarter. All 3 stations recorded their lowest annual mean readings during the time period plotted for the 12 months ending December 2020. The latest data shows Trafford A56 recording an annual mean of 23.2 microgrammes of N.O.2 per cubic metre compared with 14.2 microgrammes at Trafford Moss Park and 12 microgrammes at Trafford Wellacre Academy.") +
     theme_x() +
     theme(
       legend.position = "top",
@@ -618,11 +618,11 @@ output$pm10_concentration_plot <- renderggiraph({
     labs(title = expression(paste("Annual mean Particulate Matter (", PM[10], ") concentration")),
          subtitle = NULL,
          caption = "Source: Trafford Council and Ricardo EE",
-         x = NULL,
+         x = "12 months ending",
          y = expression(paste("µg/m"^3)),
          fill = NULL,
          colour = "Location: ",
-         alt = "Line chart showing the annual mean of PM10 readings taken between 2013 and 2021 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. The trend for both has been a generally stready decline, with the exception of 2018 and 2019. However levels in 2021 are around the lowest recorded within the timeframe plotted, with Trafford A56 recording 14.4 microgrammes of PM10 per cubic metre compared to 13.2 microgrammes at Trafford Moss Park.") +
+         alt = "Line chart showing the annual mean of PM10 readings taken between the 12 months ending September 2021 and the 12 months ending June 2022 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. Usually the annual mean recorded at Trafford A56 is higher than that at Trafford Moss Park, with the exception of the latest data showing Trafford A56 recording 15.3 microgrammes of PM10 per cubic metre compared to 15.5 microgrammes at Trafford Moss Park. This is also the highest average mean recorded for Trafford Moss Park in the time period shown. Both stations show rising annual mean recordings over the last 2 quarters.") +
     theme_x() +
     theme(
       legend.position = "top",
