@@ -1,38 +1,4 @@
 area_code,area_name,period,indicator,measure,units,value
-E92000001,England,June 2019,Claimant count,Count,Persons,942115
-E92000001,England,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
-E06000030,Swindon,June 2019,Claimant count,Count,Persons,3440
-E06000030,Swindon,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
-E06000007,Warrington,June 2019,Claimant count,Count,Persons,3330
-E06000007,Warrington,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
-E06000042,Milton Keynes,June 2019,Claimant count,Count,Persons,3410
-E06000042,Milton Keynes,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2
-E08000029,Solihull,June 2019,Claimant count,Count,Persons,3540
-E08000029,Solihull,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.8
-E06000025,South Gloucestershire,June 2019,Claimant count,Count,Persons,2220
-E06000025,South Gloucestershire,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.2
-E08000007,Stockport,June 2019,Claimant count,Count,Persons,4155
-E08000007,Stockport,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.3
-E06000014,York,June 2019,Claimant count,Count,Persons,1730
-E06000014,York,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.2
-E06000055,Bedford,June 2019,Claimant count,Count,Persons,3460
-E06000055,Bedford,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
-E06000050,Cheshire West and Chester,June 2019,Claimant count,Count,Persons,5145
-E06000050,Cheshire West and Chester,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
-E06000034,Thurrock,June 2019,Claimant count,Count,Persons,3225
-E06000034,Thurrock,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.9
-E08000002,Bury,June 2019,Claimant count,Count,Persons,3790
-E08000002,Bury,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
-E06000015,Derby,June 2019,Claimant count,Count,Persons,4980
-E06000015,Derby,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
-E06000031,Peterborough,June 2019,Claimant count,Count,Persons,3995
-E06000031,Peterborough,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
-E06000038,Reading,June 2019,Claimant count,Count,Persons,2765
-E06000038,Reading,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.6
-E06000035,Medway,June 2019,Claimant count,Count,Persons,5125
-E06000035,Medway,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.9
-E08000009,Trafford,June 2019,Claimant count,Count,Persons,3440
-E08000009,Trafford,June 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
 E92000001,England,July 2019,Claimant count,Count,Persons,949770
 E92000001,England,July 2019,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
 E06000030,Swindon,July 2019,Claimant count,Count,Persons,3430
@@ -1223,58 +1189,92 @@ E06000035,Medway,May 2022,Claimant count,Count,Persons,7235
 E06000035,Medway,May 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
 E08000009,Trafford,May 2022,Claimant count,Count,Persons,4520
 E08000009,Trafford,May 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
-E92000001,England,June 2022,Claimant count,Count,Persons,1349920
+E92000001,England,June 2022,Claimant count,Count,Persons,1335760
 E92000001,England,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
-E06000030,Swindon,June 2022,Claimant count,Count,Persons,4635
+E06000030,Swindon,June 2022,Claimant count,Count,Persons,4610
 E06000030,Swindon,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
-E06000007,Warrington,June 2022,Claimant count,Count,Persons,3720
-E06000007,Warrington,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.9
-E06000042,Milton Keynes,June 2022,Claimant count,Count,Persons,6510
-E06000042,Milton Keynes,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E06000007,Warrington,June 2022,Claimant count,Count,Persons,3700
+E06000007,Warrington,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.8
+E06000042,Milton Keynes,June 2022,Claimant count,Count,Persons,6365
+E06000042,Milton Keynes,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
 E08000029,Solihull,June 2022,Claimant count,Count,Persons,4380
 E08000029,Solihull,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
-E06000025,South Gloucestershire,June 2022,Claimant count,Count,Persons,3150
+E06000025,South Gloucestershire,June 2022,Claimant count,Count,Persons,3210
 E06000025,South Gloucestershire,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
-E08000007,Stockport,June 2022,Claimant count,Count,Persons,6280
+E08000007,Stockport,June 2022,Claimant count,Count,Persons,6225
 E08000007,Stockport,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.5
-E06000014,York,June 2022,Claimant count,Count,Persons,2480
+E06000014,York,June 2022,Claimant count,Count,Persons,2475
 E06000014,York,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
-E06000055,Bedford,June 2022,Claimant count,Count,Persons,4510
-E06000055,Bedford,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.2
-E06000050,Cheshire West and Chester,June 2022,Claimant count,Count,Persons,5555
+E06000055,Bedford,June 2022,Claimant count,Count,Persons,4390
+E06000055,Bedford,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E06000050,Cheshire West and Chester,June 2022,Claimant count,Count,Persons,5630
 E06000050,Cheshire West and Chester,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
-E06000034,Thurrock,June 2022,Claimant count,Count,Persons,4255
-E06000034,Thurrock,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
-E08000002,Bury,June 2022,Claimant count,Count,Persons,5300
+E06000034,Thurrock,June 2022,Claimant count,Count,Persons,4235
+E06000034,Thurrock,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E08000002,Bury,June 2022,Claimant count,Count,Persons,5220
 E08000002,Bury,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.5
-E06000015,Derby,June 2022,Claimant count,Count,Persons,7710
-E06000015,Derby,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.8
-E06000031,Peterborough,June 2022,Claimant count,Count,Persons,6705
-E06000031,Peterborough,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.4
-E06000038,Reading,June 2022,Claimant count,Count,Persons,4365
+E06000015,Derby,June 2022,Claimant count,Count,Persons,7620
+E06000015,Derby,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.7
+E06000031,Peterborough,June 2022,Claimant count,Count,Persons,6555
+E06000031,Peterborough,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.3
+E06000038,Reading,June 2022,Claimant count,Count,Persons,4350
 E06000038,Reading,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
-E06000035,Medway,June 2022,Claimant count,Count,Persons,6945
-E06000035,Medway,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
-E08000009,Trafford,June 2022,Claimant count,Count,Persons,4535
+E06000035,Medway,June 2022,Claimant count,Count,Persons,6835
+E06000035,Medway,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E08000009,Trafford,June 2022,Claimant count,Count,Persons,4520
 E08000009,Trafford,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
-E05000819,Altrincham,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2
-E05000820,Ashton upon Mersey,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.2
-E05000821,Bowdon,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.6
-E05000822,Broadheath,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.9
-E05000823,Brooklands,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.5
-E05000824,Bucklow-St Martins,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.2
-E05000825,Clifford,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.3
-E05000826,Davyhulme East,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
-E05000827,Davyhulme West,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
-E05000828,Flixton,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
-E05000829,Gorse Hill,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.8
-E05000830,Hale Barns,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.5
-E05000831,Hale Central,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.3
-E05000832,Longford,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5
-E05000833,Priory,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.3
-E05000835,Sale Moor,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.5
-E05000834,St Mary's,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
-E05000836,Stretford,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
-E05000837,Timperley,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1
-E05000838,Urmston,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
-E05000839,Village,June 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
+E92000001,England,July 2022,Claimant count,Count,Persons,1328175
+E92000001,England,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E06000030,Swindon,July 2022,Claimant count,Count,Persons,4465
+E06000030,Swindon,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E06000007,Warrington,July 2022,Claimant count,Count,Persons,3685
+E06000007,Warrington,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.8
+E06000042,Milton Keynes,July 2022,Claimant count,Count,Persons,6315
+E06000042,Milton Keynes,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.7
+E08000029,Solihull,July 2022,Claimant count,Count,Persons,4365
+E08000029,Solihull,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
+E06000025,South Gloucestershire,July 2022,Claimant count,Count,Persons,3115
+E06000025,South Gloucestershire,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E08000007,Stockport,July 2022,Claimant count,Count,Persons,6195
+E08000007,Stockport,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.5
+E06000014,York,July 2022,Claimant count,Count,Persons,2485
+E06000014,York,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
+E06000055,Bedford,July 2022,Claimant count,Count,Persons,4350
+E06000055,Bedford,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E06000050,Cheshire West and Chester,July 2022,Claimant count,Count,Persons,5580
+E06000050,Cheshire West and Chester,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
+E06000034,Thurrock,July 2022,Claimant count,Count,Persons,4255
+E06000034,Thurrock,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E08000002,Bury,July 2022,Claimant count,Count,Persons,5215
+E08000002,Bury,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.5
+E06000015,Derby,July 2022,Claimant count,Count,Persons,7635
+E06000015,Derby,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.7
+E06000031,Peterborough,July 2022,Claimant count,Count,Persons,6660
+E06000031,Peterborough,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.4
+E06000038,Reading,July 2022,Claimant count,Count,Persons,4325
+E06000038,Reading,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E06000035,Medway,July 2022,Claimant count,Count,Persons,6800
+E06000035,Medway,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E08000009,Trafford,July 2022,Claimant count,Count,Persons,4460
+E08000009,Trafford,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E05000819,Altrincham,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2
+E05000820,Ashton upon Mersey,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.1
+E05000821,Bowdon,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.6
+E05000822,Broadheath,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E05000823,Brooklands,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.4
+E05000824,Bucklow-St Martins,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.6
+E05000825,Clifford,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.1
+E05000826,Davyhulme East,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
+E05000827,Davyhulme West,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.2
+E05000828,Flixton,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
+E05000829,Gorse Hill,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.8
+E05000830,Hale Barns,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E05000831,Hale Central,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.3
+E05000832,Longford,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.2
+E05000833,Priory,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
+E05000835,Sale Moor,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E05000834,St Mary's,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
+E05000836,Stretford,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.9
+E05000837,Timperley,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1
+E05000838,Urmston,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.7
+E05000839,Village,July 2022,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1

@@ -71,7 +71,7 @@ output$universal_credit_plot <- renderggiraph({
       ) +
       labs(
         title = "Universal Credit rate - aged 16 to 64 by ward",
-        subtitle = "June 2022",
+        subtitle = "July 2022",
         caption = "Source: DWP,ONS",
         x = NULL,
         y = NULL,
@@ -176,7 +176,7 @@ output$claimant_count_plot <- renderggiraph({
       ) +
       labs(
         title = "Claimant Count rate - aged 16 to 64 by ward",
-        subtitle = "June 2022",
+        subtitle = "July 2022",
         caption = "Source: ONS",
         x = NULL,
         y = NULL,
