@@ -3,44 +3,41 @@
 
 # Source: Department for Transport (DfT)
 #         https://www.gov.uk/government/statistical-data-sets/walking-and-cycling-statistics-cw#participation-in-walking-and-cycling
-#         CW0301: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1019282/cw0301.ods
+#         CW0301: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1100941/cw0301.ods
 
 
 # Load required packages ---------------------------
 library(tidyverse); library(readODS); library(httr);
 
 # Setup objects ---------------------------
-# Trafford and its CIPFA nearest neighbours (2019):
+# Trafford and its CIPFA nearest neighbours (2021):
 authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1019282/cw0301.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1100941/cw0301.ods",
     write_disk(tmp))
 
-# The sheets in the workbook are arranged alternately in pairs: year_x_percentages, year_x_confidence_interval
-# We're only interested in the sheets containing the percentages, not those with "CI" in the sheet name
-# Also the column names are not consistent within the sheets, meaning that we can't use them as variable names
-# We therefore need col_names = FALSE and we'll rename them later
-df_raw <- list_ods_sheets(tmp)[!str_detect(list_ods_sheets(tmp), "CI")] %>%
-  set_names() %>% # instead of using the sheet ordinal, this uses the name within the map function
-  map_df(~ read_ods(tmp, sheet = .x,
-                    col_names = FALSE, col_types = NA, skip = 8), .id = "src_sht")
+df_raw <- read_ods(tmp, sheet = "CW0301", skip = 7)
 
 # Tidy the data ---------------------------
 df_wlk_cyc <- df_raw %>%
-  # Start by selecting and renaming the columns we are interested in
-  select(period = src_sht,
-         area_code = A,
-         area_name = B,
-         value = I) %>% # This is the Five times per week column
-  filter(area_code %in% authorities$area_code) %>%
-  # We need to change the format of period from CW0301_YYYY into 20YY-YY using a regex
-  # Replace "CW0301_" with "20" then get the next 2 digits in one group and the last 2 in another and put a hyphen between them
-  mutate(period = str_replace(period, "CW0301_([0-9]{2})([0-9]{2})", "20\\1-\\2"),
-         area_name = if_else(area_name == "ENGLAND", "England", area_name),
+  rename(area_code = `ONS Code`,
+         area_name = `Area name`) %>%
+  filter(Frequency == "At least 5 times per week",
+         area_code %in% authorities$area_code) %>%
+  select(-Mode, -Purpose, -Frequency) %>% # remove unwanted columns
+  mutate(`2021` = as.character(`2021`)) %>% # annoyingly this column is num when the others are char - need all the same to pivot
+  pivot_longer(cols = c(-area_code, -area_name),
+               names_to = "period",
+               values_to = "value") %>%
+  # the period needs to be in the format 20YY-YY.
+  # each year value in period is the latest, so we need to create the year before number
+  mutate(period_to = str_sub(period, -2, -1),
+         period_from = (as.numeric(period) -1),
+         period = paste0(period_from, "-", period_to),
          value = round(as.numeric(value), 1),
          indicator = "Proportion of adults who do any walking or cycling, for any purpose, five times per week",
          measure = "Percentage",
