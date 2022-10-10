@@ -1,26 +1,9 @@
 area_code,area_name,period,indicator,measure,unit,value_ulev,value_all_vehicles
-E06000055,Bedford,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,450,123899
-E08000002,Bury,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,360,122868
-E06000050,Cheshire West and Chester,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,837,226810
-E06000015,Derby,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1203,142334
-E92000001,England,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,199320,32975849.000000004
-E06000035,Medway,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,550,157939
-E06000042,Milton Keynes,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,6583,394980
-E06000031,Peterborough,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,11069,220377
-E06000038,Reading,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,327,76865
-E08000029,Solihull,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2085,188510
-E06000025,South Gloucestershire,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2648,314830
-E08000007,Stockport,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,613,167665
-E06000030,Swindon,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,5094,295186
-E06000034,Thurrock,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,286,101372
-E08000009,Trafford,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,546,130487
-E06000007,Warrington,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,444,132714
-E06000014,York,2019-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,432,102924
 E06000055,Bedford,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,512,125204
 E08000002,Bury,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,415,124733
 E06000050,Cheshire West and Chester,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,925,228256
 E06000015,Derby,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1298,142972
-E92000001,England,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,217353,33121502.999999996
+E92000001,England,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,217343,33121502.999999996
 E06000035,Medway,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,604,158843
 E06000042,Milton Keynes,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,6788,385417
 E06000031,Peterborough,2019-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,11539,220367
@@ -37,7 +20,7 @@ E06000055,Bedford,2019-12-31,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,436,121862
 E06000050,Cheshire West and Chester,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1020,227250
 E06000015,Derby,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1426,142054
-E92000001,England,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,239238,32941676
+E92000001,England,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,239227,32941676
 E06000035,Medway,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,653,157896
 E06000042,Milton Keynes,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,7186,378960
 E06000031,Peterborough,2019-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,12454,220693
@@ -54,7 +37,7 @@ E06000055,Bedford,2020-03-31,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,485,123138
 E06000050,Cheshire West and Chester,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1139,227456
 E06000015,Derby,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1571,142422
-E92000001,England,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,269265,32950966.999999996
+E92000001,England,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,269254,32950966.999999996
 E06000035,Medway,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,720,157795
 E06000042,Milton Keynes,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,8630,380302
 E06000031,Peterborough,2020-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,13175,224279
@@ -71,7 +54,7 @@ E06000055,Bedford,2020-06-30,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,475,118685
 E06000050,Cheshire West and Chester,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1196,226235
 E06000015,Derby,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1612,140701
-E92000001,England,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,282632,32635833
+E92000001,England,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,282621,32635833
 E06000035,Medway,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,759,156974
 E06000042,Milton Keynes,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,9800,371035
 E06000031,Peterborough,2020-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,13450,224251
@@ -88,7 +71,7 @@ E06000055,Bedford,2020-09-30,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,614,119934
 E06000050,Cheshire West and Chester,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1349,229626
 E06000015,Derby,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1712,141389
-E92000001,England,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,333036,33080540.999999996
+E92000001,England,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,333024,33080540.999999996
 E06000035,Medway,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,891,159311
 E06000042,Milton Keynes,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,12758,373793
 E06000031,Peterborough,2020-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,13728,219710
@@ -105,16 +88,16 @@ E06000055,Bedford,2020-12-31,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,793,118973
 E06000050,Cheshire West and Chester,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1466,228151
 E06000015,Derby,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1819,139917
-E92000001,England,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,385058,32905807
+E92000001,England,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,385005,32905807
 E06000035,Medway,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1014,158692
 E06000042,Milton Keynes,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,17284,372732
-E06000031,Peterborough,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,15392,218662
+E06000031,Peterborough,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,15391,218662
 E06000038,Reading,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,648,75867
-E08000029,Solihull,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,7261,224265
+E08000029,Solihull,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,7252,224265
 E06000025,South Gloucestershire,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,7502,315815
 E08000007,Stockport,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,31106,438003
 E06000030,Swindon,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,15076,302282
-E06000034,Thurrock,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,592,101943
+E06000034,Thurrock,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,591,101943
 E08000009,Trafford,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1039,129116.00000000001
 E06000007,Warrington,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,879,132722
 E06000014,York,2020-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,787,102370
@@ -122,16 +105,16 @@ E06000055,Bedford,2021-03-31,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,968,117082
 E06000050,Cheshire West and Chester,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1619,227757
 E06000015,Derby,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1988,138572
-E92000001,England,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,435049,32877355.000000004
+E92000001,England,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,434997,32877355.000000004
 E06000035,Medway,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1100,158345
-E06000042,Milton Keynes,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,18783,368056
-E06000031,Peterborough,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,17041,219462
+E06000042,Milton Keynes,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,18782,368056
+E06000031,Peterborough,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,17040,219462
 E06000038,Reading,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,676,75556
-E08000029,Solihull,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,8682,224012
+E08000029,Solihull,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,8673,224012
 E06000025,South Gloucestershire,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,11104,315218
 E08000007,Stockport,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,34763,427407
 E06000030,Swindon,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,17523,302284
-E06000034,Thurrock,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,659,101680
+E06000034,Thurrock,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,658,101680
 E08000009,Trafford,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1166,128663.99999999999
 E06000007,Warrington,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,958,132579
 E06000014,York,2021-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,855,101607
@@ -139,16 +122,16 @@ E06000055,Bedford,2021-06-30,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1149,117362
 E06000050,Cheshire West and Chester,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1936,231532
 E06000015,Derby,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2237,140073
-E92000001,England,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,504079,33350894
+E92000001,England,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,504027,33350894
 E06000035,Medway,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1228,160267
-E06000042,Milton Keynes,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,21587,367986
-E06000031,Peterborough,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,18992,223040
+E06000042,Milton Keynes,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,21586,367986
+E06000031,Peterborough,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,18991,223040
 E06000038,Reading,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,788,76344
-E08000029,Solihull,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,9918,229810
+E08000029,Solihull,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,9909,229810
 E06000025,South Gloucestershire,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,14349,319104
 E08000007,Stockport,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,39642,423753
 E06000030,Swindon,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,21039,305103
-E06000034,Thurrock,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,762,102816
+E06000034,Thurrock,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,761,102816
 E08000009,Trafford,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1356,129848.99999999999
 E06000007,Warrington,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1144,134002
 E06000014,York,2021-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1003,103158
@@ -156,16 +139,16 @@ E06000055,Bedford,2021-09-30,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1370,117296
 E06000050,Cheshire West and Chester,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2212,231613
 E06000015,Derby,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2443,139195
-E92000001,England,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,575249,33354873
+E92000001,England,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,575200,33354873
 E06000035,Medway,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1383,160278
-E06000042,Milton Keynes,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,25089,366621
-E06000031,Peterborough,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,20663,222720
+E06000042,Milton Keynes,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,25088,366621
+E06000031,Peterborough,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,20662,222720
 E06000038,Reading,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,888,76570
-E08000029,Solihull,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,10169,225680
-E06000025,South Gloucestershire,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,17336,320711
+E08000029,Solihull,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,10161,225680
+E06000025,South Gloucestershire,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,17338,320711
 E08000007,Stockport,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,44389,419066
 E06000030,Swindon,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,24497,308503
-E06000034,Thurrock,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,913,102756
+E06000034,Thurrock,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,912,102756
 E08000009,Trafford,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1581,129931.99999999999
 E06000007,Warrington,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1317,134456
 E06000014,York,2021-09-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1153,102976
@@ -173,16 +156,16 @@ E06000055,Bedford,2021-12-31,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1619,116081
 E06000050,Cheshire West and Chester,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2517,230794
 E06000015,Derby,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2639,138283
-E92000001,England,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,660816,33214589.999999996
+E92000001,England,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,660767,33214589.999999996
 E06000035,Medway,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1610,159423
-E06000042,Milton Keynes,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,30466,365204
-E06000031,Peterborough,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,22894,223246
+E06000042,Milton Keynes,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,30465,365204
+E06000031,Peterborough,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,22893,223246
 E06000038,Reading,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,988,76378
-E08000029,Solihull,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,11271,224706
-E06000025,South Gloucestershire,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,22076,324690
+E08000029,Solihull,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,11263,224706
+E06000025,South Gloucestershire,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,22078,324690
 E08000007,Stockport,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,51397,416500
 E06000030,Swindon,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,27966,309349
-E06000034,Thurrock,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1036,102297
+E06000034,Thurrock,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1035,102297
 E08000009,Trafford,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1829,129352
 E06000007,Warrington,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1468,134474
 E06000014,York,2021-12-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1298,102182
@@ -190,16 +173,33 @@ E06000055,Bedford,2022-03-31,Licensed vehicles - ultra low emission vehicles (ul
 E08000002,Bury,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1716,116338
 E06000050,Cheshire West and Chester,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2927,232157
 E06000015,Derby,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2845,138926
-E92000001,England,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,747265,33344466.999999996
+E92000001,England,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,747216,33344466.999999996
 E06000035,Medway,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1781,159694
-E06000042,Milton Keynes,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,33608,364418
-E06000031,Peterborough,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,24867,224664
+E06000042,Milton Keynes,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,33607,364418
+E06000031,Peterborough,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,24866,224664
 E06000038,Reading,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1087,76522
-E08000029,Solihull,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,12050,221430
-E06000025,South Gloucestershire,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,24768,325475
+E08000029,Solihull,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,12042,221430
+E06000025,South Gloucestershire,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,24770,325475
 E08000007,Stockport,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,59941,417847
 E06000030,Swindon,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,31282,310445
-E06000034,Thurrock,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1203,102542
+E06000034,Thurrock,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1202,102542
 E08000009,Trafford,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2086,129532.99999999999
 E06000007,Warrington,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1660,135245
 E06000014,York,2022-03-31,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1412,102059
+E06000055,Bedford,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2532,117925
+E08000002,Bury,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1700,116592
+E06000050,Cheshire West and Chester,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,3177,233794
+E06000015,Derby,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2995,139663
+E92000001,England,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,815028,33575038
+E06000035,Medway,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1996,160643
+E06000042,Milton Keynes,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,35444,357290
+E06000031,Peterborough,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,26034,221652
+E06000038,Reading,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1197,77020
+E08000029,Solihull,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,8731,190122
+E06000025,South Gloucestershire,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,26461,325906
+E08000007,Stockport,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,66128,416565
+E06000030,Swindon,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,33964,311403
+E06000034,Thurrock,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1366,103264
+E08000009,Trafford,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,2291,130387
+E06000007,Warrington,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1796,136292
+E06000014,York,2022-06-30,Licensed vehicles - ultra low emission vehicles (ulev) and all vehicles including ulev,Frequency,Vehicles,1574,102230
