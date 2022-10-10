@@ -1,9 +1,9 @@
 # Vehicle miles travelled on roads.
-# Created: 2022-01-07
+# Created: 2022-01-07.  Last updated: 2022-10-10
 
 # Source: Department for Transport (DfT)
 #         https://www.gov.uk/government/statistical-data-sets/road-traffic-statistics-tra#traffic-by-local-authority-tra89
-#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/982024/tra8901.ods
+#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1107032/tra8901.ods
 
 
 # Load required packages ---------------------------
@@ -11,7 +11,7 @@ library(tidyverse); library(readODS); library(httr)
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/982024/tra8901.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1107032/tra8901.ods",
     write_disk(tmp))
 
 # Setup objects ---------------------------
@@ -28,17 +28,18 @@ df_vehicle_miles <- df_raw %>%
   select(area_code = `LA Code`,
          area_name = 3,
          NOTWANTED = 4, # This is an unnamed notes column which we don't need
-         `2010` = `20103`, # The additional "3" relates to a footnote
-         `2011` = `20113`,
-         `2012` = `20123`,
-         `2013` = `20133`,
-         `2014` = `20143`,
-         `2015` = `20153`,
-         `2016` = `20163`,
-         `2017` = `20173`,
-         `2018` = `20183`,
-         `2019`,
-         `2020`) %>%
+         `2010` = `2010R`, # The additional "R" appears to refer to "Revised" as these values have changed from the previous version, however no footnotes are present in the datasheet
+         `2011` = `2011R`,
+         `2012` = `2012R`,
+         `2013` = `2013R`,
+         `2014` = `2014R`,
+         `2015` = `2015R`,
+         `2016` = `2016R`,
+         `2017` = `2017R`,
+         `2018` = `2018R`,
+         `2019` = `2019R`,
+         `2020` = `2020R`,
+         `2021`) %>%
   select(-NOTWANTED) %>%
   # Filter out rows with area_codes not in the format "E06xxxxxx", "E08xxxxxx", "E09xxxxxx" or "E10xxxxxx" as these are region aggregations
   filter(str_detect(area_code, pattern = "E06|E08|E09|E10[0-9]{6}")) %>%
