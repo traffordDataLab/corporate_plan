@@ -74,7 +74,7 @@ ui <- fluidPage(
         tabPanel(
             # Home/landing page
             title = "Introduction",
-            icon = icon("home"),
+            icon = icon("house"),
             HTML("<div id='homePageContainer'>
                   <h2>Visualising the Council's priorities</h2>
                   <p>The corporate plan describes Trafford Council's strategic vision, outcomes and priorities for the borough, with the priorities being key to it's delivery. We will focus on three priorities to help us achieve these outcomes: <strong>reducing health inequalities</strong>, <strong>supporting people out of poverty</strong> and <strong>addressing our climate crisis</strong>.</p>"
