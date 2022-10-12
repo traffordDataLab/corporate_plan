@@ -151,7 +151,7 @@ output$claimant_count_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from June 2019 to June 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Latest data for June 2022 shows a claimant count rate of 3.1% in Trafford, 3.6% for the average of similar authorities and 3.8% for England. This shows a slight decrease in the claimant count percentage in Trafford from 3.3% in January 2022 whereas the percentage has also decreased for its comparitors during the same period."
+        alt = "Line chart showing jobseekers allowance and universal credit claims as a proportion of residents aged 16 to 64 in Trafford compared with the average of similar authorities and England from September 2019 to September 2022. All three lines follow a very similar trend, with Trafford having the lowest proportion, followed by the average of similar local authorities and then England. Latest data for September 2022 shows a claimant count rate of 3.1% in Trafford, 3.5% for the average of similar authorities and 3.8% for England. The claimant count rate of 3.1% in Trafford has remained consistent since May 2022, whereas the average for similar local authorities of 3.5% has remained consistent since July 2022. In comparison, the rate for England of 3.8% increased by 0.1 percentage points from the previous month."
       ) +
       theme_x()
   } else {
@@ -176,11 +176,11 @@ output$claimant_count_plot <- renderggiraph({
       ) +
       labs(
         title = "Claimant Count rate - aged 16 to 64 by ward",
-        subtitle = "July 2022",
+        subtitle = "September 2022",
         caption = "Source: ONS",
         x = NULL,
         y = NULL,
-        alt = "Map showing the proportion of Claimant Count as a proportion of people aged 16 to 64 in each of Trafford's wards in June 2022. The wards in the North have high proportions with Clifford having the highest at 6.3% and Longford, Stretford and Gorse Hill between 5% and 5.8%. Bucklow-St Martins in the West had a high propotion at 6.2%. Other wards with proportion over 3% are Sale Moor at 3.5% and St Mary's at 3.3% in the central area and Village at 3.3% in the South"
+        alt = "Map showing the proportion of Claimant Count as a proportion of people aged 16 to 64 in each of Trafford's wards in September 2022. The wards in the North have high proportions with Clifford having the highest overall at 6.3% and Longford, Stretford and Gorse Hill between 4.9% and 5.6%. Bucklow-St Martins in the West had the second highest proportion at 5.7%. Wards with proportions over 3% are Sale Moor at 3.3% and St Mary's at 3.4% in the Central area and Village at 3.1% in the South"
       ) +
       coord_sf(datum = NA) +
       theme_x() +
