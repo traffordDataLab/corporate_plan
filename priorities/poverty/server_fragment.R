@@ -46,7 +46,7 @@ output$universal_credit_plot <- renderggiraph({
         x = NULL,
         y = "Percentage",
         colour = NULL,
-        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from June 2019 to June 2022. The average of similar authorities and England closely follow the same trend throughout the time period. Trafford initially had a higher proportion than its comparitors, however due to a slower rate of increase, by September 2019 was below both. Since May 2020 it has followed the same trend as its comparitors, but at approximately 2 to 3 percentage points below. In June 2022 Trafford's claimant rate was 10.7% compared with 13.8% for England and 13.7% for the average of similar authorities."
+        alt = "Line chart showing universal credit claims as a proportion of people aged 16 to 64 in Trafford compared with the average of similar authorities and England from September 2019 to September 2022. The average of similar authorities and England closely follow each other throughout the time period with Trafford following the same trend but lower than its comparitors. Since May 2020 the proportion of Universal Credit claimants in Trafford has been consistently 2 to 3 percentage points below its comparitors. The latest data for September 2022 shows Trafford's claimant rate at 11% compared with 14% for the average of similar authorities and 14.2% for England."
       ) +
       theme_x()
   } else {
@@ -71,11 +71,11 @@ output$universal_credit_plot <- renderggiraph({
       ) +
       labs(
         title = "Universal Credit rate - aged 16 to 64 by ward",
-        subtitle = "July 2022",
+        subtitle = "September 2022",
         caption = "Source: DWP,ONS",
         x = NULL,
         y = NULL,
-        alt = "Map showing the proportion of Universal Credit claims as a proportion of people aged 16 to 64 in each of Trafford's wards in June 2022. Bucklow-St Martins in the West had the highest propotion of all wards at 24.7%. The wards in the North have high proportions with Clifford having the highest at 21.5% and Longford, Stretford and Gorse Hill between 14.8% and 18.9%.  Other wards with proportion over 10% are St Mary's at 14.2% and Sale Moor at 12.4% in the central area and Village at 12.6% in the South"
+        alt = "Map showing the proportion of Universal Credit claims as a proportion of people aged 16 to 64 in each of Trafford's wards in September 2022. Bucklow-St Martins in the West had the highest propotion of all wards at 25.6%. The wards in the North have high proportions with Clifford having the highest at 22.1% and Longford, Stretford and Gorse Hill between 15.4% and 19.2%.  Other wards with proportion over 10% are St Mary's at 14.8% and Sale Moor at 12.1% in the central area and Village at 12.9% in the South"
       ) +
       coord_sf(datum = NA) +
       theme_x() +
