@@ -757,7 +757,7 @@ df_expected_standard_ks2 <- read_csv("data/poverty/expected_standard_ks2.csv") %
                                area_name == "England" ~ "England",
                                TRUE ~ "Similar authorities average")) %>%
   group_by(period, area_name) %>%
-  summarise(value = round(mean(value), 1))
+  summarise(value = round(mean(value,na.rm=TRUE), 1))
 
 # Plot
 output$expected_standard_ks2_plot <- renderggiraph({
@@ -779,7 +779,7 @@ output$expected_standard_ks2_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing that in the academic years from 2015/16 to 2018/19 Trafford had a higher percentage of pupils achieving the expected standard at Key Stage 2 in Reading, Writing and Maths compared with the average of similar authorities and England. All 3 lines show a similar trend, however the gap between Trafford and the other comparitors is slightly increasing. In 2018/19 77% of Trafford's pupils achieved the expected standard, compared with 67.2% for the average of similar authorities and 65% for England.") +
+         alt = "Line chart showing that in the academic years from 2015/16 to 2021/22 with data not available for academic years 2019/20 and 2020/21. Trafford have had a higher percentage of pupils achieving the expected standard at Key Stage 2 in Reading, Writing and Maths compared with the average of similar authorities and England during this period. Trafford, the similar authorities and England had lower percentages of achievement compared to previous years. In 2021/22 67% of Trafford's pupils achieved the expected standard, compared with 77% in 2018/19. The average of similar authorities had 60.5% and England 58% of achievement in 2021/22") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible

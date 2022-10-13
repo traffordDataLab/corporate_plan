@@ -16,11 +16,11 @@ authorities <- read_csv("../../cssn.csv") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
 # API key for LGInform+
-api_key <- "[INSERT API TOKEN HERE]"
+api_key <- ""
 
 # Download and tidy the data ---------------------------
 
-df_ks2_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?value.valueType=raw&metricType=6080&area=E92000001%2CE08000009%2CNearNeighboursChildrenServices_Trafford&period=latest%3A4&rowGrouping=area&ApplicationKey=", api_key), skip = 2)
+df_ks2_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?value.valueType=raw&metricType=6080&area=E92000001%2CE08000009%2CNearNeighboursChildrenServices_Trafford&period=latest%3A7&rowGrouping=area&ApplicationKey=", api_key), skip = 2)
 
 # Tidy the LG Inform+ data ---------------------------
 df_ks2 <- df_ks2_raw %>%
