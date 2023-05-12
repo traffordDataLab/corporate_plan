@@ -379,7 +379,7 @@ cipfa <- read_csv("data/cipfa2021.csv") %>%
   select(area_code)
 
 overweight_adult <- read_csv("data/health/overweight_adult.csv") %>%
-  filter(indicator == "Percentage of adults (aged 18+) classified as overweight or obese") %>%
+  filter(indicator == "Percentage of adults (aged 18 plus) classified as overweight or obese") %>%
   mutate(period = as_factor(period)) %>%
   filter(!is.na(value))
 
@@ -908,7 +908,7 @@ output$mortality_rate_plot <- renderggiraph({
       labs(
         title = "Under 75 mortality rate from preventable causes",
         subtitle = NULL,
-        caption = "Source: Annual Mortality Extracts, ONS",
+        caption = "Data from 2020 and before is not comparable to 2021 as it needs rebasing to Census 2021\nSource: Annual Mortality Extracts, ONS",
         x = NULL,
         y = "per 100,000 population",
         colour = NULL,
