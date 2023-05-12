@@ -3,7 +3,7 @@
 
 # Source: Department for Transport (DfT)
 #         https://www.gov.uk/government/statistical-data-sets/road-traffic-statistics-tra#traffic-by-local-authority-tra89
-#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1107032/tra8901.ods
+#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1144655/tra8901.ods
 
 
 # Load required packages ---------------------------
@@ -11,7 +11,7 @@ library(tidyverse); library(readODS); library(httr)
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1107032/tra8901.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1144655/tra8901.ods",
     write_disk(tmp))
 
 # Setup objects ---------------------------
@@ -20,33 +20,31 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E08000009", area_name = "Trafford")
 
 # Get the raw data ---------------------------
-df_raw <- read_ods(tmp, sheet = 1, col_names = TRUE, col_types = NA, skip = 5)
+df_raw <- read_ods(tmp, sheet = "TRA8901", col_names = TRUE, col_types = NA, skip = 4)
 
 # Tidy the data ---------------------------
 df_vehicle_miles <- df_raw %>%
-  # renaming columns via select due to cols 3 and 4 being unnamed
-  select(area_code = `LA Code`,
-         area_name = 3,
-         NOTWANTED = 4, # This is an unnamed notes column which we don't need
-         `2010` = `2010R`, # The additional "R" appears to refer to "Revised" as these values have changed from the previous version, however no footnotes are present in the datasheet
-         `2011` = `2011R`,
-         `2012` = `2012R`,
-         `2013` = `2013R`,
-         `2014` = `2014R`,
-         `2015` = `2015R`,
-         `2016` = `2016R`,
-         `2017` = `2017R`,
-         `2018` = `2018R`,
-         `2019` = `2019R`,
-         `2020` = `2020R`,
-         `2021`) %>%
-  select(-NOTWANTED) %>%
+  # renaming columns via select for ease
+  select(area_code = `Local Authority Code`,
+         area_name = `Local Authority`,
+         `2010` = `2010[r]`, # The additional "[r]" refers to the data being revised following the "minor road review".
+         `2011` = `2011[r]`,
+         `2012` = `2012[r]`,
+         `2013` = `2013[r]`,
+         `2014` = `2014[r]`,
+         `2015` = `2015[r]`,
+         `2016` = `2016[r]`,
+         `2017` = `2017[r]`,
+         `2018` = `2018 [r]`,
+         `2019` = `2019 [r]`,
+         `2020` = `2020 [note 3] [r]`, # The addition [note 3] refers to the figures being affected by COVID-19
+         `2021` = `2021 [note 3]`) %>%
   # Filter out rows with area_codes not in the format "E06xxxxxx", "E08xxxxxx", "E09xxxxxx" or "E10xxxxxx" as these are region aggregations
   filter(str_detect(area_code, pattern = "E06|E08|E09|E10[0-9]{6}")) %>%
   # convert to 'tidy' data by transposing the dataset to long format
   pivot_longer(c(-area_code, -area_name), names_to = "period", values_to = "value") %>%
-  # Remove rows with no data, signified with ".."
-  filter(value != "..") %>%
+  # Remove rows with no data, signified with "[x]"
+  filter(value != "[x]") %>%
   mutate(value = as.numeric(value))
 
 # Calculate England averages for each year ---------------------------
