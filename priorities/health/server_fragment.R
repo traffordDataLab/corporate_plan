@@ -40,7 +40,7 @@ obese_r_quintiles_plot <- obese_reception_quintiles %>%
   mutate(area_name = factor(area_name, levels = c("Trafford","Similar Authorities average","England")))
 
 obese_reception_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
-  left_join(obese_r %>% filter(area_type == "Ward") %>% select(area_code, indicator, value), by = "area_code")
+  left_join(obese_r %>% filter(area_type == "Electoral Wards") %>% select(area_code, indicator, value), by = "area_code")
 
 output$obese_reception_plot <- renderggiraph({
   
@@ -156,7 +156,7 @@ output$obese_reception_plot <- renderggiraph({
       ) +
       labs(
         title = "Obese children aged 4-5 years by ward",
-        subtitle = "2017/18 - 2019/20",
+        subtitle = "2019/20 - 2021/22",
         caption = "Source: National Child Measurement Programme, NHS Digital",
         x = NULL,
         y = NULL,
@@ -226,7 +226,7 @@ obese_y6_quintiles_plot <- obese_year6_quintiles %>%
   mutate(area_name = factor(area_name, levels = c("Trafford","Similar Authorities average","England")))
 
 obese_year6_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
-  left_join(obese_y6 %>% filter(area_type == "Ward") %>% select(area_code, indicator, value), by = "area_code")
+  left_join(obese_y6 %>% filter(area_type == "Electoral Wards") %>% select(area_code, indicator, value), by = "area_code")
 
 
 output$obese_year6_plot <- renderggiraph({
@@ -341,7 +341,7 @@ output$obese_year6_plot <- renderggiraph({
                               ncol = 2)) +
       labs(
         title = "Obese children aged 10-11 years by ward",
-        subtitle = "2017/18 - 2019/20",
+        subtitle = "2019/20 - 2021/22",
         caption = "Source: National Child Measurement Programme, NHS Digital",
         x = NULL,
         y = NULL,

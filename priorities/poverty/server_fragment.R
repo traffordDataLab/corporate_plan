@@ -71,7 +71,7 @@ output$universal_credit_plot <- renderggiraph({
       ) +
       labs(
         title = "Universal Credit rate - aged 16 to 64 by ward",
-        subtitle = "September 2022",
+        subtitle = "March 2023",
         caption = "Source: DWP,ONS",
         x = NULL,
         y = NULL,
@@ -176,7 +176,7 @@ output$claimant_count_plot <- renderggiraph({
       ) +
       labs(
         title = "Claimant Count rate - aged 16 to 64 by ward",
-        subtitle = "September 2022",
+        subtitle = "March 2023",
         caption = "Source: ONS",
         x = NULL,
         y = NULL,
@@ -408,7 +408,7 @@ output$neet_plot <- renderggiraph({
     
   } else {
     
-    gg <- ggplot(df_neet %>% filter(indicator == "16-17 year olds not in education, employment or training (NEET) or whose activity is not known"),
+    gg <- ggplot(df_neet %>% filter(indicator == "16 to 17 year olds not in education, employment or training (NEET) or whose activity is not known"),
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(size = 1) +
       geom_point_interactive(
