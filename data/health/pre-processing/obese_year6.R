@@ -10,7 +10,7 @@ cssn <- read_csv("../../cssn.csv") %>%
   select(area_code)
 
 obese_year6_quintiles <- read_csv("https://fingertips.phe.org.uk/api/all_data/csv/by_indicator_id?indicator_ids=92033&area_type_id=101") %>%
-  filter(`Area Code` %in% c("E08000009",cssn$area_code,"E92000001"), Sex == "Persons", `Time period` == "2015/16 - 19/20", `Category Type` == "LSOA11 deprivation quintiles in England (IMD2019)") %>%
+  filter(`Area Code` %in% c("E08000009",cssn$area_code,"E92000001"), Sex == "Persons", `Time period` == "2017/18 - 21/22", `Category Type` == "LSOA11 deprivation quintiles within area (IMD  trend)") %>%
   select(area_code = `Area Code`, area_name = `Area Name`, area_type = `Area Type`, period = `Time period`, value = Value, indicator = `Indicator Name`, unit = Sex, compared_to_England = `Compared to England value or percentiles`, inequality = Category) %>%
   mutate(measure = "Percentage",
          area_type = if_else(area_type=="England","Country",area_type))
@@ -46,7 +46,8 @@ lookup <- read_csv("https://www.trafforddatalab.io/spatial_data/lookups/administ
 obese_year6_wards <- read_csv("https://fingertips.phe.org.uk/api/all_data/csv/by_indicator_id?indicator_ids=93107&area_type_id=101") %>%
   filter(`Area Code` %in% lookup$wd17cd) %>%
   select(area_code = `Area Code`, area_name = `Area Name`, area_type = `Area Type`, period = `Time period`, value = Value, indicator = `Indicator Name`, unit = Sex, compared_to_England = `Compared to England value or percentiles`, inequality = Category) %>%
-  mutate(measure = "Percentage")
+  mutate(measure = "Percentage") %>%
+  filter(period == "2019/20 - 21/22")
 
 
 df <- bind_rows(obese_year6_quintiles, obese_year6_england, obese_year6_districsts, obese_year6_cssn, obese_year6_wards) %>%
