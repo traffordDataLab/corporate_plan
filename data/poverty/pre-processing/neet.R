@@ -59,22 +59,9 @@ df_neet <- df_neet_raw %>%
   arrange(period, area_name) %>%
   select(area_code, area_name, period, indicator, measure, unit, value)
 
-# Data from 2021
 
-tmp <- tempfile(fileext = ".xlsx")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1005105/2021_NEET_and_participation_tables.xlsx",
-    write_disk(tmp))
-
-NEET_2021 <- read_xlsx(tmp, sheet = 8, skip = 6) %>%
-  select(area_code = "ONS Geography code (9 digit)", area_name = "Region/LA name", `16-17 year olds not in education, employment or training (NEET)` = "of which known to be NEET", `16-17 year olds not in education, employment or training (NEET) or whose activity is not known` = "Proportion NEET \r\nor not known") %>%
-  filter(area_code %in% authorities$area_code) %>%
-  pivot_longer(cols = -c(area_code, area_name), "indicator", "value") %>%
-  mutate(period = "2021", value = round(value *100,1),
-         measure = "Percentage", unit = "Persons") 
-
-    
 # Combine the datasets ---------------------------
-df_neet <- bind_rows(df_neet_and_unknown, df_neet, NEET_2021) %>%
+df_neet <- bind_rows(df_neet_and_unknown, df_neet) %>%
 arrange(indicator,period,area_code)
   
 # Export the tidied data ---------------------------
