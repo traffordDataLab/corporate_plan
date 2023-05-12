@@ -37,6 +37,7 @@ codes <- pop_ward %>%
 
 
 api_key <- ""
+
 # API endpoint
 path <- "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/table"
 
