@@ -2,16 +2,7 @@
 # Created: 2022-02-18
 
 # Source: Annual Survey of Hours and Earnings, ONS
-# To find the page and file URLs required - as shown below, the following URL performs the required search:
-# Search URL: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datalist?sortBy=release_date&query=living%20wage&filter=user_requested_data&fromDateDay=&fromDateMonth=&fromDateYear=&toDateDay=&toDateMonth=&toDateYear=&size=50
-# Page URLs containing data ZIP files to download. The data is usually provided for 2 year periods at a time within each ZIP file. Always get/use the latest year available just in case the data has been revised from the previous release:
-#   - NOTE: earliest data is 2015 but doesn't state "work geography" and is in a different format to all the later files, so ignore and start at 2016
-#   - 2016 (ignore 2017): https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/007656annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployejobswithhourlypaybelowthelivingwagebyparliamentaryconstituencyandlocalauthorityukapril2016andapril2017
-#   - 2017 (ignore 2018): https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/009211annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2017andapril2018
-#   - 2018 (ignore 2019): https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/10743annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2018andapril2019
-#   - 2019 (ignore 2020): https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/12439annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2019andapril2020
-#   - 2020 (revised) and 2021 (provisional): https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/13855annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2020andapril2021
-
+# URL: https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage
 # Licence: Open Government Licence
 
 
@@ -59,47 +50,53 @@ get_data <- function (url, workbook, data_year) {
 # Download, extract and tidy the data for each year and bind it together into a complete dataset ---------------------------
 
 # 2016
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/007656annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployejobswithhourlypaybelowthelivingwagebyparliamentaryconstituencyandlocalauthorityukapril2016andapril2017/livingwagebylaandpc.zip",
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/april2016and2017/livingwagebylaandpc2016and2017.zip",
                                workbook = "Work Geography LW Table 7.1a   lpmgx 2016.xls",
                                data_year = "2016")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
 # 2017
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/009211annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2017andapril2018/20172018livingwagebyworkgeographyv2.zip",
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/april2017and2018/20172018livingwagebyworkgeographyv2.zip",
                                workbook = "Work Geography LW Table 7.1a   lpmgx 2017.xls",
                                data_year = "2017")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
 # 2018
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/10743annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2018andapril2019/20182019livingwagebyworkgeography.zip",
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/april2018and2019/20182019livingwagebyworkgeography.zip",
                                workbook = "Work Geography LW Table 7.1a   lwfmgx 2018.xls",
                                data_year = "2018")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
 # 2019
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/12439annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2019andapril2020/20192020livingwagebyworkgeography.zip",
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/april2019and2020/20192020livingwagebyworkgeography.zip",
                                workbook = "Work Geography LW Table 7.1a   lwfmgx 2019.xls",
                                data_year = "2019")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
 # 2020
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/13855annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2020andapril2021/livingwagebyworkgeography2020revised.zip",
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/2020revised/livingwagebyworkgeography2020revised.zip",
                                workbook = "Work Geography LWF Table 7 LWF.1a   lwfmgx 2020.xls",
                                data_year = "2020")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
 # 2021
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/adhocs/13855annualsurveyofhoursandearningsasheestimatesofthenumberandproportionofemployeejobswithhourlypaybelowthelivingwagebyworkgeographylocalauthorityandparliamentaryconstituencyukapril2020andapril2021/livingwagebyworkgeography2021provisional.zip",
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/2021revised/livingwagebyworkgeography2021revised.zip",
                                workbook = "Work Geography LWF Table 7 LWF.1a   lwfmgx 2021.xls",
                                data_year = "2021")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
+# 2022 provisional
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/2022provisional/livingwagebyworkgeography2022provisional.zip",
+                               workbook = "PROV - Work Geography LWF Table 7 LWF.1a   lwfmgx 2022.xls",
+                               data_year = "2022")
+
+df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
 # Finalise the completed dataset with the common variables ---------------------------
 df_rlw <- df_rlw %>%
