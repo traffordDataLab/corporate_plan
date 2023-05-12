@@ -17,7 +17,8 @@ df  <- read_csv(paste0("https://www.nomisweb.co.uk/api/v01/dataset/NM_17_5.data.
          area_name = GEOGRAPHY_NAME,
          indicator = VARIABLE_NAME,
          period = DATE_NAME, measure, unit,
-         value = OBS_VALUE)
+         value = OBS_VALUE) %>%
+  unique()
 
 
 write_csv(df, "../employment_rate.csv")
