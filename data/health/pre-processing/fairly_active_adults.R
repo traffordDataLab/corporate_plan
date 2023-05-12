@@ -13,7 +13,7 @@ cipfa <- read_csv("../../cipfa2021.csv") %>%
 
 fairly_active_adults <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?metricType=10270&area=",paste(c("E92000001",cipfa$area_code, "E08000009"), collapse = ','),"&period=latest:6&columnGrouping=period&rowGrouping=area&ApplicationKey=",lginform_key)) %>%
   filter(area != "area") %>%
-  pivot_longer("2016":"2021", names_to = 'period', values_to = 'value') %>%
+  pivot_longer("2017":"2022", names_to = 'period', values_to = 'value') %>%
   select(area_name = `area label`, area_code = area, period, value) %>%
   mutate(indicator = "Percentage of adults aged 16+ who are fairly active",
          measure = "Percentage", unit = "Persons", compared_to_England = NA_character_, inequality = NA_character_,
