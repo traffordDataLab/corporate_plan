@@ -30,13 +30,13 @@ cssn <- read_csv("../../cssn.csv") %>%
 children_dental_decay_cssn <- children_dental_decay %>%
   filter(area_code %in% c(cssn$area_code)) %>%
   rename(area_type = `Area Type`) %>%
-  select(-c(`Category Type`)) %>%
+  select(-c(`Category Type`, Age)) %>%
   mutate(measure = "Percentage")
 
 df <- bind_rows(children_dental_decay_england, children_dental_decay_districsts, children_dental_decay_cssn) %>%
   mutate(value = round(value, 1)) %>%
   unique() %>%
-  filter(period %in% c("2014/15", "2016/17", "2018/19")) %>%
+  filter(period %in% c("2014/15", "2016/17", "2018/19", "2021/22")) %>%
   mutate(unit = "5 years children") %>%
   select(area_code, area_name, area_type, period, indicator, measure, unit, value, compared_to_England, inequality)
 
