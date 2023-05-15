@@ -15,7 +15,7 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1094219/D1_-_Domestic_EPCs.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1153140/D1_-_All_Domestic_EPCs.ods",
     write_disk(tmp))
 
 # Extract the raw data ---------------------------
@@ -27,19 +27,19 @@ df_epc_england <- df_epc_england_raw %>%
   filter(is.na(Quarter) == FALSE) %>% # This removes the totals at the top of the sheet
   mutate(area_code = "E92000001",
          area_name = "England") %>%
-  select(area_code, area_name, Quarter, `Number of Lodgements`, `A`, `B`, `C`)
+  select(area_code, area_name, Quarter, `Number Lodgements`, `A`, `B`, `C`)
 
 # Prepare LA data ---------------------------
 df_epc_la <- df_epc_la_raw %>%
   select(area_code = `Local Authority Code`,
-         area_name = `Local Authority`,
-         Quarter, `Number of Lodgements`, `A`, `B`, `C`) %>%
+         area_name = `Region`,
+         Quarter, `Number Lodgements`, `A`, `B`, `C`) %>%
   filter(area_code %in% authorities$area_code)
 
 # Join both datasets together and tidy ---------------------------
 df_epc <- bind_rows(df_epc_england, df_epc_la) %>%
   separate(Quarter, into = c("year", "quarter"), sep = "/") %>%
-  rename(value_certificates_lodged = `Number of Lodgements`,
+  rename(value_certificates_lodged = `Number Lodgements`,
          value_rating_A = `A`,
          value_rating_B = `B`,
          value_rating_C = `C`) %>%
