@@ -124,7 +124,7 @@ output$obese_reception_plot <- renderggiraph({
                          labels = label_percent(scale = 1, accuracy = 1)) +
       labs(
         title = "Obese children aged 4-5 years by deprivation",
-        subtitle = "2015/16 - 2019/20",
+        subtitle = "2017/18 - 21/22",
         caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
         y = NULL,
@@ -310,7 +310,7 @@ output$obese_year6_plot <- renderggiraph({
                          labels = label_percent(scale = 1, accuracy = 1)) +
       labs(
         title = "Obese children aged 10-11 years by deprivation",
-        subtitle = "2015/16 - 2019/20",
+        subtitle = "2017/18 - 21/22",
         caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
         y = NULL,
