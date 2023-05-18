@@ -2,7 +2,7 @@
 # Created: 2021-12-23
 
 # Source: Department for Environment, Food & Rural Affairs
-# URL: https://www.gov.uk/government/statistical-data-sets/env18-local-authority-collected-waste-annual-results-tables
+# URL: https://www.gov.uk/government/statistical-data-sets/env18-local-authority-collected-waste-annual-results-tables-202122
 
 
 # Load required packages ---------------------------
@@ -15,7 +15,7 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".xlsx")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1047705/LA_and_Regional_Spreadsheet_2021_rev.xlsx",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1144270/LA_and_Regional_Spreadsheet_202122.xlsx",
     write_disk(tmp))
 
 # Extract the raw data ---------------------------

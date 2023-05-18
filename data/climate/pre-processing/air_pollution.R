@@ -1,5 +1,5 @@
 # Nitrogen Dioxide (NO2) and Particulate Matter (PM10) concentrations 
-# Created: 2022-01-27.  Last updated: 2022-10-10
+# Created: 2022-01-27.  Last updated: 2023-05-15
 
 # Source: Ricardo EE
 #         https://www.airqualityengland.co.uk/
@@ -41,7 +41,7 @@ Wellacre <- "TRF3"
 # Pollutants: Nitrogen Dioxide = "NO2", Particulate Matter 10mg = "GE10" in the API
 
 # Latest year of data we want
-max_year <- 2022
+max_year <- 2023
 df_no2 <- NULL
 df_pm10 <- NULL
 
@@ -56,16 +56,16 @@ df_pm10 <- NULL
 #            airqualityengland(Wellacre, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"))
 
 # 12 months up to current calendar year Q3
-df_no2 <- df_no2 %>%
-  bind_rows(airqualityengland(A56, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "NO2"),
-            airqualityengland(MossPark, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "NO2"),
-            airqualityengland(Wellacre, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "NO2"))
+#df_no2 <- df_no2 %>%
+#  bind_rows(airqualityengland(A56, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "NO2"),
+#            airqualityengland(MossPark, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "NO2"),
+#            airqualityengland(Wellacre, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "NO2"))
 
 # 12 months up to current calendar year Q2
-df_no2 <- df_no2 %>% 
-  bind_rows(airqualityengland(A56, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "NO2"),
-            airqualityengland(MossPark, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "NO2"),
-            airqualityengland(Wellacre, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "NO2"))
+#df_no2 <- df_no2 %>% 
+#  bind_rows(airqualityengland(A56, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "NO2"),
+#            airqualityengland(MossPark, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "NO2"),
+#            airqualityengland(Wellacre, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "NO2"))
 
 # 12 months up to current calendar year Q1
 df_no2 <- df_no2 %>% 
@@ -131,16 +131,16 @@ df_no2 <- df_no2 %>%
             airqualityengland(Wellacre, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"))
 
 # 12 months up to 3 calendar years ago Q3
-#df_no2 <- df_no2 %>% 
-#  bind_rows(airqualityengland(A56, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "NO2"),
-#            airqualityengland(MossPark, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "NO2"),
-#            airqualityengland(Wellacre, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "NO2"))
+df_no2 <- df_no2 %>% 
+  bind_rows(airqualityengland(A56, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "NO2"),
+            airqualityengland(MossPark, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "NO2"),
+            airqualityengland(Wellacre, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "NO2"))
 
 # 12 months up to 3 calendar years ago Q2
-#df_no2 <- df_no2 %>% 
-#  bind_rows(airqualityengland(A56, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "NO2"),
-#            airqualityengland(Wellacre, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "NO2"),
-#            airqualityengland(MossPark, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "NO2"))
+df_no2 <- df_no2 %>% 
+  bind_rows(airqualityengland(A56, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "NO2"),
+            airqualityengland(Wellacre, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "NO2"),
+            airqualityengland(MossPark, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "NO2"))
 
 # 12 months up to 3 calendar years ago Q1
 #df_no2 <- df_no2 %>% 
@@ -171,14 +171,14 @@ write_csv(df_no2, "../no2_concentration.csv")
 #            airqualityengland(MossPark, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10"))
 
 # 12 months up to current calendar year Q3
-df_pm10 <- df_pm10 %>%
-  bind_rows(airqualityengland(A56, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "PM10"),
-            airqualityengland(MossPark, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "PM10"))
+#df_pm10 <- df_pm10 %>%
+#  bind_rows(airqualityengland(A56, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "PM10"),
+#            airqualityengland(MossPark, paste0(max_year-1, "-10-01"), paste0(max_year, "-09-30"), "PM10"))
 
 # 12 months up to current calendar year Q2
-df_pm10 <- df_pm10 %>% 
-  bind_rows(airqualityengland(A56, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "PM10"),
-            airqualityengland(MossPark, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "PM10"))
+#df_pm10 <- df_pm10 %>% 
+#  bind_rows(airqualityengland(A56, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "PM10"),
+#            airqualityengland(MossPark, paste0(max_year-1, "-07-01"), paste0(max_year, "-06-30"), "PM10"))
 
 # 12 months up to current calendar year Q1
 df_pm10 <- df_pm10 %>% 
@@ -234,14 +234,14 @@ df_pm10 <- df_pm10 %>%
             airqualityengland(MossPark, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10"))
 
 # 12 months up to 3 calendar years ago Q3
-#df_pm10 <- df_pm10 %>% 
-#  bind_rows(airqualityengland(A56, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "PM10"),
-#            airqualityengland(MossPark, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "PM10"))
+df_pm10 <- df_pm10 %>% 
+  bind_rows(airqualityengland(A56, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "PM10"),
+            airqualityengland(MossPark, paste0(max_year-4, "-10-01"), paste0(max_year-3, "-09-30"), "PM10"))
 
 # 12 months up to 3 calendar years ago Q2
-#df_pm10 <- df_pm10 %>% 
-#  bind_rows(airqualityengland(A56, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "PM10"),
-#            airqualityengland(Wellacre, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "PM10"))
+df_pm10 <- df_pm10 %>% 
+  bind_rows(airqualityengland(A56, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "PM10"),
+            airqualityengland(MossPark, paste0(max_year-4, "-07-01"), paste0(max_year-3, "-06-30"), "PM10"))
 
 # 12 months up to 3 calendar years ago Q1
 #df_pm10 <- df_pm10 %>% 

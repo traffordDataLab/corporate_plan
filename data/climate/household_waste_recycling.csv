@@ -186,6 +186,23 @@ E06000034,Thurrock,2020/21,"Household waste sent for reuse, recycling or compost
 E08000009,Trafford,2020/21,"Household waste sent for reuse, recycling or composting",Percentage,Waste,53.3
 E06000007,Warrington,2020/21,"Household waste sent for reuse, recycling or composting",Percentage,Waste,44.4
 E06000014,York,2020/21,"Household waste sent for reuse, recycling or composting",Percentage,Waste,44.1
+E06000055,Bedford,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,37
+E08000002,Bury,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,53.8
+E06000050,Cheshire West and Chester,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,57.6
+E06000015,Derby,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,37.3
+E92000001,England,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,42.5
+E06000035,Medway,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,40.5
+E06000042,Milton Keynes,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,51.9
+E06000031,Peterborough,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,38.9
+E06000038,Reading,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,51.5
+E08000029,Solihull,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,35.2
+E06000025,South Gloucestershire,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,59.9
+E08000007,Stockport,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,60.3
+E06000030,Swindon,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,36.5
+E06000034,Thurrock,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,28.7
+E08000009,Trafford,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,58.8
+E06000007,Warrington,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,42.1
+E06000014,York,2021/22,"Household waste sent for reuse, recycling or composting",Percentage,Waste,43.2
 E06000055,Bedford,2014/15,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,28341
 E08000002,Bury,2014/15,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,30479
 E06000050,Cheshire West and Chester,2014/15,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,94926
@@ -298,3 +315,19 @@ E06000034,Thurrock,2020/21,"Household waste sent for reuse, recycling or compost
 E08000009,Trafford,2020/21,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,46040
 E06000007,Warrington,2020/21,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,43237
 E06000014,York,2020/21,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,35830
+E06000055,Bedford,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,28511
+E08000002,Bury,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,34664
+E06000050,Cheshire West and Chester,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,98357
+E06000015,Derby,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,38454
+E06000035,Medway,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,49911
+E06000042,Milton Keynes,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,62984
+E06000031,Peterborough,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,33461
+E06000038,Reading,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,28993
+E08000029,Solihull,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,32102
+E06000025,South Gloucestershire,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,73355
+E08000007,Stockport,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,62851
+E06000030,Swindon,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,34901
+E06000034,Thurrock,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,20454
+E08000009,Trafford,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,47469
+E06000007,Warrington,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,39753
+E06000014,York,2021/22,"Household waste sent for reuse, recycling or composting",Frequency,Tonnes,35900
