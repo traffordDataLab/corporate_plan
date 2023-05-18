@@ -74,10 +74,9 @@ output$obese_reception_plot <- renderggiraph({
     gg <- ggplot(data = filter(obese_reception, area_type %in% c("District", "UA")),
                  aes(x = period, y = value)) +
       stat_boxplot(geom = "errorbar", colour = "#C9C9C9", width = 0.2) +
-      geom_boxplot_interactive(aes(tooltip = value),
-                               colour = "#C9C9C9",
-                               outlier.shape = 21, outlier.colour = "#C9C9C9", outlier.size = 1,
-                               fatten = NULL) +
+      geom_boxplot_interactive(aes(tooltip = value), colour = "#C9C9C9",
+                               outlier.shape = 21, outlier.colour = "#C9C9C9",
+                               outlier.size = 1, fatten = NULL) +
       geom_point_interactive(data = filter(obese_reception, area_name == "Trafford"),
                              aes(x = period, y = value, fill = compared_to_England,
                                  tooltip =
@@ -112,11 +111,11 @@ output$obese_reception_plot <- renderggiraph({
   } else if (input$obese_reception_selection == "Deprivation"){
     gg <-
       ggplot(obese_r_quintiles_plot, aes(x = inequality, y = value, fill = area_name, group = area_name)) +
-      geom_bar_interactive(aes(tooltip =
+      geom_col_interactive(aes(tooltip =
                                  paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                         '<span class="plotTooltipMain">', area_name, '</span><br />',
                                         '<span class="plotTooltipPeriod">', inequality, '</span><br />')), 
-                           stat = "identity", width = 0.5, position = position_dodge(width=0.6)) +
+                          width = 0.5, position = position_dodge(width=0.6)) +
       scale_fill_manual(
         values = c("Trafford" = plot_colour_trafford, "Similar Authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
       
