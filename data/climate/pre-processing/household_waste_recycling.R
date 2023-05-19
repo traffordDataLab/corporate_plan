@@ -93,7 +93,7 @@ df_non_recycling_tonnes <- df_raw_tonnes %>%
   select(area_code,
          area_name,
          period = `Financial Year`,
-         value = `Household - waste not sent for recycling (tonnes)`) %>%
+         value = `Household - regular collection (not recycled) (tonnes)`) %>%
   mutate(indicator = "Household waste not sent for reuse, recycling or composting",
          measure = "Frequency",
          unit = "Tonnes",

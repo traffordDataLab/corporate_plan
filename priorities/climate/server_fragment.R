@@ -372,7 +372,7 @@ output$household_waste_not_recycled_plot <- renderggiraph({
            x = NULL,
            y = "Tonnes",
            fill = NULL,
-           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2021/22. Following a sharp increase in 2020/21 for both Trafford and its comparator, Trafford's tonnage in 2021/22 (33,233) reduced by a greater amount than the average of similar authorities (52,652) compared to the previous year.") +
+           alt = "Line chart showing Trafford has had a lower tonnage of household waste that was collected but not sent for recycling compared to the average of similar authorities between 2014/15 and 2021/22. Following a sharp increase in 2020/21 for both Trafford and its comparator, Trafford's tonnage in 2021/22 (27,415) reduced by a greater amount than the average of similar authorities (40,285.1) compared to the previous year.") +
       theme_x()
   
   }
