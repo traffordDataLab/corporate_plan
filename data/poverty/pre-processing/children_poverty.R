@@ -12,15 +12,20 @@ cssn <- read_csv("../../cssn.csv") %>%
   bind_rows(data.frame (area_code  = c("E08000009","E92000001"),
                         for_query = c("UTLA_TO_REGION_NI:E08000009","COUNTRY_TO_UK:E92000001")))
 
-# Source:Mid-2020 population estimates for local authorities in England
+# Source:Mid-2021 population estimates for local authorities in England
+# Source: Census 2021 for wards
 # URL: https://www.nomisweb.co.uk/datasets/pestsyoala
 # Licence: Open Government Licence v3.0
 
-pop_ward <- read_csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_2010_1.data.csv?geography=1656750701...1656750715,1656750717,1656750716,1656750718...1656750721&date=latest&gender=0&c_age=201&measures=20100") %>%
+pop_ward <- read_csv("https://www.nomisweb.co.uk/api/v01/dataset/NM_2027_1.data.csv?date=latest&geography=641728593...641728607,641728609,641728608,641728610...641728613&c2021_age_102=1001...1003&measures=20100") %>%
   select(area_code = GEOGRAPHY_CODE,
          area_name = GEOGRAPHY_NAME,
          pop0_15 = OBS_VALUE,
-         year_pop = DATE)
+         year_pop = DATE) %>%
+  group_by(area_code,area_name,year_pop) %>%
+  summarise(pop0_15 = sum(pop0_15)) %>%
+  ungroup() %>%
+  mutate(area_name = sub(" \\(.*", "", area_name))
 
 population <- read_csv(paste0("https://www.nomisweb.co.uk/api/v01/dataset/NM_2002_1.data.csv?geography=",paste(c(cssn$area_code), collapse = ','),"&date=latestMINUS6-latest&gender=0&c_age=201&measures=20100")) %>%
   select(area_code = GEOGRAPHY_CODE,

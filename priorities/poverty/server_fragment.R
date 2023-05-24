@@ -336,7 +336,7 @@ output$children_poverty_plot <- renderggiraph({
       ) +
       labs(
         title = "Children in relative low income families by ward",
-        subtitle = "2020/21",
+        subtitle = "2021/22",
         caption = "Source: DWP",
         x = NULL,
         y = NULL,
