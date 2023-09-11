@@ -25,9 +25,9 @@ download.file("https://assets.publishing.service.gov.uk/government/uploads/syste
 # LibreOffice needs to be installed and the path to the application is different depending on the OS.
 # For Windows try: libreoffice --headless --convert-to xlsx veh0105.ods.
 # The following works on Mac and should work on similar *nix-based OSes.
-cd data/climate/pre-processing/
-  /Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to xlsx veh0105.ods
-/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to xlsx veh0132.ods
+#cd data/climate/pre-processing/
+#  /Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to xlsx veh0105.ods
+#/Applications/LibreOffice.app/Contents/MacOS/soffice --headless --convert-to xlsx veh0132.ods
 
 # Cleanup the downloaded ODS
 if (file.exists("veh0105.ods")) file.remove("veh0105.ods")
