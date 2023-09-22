@@ -2,7 +2,7 @@
 
 Note: the following links open in a new window.
 
-Source: Dataset TRA8901: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1107032/tra8901.ods" target="_blank">Motor vehicle traffic (vehicle miles) by local authority in Great Britain</a> from <a href="https://www.gov.uk/government/statistical-data-sets/road-traffic-statistics-tra#traffic-by-local-authority-tra89" target="_blank">Department for Transport</a>.
+Source: Dataset TRA8901: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1169847/tra8901.ods" target="_blank">Motor vehicle traffic (vehicle miles) by local authority in Great Britain</a> from <a href="https://www.gov.uk/government/statistical-data-sets/road-traffic-statistics-tra#traffic-by-local-authority-tra89" target="_blank">Department for Transport</a>.
 
 England LA Average comparator is the mean value of the estimated miles travelled attributed to each Local Authority in England, provided within the source dataset.
 
