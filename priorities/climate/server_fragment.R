@@ -509,7 +509,7 @@ output$borough_co2_emissions_plot <- renderggiraph({
     scale_y_continuous(limits = c(0, NA), labels = scales::label_comma()) +
     labs(title = expression(paste("Territorial Carbon Dioxide (", CO[2], ") emission estimates")),
          subtitle = NULL,
-         caption = "Source: BEIS",
+         caption = "Source: DESNZ",
          x = NULL,
          y = expression(paste("Kilotonnes (kt ", CO[2], "e)")),
          fill = NULL,
