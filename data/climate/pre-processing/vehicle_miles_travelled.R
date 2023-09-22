@@ -1,9 +1,9 @@
 # Vehicle miles travelled on roads.
-# Created: 2022-01-07.  Last updated: 2022-10-10
+# Created: 2022-01-07.  Last updated: 2023-09-22.  Data: July 2023
 
 # Source: Department for Transport (DfT)
 #         https://www.gov.uk/government/statistical-data-sets/road-traffic-statistics-tra#traffic-by-local-authority-tra89
-#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1144655/tra8901.ods
+#         https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1169847/tra8901.ods
 
 
 # Load required packages ---------------------------
@@ -11,7 +11,7 @@ library(tidyverse); library(readODS); library(httr)
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1144655/tra8901.ods",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1169847/tra8901.ods",
     write_disk(tmp))
 
 # Setup objects ---------------------------
@@ -25,20 +25,20 @@ df_raw <- read_ods(tmp, sheet = "TRA8901", col_names = TRUE, col_types = NA, ski
 # Tidy the data ---------------------------
 df_vehicle_miles <- df_raw %>%
   # renaming columns via select for ease
-  select(area_code = `Local Authority Code`,
-         area_name = `Local Authority`,
-         `2010` = `2010[r]`, # The additional "[r]" refers to the data being revised following the "minor road review".
-         `2011` = `2011[r]`,
-         `2012` = `2012[r]`,
-         `2013` = `2013[r]`,
-         `2014` = `2014[r]`,
-         `2015` = `2015[r]`,
-         `2016` = `2016[r]`,
-         `2017` = `2017[r]`,
-         `2018` = `2018 [r]`,
-         `2019` = `2019 [r]`,
-         `2020` = `2020 [note 3] [r]`, # The addition [note 3] refers to the figures being affected by COVID-19
-         `2021` = `2021 [note 3]`) %>%
+  select(area_code = `Local.Authority.or.Region.Code`,
+         area_name = `Local.Authority`,
+         `2011` = `X2011`,
+         `2012` = `X2012`,
+         `2013` = `X2013`,
+         `2014` = `X2014`,
+         `2015` = `X2015`,
+         `2016` = `X2016`,
+         `2017` = `X2017`,
+         `2018` = `X2018`,
+         `2019` = `X2019`,
+         `2020` = `X2020..note.7.`, # The addition ..note.7 refers to the figures being affected by COVID-19
+         `2021` = `X2021..note.7.`,
+         `2022` = `X2022..note.7.`) %>%
   # Filter out rows with area_codes not in the format "E06xxxxxx", "E08xxxxxx", "E09xxxxxx" or "E10xxxxxx" as these are region aggregations
   filter(str_detect(area_code, pattern = "E06|E08|E09|E10[0-9]{6}")) %>%
   # convert to 'tidy' data by transposing the dataset to long format
