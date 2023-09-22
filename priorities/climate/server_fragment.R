@@ -419,8 +419,7 @@ calc10YearProportionEPC <- function(period_from, period_to) {
 }
 
 # Get the data for the 10 year periods
-df_epc <- bind_rows(calc10YearProportionEPC("2010-09-30", "2020-06-30"),
-                    calc10YearProportionEPC("2010-12-31", "2020-09-30"),
+df_epc <- bind_rows(calc10YearProportionEPC("2010-12-31", "2020-09-30"),
                     calc10YearProportionEPC("2011-03-31", "2020-12-31"),
                     calc10YearProportionEPC("2011-06-30", "2021-03-31"),
                     calc10YearProportionEPC("2011-09-30", "2021-06-30"),
@@ -430,7 +429,8 @@ df_epc <- bind_rows(calc10YearProportionEPC("2010-09-30", "2020-06-30"),
                     calc10YearProportionEPC("2012-09-30", "2022-06-30"),
                     calc10YearProportionEPC("2012-12-31", "2022-09-30"),
                     calc10YearProportionEPC("2013-03-31", "2022-12-31"),
-                    calc10YearProportionEPC("2013-06-30", "2023-03-31"))
+                    calc10YearProportionEPC("2013-06-30", "2023-03-31"),
+                    calc10YearProportionEPC("2013-09-30", "2023-06-30"))
 
 # Create the average of similar LAs
 df_epc <- df_epc %>%
@@ -460,7 +460,7 @@ output$domestic_epc_plot <- renderggiraph({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (10 percentage points fewer) or England (7 percentage points fewer). The latest time period available, June 2013 to March 2023 shows 35.4% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 42.7% for England and 45.3% for the average of similar authorities.") +
+         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (approximately 10 percentage points fewer) or England (approximately 7 percentage points fewer). The latest time period available, September 2013 to June 2023 shows 35.7% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 43.4% for England and 45.9% for the average of similar authorities.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
