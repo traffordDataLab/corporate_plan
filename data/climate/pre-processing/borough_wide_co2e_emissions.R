@@ -1,10 +1,11 @@
 # Borough wide CO2e emissions (Full set data)
 # Created: 2022-01-27
-# Latest data: 2022-06-30
-# Next publication: 2023-06
+# Latest data: 2023-07-06
+# Next publication: 2024-06
 
-# Source: Department for Business, Energy & Industrial Strategy
-#         https://www.gov.uk/government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-national-statistics-2005-to-2020
+# Source: Department for Energy Security and Net Zero
+#         https://www.gov.uk/government/collections/uk-local-authority-and-regional-greenhouse-gas-emissions-national-statistics
+#         https://www.gov.uk/government/statistics/uk-local-authority-and-regional-greenhouse-gas-emissions-national-statistics-2005-to-2021
 
 # Load required packages ---------------------------
 library(tidyverse) ; library(httr) ; library(readxl)
@@ -16,7 +17,7 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".xlsx")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1086980/UK-local-authority-ghg-emissions-2020.xlsx",
+GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1168130/2005-21-uk-local-authority-ghg-emissions-update-060723.xlsx",
     write_disk(tmp))
 
 # Extract the raw data ---------------------------

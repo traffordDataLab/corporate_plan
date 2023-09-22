@@ -513,7 +513,7 @@ output$borough_co2_emissions_plot <- renderggiraph({
          x = NULL,
          y = expression(paste("Kilotonnes (kt ", CO[2], "e)")),
          fill = NULL,
-         alt = "Line chart showing that territorial carbon dioxide (CO2) emissions in Trafford were higher than the average for similar authorities between 2010 and 2020. Although the amount has been decreasing since 2012, the trend has been very similar to the average for similar authorities, and since 2014 they have been decreasing at the same rate. The latest data for 2020 shows 1,369.5 kilotonnes of CO2 emitted within the borough of Trafford compared to the similar authorities average of 1,103.2 kilotonnes.") +
+         alt = "Line chart showing that territorial carbon dioxide (CO2) emissions in Trafford were higher than the average for similar authorities between 2010 and 2021. Although the amount has been decreasing since 2012, the trend has been very similar to the average for similar authorities. In 2020, emissions for both Trafford and the average of similar local authorities dropped sharply, corresponding with the start of the coronavirus pandemic. However, the latest data for 2021 shows an increase again with an estimated 1,442.1 kilotonnes of CO2 emitted within the borough of Trafford compared to the similar authorities average of 1,163.4 kilotonnes.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
