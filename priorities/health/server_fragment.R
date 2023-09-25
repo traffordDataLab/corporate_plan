@@ -42,7 +42,7 @@ obese_r_quintiles_plot <- obese_reception_quintiles %>%
 obese_reception_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
   left_join(obese_r %>% filter(area_type == "Electoral Wards") %>% select(area_code, indicator, value), by = "area_code")
 
-output$obese_reception_plot <- renderggiraph({
+output$obese_reception_plot <- renderGirafe({
   
   if (input$obese_reception_selection == "Trend") {
     
@@ -178,7 +178,7 @@ output$obese_reception_plot <- renderggiraph({
 
 output$obese_reception_box <- renderUI({
   withSpinner(
-    ggiraphOutput("obese_reception_plot", height = "inherit"),
+    girafeOutput("obese_reception_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -228,7 +228,7 @@ obese_year6_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
   left_join(obese_y6 %>% filter(area_type == "Electoral Wards") %>% select(area_code, indicator, value), by = "area_code")
 
 
-output$obese_year6_plot <- renderggiraph({
+output$obese_year6_plot <- renderGirafe({
   
   if (input$obese_year6_selection == "Trend") {
     
@@ -363,7 +363,7 @@ output$obese_year6_plot <- renderggiraph({
 
 output$obese_year6_box <- renderUI({
   withSpinner(
-    ggiraphOutput("obese_year6_plot", height = "inherit"),
+    girafeOutput("obese_year6_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -393,7 +393,7 @@ overweight_adult_cipfa_mean <- overweight_adult %>%
 overweight_adult_trend <- bind_rows(overweight_adult %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), overweight_adult_cipfa_mean)
 
 
-output$overweight_adult_plot <- renderggiraph({
+output$overweight_adult_plot <- renderGirafe({
   
   if (input$overweight_adult_selection == "Trend") {
     
@@ -473,7 +473,7 @@ output$overweight_adult_plot <- renderggiraph({
 
 output$overweight_adult_box <- renderUI({
   withSpinner(
-    ggiraphOutput("overweight_adult_plot", height = "inherit"),
+    girafeOutput("overweight_adult_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -500,7 +500,7 @@ active_adults_cipfa_mean <- active_adults %>%
 active_adults_trend <- bind_rows(active_adults %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), active_adults_cipfa_mean)
 
 
-output$active_adults_plot <- renderggiraph({
+output$active_adults_plot <- renderGirafe({
   
   if (input$active_adults_selection == "Trend") {
     
@@ -580,7 +580,7 @@ output$active_adults_plot <- renderggiraph({
 
 output$active_adults_box <- renderUI({
   withSpinner(
-    ggiraphOutput("active_adults_plot", height = "inherit"),
+    girafeOutput("active_adults_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -606,7 +606,7 @@ inactive_adults_cipfa_mean <- inactive_adults %>%
 inactive_adults_trend <- bind_rows(inactive_adults %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), inactive_adults_cipfa_mean)
 
 
-output$inactive_adults_plot <- renderggiraph({
+output$inactive_adults_plot <- renderGirafe({
   
   if (input$inactive_adults_selection == "Trend") {
     
@@ -686,7 +686,7 @@ output$inactive_adults_plot <- renderggiraph({
 
 output$inactive_adults_box <- renderUI({
   withSpinner(
-    ggiraphOutput("inactive_adults_plot", height = "inherit"),
+    girafeOutput("inactive_adults_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -712,7 +712,7 @@ fairly_active_adults_cipfa_mean <- fairly_active_adults %>%
 fairly_active_adults_trend <- bind_rows(fairly_active_adults %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), fairly_active_adults_cipfa_mean)
 
 
-output$fairly_active_adults_plot <- renderggiraph({
+output$fairly_active_adults_plot <- renderGirafe({
   
   if (input$fairly_active_adults_selection == "Trend") {
     
@@ -751,7 +751,7 @@ output$fairly_active_adults_plot <- renderggiraph({
 
 output$fairly_active_adults_box <- renderUI({
   withSpinner(
-    ggiraphOutput("fairly_active_adults_plot", height = "inherit"),
+    girafeOutput("fairly_active_adults_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -778,7 +778,7 @@ active_children_cssn_mean <- active_children %>%
 active_children_trend <- bind_rows(active_children %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), active_children_cssn_mean)
 
 
-output$active_children_plot <- renderggiraph({
+output$active_children_plot <- renderGirafe({
   
   if (input$active_children_selection == "Trend") {
     
@@ -858,7 +858,7 @@ output$active_children_plot <- renderggiraph({
 
 output$active_children_box <- renderUI({
   withSpinner(
-    ggiraphOutput("active_children_plot", height = "inherit"),
+    girafeOutput("active_children_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -887,7 +887,7 @@ mortality_rate_persons <- mortality_rate %>%
   filter(unit == "Persons")
 
 
-output$mortality_rate_plot <- renderggiraph({
+output$mortality_rate_plot <- renderGirafe({
   
   if (input$mortality_rate_selection == "Trend") {
     
@@ -994,7 +994,7 @@ output$mortality_rate_plot <- renderggiraph({
 
 output$mortality_rate_box <- renderUI({
   withSpinner(
-    ggiraphOutput("mortality_rate_plot", height = "inherit"),
+    girafeOutput("mortality_rate_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -1020,7 +1020,7 @@ healthy_life_expectancy_cipfa_mean <- healthy_life_expectancy %>%
 healthy_life_expectancy_trend <- bind_rows(healthy_life_expectancy %>% select(area_name, period,value,inequality) %>% filter(area_name %in% c("Trafford", "England")), healthy_life_expectancy_cipfa_mean)
 
 
-output$healthy_life_expectancy_plot <- renderggiraph({
+output$healthy_life_expectancy_plot <- renderGirafe({
   
   if (input$healthy_life_expectancy_selection == "Sex") {
     
@@ -1102,7 +1102,7 @@ output$healthy_life_expectancy_plot <- renderggiraph({
 
 output$healthy_life_expectancy_box <- renderUI({
   withSpinner(
-    ggiraphOutput("healthy_life_expectancy_plot", height = "inherit"),
+    girafeOutput("healthy_life_expectancy_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -1128,7 +1128,7 @@ inequality_life_expectancy_cipfa_mean <- inequality_life_expectancy %>%
 inequality_life_expectancy_trend <- bind_rows(inequality_life_expectancy %>% select(area_name, period,value,inequality) %>% filter(area_name %in% c("Trafford", "England")), inequality_life_expectancy_cipfa_mean)
 
 
-output$inequality_life_expectancy_plot <- renderggiraph({
+output$inequality_life_expectancy_plot <- renderGirafe({
   
   if (input$inequality_life_expectancy_selection == "Sex") {
     
@@ -1201,7 +1201,7 @@ output$inequality_life_expectancy_plot <- renderggiraph({
 
 output$inequality_life_expectancy_box <- renderUI({
   withSpinner(
-    ggiraphOutput("inequality_life_expectancy_plot", height = "inherit"),
+    girafeOutput("inequality_life_expectancy_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -1227,7 +1227,7 @@ children_dental_decay_cssn_mean <- children_dental_decay %>%
 children_dental_decay_trend <- bind_rows(children_dental_decay %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), children_dental_decay_cssn_mean)
 
 
-output$children_dental_decay_plot <- renderggiraph({
+output$children_dental_decay_plot <- renderGirafe({
   
   if (input$children_dental_decay_selection == "Trend") {
     
@@ -1307,7 +1307,7 @@ output$children_dental_decay_plot <- renderggiraph({
 
 output$children_dental_decay_box <- renderUI({
   withSpinner(
-    ggiraphOutput("children_dental_decay_plot", height = "inherit"),
+    girafeOutput("children_dental_decay_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -1333,7 +1333,7 @@ adults_smoking_manual_cipfa_mean <- adults_smoking_manual %>%
 adults_smoking_manual_trend <- bind_rows(adults_smoking_manual %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), adults_smoking_manual_cipfa_mean)
 
 
-output$adults_smoking_manual_plot <- renderggiraph({
+output$adults_smoking_manual_plot <- renderGirafe({
   
   if (input$adults_smoking_manual_selection == "Trend") {
     
@@ -1414,7 +1414,7 @@ output$adults_smoking_manual_plot <- renderggiraph({
 
 output$adults_smoking_manual_box <- renderUI({
   withSpinner(
-    ggiraphOutput("adults_smoking_manual_plot", height = "inherit"),
+    girafeOutput("adults_smoking_manual_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -1440,7 +1440,7 @@ adults_depression_cipfa_mean <- adults_depression %>%
 adults_depression_trend <- bind_rows(adults_depression %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), adults_depression_cipfa_mean)
 
 
-output$adults_depression_plot <- renderggiraph({
+output$adults_depression_plot <- renderGirafe({
   
   if (input$adults_depression_selection == "Trend") {
     
@@ -1513,7 +1513,7 @@ output$adults_depression_plot <- renderggiraph({
 
 output$adults_depression_box <- renderUI({
   withSpinner(
-    ggiraphOutput("adults_depression_plot", height = "inherit"),
+    girafeOutput("adults_depression_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,

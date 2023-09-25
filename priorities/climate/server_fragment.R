@@ -11,7 +11,7 @@ df_licensed_vehicles <- read_csv("data/climate/licensed_vehicles.csv") %>%
   summarise(value = round(mean(value_all_vehicles)))
 
 # Plot
-output$licensed_vehicles_plot <- renderggiraph({
+output$licensed_vehicles_plot <- renderGirafe({
   gg <- ggplot(df_licensed_vehicles,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
                geom_line(size = 1) +
@@ -45,7 +45,7 @@ output$licensed_vehicles_plot <- renderggiraph({
 # Render the output in the ui object
 output$licensed_vehicles_box <- renderUI({
   withSpinner(
-    ggiraphOutput("licensed_vehicles_plot", height = "inherit"),
+    girafeOutput("licensed_vehicles_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -67,7 +67,7 @@ df_licensed_ulev <- read_csv("data/climate/licensed_vehicles.csv") %>%
   summarise(value = round(mean(value), 2))
 
 # Plot
-output$licensed_ulev_plot <- renderggiraph({
+output$licensed_ulev_plot <- renderGirafe({
   gg <- ggplot(df_licensed_ulev,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -101,7 +101,7 @@ output$licensed_ulev_plot <- renderggiraph({
 # Render the output in the ui object
 output$licensed_ulev_box <- renderUI({
   withSpinner(
-    ggiraphOutput("licensed_ulev_plot", height = "inherit"),
+    girafeOutput("licensed_ulev_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -122,7 +122,7 @@ df_vehicle_miles <- read_csv("data/climate/vehicle_miles_travelled.csv") %>%
   summarise(value = round(mean(value)))
 
 # Plot
-output$vehicle_miles_plot <- renderggiraph({
+output$vehicle_miles_plot <- renderGirafe({
   gg <- ggplot(df_vehicle_miles,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -156,7 +156,7 @@ output$vehicle_miles_plot <- renderggiraph({
 # Render the output in the ui object
 output$vehicle_miles_box <- renderUI({
   withSpinner(
-    ggiraphOutput("vehicle_miles_plot", height = "inherit"),
+    girafeOutput("vehicle_miles_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -176,7 +176,7 @@ df_ev_charging_points_rate <- read_csv("data/climate/electric_vehicle_charging_p
   summarise(value = round(mean(value), 1))
 
 # Plot
-output$ev_charging_points_plot <- renderggiraph({
+output$ev_charging_points_plot <- renderGirafe({
   gg <- ggplot(df_ev_charging_points_rate,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -210,7 +210,7 @@ output$ev_charging_points_plot <- renderggiraph({
 # Render the output in the ui object
 output$ev_charging_points_box <- renderUI({
   withSpinner(
-    ggiraphOutput("ev_charging_points_plot", height = "inherit"),
+    girafeOutput("ev_charging_points_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -237,7 +237,7 @@ df_household_waste_recycling_tonnes <- read_csv("data/climate/household_waste_re
   summarise(value = round(mean(value), digits = 1))
 
 # Plot
-output$household_waste_recycling_plot <- renderggiraph({
+output$household_waste_recycling_plot <- renderGirafe({
   
   if (input$household_waste_recycling_selection == "% Trend") {
   
@@ -299,7 +299,7 @@ output$household_waste_recycling_plot <- renderggiraph({
 # Render the output in the ui object
 output$household_waste_recycling_box <- renderUI({
   withSpinner(
-    ggiraphOutput("household_waste_recycling_plot", height = "inherit"),
+    girafeOutput("household_waste_recycling_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -327,7 +327,7 @@ df_household_waste_not_recycled_tonnes <- read_csv("data/climate/household_waste
 
 
 # Plot
-output$household_waste_not_recycled_plot <- renderggiraph({
+output$household_waste_not_recycled_plot <- renderGirafe({
   
   if (input$household_waste_not_recycled_selection == "% Trend") {
   
@@ -389,7 +389,7 @@ output$household_waste_not_recycled_plot <- renderggiraph({
 # Render the output in the ui object
 output$household_waste_not_recycled_box <- renderUI({
   withSpinner(
-    ggiraphOutput("household_waste_not_recycled_plot", height = "inherit"),
+    girafeOutput("household_waste_not_recycled_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -441,7 +441,7 @@ df_epc <- df_epc %>%
   summarise(value = round(mean(value), digits = 1))
 
 # Plot
-output$domestic_epc_plot <- renderggiraph({
+output$domestic_epc_plot <- renderGirafe({
   gg <- ggplot(df_epc,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -475,7 +475,7 @@ output$domestic_epc_plot <- renderggiraph({
 # Render the output in the ui object
 output$domestic_epc_box <- renderUI({
   withSpinner(
-    ggiraphOutput("domestic_epc_plot", height = "inherit"),
+    girafeOutput("domestic_epc_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -494,7 +494,7 @@ df_borough_co2_emissions <- read_csv("data/climate/borough_wide_co2_emissions.cs
   summarise(value = round(mean(value), digits = 1))
 
 # Plot
-output$borough_co2_emissions_plot <- renderggiraph({
+output$borough_co2_emissions_plot <- renderGirafe({
   gg <- ggplot(df_borough_co2_emissions,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -528,7 +528,7 @@ output$borough_co2_emissions_plot <- renderggiraph({
 # Render the output in the ui object
 output$borough_co2_emissions_box <- renderUI({
   withSpinner(
-    ggiraphOutput("borough_co2_emissions_plot", height = "inherit"),
+    girafeOutput("borough_co2_emissions_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -544,7 +544,7 @@ df_no2_concentration <- read_csv("data/climate/no2_concentration.csv") %>%
   mutate(period = as.character(period))
 
 # Plot
-output$no2_concentration_plot <- renderggiraph({
+output$no2_concentration_plot <- renderGirafe({
   gg <- ggplot(df_no2_concentration,
                aes(x = period, y = value, colour = station_name, fill = station_name, group = station_name)) +
     geom_line(size = 1) +
@@ -585,7 +585,7 @@ output$no2_concentration_plot <- renderggiraph({
 # Render the output in the ui object
 output$no2_concentration_box <- renderUI({
   withSpinner(
-    ggiraphOutput("no2_concentration_plot", height = "inherit"),
+    girafeOutput("no2_concentration_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -601,7 +601,7 @@ df_pm10_concentration <- read_csv("data/climate/pm10_concentration.csv") %>%
   mutate(period = as.character(period))
 
 # Plot
-output$pm10_concentration_plot <- renderggiraph({
+output$pm10_concentration_plot <- renderGirafe({
   gg <- ggplot(df_pm10_concentration,
                aes(x = period, y = value, colour = station_name, fill = station_name, group = station_name)) +
     geom_line(size = 1) +
@@ -642,7 +642,7 @@ output$pm10_concentration_plot <- renderggiraph({
 # Render the output in the ui object
 output$pm10_concentration_box <- renderUI({
   withSpinner(
-    ggiraphOutput("pm10_concentration_plot", height = "inherit"),
+    girafeOutput("pm10_concentration_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -662,7 +662,7 @@ df_adults_walk_cycle <- read_csv("data/climate/adults_walking_or_cycling.csv") %
   summarise(value = round(mean(value), 1))
 
 # Plot
-output$adults_walk_cycle_plot <- renderggiraph({
+output$adults_walk_cycle_plot <- renderGirafe({
   gg <- ggplot(df_adults_walk_cycle,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -696,7 +696,7 @@ output$adults_walk_cycle_plot <- renderggiraph({
 # Render the output in the ui object
 output$adults_walk_cycle_box <- renderUI({
   withSpinner(
-    ggiraphOutput("adults_walk_cycle_plot", height = "inherit"),
+    girafeOutput("adults_walk_cycle_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,

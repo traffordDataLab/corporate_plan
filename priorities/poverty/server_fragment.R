@@ -22,7 +22,7 @@ universal_credit_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
 
 
 # Plot
-output$universal_credit_plot <- renderggiraph({
+output$universal_credit_plot <- renderGirafe({
   
   if (input$universal_credit_selection == "Trend") {
     
@@ -96,7 +96,7 @@ output$universal_credit_plot <- renderggiraph({
 # Render the output in the ui object
 output$universal_credit_box <- renderUI({
   withSpinner(
-    ggiraphOutput("universal_credit_plot", height = "inherit"),
+    girafeOutput("universal_credit_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -127,7 +127,7 @@ claimant_count_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
   left_join(claimant_count %>% filter(grepl("E05", area_code)) %>% select(area_code, indicator, value), by = "area_code")
 
 # Plot
-output$claimant_count_plot <- renderggiraph({
+output$claimant_count_plot <- renderGirafe({
   
   if (input$claimant_count_selection == "Trend") {
     
@@ -201,7 +201,7 @@ output$claimant_count_plot <- renderggiraph({
 # Render the output in the ui object
 output$claimant_count_box <- renderUI({
   withSpinner(
-    ggiraphOutput("claimant_count_plot", height = "inherit"),
+    girafeOutput("claimant_count_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -217,14 +217,14 @@ output$claimant_count_box <- renderUI({
 
 
 # Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
+#output$[INDICATOR NAME]_plot <- renderGirafe({
 
 #})
 
 # Render the output in the ui object
 # output$[INDICATOR NAME]_box <- renderUI({
 #   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
+#     girafeOutput("[INDICATOR NAME]_plot", height = "inherit"),
 #     type = 4,
 #     color = plot_colour_spinner,
 #     size = 1,
@@ -259,7 +259,7 @@ children_poverty_wards <- st_read("data/geospatial/electoral_ward.geojson") %>%
 
 
 # Plot
-output$children_poverty_plot <- renderggiraph({
+output$children_poverty_plot <- renderGirafe({
   
   if (input$children_poverty_selection == "Rel. Trend") {
     
@@ -361,7 +361,7 @@ output$children_poverty_plot <- renderggiraph({
 # Render the output in the ui object
 output$children_poverty_box <- renderUI({
   withSpinner(
-    ggiraphOutput("children_poverty_plot", height = "inherit"),
+    girafeOutput("children_poverty_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -381,7 +381,7 @@ df_neet <- read_csv("data/poverty/neet.csv") %>%
   summarise(value = round(mean(value), digits = 1))
 
 # Plot
-output$neet_plot <- renderggiraph({
+output$neet_plot <- renderGirafe({
   
   if (input$neet_selection == "Trend") {
     
@@ -443,7 +443,7 @@ output$neet_plot <- renderggiraph({
 # Render the output in the ui object
 output$neet_box <- renderUI({
   withSpinner(
-    ggiraphOutput("neet_plot", height = "inherit"),
+    girafeOutput("neet_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -458,14 +458,14 @@ output$neet_box <- renderUI({
 
 
 # Plot
-#output$[INDICATOR NAME]_plot <- renderggiraph({
+#output$[INDICATOR NAME]_plot <- renderGirafe({
 
 #})
 
 # Render the output in the ui object
 # output$[INDICATOR NAME]_box <- renderUI({
 #   withSpinner(
-#     ggiraphOutput("[INDICATOR NAME]_plot", height = "inherit"),
+#     girafeOutput("[INDICATOR NAME]_plot", height = "inherit"),
 #     type = 4,
 #     color = plot_colour_spinner,
 #     size = 1,
@@ -492,7 +492,7 @@ fuel_poverty_cipfa_mean <- fuel_poverty %>%
 fuel_poverty_trend <- bind_rows(fuel_poverty %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), fuel_poverty_cipfa_mean) 
 
 # Plot
-output$fuel_poverty_plot <- renderggiraph({
+output$fuel_poverty_plot <- renderGirafe({
   
   if (input$fuel_poverty_selection == "Trend") {
     
@@ -533,7 +533,7 @@ output$fuel_poverty_plot <- renderggiraph({
 # Render the output in the ui object
 output$fuel_poverty_box <- renderUI({
   withSpinner(
-    ggiraphOutput("fuel_poverty_plot", height = "inherit"),
+    girafeOutput("fuel_poverty_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -563,7 +563,7 @@ employment_rate_trend <- bind_rows(employment_rate %>% select(area_name, period,
   mutate(period = str_sub(period, start = 10))
 
 # Plot
-output$employment_rate_plot <- renderggiraph({
+output$employment_rate_plot <- renderGirafe({
   
   if (input$employment_rate_selection == "Trend") {
     
@@ -604,7 +604,7 @@ output$employment_rate_plot <- renderggiraph({
 # Render the output in the ui object
 output$employment_rate_box <- renderUI({
   withSpinner(
-    ggiraphOutput("employment_rate_plot", height = "inherit"),
+    girafeOutput("employment_rate_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -624,7 +624,7 @@ df_real_living_wage <- read_csv("data/poverty/real_living_wage.csv") %>%
   summarise(value = round(mean(value), 1))
 
 # Plot
-output$real_living_wage_plot <- renderggiraph({
+output$real_living_wage_plot <- renderGirafe({
   gg <- ggplot(df_real_living_wage,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -658,7 +658,7 @@ output$real_living_wage_plot <- renderggiraph({
 # Render the output in the ui object
 output$real_living_wage_box <- renderUI({
   withSpinner(
-    ggiraphOutput("real_living_wage_plot", height = "inherit"),
+    girafeOutput("real_living_wage_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -678,7 +678,7 @@ df_school_readiness <- read_csv("data/poverty/school_readiness.csv") %>%
   summarise(value = round(mean(value), digits = 1))
 
 # Plot
-output$school_readiness_plot <- renderggiraph({
+output$school_readiness_plot <- renderGirafe({
   
   if (input$school_readiness_selection == "Trend") {
     
@@ -740,7 +740,7 @@ output$school_readiness_plot <- renderggiraph({
 # Render the output in the ui object
 output$school_readiness_box <- renderUI({
   withSpinner(
-    ggiraphOutput("school_readiness_plot", height = "inherit"),
+    girafeOutput("school_readiness_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
@@ -760,7 +760,7 @@ df_expected_standard_ks2 <- read_csv("data/poverty/expected_standard_ks2.csv") %
   summarise(value = round(mean(value,na.rm=TRUE), 1))
 
 # Plot
-output$expected_standard_ks2_plot <- renderggiraph({
+output$expected_standard_ks2_plot <- renderGirafe({
   gg <- ggplot(df_expected_standard_ks2,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
     geom_line(size = 1) +
@@ -794,7 +794,7 @@ output$expected_standard_ks2_plot <- renderggiraph({
 # Render the output in the ui object
 output$expected_standard_ks2_box <- renderUI({
   withSpinner(
-    ggiraphOutput("expected_standard_ks2_plot", height = "inherit"),
+    girafeOutput("expected_standard_ks2_plot", height = "inherit"),
     type = 4,
     color = plot_colour_spinner,
     size = 1,
