@@ -1,5 +1,5 @@
 # Domestic Energy Performance Certificates (EPC).
-# Created: 2022-01-17  Updated: 2023-09-22  Data: 2023-07-27
+# Created: 2022-01-17  Updated: 2023-09-22  Data: 2023-11-13
 
 # Source: Department for Levelling Up, Housing & Communities
 #         https://www.gov.uk/government/statistical-data-sets/live-tables-on-energy-performance-of-buildings-certificates
@@ -15,7 +15,7 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1174148/D1-_Domestic_Properties.ods",
+GET(url = "https://assets.publishing.service.gov.uk/media/65392230e6c968000daa9ad2/D1-_Domestic_Properties.ods",
     write_disk(tmp))
 
 # Extract the raw data ---------------------------
