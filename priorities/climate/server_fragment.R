@@ -565,7 +565,7 @@ output$no2_concentration_plot <- renderGirafe({
          y = expression(paste("µg/m"^3)),
          fill = NULL,
          colour = "Location: ",
-         alt = "Line chart showing the annual mean of N.O.2 readings taken between the 12 months ending September 2020 and the 12 months ending June 2023 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy. The latest annual mean recording of 10.9 microgrammes of N.O.2 per cubic metre at Trafford Wellacre Academy for the 12 months up to the end of June 2023 is only 0.1 above the lowest recorded at this station during the time period shown. The latest annual mean recorded at Trafford Moss Park of 14.1 microgrammes of N.O.2 per cubic metre is also only 0.1 above the lowest recording at this station during the period shown. The last two annual mean readings from Trafford A56 have been on a downward trend and the lastest annual mean recording for the 12 months ending June 2023 is 22.7 microgrammes of N.O.2 per cubic metre.") +
+         alt = "Line chart showing the annual mean of N.O.2 readings taken between the 12 months ending December 2020 and the 12 months ending September 2023 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy. The latest annual mean recordings of N.O.2 per cubic metre are 21.5 microgrammes at the Trafford A56, 14.7 microgrammes at Trafford Moss Park and 10.5 microgrammes at Trafford Wellacre Academy (the lowest recorded at this station during the time period shown).") +
     theme_x() +
     theme(
       legend.position = "top",
@@ -622,7 +622,7 @@ output$pm10_concentration_plot <- renderGirafe({
          y = expression(paste("µg/m"^3)),
          fill = NULL,
          colour = "Location: ",
-         alt = "Line chart showing the annual mean of PM10 readings taken between the 12 months ending September 2020 and the 12 months ending June 2023 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. Previously the annual mean recorded at Trafford A56 was higher than that at Trafford Moss Park, however for the 4 periods following the 12 months up to March 2022 this trend reversed. The latest 2 annual mean recordings at both stations show a decrease from the previous. The latest annual mean figures are almost identical with 13.8 microgrammes of PM10 per cubic metre recorded at Trafford A56 compared to 13.7 microgrammes at Trafford Moss Park.") +
+         alt = "Line chart showing the annual mean of PM10 readings taken between the 12 months ending December 2020 and the 12 months ending September 2023 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. Previously the annual mean recorded at Trafford A56 was higher than that at Trafford Moss Park, however for the 4 periods following the 12 months up to March 2022 this trend reversed. The latest 3 annual mean recordings at both stations show a decrease from the previous. The latest annual mean figures recorded of PM10 per cubic metre are 14 microgrammes at Trafford A56 and 12.4 microgrammes at Trafford Moss Park (the lowest recorded reading at this station during the time period shown.") +
     theme_x() +
     theme(
       legend.position = "top",
