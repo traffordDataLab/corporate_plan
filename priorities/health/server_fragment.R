@@ -49,7 +49,7 @@ output$obese_reception_plot <- renderGirafe({
     gg <- ggplot(
       filter(obese_reception_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -235,7 +235,7 @@ output$obese_year6_plot <- renderGirafe({
     gg <- ggplot(
       filter(obese_year6_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -400,7 +400,7 @@ output$overweight_adult_plot <- renderGirafe({
     gg <- ggplot(
       filter(overweight_adult_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -507,7 +507,7 @@ output$active_adults_plot <- renderGirafe({
     gg <- ggplot(
       filter(active_adults_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -613,7 +613,7 @@ output$inactive_adults_plot <- renderGirafe({
     gg <- ggplot(
       filter(inactive_adults_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -719,7 +719,7 @@ output$fairly_active_adults_plot <- renderGirafe({
     gg <- ggplot(
       filter(fairly_active_adults_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -785,7 +785,7 @@ output$active_children_plot <- renderGirafe({
     gg <- ggplot(
       filter(active_children_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -895,7 +895,7 @@ output$mortality_rate_plot <- renderGirafe({
       filter(mortality_rate_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
              unit == "Persons"),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -961,7 +961,7 @@ output$mortality_rate_plot <- renderGirafe({
       filter(mortality_rate_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
              unit != "Persons", period %in% c("2015":"2020")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -1026,7 +1026,7 @@ output$healthy_life_expectancy_plot <- renderGirafe({
     
     gg <- ggplot(healthy_life_expectancy_trend,
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, ' years</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -1134,7 +1134,7 @@ output$inequality_life_expectancy_plot <- renderGirafe({
     
     gg <- ggplot(inequality_life_expectancy_trend,
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, ' years</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -1234,7 +1234,7 @@ output$children_dental_decay_plot <- renderGirafe({
     gg <- ggplot(
       filter(children_dental_decay_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -1340,7 +1340,7 @@ output$adults_smoking_manual_plot <- renderGirafe({
     gg <- ggplot(
       filter(adults_smoking_manual_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -1447,7 +1447,7 @@ output$adults_depression_plot <- renderGirafe({
     gg <- ggplot(
       filter(adults_depression_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',

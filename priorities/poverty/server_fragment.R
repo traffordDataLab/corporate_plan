@@ -29,7 +29,7 @@ output$universal_credit_plot <- renderGirafe({
     gg <- ggplot(
       filter(universal_credit_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -134,7 +134,7 @@ output$claimant_count_plot <- renderGirafe({
     gg <- ggplot(
       filter(claimant_count_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -267,7 +267,7 @@ output$children_poverty_plot <- renderGirafe({
       filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
              indicator == "Children in relative low income families (under 16s)"),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -294,7 +294,7 @@ output$children_poverty_plot <- renderGirafe({
       filter(children_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
              indicator == "Children in absolute low income families (under 16s)"),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -387,7 +387,7 @@ output$neet_plot <- renderGirafe({
     
     gg <- ggplot(df_neet %>% filter(indicator == "16-17 year olds not in education, employment or training (NEET)"),
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -410,7 +410,7 @@ output$neet_plot <- renderGirafe({
     
     gg <- ggplot(df_neet %>% filter(indicator == "16 to 17 year olds not in education, employment or training (NEET) or whose activity is not known"),
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -499,7 +499,7 @@ output$fuel_poverty_plot <- renderGirafe({
     gg <- ggplot(
       filter(fuel_poverty_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -570,7 +570,7 @@ output$employment_rate_plot <- renderGirafe({
     gg <- ggplot(
       filter(employment_rate_trend, area_name %in% c("Trafford", "Similar Authorities average", "England")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -627,7 +627,7 @@ df_real_living_wage <- read_csv("data/poverty/real_living_wage.csv") %>%
 output$real_living_wage_plot <- renderGirafe({
   gg <- ggplot(df_real_living_wage,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -684,7 +684,7 @@ output$school_readiness_plot <- renderGirafe({
     
     gg <- ggplot(df_school_readiness %>% filter(indicator == "School readiness: percentage of children achieving a good level of development at the end of Reception"),
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -707,7 +707,7 @@ output$school_readiness_plot <- renderGirafe({
     
     gg <- ggplot(df_school_readiness %>% filter(indicator == "School Readiness: percentage of children with free school meal status achieving a good level of development at the end of Reception"),
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -763,7 +763,7 @@ df_expected_standard_ks2 <- read_csv("data/poverty/expected_standard_ks2.csv") %
 output$expected_standard_ks2_plot <- renderGirafe({
   gg <- ggplot(df_expected_standard_ks2,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',

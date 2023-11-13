@@ -14,7 +14,7 @@ df_licensed_vehicles <- read_csv("data/climate/licensed_vehicles.csv") %>%
 output$licensed_vehicles_plot <- renderGirafe({
   gg <- ggplot(df_licensed_vehicles,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-               geom_line(size = 1) +
+               geom_line(linewidth = 1) +
                geom_point_interactive(
                  aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
                                       '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -70,7 +70,7 @@ df_licensed_ulev <- read_csv("data/climate/licensed_vehicles.csv") %>%
 output$licensed_ulev_plot <- renderGirafe({
   gg <- ggplot(df_licensed_ulev,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -125,7 +125,7 @@ df_vehicle_miles <- read_csv("data/climate/vehicle_miles_travelled.csv") %>%
 output$vehicle_miles_plot <- renderGirafe({
   gg <- ggplot(df_vehicle_miles,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma(accuracy = 1)(value), ' million</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -179,7 +179,7 @@ df_ev_charging_points_rate <- read_csv("data/climate/electric_vehicle_charging_p
 output$ev_charging_points_plot <- renderGirafe({
   gg <- ggplot(df_ev_charging_points_rate,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -243,7 +243,7 @@ output$household_waste_recycling_plot <- renderGirafe({
   
     gg <- ggplot(df_household_waste_recycling_percentage,
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -266,7 +266,7 @@ output$household_waste_recycling_plot <- renderGirafe({
     
     gg <- ggplot(df_household_waste_recycling_tonnes,
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -333,7 +333,7 @@ output$household_waste_not_recycled_plot <- renderGirafe({
   
     gg <- ggplot(df_household_waste_not_recycled_percentage,
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -356,7 +356,7 @@ output$household_waste_not_recycled_plot <- renderGirafe({
   
     gg <- ggplot(df_household_waste_not_recycled_tonnes,
                  aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-      geom_line(size = 1) +
+      geom_line(linewidth = 1) +
       geom_point_interactive(
         aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
                              '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -444,7 +444,7 @@ df_epc <- df_epc %>%
 output$domestic_epc_plot <- renderGirafe({
   gg <- ggplot(df_epc,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -497,7 +497,7 @@ df_borough_co2_emissions <- read_csv("data/climate/borough_wide_co2_emissions.cs
 output$borough_co2_emissions_plot <- renderGirafe({
   gg <- ggplot(df_borough_co2_emissions,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', scales::label_comma()(value), '</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
@@ -547,7 +547,7 @@ df_no2_concentration <- read_csv("data/climate/no2_concentration.csv") %>%
 output$no2_concentration_plot <- renderGirafe({
   gg <- ggplot(df_no2_concentration,
                aes(x = period, y = value, colour = station_name, fill = station_name, group = station_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '</span><br />',
                            '<span class="plotTooltipMain">', station_name, '</span><br />',
@@ -604,7 +604,7 @@ df_pm10_concentration <- read_csv("data/climate/pm10_concentration.csv") %>%
 output$pm10_concentration_plot <- renderGirafe({
   gg <- ggplot(df_pm10_concentration,
                aes(x = period, y = value, colour = station_name, fill = station_name, group = station_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '</span><br />',
                            '<span class="plotTooltipMain">', station_name, '</span><br />',
@@ -665,7 +665,7 @@ df_adults_walk_cycle <- read_csv("data/climate/adults_walking_or_cycling.csv") %
 output$adults_walk_cycle_plot <- renderGirafe({
   gg <- ggplot(df_adults_walk_cycle,
                aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
-    geom_line(size = 1) +
+    geom_line(linewidth = 1) +
     geom_point_interactive(
       aes(tooltip = paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                            '<span class="plotTooltipMain">', area_name, '</span><br />',
