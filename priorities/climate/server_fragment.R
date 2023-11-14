@@ -195,7 +195,7 @@ output$ev_charging_points_plot <- renderGirafe({
          x = NULL,
          y = "Devices (per 100K)",
          fill = NULL,
-         alt = "Line chart showing that there have been consistently fewer publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between October 2020 and July 2023. The number of devices per 100,000 people in Trafford is increasing at a slightly slower rate than its comparitors, however the increases between quarters have been much more consistent since October 2022. The latest data for July 2023 of 43.7 devices per 100,000 population is still much lower compared to 60.1 for the average of similar authorities and 66.7 for England.") +
+         alt = "Line chart showing that there have been consistently fewer publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between January 2021 and October 2023. The number of devices per 100,000 people in Trafford is increasing at a slightly slower rate than its comparitors, however the increases between quarters have been much more consistent since October 2022. The latest data for October 2023 of 49.2 devices per 100,000 population is still much lower compared to 66.7 for the average of similar authorities and 75.2 for England.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
