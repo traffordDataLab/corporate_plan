@@ -5,7 +5,7 @@
 obese_r <- read_csv("data/health/obese_reception.csv") 
 
 obese_reception <- obese_r %>%
-  filter(indicator == "Reception: Prevalence of obesity (including severe obesity)") %>%
+  filter(indicator == "Reception prevalence of obesity (including severe obesity)") %>%
   mutate(period = as_factor(period)) %>%
   filter(!is.na(value))
 
@@ -23,7 +23,7 @@ obese_reception_cssn_mean <- obese_reception %>%
 obese_reception_trend <- bind_rows(obese_reception %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_reception_cssn_mean)
 
 obese_reception_quintiles <- obese_r %>%
-  filter(indicator == "Reception: Prevalence of obesity (including severe obesity), 5-years data combined") %>% 
+  filter(indicator == "Reception prevalence of obesity (including severe obesity), 5 years data combined") %>% 
   mutate(inequality = as_factor(inequality))
 
 obese_r_quintiles_cssn_mean <- obese_reception_quintiles %>%
@@ -124,7 +124,7 @@ output$obese_reception_plot <- renderGirafe({
                          labels = label_percent(scale = 1, accuracy = 1)) +
       labs(
         title = "Obese children aged 4-5 years by deprivation",
-        subtitle = "2017/18 - 21/22",
+        subtitle = "2018/19 - 22/23",
         caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
         y = NULL,
@@ -155,7 +155,7 @@ output$obese_reception_plot <- renderGirafe({
       ) +
       labs(
         title = "Obese children aged 4-5 years by ward",
-        subtitle = "2019/20 - 2021/22",
+        subtitle = "2020/21 - 2022/23",
         caption = "Source: National Child Measurement Programme, NHS Digital",
         x = NULL,
         y = NULL,
@@ -191,7 +191,7 @@ output$obese_reception_box <- renderUI({
 obese_y6 <- read_csv("data/health/obese_year6.csv") 
 
 obese_year6 <- obese_y6 %>%
-  filter(indicator == "Year 6: Prevalence of obesity (including severe obesity)") %>%
+  filter(indicator == "Year 6 prevalence of obesity (including severe obesity)") %>%
   mutate(period = as_factor(period)) %>%
   filter(!is.na(value))
 
@@ -209,7 +209,7 @@ obese_year6_cssn_mean <- obese_year6 %>%
 obese_year6_trend <- bind_rows(obese_year6 %>% select(area_name, period,value) %>% filter(area_name %in% c("Trafford", "England")), obese_year6_cssn_mean)
 
 obese_year6_quintiles <- obese_y6 %>%
-  filter(indicator == "Year 6: Prevalence of obesity (including severe obesity), 5-years data combined") %>% mutate(inequality = as_factor(inequality))
+  filter(indicator == "Year 6 prevalence of obesity (including severe obesity), 5 years data combined") %>% mutate(inequality = as_factor(inequality))
 
 obese_y6_quintiles_cssn_mean <- obese_year6_quintiles %>%
   filter(area_code %in% cssn$area_code) %>%
@@ -310,7 +310,7 @@ output$obese_year6_plot <- renderGirafe({
                          labels = label_percent(scale = 1, accuracy = 1)) +
       labs(
         title = "Obese children aged 10-11 years by deprivation",
-        subtitle = "2017/18 - 21/22",
+        subtitle = "2018/19 - 22/23",
         caption = "Source: National Child Measurement Programme, NHS Digital; IMD2019, MHCLG",
         x = NULL,
         y = NULL,
@@ -340,7 +340,7 @@ output$obese_year6_plot <- renderGirafe({
                               ncol = 2)) +
       labs(
         title = "Obese children aged 10-11 years by ward",
-        subtitle = "2019/20 - 2021/22",
+        subtitle = "2020/21 - 2022/23",
         caption = "Source: National Child Measurement Programme, NHS Digital",
         x = NULL,
         y = NULL,
