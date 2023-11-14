@@ -25,26 +25,8 @@ adults_smoking_manual_districsts <- adults_smoking_manual_trend %>%
   select(-c(`Category Type`, Age)) %>%
   mutate(measure = "Percentage")
 
-adults_smoking_manual_2020 <- read_csv("https://fingertips.phe.org.uk/api/all_data/csv/by_indicator_id?indicator_ids=93802&area_type_id=101") %>%
-  select(area_code = `Area Code`, area_name = `Area Name`, period = `Time period`, value = Value, indicator = `Indicator Name`, unit = Sex, compared_to_England = `Compared to England value or percentiles`, inequality = Category, `Category Type`, `Area Type`, Age)
 
-adults_smoking_manual_england_2020 <- adults_smoking_manual_2020  %>%
-  filter(`area_code` == "E92000001") %>%
-  filter(unit == "Persons") %>%
-  filter(is.na(`Category Type`)) %>%
-  filter(Age == "18-64 yrs") %>%
-  select(-c(`Category Type`, `Area Type`, Age)) %>%
-  mutate(measure = "Percentage",
-         area_type = "Country")
-
-adults_smoking_manual_districsts_2020 <- adults_smoking_manual_2020 %>%
-  filter(`Area Type` %in% c("UA", "District")) %>%
-  rename(area_type = `Area Type`) %>%
-  select(-c(`Category Type`, Age)) %>%
-  mutate(measure = "Percentage")
-
-df <- bind_rows(adults_smoking_manual_england, adults_smoking_manual_districsts,
-                adults_smoking_manual_england_2020, adults_smoking_manual_districsts_2020) %>%
+df <- bind_rows(adults_smoking_manual_england, adults_smoking_manual_districsts) %>%
   mutate(value = round(value, 1)) %>%
   unique() %>%
   select(area_code, area_name, area_type, period, indicator, measure, unit, value, compared_to_England, inequality)
