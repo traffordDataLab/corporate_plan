@@ -20,7 +20,7 @@ api_key <- ""
 
 # Download and tidy the data ---------------------------
 
-df_ks2_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?value.valueType=raw&metricType=6080&area=E92000001%2CE08000009%2CNearNeighboursChildrenServices_Trafford&period=latest%3A7&rowGrouping=area&ApplicationKey=", api_key), skip = 2)
+df_ks2_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?metricType=6080&area=",paste(c("E92000001",authorities$area_code, "E08000009"), collapse = ','),"&period=latest:8&columnGrouping=period&rowGrouping=area&ApplicationKey=",lginform_key))
 
 # Tidy the LG Inform+ data ---------------------------
 df_ks2 <- df_ks2_raw %>%
