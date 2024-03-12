@@ -1,10 +1,10 @@
 # Licensed Vehicles.
-# Created: 2021-11-29, last update: 2023-09-20 (data: 2023-10-25)
+# Created: 2021-11-29, last update: 2023-12-12 (data: 2023-09-30)
 
 # Source: Department for Transport (DfT) & Driver and Vehicle Licensing Authority (DVLA)
 #         https://www.gov.uk/government/statistical-data-sets/all-vehicles-veh01
-# All Vehicles by body type:       https://assets.publishing.service.gov.uk/media/6537df8b3099f900117f3089/veh0105.ods
-# All Ultra Low Emission Vehicles: https://assets.publishing.service.gov.uk/media/6537df8a1bf90d0013d84520/veh0132.ods
+# All Vehicles by body type:       https://assets.publishing.service.gov.uk/media/657335bf33b7f2000db72125/veh0105.ods
+# All Ultra Low Emission Vehicles: https://assets.publishing.service.gov.uk/media/65733542049516000f49bf18/veh0132.ods
 
 
 # Load required packages ---------------------------
@@ -17,8 +17,8 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
 # Download the datasets for all vehicles and ULEV ---------------------------
-download.file("https://assets.publishing.service.gov.uk/media/6537df8b3099f900117f3089/veh0105.ods", "veh0105.ods")
-download.file("https://assets.publishing.service.gov.uk/media/6537df8a1bf90d0013d84520/veh0132.ods", "veh0132.ods")
+download.file("https://assets.publishing.service.gov.uk/media/657335bf33b7f2000db72125/veh0105.ods", "veh0105.ods")
+download.file("https://assets.publishing.service.gov.uk/media/65733542049516000f49bf18/veh0132.ods", "veh0132.ods")
 
 # These files are too large to process using readODS or tidyODS so we need to convert them to XLSX.
 # Use LibreOffice in its headless state (doesn't open the application window) via the terminal.
