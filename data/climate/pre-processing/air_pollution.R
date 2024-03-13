@@ -1,5 +1,5 @@
 # Nitrogen Dioxide (NO2) and Particulate Matter (PM10) concentrations 
-# Created: 2022-01-27.  Last updated: 2023-11-13
+# Created: 2022-01-27.  Last updated: 2024-03-13
 
 # Source: Ricardo EE
 #         https://www.airqualityengland.co.uk/
@@ -50,10 +50,10 @@ df_pm10 <- NULL
 # Un-comment the current calendar year as each quarter is completed, and comment out the corresponding last data periods to always have 12 periods of data
 
 # 12 months up to current calendar year Q4
-#df_no2 <- df_no2 %>% 
-#  bind_rows(airqualityengland(A56, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"),
-#            airqualityengland(MossPark, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"),
-#            airqualityengland(Wellacre, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"))
+df_no2 <- df_no2 %>% 
+  bind_rows(airqualityengland(A56, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"),
+            airqualityengland(MossPark, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"),
+            airqualityengland(Wellacre, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "NO2"))
 
 # 12 months up to current calendar year Q3
 df_no2 <- df_no2 %>%
@@ -125,10 +125,10 @@ df_no2 <- df_no2 %>%
 
 
 # 12 months up to 3 calendar years ago Q4
-df_no2 <- df_no2 %>% 
-  bind_rows(airqualityengland(A56, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"),
-            airqualityengland(MossPark, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"),
-            airqualityengland(Wellacre, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"))
+#df_no2 <- df_no2 %>% 
+#  bind_rows(airqualityengland(A56, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"),
+#            airqualityengland(MossPark, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"),
+#            airqualityengland(Wellacre, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "NO2"))
 
 # 12 months up to 3 calendar years ago Q3
 #df_no2 <- df_no2 %>% 
@@ -166,9 +166,9 @@ write_csv(df_no2, "../no2_concentration.csv")
 # Un-comment the current calendar year as each quarter is completed, and comment out the corresponding last data periods to always have 12 periods of data
 
 # 12 months up to current calendar year Q4
-#df_pm10 <- df_pm10 %>% 
-#  bind_rows(airqualityengland(A56, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10"),
-#            airqualityengland(MossPark, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10"))
+df_pm10 <- df_pm10 %>% 
+  bind_rows(airqualityengland(A56, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10"),
+            airqualityengland(MossPark, paste0(max_year, "-01-01"), paste0(max_year, "-12-31"), "PM10"))
 
 # 12 months up to current calendar year Q3
 df_pm10 <- df_pm10 %>%
@@ -229,9 +229,9 @@ df_pm10 <- df_pm10 %>%
 
 
 # 12 months up to 3 calendar years ago Q4
-df_pm10 <- df_pm10 %>% 
-  bind_rows(airqualityengland(A56, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10"),
-            airqualityengland(MossPark, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10"))
+#df_pm10 <- df_pm10 %>% 
+#  bind_rows(airqualityengland(A56, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10"),
+#            airqualityengland(MossPark, paste0(max_year-3, "-01-01"), paste0(max_year-3, "-12-31"), "PM10"))
 
 # 12 months up to 3 calendar years ago Q3
 #df_pm10 <- df_pm10 %>% 
