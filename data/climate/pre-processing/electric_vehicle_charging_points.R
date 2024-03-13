@@ -3,16 +3,16 @@
 
 # Source: Department for Transport (DfT) and Office for Zero Emission Vehicles (OZEV)
 #         https://www.gov.uk/government/collections/electric-vehicle-charging-infrastructure-statistics
-#         https://www.gov.uk/government/statistics/electric-vehicle-charging-device-statistics-october-2023
-#         https://assets.publishing.service.gov.uk/media/653a8307d10f3500139a6a1b/electric-vehicle-charging-device-statistics-october-2023.ods
+#         https://www.gov.uk/government/statistics/electric-vehicle-charging-device-statistics-january-2024
+#         https://assets.publishing.service.gov.uk/media/65ba357a4ec51d000dc9f213/electric-vehicle-charging-device-statistics-january-2024.ods
 
 
 # Load required packages ---------------------------
-library(tidyverse); library(tidyselect); library(readODS); library(httr)
+library(tidyverse); library(tidyselect); library(readODS); library(httr); library(janitor)
 
 # Download the data ---------------------------
 tmp <- tempfile(fileext = ".ods")
-GET(url = "https://assets.publishing.service.gov.uk/media/653a8307d10f3500139a6a1b/electric-vehicle-charging-device-statistics-october-2023.ods",
+GET(url = "https://assets.publishing.service.gov.uk/media/65ba357a4ec51d000dc9f213/electric-vehicle-charging-device-statistics-january-2024.ods",
     write_disk(tmp))
 
 # Setup objects ---------------------------
@@ -22,26 +22,27 @@ authorities <- read_csv("../../cipfa2021.csv") %>%
   add_row(area_code = "E92000001", area_name = "England")
 
 # Get the raw data ---------------------------
-df_raw <- read_ods(tmp, sheet = "2a", col_names = TRUE, col_types = NA, skip = 2)
+df_raw <- read_ods(tmp, sheet = "2a", col_names = TRUE, col_types = NA, skip = 2) %>%
+    clean_names()
 
 # Tidy the data ---------------------------
 df_charging_points_rate <- df_raw %>%
     # The data are now ordered in columns oldest to latest. We only want the last 12 columns of data plus the first 2 (area code and area name).
     select(1:2, (ncol(.)-11):ncol(.)) %>%
-    rename(area_code = `Local.Authority...Region.Code...Note.5.`,
-           area_name = `Local.Authority...Region.Name`,
-           `2023-10` = 14,
-           `2023-07` = 13,
-           `2023-04` = 12,
-           `2023-01` = 11,
-           `2022-10` = 10,
-           `2022-07` = 9,
-           `2022-04` = 8,
-           `2022-01` = 7,
-           `2021-10` = 6,
-           `2021-07` = 5,
-           `2021-04` = 4,
-           `2021-01` = 3
+    rename(area_code = local_authority_region_code_note_5,
+           area_name = local_authority_region_name,
+           `2024-01` = 14,
+           `2023-10` = 13,
+           `2023-07` = 12,
+           `2023-04` = 11,
+           `2023-01` = 10,
+           `2022-10` = 9,
+           `2022-07` = 8,
+           `2022-04` = 7,
+           `2022-01` = 6,
+           `2021-10` = 5,
+           `2021-07` = 4,
+           `2021-04` = 3
     ) %>%
     filter(area_code %in% authorities$area_code) %>%
     mutate(area_name = if_else(area_name == "ENGLAND", "England", area_name)) %>%
