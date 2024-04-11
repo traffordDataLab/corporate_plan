@@ -41,9 +41,9 @@ df_neet_and_unknown <- df_neet_raw %>%
 
 # Download the data from LG Inform+: NEET only ---------------------------
 # NOTE: this requires an API key
-api_key <- ""
+lginform_key <- ""
 
-df_neet_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?metricType=9613&area=",paste(c("E92000001",cipfa$area_code, "E08000009"), collapse = ','),"&period=latest:5&columnGrouping=period&rowGrouping=area&ApplicationKey=",lginform_key))
+df_neet_raw <- read_csv(paste0("https://webservices.esd.org.uk/data.csv?metricType=9613&area=",paste(c("E92000001",cipfa$area_code, "E08000009"), collapse = ','),"&period=latest:7&columnGrouping=period&rowGrouping=area&ApplicationKey=",lginform_key))
 
 # Tidy the LG Inform+ data ---------------------------
 df_neet <- df_neet_raw %>%
