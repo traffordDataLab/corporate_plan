@@ -1,140 +1,4 @@
 area_code,area_name,period,indicator,measure,units,value
-E92000001,England,October 2020,Claimant count,Count,Persons,2188335
-E92000001,England,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.2
-E06000030,Swindon,October 2020,Claimant count,Count,Persons,7890
-E06000030,Swindon,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.6
-E06000007,Warrington,October 2020,Claimant count,Count,Persons,6680
-E06000007,Warrington,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
-E06000042,Milton Keynes,October 2020,Claimant count,Count,Persons,10435
-E06000042,Milton Keynes,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.2
-E08000029,Solihull,October 2020,Claimant count,Count,Persons,7395
-E08000029,Solihull,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.7
-E06000025,South Gloucestershire,October 2020,Claimant count,Count,Persons,6560
-E06000025,South Gloucestershire,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.7
-E08000007,Stockport,October 2020,Claimant count,Count,Persons,10370
-E08000007,Stockport,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.8
-E06000014,York,October 2020,Claimant count,Count,Persons,4680
-E06000014,York,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
-E06000055,Bedford,October 2020,Claimant count,Count,Persons,6885
-E06000055,Bedford,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.5
-E06000050,Cheshire West and Chester,October 2020,Claimant count,Count,Persons,10765
-E06000050,Cheshire West and Chester,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.2
-E06000034,Thurrock,October 2020,Claimant count,Count,Persons,7465
-E06000034,Thurrock,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.8
-E08000002,Bury,October 2020,Claimant count,Count,Persons,8015
-E08000002,Bury,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.9
-E06000015,Derby,October 2020,Claimant count,Count,Persons,11880
-E06000015,Derby,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.4
-E06000031,Peterborough,October 2020,Claimant count,Count,Persons,9295
-E06000031,Peterborough,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.5
-E06000038,Reading,October 2020,Claimant count,Count,Persons,6650
-E06000038,Reading,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.3
-E06000035,Medway,October 2020,Claimant count,Count,Persons,11595
-E06000035,Medway,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.6
-E08000009,Trafford,October 2020,Claimant count,Count,Persons,7600
-E08000009,Trafford,October 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.2
-E92000001,England,November 2020,Claimant count,Count,Persons,2225600
-E92000001,England,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.3
-E06000030,Swindon,November 2020,Claimant count,Count,Persons,7970
-E06000030,Swindon,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.7
-E06000007,Warrington,November 2020,Claimant count,Count,Persons,6660
-E06000007,Warrington,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
-E06000042,Milton Keynes,November 2020,Claimant count,Count,Persons,10365
-E06000042,Milton Keynes,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.2
-E08000029,Solihull,November 2020,Claimant count,Count,Persons,7670
-E08000029,Solihull,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.9
-E06000025,South Gloucestershire,November 2020,Claimant count,Count,Persons,6550
-E06000025,South Gloucestershire,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.6
-E08000007,Stockport,November 2020,Claimant count,Count,Persons,10575
-E08000007,Stockport,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.9
-E06000014,York,November 2020,Claimant count,Count,Persons,4725
-E06000014,York,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
-E06000055,Bedford,November 2020,Claimant count,Count,Persons,6935
-E06000055,Bedford,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.5
-E06000050,Cheshire West and Chester,November 2020,Claimant count,Count,Persons,10790
-E06000050,Cheshire West and Chester,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.2
-E06000034,Thurrock,November 2020,Claimant count,Count,Persons,7570
-E06000034,Thurrock,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.9
-E08000002,Bury,November 2020,Claimant count,Count,Persons,8185
-E08000002,Bury,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7
-E06000015,Derby,November 2020,Claimant count,Count,Persons,12005
-E06000015,Derby,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.5
-E06000031,Peterborough,November 2020,Claimant count,Count,Persons,9350
-E06000031,Peterborough,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.5
-E06000038,Reading,November 2020,Claimant count,Count,Persons,6800
-E06000038,Reading,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.4
-E06000035,Medway,November 2020,Claimant count,Count,Persons,11695
-E06000035,Medway,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.7
-E08000009,Trafford,November 2020,Claimant count,Count,Persons,7730
-E08000009,Trafford,November 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.3
-E92000001,England,December 2020,Claimant count,Count,Persons,2216785
-E92000001,England,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.3
-E06000030,Swindon,December 2020,Claimant count,Count,Persons,7825
-E06000030,Swindon,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.6
-E06000007,Warrington,December 2020,Claimant count,Count,Persons,6545
-E06000007,Warrington,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5
-E06000042,Milton Keynes,December 2020,Claimant count,Count,Persons,9950
-E06000042,Milton Keynes,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.9
-E08000029,Solihull,December 2020,Claimant count,Count,Persons,7515
-E08000029,Solihull,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.8
-E06000025,South Gloucestershire,December 2020,Claimant count,Count,Persons,6480
-E06000025,South Gloucestershire,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.6
-E08000007,Stockport,December 2020,Claimant count,Count,Persons,10500
-E08000007,Stockport,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.9
-E06000014,York,December 2020,Claimant count,Count,Persons,4705
-E06000014,York,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
-E06000055,Bedford,December 2020,Claimant count,Count,Persons,6850
-E06000055,Bedford,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.4
-E06000050,Cheshire West and Chester,December 2020,Claimant count,Count,Persons,10495
-E06000050,Cheshire West and Chester,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
-E06000034,Thurrock,December 2020,Claimant count,Count,Persons,7565
-E06000034,Thurrock,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.9
-E08000002,Bury,December 2020,Claimant count,Count,Persons,7995
-E08000002,Bury,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.8
-E06000015,Derby,December 2020,Claimant count,Count,Persons,11950
-E06000015,Derby,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.4
-E06000031,Peterborough,December 2020,Claimant count,Count,Persons,9345
-E06000031,Peterborough,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.5
-E06000038,Reading,December 2020,Claimant count,Count,Persons,6825
-E06000038,Reading,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.4
-E06000035,Medway,December 2020,Claimant count,Count,Persons,11695
-E06000035,Medway,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.7
-E08000009,Trafford,December 2020,Claimant count,Count,Persons,7635
-E08000009,Trafford,December 2020,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.3
-E92000001,England,January 2021,Claimant count,Count,Persons,2189260
-E92000001,England,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.1
-E06000030,Swindon,January 2021,Claimant count,Count,Persons,7775
-E06000030,Swindon,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.2
-E06000007,Warrington,January 2021,Claimant count,Count,Persons,6420
-E06000007,Warrington,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.8
-E06000042,Milton Keynes,January 2021,Claimant count,Count,Persons,9890
-E06000042,Milton Keynes,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.3
-E08000029,Solihull,January 2021,Claimant count,Count,Persons,7390
-E08000029,Solihull,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.7
-E06000025,South Gloucestershire,January 2021,Claimant count,Count,Persons,6290
-E06000025,South Gloucestershire,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
-E08000007,Stockport,January 2021,Claimant count,Count,Persons,10220
-E08000007,Stockport,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.7
-E06000014,York,January 2021,Claimant count,Count,Persons,4595
-E06000014,York,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.5
-E06000055,Bedford,January 2021,Claimant count,Count,Persons,6810
-E06000055,Bedford,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.8
-E06000050,Cheshire West and Chester,January 2021,Claimant count,Count,Persons,10280
-E06000050,Cheshire West and Chester,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.7
-E06000034,Thurrock,January 2021,Claimant count,Count,Persons,7410
-E06000034,Thurrock,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.6
-E08000002,Bury,January 2021,Claimant count,Count,Persons,7985
-E08000002,Bury,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.7
-E06000015,Derby,January 2021,Claimant count,Count,Persons,11905
-E06000015,Derby,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,7.2
-E06000031,Peterborough,January 2021,Claimant count,Count,Persons,9350
-E06000031,Peterborough,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.8
-E06000038,Reading,January 2021,Claimant count,Count,Persons,6820
-E06000038,Reading,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.7
-E06000035,Medway,January 2021,Claimant count,Count,Persons,11475
-E06000035,Medway,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.5
-E08000009,Trafford,January 2021,Claimant count,Count,Persons,7425
-E08000009,Trafford,January 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
 E92000001,England,February 2021,Claimant count,Count,Persons,2295430
 E92000001,England,February 2021,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.4
 E06000030,Swindon,February 2021,Claimant count,Count,Persons,8235
@@ -1223,79 +1087,215 @@ E06000035,Medway,September 2023,Claimant count,Count,Persons,6755
 E06000035,Medway,September 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
 E08000009,Trafford,September 2023,Claimant count,Count,Persons,4315
 E08000009,Trafford,September 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
-E92000001,England,October 2023,Claimant count,Count,Persons,1338285
-E92000001,England,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
-E06000030,Swindon,October 2023,Claimant count,Count,Persons,4495
-E06000030,Swindon,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
-E06000007,Warrington,October 2023,Claimant count,Count,Persons,3255
-E06000007,Warrington,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
-E06000042,Milton Keynes,October 2023,Claimant count,Count,Persons,6805
-E06000042,Milton Keynes,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.7
-E08000029,Solihull,October 2023,Claimant count,Count,Persons,4085
-E08000029,Solihull,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
-E06000025,South Gloucestershire,October 2023,Claimant count,Count,Persons,3165
+E92000001,England,October 2023,Claimant count,Count,Persons,1323745
+E92000001,England,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.7
+E06000030,Swindon,October 2023,Claimant count,Count,Persons,4420
+E06000030,Swindon,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.9
+E06000007,Warrington,October 2023,Claimant count,Count,Persons,3185
+E06000007,Warrington,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
+E06000042,Milton Keynes,October 2023,Claimant count,Count,Persons,6715
+E06000042,Milton Keynes,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.6
+E08000029,Solihull,October 2023,Claimant count,Count,Persons,4045
+E08000029,Solihull,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E06000025,South Gloucestershire,October 2023,Claimant count,Count,Persons,3185
 E06000025,South Gloucestershire,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
-E08000007,Stockport,October 2023,Claimant count,Count,Persons,5565
+E08000007,Stockport,October 2023,Claimant count,Count,Persons,5590
 E08000007,Stockport,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
-E06000014,York,October 2023,Claimant count,Count,Persons,2245
+E06000014,York,October 2023,Claimant count,Count,Persons,2205
 E06000014,York,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
-E06000055,Bedford,October 2023,Claimant count,Count,Persons,4830
-E06000055,Bedford,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
-E06000050,Cheshire West and Chester,October 2023,Claimant count,Count,Persons,5470
+E06000055,Bedford,October 2023,Claimant count,Count,Persons,4740
+E06000055,Bedford,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000050,Cheshire West and Chester,October 2023,Claimant count,Count,Persons,5525
 E06000050,Cheshire West and Chester,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
-E06000034,Thurrock,October 2023,Claimant count,Count,Persons,4535
+E06000034,Thurrock,October 2023,Claimant count,Count,Persons,4480
 E06000034,Thurrock,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
-E08000002,Bury,October 2023,Claimant count,Count,Persons,4865
-E08000002,Bury,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
-E06000015,Derby,October 2023,Claimant count,Count,Persons,7960
-E06000015,Derby,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.8
-E06000031,Peterborough,October 2023,Claimant count,Count,Persons,7170
-E06000031,Peterborough,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.2
-E06000038,Reading,October 2023,Claimant count,Count,Persons,4665
+E08000002,Bury,October 2023,Claimant count,Count,Persons,4795
+E08000002,Bury,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000015,Derby,October 2023,Claimant count,Count,Persons,7850
+E06000015,Derby,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.7
+E06000031,Peterborough,October 2023,Claimant count,Count,Persons,6975
+E06000031,Peterborough,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
+E06000038,Reading,October 2023,Claimant count,Count,Persons,4620
 E06000038,Reading,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
-E06000035,Medway,October 2023,Claimant count,Count,Persons,6865
-E06000035,Medway,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
-E08000009,Trafford,October 2023,Claimant count,Count,Persons,4425
+E06000035,Medway,October 2023,Claimant count,Count,Persons,6720
+E06000035,Medway,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E08000009,Trafford,October 2023,Claimant count,Count,Persons,4385
 E08000009,Trafford,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
-E05000819,Altrincham,October 2023,Claimant count,Count,Persons,150
-E05000819,Altrincham,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
-E05000820,Ashton upon Mersey,October 2023,Claimant count,Count,Persons,125
-E05000820,Ashton upon Mersey,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2
-E05000821,Bowdon,October 2023,Claimant count,Count,Persons,75
-E05000821,Bowdon,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.5
-E05000822,Broadheath,October 2023,Claimant count,Count,Persons,180
-E05000822,Broadheath,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.1
-E05000823,Brooklands,October 2023,Claimant count,Count,Persons,85
-E05000823,Brooklands,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.3
-E05000824,Bucklow-St Martins,October 2023,Claimant count,Count,Persons,325
-E05000824,Bucklow-St Martins,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.3
-E05000825,Clifford,October 2023,Claimant count,Count,Persons,575
-E05000825,Clifford,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.6
-E05000826,Davyhulme East,October 2023,Claimant count,Count,Persons,165
-E05000826,Davyhulme East,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.8
-E05000827,Davyhulme West,October 2023,Claimant count,Count,Persons,140
-E05000827,Davyhulme West,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.3
-E05000828,Flixton,October 2023,Claimant count,Count,Persons,120
-E05000828,Flixton,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.9
-E05000829,Gorse Hill,October 2023,Claimant count,Count,Persons,440
-E05000829,Gorse Hill,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.4
-E05000830,Hale Barns,October 2023,Claimant count,Count,Persons,95
-E05000830,Hale Barns,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
-E05000831,Hale Central,October 2023,Claimant count,Count,Persons,65
-E05000831,Hale Central,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,0.9
-E05000832,Longford,October 2023,Claimant count,Count,Persons,470
-E05000832,Longford,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.6
-E05000833,Priory,October 2023,Claimant count,Count,Persons,155
-E05000833,Priory,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2
-E05000835,Sale Moor,October 2023,Claimant count,Count,Persons,195
-E05000835,Sale Moor,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.9
-E05000834,St Mary's,October 2023,Claimant count,Count,Persons,250
-E05000834,St Mary's,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.5
-E05000836,Stretford,October 2023,Claimant count,Count,Persons,350
-E05000836,Stretford,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.8
-E05000837,Timperley,October 2023,Claimant count,Count,Persons,70
-E05000837,Timperley,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1
-E05000838,Urmston,October 2023,Claimant count,Count,Persons,190
-E05000838,Urmston,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.8
-E05000839,Village,October 2023,Claimant count,Count,Persons,210
-E05000839,Village,October 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
+E92000001,England,November 2023,Claimant count,Count,Persons,1332875
+E92000001,England,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.7
+E06000030,Swindon,November 2023,Claimant count,Count,Persons,4640
+E06000030,Swindon,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E06000007,Warrington,November 2023,Claimant count,Count,Persons,3230
+E06000007,Warrington,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
+E06000042,Milton Keynes,November 2023,Claimant count,Count,Persons,6680
+E06000042,Milton Keynes,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.6
+E08000029,Solihull,November 2023,Claimant count,Count,Persons,4085
+E08000029,Solihull,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E06000025,South Gloucestershire,November 2023,Claimant count,Count,Persons,3300
+E06000025,South Gloucestershire,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
+E08000007,Stockport,November 2023,Claimant count,Count,Persons,5700
+E08000007,Stockport,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E06000014,York,November 2023,Claimant count,Count,Persons,2270
+E06000014,York,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E06000055,Bedford,November 2023,Claimant count,Count,Persons,4675
+E06000055,Bedford,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000050,Cheshire West and Chester,November 2023,Claimant count,Count,Persons,5605
+E06000050,Cheshire West and Chester,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.6
+E06000034,Thurrock,November 2023,Claimant count,Count,Persons,4555
+E06000034,Thurrock,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E08000002,Bury,November 2023,Claimant count,Count,Persons,4880
+E08000002,Bury,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E06000015,Derby,November 2023,Claimant count,Count,Persons,7965
+E06000015,Derby,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.8
+E06000031,Peterborough,November 2023,Claimant count,Count,Persons,6940
+E06000031,Peterborough,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
+E06000038,Reading,November 2023,Claimant count,Count,Persons,4640
+E06000038,Reading,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E06000035,Medway,November 2023,Claimant count,Count,Persons,6790
+E06000035,Medway,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E08000009,Trafford,November 2023,Claimant count,Count,Persons,4355
+E08000009,Trafford,November 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
+E92000001,England,December 2023,Claimant count,Count,Persons,1341150
+E92000001,England,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E06000030,Swindon,December 2023,Claimant count,Count,Persons,4540
+E06000030,Swindon,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
+E06000007,Warrington,December 2023,Claimant count,Count,Persons,3140
+E06000007,Warrington,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
+E06000042,Milton Keynes,December 2023,Claimant count,Count,Persons,6710
+E06000042,Milton Keynes,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.6
+E08000029,Solihull,December 2023,Claimant count,Count,Persons,4050
+E08000029,Solihull,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E06000025,South Gloucestershire,December 2023,Claimant count,Count,Persons,3200
+E06000025,South Gloucestershire,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E08000007,Stockport,December 2023,Claimant count,Count,Persons,5650
+E08000007,Stockport,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E06000014,York,December 2023,Claimant count,Count,Persons,2265
+E06000014,York,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E06000055,Bedford,December 2023,Claimant count,Count,Persons,4735
+E06000055,Bedford,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000050,Cheshire West and Chester,December 2023,Claimant count,Count,Persons,5480
+E06000050,Cheshire West and Chester,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
+E06000034,Thurrock,December 2023,Claimant count,Count,Persons,4630
+E06000034,Thurrock,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E08000002,Bury,December 2023,Claimant count,Count,Persons,4920
+E08000002,Bury,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E06000015,Derby,December 2023,Claimant count,Count,Persons,8015
+E06000015,Derby,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.8
+E06000031,Peterborough,December 2023,Claimant count,Count,Persons,6920
+E06000031,Peterborough,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5
+E06000038,Reading,December 2023,Claimant count,Count,Persons,4725
+E06000038,Reading,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000035,Medway,December 2023,Claimant count,Count,Persons,6770
+E06000035,Medway,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E08000009,Trafford,December 2023,Claimant count,Count,Persons,4335
+E08000009,Trafford,December 2023,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
+E92000001,England,January 2024,Claimant count,Count,Persons,1350895
+E92000001,England,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E06000030,Swindon,January 2024,Claimant count,Count,Persons,4590
+E06000030,Swindon,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E06000007,Warrington,January 2024,Claimant count,Count,Persons,3140
+E06000007,Warrington,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
+E06000042,Milton Keynes,January 2024,Claimant count,Count,Persons,6810
+E06000042,Milton Keynes,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.7
+E08000029,Solihull,January 2024,Claimant count,Count,Persons,4130
+E08000029,Solihull,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E06000025,South Gloucestershire,January 2024,Claimant count,Count,Persons,3285
+E06000025,South Gloucestershire,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
+E08000007,Stockport,January 2024,Claimant count,Count,Persons,5730
+E08000007,Stockport,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E06000014,York,January 2024,Claimant count,Count,Persons,2275
+E06000014,York,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E06000055,Bedford,January 2024,Claimant count,Count,Persons,4710
+E06000055,Bedford,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000050,Cheshire West and Chester,January 2024,Claimant count,Count,Persons,5525
+E06000050,Cheshire West and Chester,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
+E06000034,Thurrock,January 2024,Claimant count,Count,Persons,4625
+E06000034,Thurrock,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E08000002,Bury,January 2024,Claimant count,Count,Persons,4985
+E08000002,Bury,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.2
+E06000015,Derby,January 2024,Claimant count,Count,Persons,8085
+E06000015,Derby,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.9
+E06000031,Peterborough,January 2024,Claimant count,Count,Persons,7025
+E06000031,Peterborough,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
+E06000038,Reading,January 2024,Claimant count,Count,Persons,4725
+E06000038,Reading,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E06000035,Medway,January 2024,Claimant count,Count,Persons,6790
+E06000035,Medway,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.8
+E08000009,Trafford,January 2024,Claimant count,Count,Persons,4325
+E08000009,Trafford,January 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
+E92000001,England,February 2024,Claimant count,Count,Persons,1405485
+E92000001,England,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E06000030,Swindon,February 2024,Claimant count,Count,Persons,4900
+E06000030,Swindon,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
+E06000007,Warrington,February 2024,Claimant count,Count,Persons,3285
+E06000007,Warrington,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.5
+E06000042,Milton Keynes,February 2024,Claimant count,Count,Persons,7240
+E06000042,Milton Keynes,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.9
+E08000029,Solihull,February 2024,Claimant count,Count,Persons,4250
+E08000029,Solihull,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.3
+E06000025,South Gloucestershire,February 2024,Claimant count,Count,Persons,3505
+E06000025,South Gloucestershire,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.9
+E08000007,Stockport,February 2024,Claimant count,Count,Persons,5835
+E08000007,Stockport,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.2
+E06000014,York,February 2024,Claimant count,Count,Persons,2390
+E06000014,York,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.8
+E06000055,Bedford,February 2024,Claimant count,Count,Persons,4870
+E06000055,Bedford,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.1
+E06000050,Cheshire West and Chester,February 2024,Claimant count,Count,Persons,5655
+E06000050,Cheshire West and Chester,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.6
+E06000034,Thurrock,February 2024,Claimant count,Count,Persons,4725
+E06000034,Thurrock,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.2
+E08000002,Bury,February 2024,Claimant count,Count,Persons,5160
+E08000002,Bury,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.3
+E06000015,Derby,February 2024,Claimant count,Count,Persons,8540
+E06000015,Derby,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
+E06000031,Peterborough,February 2024,Claimant count,Count,Persons,7510
+E06000031,Peterborough,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.5
+E06000038,Reading,February 2024,Claimant count,Count,Persons,4955
+E06000038,Reading,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.2
+E06000035,Medway,February 2024,Claimant count,Count,Persons,7060
+E06000035,Medway,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4
+E08000009,Trafford,February 2024,Claimant count,Count,Persons,4505
+E08000009,Trafford,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.1
+E05000819,Altrincham,February 2024,Claimant count,Count,Persons,165
+E05000819,Altrincham,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.9
+E05000820,Ashton upon Mersey,February 2024,Claimant count,Count,Persons,140
+E05000820,Ashton upon Mersey,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.2
+E05000821,Bowdon,February 2024,Claimant count,Count,Persons,65
+E05000821,Bowdon,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.3
+E05000822,Broadheath,February 2024,Claimant count,Count,Persons,170
+E05000822,Broadheath,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.9
+E05000823,Brooklands,February 2024,Claimant count,Count,Persons,85
+E05000823,Brooklands,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.4
+E05000824,Bucklow-St Martins,February 2024,Claimant count,Count,Persons,360
+E05000824,Bucklow-St Martins,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.8
+E05000825,Clifford,February 2024,Claimant count,Count,Persons,595
+E05000825,Clifford,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,6.8
+E05000826,Davyhulme East,February 2024,Claimant count,Count,Persons,135
+E05000826,Davyhulme East,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.3
+E05000827,Davyhulme West,February 2024,Claimant count,Count,Persons,140
+E05000827,Davyhulme West,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.4
+E05000828,Flixton,February 2024,Claimant count,Count,Persons,125
+E05000828,Flixton,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2
+E05000829,Gorse Hill,February 2024,Claimant count,Count,Persons,420
+E05000829,Gorse Hill,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.1
+E05000830,Hale Barns,February 2024,Claimant count,Count,Persons,95
+E05000830,Hale Barns,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.7
+E05000831,Hale Central,February 2024,Claimant count,Count,Persons,80
+E05000831,Hale Central,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.2
+E05000832,Longford,February 2024,Claimant count,Count,Persons,485
+E05000832,Longford,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,5.7
+E05000833,Priory,February 2024,Claimant count,Count,Persons,170
+E05000833,Priory,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.2
+E05000835,Sale Moor,February 2024,Claimant count,Count,Persons,195
+E05000835,Sale Moor,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3
+E05000834,St Mary's,February 2024,Claimant count,Count,Persons,250
+E05000834,St Mary's,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.5
+E05000836,Stretford,February 2024,Claimant count,Count,Persons,355
+E05000836,Stretford,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,4.9
+E05000837,Timperley,February 2024,Claimant count,Count,Persons,75
+E05000837,Timperley,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,1.2
+E05000838,Urmston,February 2024,Claimant count,Count,Persons,180
+E05000838,Urmston,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,2.6
+E05000839,Village,February 2024,Claimant count,Count,Persons,220
+E05000839,Village,February 2024,Claimants as a proportion of residents aged 16-64,Percentage,Persons,3.4
