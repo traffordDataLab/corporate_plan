@@ -91,12 +91,20 @@ df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmen
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
 
-# 2022 provisional
-df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/2022provisional/livingwagebyworkgeography2022provisional.zip",
-                               workbook = "PROV - Work Geography LWF Table 7 LWF.1a   lwfmgx 2022.xls",
+# 2022
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/2022revised/livingwagebyworkgeography2022revised.zip",
+                               workbook = "Work Geography LWF Table 7 LWF.1a   lwfmgx 2022.xls",
                                data_year = "2022")
 
 df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
+
+# 2023 provisional
+df_rlw_single_year <- get_data(url = "https://www.ons.gov.uk/file?uri=/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/numberandproportionofemployeejobswithhourlypaybelowthelivingwage/2023provisional/livingwagebyworkgeography2023provisional.zip",
+                               workbook = "PROV - Work Geography LWF Table 7 LWF.1a   lwfmgx 2023.xls",
+                               data_year = "2023")
+
+df_rlw <- bind_rows(df_rlw, df_rlw_single_year) # add the data to the full dataset
+
 
 # Finalise the completed dataset with the common variables ---------------------------
 df_rlw <- df_rlw %>%
