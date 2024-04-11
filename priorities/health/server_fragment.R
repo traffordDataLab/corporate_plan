@@ -907,7 +907,7 @@ output$mortality_rate_plot <- renderGirafe({
       labs(
         title = "Under 75 mortality rate from preventable causes",
         subtitle = NULL,
-        caption = "Data from 2020 and before is not comparable to 2021 as it needs rebasing to Census 2021\nSource: Annual Mortality Extracts, ONS",
+        caption = "Source: Annual Mortality Extracts, ONS",
         x = NULL,
         y = "per 100,000 population",
         colour = NULL,
@@ -959,7 +959,7 @@ output$mortality_rate_plot <- renderGirafe({
     
     gg <- ggplot(
       filter(mortality_rate_trend, area_name %in% c("Trafford", "Similar Authorities average", "England"),
-             unit != "Persons", period %in% c("2015":"2020")),
+             unit != "Persons", period %in% c("2015":"2022")),
       aes(x = period, y = value, colour = area_name, fill = area_name, group = area_name)) +
       geom_line(linewidth = 1) +
       geom_point_interactive(aes(tooltip =
@@ -1477,12 +1477,12 @@ output$adults_depression_plot <- renderGirafe({
                                outlier.shape = 21, outlier.colour = "#C9C9C9", outlier.size = 1,
                                fatten = NULL) +
       geom_point_interactive(data = filter(adults_depression, area_name == "Trafford"),
-                             aes(x = period, y = value,
+                             aes(x = period, y = value, fill = compared_to_England,
                                  tooltip =
                                    paste0('<span class="plotTooltipValue">', value, '%</span><br />',
                                           '<span class="plotTooltipMain">', area_name, '</span><br />',
                                           '<span class="plotTooltipPeriod">', period, '</span>')),
-                             shape = 21, fill = plot_colour_trafford, colour = "#000000", size = 3) +
+                             shape = 21, colour = "#000000", size = 3) +
       geom_boxplot_interactive(data = filter(adults_depression, area_name == "England"),
                                aes(x = factor(period), y = value,
                                    tooltip =
@@ -1491,6 +1491,9 @@ output$adults_depression_plot <- renderGirafe({
                                             '<span class="plotTooltipPeriod">', filter(adults_depression, area_name == "England")$period, '</span>')
                                ),
                                fill = "#C9C9C9", size = 0.5) +
+      scale_fill_manual(values = c("Better" = "#92D050",
+                                   "Similar" = "#FFC000",
+                                   "Higher" = "#C00000")) +
       scale_y_continuous(limits = c(0, NA), labels = scales::comma) +
       labs(
         title = "Prevalence of adults with depression",
@@ -1499,7 +1502,12 @@ output$adults_depression_plot <- renderGirafe({
         x = NULL, y = "Percentage",
         fill = "Compared with England:",
         alt = "Box plot showing the prevelance of adults with depression in Trafford between 2013/14 and 2020/21 compared with the average of similar authorities and England. Trafford's values for the periods shown are all in the upper quartile range.") +
-      theme_x()
+      theme_x() +
+      theme(
+        legend.position = "top",
+        legend.title = element_text(size = 9),
+        legend.text = element_text(size = 8)
+      )
   }
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
