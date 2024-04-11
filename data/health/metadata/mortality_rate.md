@@ -2,8 +2,6 @@
 
 Source: <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/deathsregisteredinenglandandwalesseriesdrreferencetables" target="_blank">Deaths registered in England and Wales, ONS</a>
 
-Data from 2020 and before is not comparable to 2021 as it needs rebasing to Census 2021. 
-
 Data for Trafford compared to the average of 15 similar authorities as defined by the Chartered Institute of Public Finance and Accountancy (CIPFA) in their <a href='https://www.cipfa.org/services/cipfastats/nearest-neighbour-model' target='_blank'>nearest neighbours model</a> from 2021.
  
 Indicator:
