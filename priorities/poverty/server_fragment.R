@@ -637,6 +637,7 @@ output$real_living_wage_plot <- renderGirafe({
     scale_colour_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_fill_manual(values = c("Trafford" = plot_colour_trafford, "Similar authorities average" = plot_colour_similar_authorities, "England" = plot_colour_england)) +
     scale_y_continuous(limits = c(0, NA)) +
+    scale_x_continuous(breaks = seq(from = min(df_real_living_wage$period), to = max(df_real_living_wage$period), by = 1)) +
     labs(title = "Employees paid at or above the real living wage",
          subtitle = NULL,
          caption = "Source: ONS",
