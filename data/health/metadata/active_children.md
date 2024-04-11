@@ -4,6 +4,8 @@ Source: <a href="https://www.sportengland.org/know-your-audience/data/active-liv
 
 Proportion of weighted number of respondents (5-16 yrs) reporting participation in sport and physical activity for at least 420 minutes in the last week.
 
+Academic year 2021/22 data for Trafford is not available.
+
 Data for Trafford compared to the average of 10 Children's Services Statistical Neighbours as defined in the <a href='https://www.gov.uk/government/publications/local-authority-interactive-tool-lait' target='_blank'>Children's Services Statistical Neighbour Benchmarking Tool</a>.
  
 Indicator:
