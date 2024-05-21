@@ -195,7 +195,7 @@ output$ev_charging_points_plot <- renderGirafe({
          x = NULL,
          y = "Devices (per 100K)",
          fill = NULL,
-         alt = "Line chart showing publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between April 2021 and January 2024. Prior to January 2024 the number of devices per 100,000 people in Trafford was consistently much lower than its comparitors, however between October 2023 and January 2024 there has been a significant increase and Trafford now has more. The latest data for January 2024 shows 83.2 devices per 100,000 population compared to 82 for England and 70.7 for the average of similar authorities.") +
+         alt = "Line chart showing publicly available charging devices per 100,000 people in Trafford compared to the average of similar authorities and England between July 2021 and April 2024. The number of devices per 100,000 people in Trafford has been consistently much lower than its comparitors, however between October 2023 and January 2024 there was a significant increase raising the number in Trafford above them for the first time. Since then Trafford's numbers have declined whilst its comparitors have increased, putting Trafford below once again although much closer than before. The latest data for April 2024 shows 76.8 devices per 100,000 population compared to 91.1 for England and 85.0 for the average of similar authorities.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -419,8 +419,7 @@ calc10YearProportionEPC <- function(period_from, period_to) {
 }
 
 # Get the data for the 10 year periods
-df_epc <- bind_rows(calc10YearProportionEPC("2011-06-30", "2021-03-31"),
-                    calc10YearProportionEPC("2011-09-30", "2021-06-30"),
+df_epc <- bind_rows(calc10YearProportionEPC("2011-09-30", "2021-06-30"),
                     calc10YearProportionEPC("2011-12-31", "2021-09-30"),
                     calc10YearProportionEPC("2012-03-31", "2021-12-31"),
                     calc10YearProportionEPC("2012-06-30", "2022-03-31"),
@@ -430,7 +429,8 @@ df_epc <- bind_rows(calc10YearProportionEPC("2011-06-30", "2021-03-31"),
                     calc10YearProportionEPC("2013-06-30", "2023-03-31"),
                     calc10YearProportionEPC("2013-09-30", "2023-06-30"),
                     calc10YearProportionEPC("2013-12-31", "2023-09-30"),
-                    calc10YearProportionEPC("2014-03-31", "2023-12-31"))
+                    calc10YearProportionEPC("2014-03-31", "2023-12-31"),
+                    calc10YearProportionEPC("2014-06-30", "2024-03-31"))
 
 # Create the average of similar LAs
 df_epc <- df_epc %>%
@@ -460,7 +460,7 @@ output$domestic_epc_plot <- renderGirafe({
          x = NULL,
          y = "Percentage",
          fill = NULL,
-         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (approximately 10 percentage points fewer) or England (approximately 8 percentage points fewer). The latest time period available, March 2014 to December 2023 shows 37.7% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 45.1% for England and 47.6% for the average of similar authorities.") +
+         alt = "Line chart showing that over 10 year periods Trafford has consistently lower percentages of domestic properties with Energy Performance Certificates (EPC) rated A, B or C than the average of similar authorities (approximately 10 percentage points fewer) or England (approximately 8 percentage points fewer). The latest time period available, June 2014 to March 2024 shows 38.7% of domestic properties in Trafford having EPCs with the most efficient ratings, compared to 46.0% for England and 48.7% for the average of similar authorities.") +
     theme_x()
   
   # Set up a custom message handler to call JS function a11yPlotSVG each time the plot is rendered, to make the plot more accessible
@@ -565,7 +565,7 @@ output$no2_concentration_plot <- renderGirafe({
          y = expression(paste("µg/m"^3)),
          fill = NULL,
          colour = "Location: ",
-         alt = "Line chart showing the annual mean of N.O.2 readings taken between the 12 months ending March 2021 and the 12 months ending December 2023 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy. The latest annual mean recordings of N.O.2 per cubic metre are 20.7 microgrammes at the Trafford A56, 14.4 microgrammes at Trafford Moss Park and 10.6 microgrammes at Trafford Wellacre Academy (the lowest recorded at this station during the time period shown).") +
+         alt = "Line chart showing the annual mean of N.O.2 readings taken between the 12 months ending June 2021 and the 12 months ending March 2023 at 3 monitoring stations within Trafford: Trafford A56, Trafford Moss Park and Trafford Wellacre Academy. Readings from Trafford A56 are the highest, followed by Trafford Moss Park and then Trafford Wellacre Academy. The latest annual mean recordings of N.O.2 per cubic metre are 19.9 microgrammes at the Trafford A56, 14.2 microgrammes at Trafford Moss Park and 10.9 microgrammes at Trafford Wellacre Academy.") +
     theme_x() +
     theme(
       legend.position = "top",
@@ -622,7 +622,7 @@ output$pm10_concentration_plot <- renderGirafe({
          y = expression(paste("µg/m"^3)),
          fill = NULL,
          colour = "Location: ",
-         alt = "Line chart showing the annual mean of PM10 readings taken between the 12 months ending March 2021 and the 12 months ending December 2023 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. Usually the annual mean recorded at Trafford A56 is higher than that at Trafford Moss Park, however for the 4 periods following the 12 months up to March 2022 this trend reversed. The latest annual mean figures recorded of PM10 per cubic metre are 12.9 microgrammes at Trafford A56 and 11.1 microgrammes at Trafford Moss Park (the lowest recorded readings at both stations during the time period shown.") +
+         alt = "Line chart showing the annual mean of PM10 readings taken between the 12 months ending June 2021 and the 12 months ending March 2024 at 2 monitoring stations within Trafford: Trafford A56 and Trafford Moss Park. Usually the annual mean recorded at Trafford A56 is higher than that at Trafford Moss Park, however for the 4 periods following the 12 months up to March 2022 this trend reversed. The latest annual mean figures recorded of PM10 per cubic metre are 12.7 microgrammes at Trafford A56 and 10.5 microgrammes at Trafford Moss Park (the lowest recorded readings at both stations during the time period shown.") +
     theme_x() +
     theme(
       legend.position = "top",
