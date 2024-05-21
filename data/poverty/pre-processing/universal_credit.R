@@ -37,13 +37,14 @@ query <- list(database = unbox("str:database:UC_Monthly"),
                 `str:field:UC_Monthly:V_F_UC_CASELOAD_FULL:COA_CODE` = list(
                   map = as.list(paste0("str:value:UC_Monthly:V_F_UC_CASELOAD_FULL:COA_CODE:V_C_MASTERGEOG11_", c(cipfa$for_query)))),
                 `str:field:UC_Monthly:F_UC_DATE:DATE_NAME` = list(
-                  map = as.list(paste0("str:value:UC_Monthly:F_UC_DATE:DATE_NAME:C_UC_DATE:",c(202102,202103,202104,202105,202106,202107,202108,202109,202110,202111,202112,202201,202202,202203,202204,202205,202206,202207,202208,202209,202210,202211,202212,202301,202302,202303,202304,202305,202306,202307,202308,202309,202310,202311,202312,202401,202402))))
+                  map = as.list(paste0("str:value:UC_Monthly:F_UC_DATE:DATE_NAME:C_UC_DATE:",c(202104,202105,202106,202107,202108,202109,202110,202111,202112,202201,202202,202203,202204,202205,202206,202207,202208,202209,202210,202211,202212,202301,202302,202303,202304,202305,202306,202307,202308,202309,202310,202311,202312,202401,202402,202403,202404))))
               )) %>% toJSON()
 request <- POST(
   url = path,
   body = query,
   config = add_headers(APIKey = api_key),
   encode = "json")
+
 response <- fromJSON(content(request, as = "text"), flatten = TRUE)
 # extract list items and convert to a dataframe
 tabnames <- response$fields$items %>% map(~.$labels %>% unlist)
@@ -74,7 +75,7 @@ query <- list(database = unbox("str:database:UC_Monthly"),
                 `str:field:UC_Monthly:V_F_UC_CASELOAD_FULL:WARD_CODE` = list(
                   map = as.list(paste0("str:value:UC_Monthly:V_F_UC_CASELOAD_FULL:WARD_CODE:V_C_MASTERGEOG11_WARD_TO_LA:E0", seq(5000819, 5000839, 1)))),
                 `str:field:UC_Monthly:F_UC_DATE:DATE_NAME` = list(
-                  map = as.list(paste0("str:value:UC_Monthly:F_UC_DATE:DATE_NAME:C_UC_DATE:",c(202402))))
+                  map = as.list(paste0("str:value:UC_Monthly:F_UC_DATE:DATE_NAME:C_UC_DATE:",c(202404))))
               )) %>% toJSON()
 request <- POST(
   url = path,
@@ -90,7 +91,7 @@ dimnames(values) <- tabnames
 universal_credit_ward <- as.data.frame.table(values, stringsAsFactors = FALSE) %>%
   as_tibble() %>%
   set_names(c(response$fields$label,"value"))  %>%
-  select(area_name = "National - Regional - LA - Ward", period = Month, value) %>%
+  select(area_name = "National - Regional - LA - Ward", period = Month, value)%>%
   left_join(pop_ward, by="area_name") 
 
 df_t <- df %>%

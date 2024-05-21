@@ -71,7 +71,7 @@ output$universal_credit_plot <- renderGirafe({
       ) +
       labs(
         title = "Universal Credit rate - aged 16 to 64 by ward",
-        subtitle = "October 2023",
+        subtitle = "April 2024",
         caption = "Source: DWP,ONS",
         x = NULL,
         y = NULL,
@@ -176,7 +176,7 @@ output$claimant_count_plot <- renderGirafe({
       ) +
       labs(
         title = "Claimant Count rate - aged 16 to 64 by ward",
-        subtitle = "October 2023",
+        subtitle = "April 2024",
         caption = "Source: ONS",
         x = NULL,
         y = NULL,
