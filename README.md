@@ -1,4 +1,7 @@
 # corporate_plan
+
+**2024-09-03: Please note, this has now been superseded by a new app [Trafford Themes](https://trafforddatalab.shinyapps.io/trafford_themes/). Please visit the [trafford_themes repo](https://github.com/traffordDataLab/trafford_themes) for the code and more information.**
+
 Dashboard application to visualise, and make available, data relating to the [Trafford Council Corporate Plan](https://www.trafford.gov.uk/about-your-council/strategies-plans-and-policies/Corporate-Plan.aspx).
 
 The Corporate Plan describes Trafford Council's vision and priorities for the borough and the priorities we have identified as an organisation as being key to the delivery of that vision. The first Corporate Plan was launched in 2018, this repo relates to the updated version for 2022 onwards.
